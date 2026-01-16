@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools-scm>=8.0"]
+
+[project]
+name = "crosswords"
+version = "0.0.1"
+description = "LLMs and Crossword Puzzles"
+authors = [
+    {name = "Radu Marinescu",email = "radu.marinescu@gmail.com"},
+    {name = "Adi Botea",email = "abotea@yahoo.com"},
+]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers=[
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    # TODO: figure out correct versions dependencies
+    "mellea",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["tests", "tests.*"]
+namespaces = false
+
+[project.urls]
+Source = "https://github.com/radum2275/crosswords"
