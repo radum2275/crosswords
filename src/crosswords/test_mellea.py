@@ -19,7 +19,7 @@ from src.crosswords.utils import strip_code_fences, validate_json_code_block
 load_dotenv()
 
 INSTRUCTION = """
-You are an expert at solving crossword puzzles. Given a definition you will provide the clue.
+You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the clue.
 Format the response as a JSON object with the following structure:
 ```json
 {
@@ -34,7 +34,8 @@ Your answer:
 
 icl_examples = []
 
-definition = "A domesticated carnivorous mammal (Canis familiaris syn. Canis lupus subsp. familiaris) typically kept as a pet or for work or field sports."
+#definition = "A domesticated carnivorous mammal (Canis familiaris syn. Canis lupus subsp. familiaris) typically kept as a pet or for work or field sports."
+definition = "Şters din datoria personalului de serviciu"
 
 # Create a Mellea RITS backend
 backend = RITSBackend(
