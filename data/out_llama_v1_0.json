@@ -1,0 +1,1207 @@
+[
+    {
+        "clue": "\u015eters din datoria personalului de serviciu",
+        "answer": "pRAF",
+        "prediction": "RADIAT",
+        "rationale": "\u015eters din datoria personalului de serviciu inseamna a fi eliminat sau a fi scos din lista personalului. In acest context, termenul 'radiat' este folosit pentru a descrie actiunea de a scoate pe cineva dintr-o lista sau dintr-o pozitie, in acest caz, din datoria personalului de serviciu."
+    },
+    {
+        "clue": "\u00cenlocuire la ad\u0103postul \u00eentunericului",
+        "answer": "IaTAC",
+        "prediction": "NOAPTE",
+        "rationale": "\u00cenlocuire la ad\u0103postul \u00eentunericului sugereaz\u0103 o perioad\u0103 de timp c\u00e2nd este \u00eentuneric, adic\u0103 noaptea. Ad\u0103postul \u00eentunericului poate fi interpretat ca o metafor\u0103 pentru perioada nop\u021bii, c\u00e2nd lumina zilei este \u00eenlocuit\u0103 de \u00eentuneric."
+    },
+    {
+        "clue": "Mi\u015fcarea de eliberare",
+        "answer": "SMuCIRE",
+        "prediction": "REVOLT\u0102",
+        "rationale": "Mi\u015fcarea de eliberare poate fi interpretat\u0103 ca o ac\u021biune de rezisten\u021b\u0103 sau de protest \u00eempotriva unei opresiuni sau a unei situa\u021bii nedrepte. REVOLT\u0102 este un termen care descrie o astfel de mi\u0219care, caracterizat\u0103 prin ac\u021biuni active de respingere a unei autorit\u0103\u021bi sau a unui sistem considerat injust."
+    },
+    {
+        "clue": "T\u0103iat\u0103 la spital!",
+        "answer": "TA",
+        "prediction": "OPERAT\u0102",
+        "rationale": "Cuv\u00e2ntul 't\u0103iat\u0103' din contextul dat sugereaz\u0103 o interven\u021bie chirurgical\u0103, iar 'la spital' confirm\u0103 aceast\u0103 interpretare. Deci, 'operat\u0103' este cel mai probabil r\u0103spuns, deoarece este un termen comun folosit pentru a descrie o persoan\u0103 care a fost supus\u0103 unei interven\u021bii chirurgicale."
+    },
+    {
+        "clue": "Aproape de un nivel inacceptabil",
+        "answer": "lOAZA",
+        "prediction": "LA LIMITA",
+        "rationale": "Expresia 'Aproape de un nivel inacceptabil' sugereaza o situatie in care ceva este foarte aproape de a depasi o limita considerata acceptabila sau tolerabila. 'La limita' este o expresie comun\u0103 \u00een limba rom\u00e2n\u0103 care descrie o astfel de situatie, indic\u00e2nd c\u0103 ceva se afl\u0103 la marginea unui prag acceptabil sau inacceptabil."
+    },
+    {
+        "clue": "Gr\u0103suliu la talie",
+        "answer": "SU",
+        "prediction": "STR\u0102LUCITOR",
+        "rationale": "Cuv\u00e2ntul 'gr\u0103suliu' poate fi interpretat ca av\u00e2nd leg\u0103tur\u0103 cu str\u0103lucirea sau culoarea aurie. \u00cen contextul descrierii unei persoane, 'gr\u0103suliu la talie' se poate referi la o centur\u0103 str\u0103lucitoare sau la un accesoriu de vestimenta\u021bie care confer\u0103 o not\u0103 de elegan\u021b\u0103 sau de str\u0103lucire la nivelul taliei."
+    },
+    {
+        "clue": "Executantul unor lovituri de pedeaps\u0103",
+        "answer": "BIcI",
+        "prediction": "EXECUTOR",
+        "rationale": "Executantul unor lovituri de pedeaps\u0103 se refer\u0103 la o persoan\u0103 care aplic\u0103 o pedeaps\u0103, \u00een special \u00een contextul unei sentin\u021be judec\u0103tore\u0219ti sau al unei pedepse fizice. \u00cen istorie, executorul era o persoan\u0103 \u00eens\u0103rcinat\u0103 cu aplicarea pedepselor corporale sau a SENTIN\u021aELOR DE MOARTE. De asemenea, \u00een sport, \u00een special \u00een fotbal, executantul unor lovituri de pedeaps\u0103 se refer\u0103 la juc\u0103torul care execut\u0103 lovitura de pedeaps\u0103. \u00cen ambele situa\u021bii, termenul 'executor' este potrivit pentru a descrie persoana responsabil\u0103 de aplicarea unei anumite ac\u021biuni."
+    },
+    {
+        "clue": "Rezultat la adunare",
+        "answer": "UNIT",
+        "prediction": "SUMA",
+        "rationale": "La adunarea a doua sau mai multe numere, rezultatul ob\u021binut se nume\u0219te sum\u0103. De exemplu, 2 + 2 = 4, unde 4 este suma."
+    },
+    {
+        "clue": "Bani cheltui\u0163i prin bazar",
+        "answer": "LIRE",
+        "prediction": "CH_medium de schimb sau mai probabil ARGINT",
+        "rationale": "Bani cheltui\u0163i prin bazar inseamna banii folosi\u0163i pentru cumparaturi, care pot fi(numiti ARGINT sau mai uzual CHocu' sau CHELTIUELILE zilnice thwart Magazine-default 'ieftin'-bazar(prin extensie pie\u0163e), \u00een care mediul de schimb folosit ar putea fi numit ARGINT."
+    },
+    {
+        "clue": "Obliga\u0163ie de serviciu",
+        "answer": "oRDIN",
+        "prediction": "SARJIE",
+        "rationale": "Obliga\u0163ie de serviciu se refer\u0103 la o responsabilitate sau \u00eendatorire a cuiva \u00een cadrul unei organiza\u021bii sau institu\u021bii, cum ar fi o sarcin\u0103 sau o misiune specific\u0103. Termenul 'SARJIE' este folosit \u00een context militar sau profesional pentru a desemna o asemenea obliga\u021bie sau responsabilitate."
+    },
+    {
+        "clue": "Admiterea unui refuz",
+        "answer": "NU",
+        "prediction": "RENUN\u021aARE",
+        "rationale": "Admiterea unui refuz inseamna acceptarea faptului ca o anumita solicitare sau cerere a fost respinsa. Renun\u021barea reprezint\u0103 actul de a abandona sau de a accepta refuzul unei solicit\u0103ri, astfel \u00eenc\u00e2t RENUN\u021aARE este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Juniori afla\u0163i \u00een preg\u0103tire cu seniorii",
+        "answer": "PAjI",
+        "prediction": "STAGIARI",
+        "rationale": "Juniorii afla\u0163i \u00een preg\u0103tire cu seniorii sunt de obicei numi\u0163i stagiar sau voluntar, dar cel mai probabil raspuns este STAGIARI, care se refer\u0103 la perioada de preg\u0103tire sau instruire sub \u00eendrumarea unor exper\u0163i mai vechi."
+    },
+    {
+        "clue": "Mic\u0103 la trup!",
+        "answer": "IC",
+        "prediction": "SUB\u021aIRE",
+        "rationale": "Expresia 'Mic\u0103 la trup' este o descriere a unei persoane cu o constitu\u021bie fizic\u0103 slab\u0103 sau sub\u021bire. Deci, SUB\u021aIRE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Fudulii de coco\u015fi (sg.)",
+        "answer": "TANTOS",
+        "prediction": "COCO\u015eEL",
+        "rationale": "Fudulii de coco\u015fi se refer\u0103 la penele ornamentale de pe capul coco\u015filor. Coco\u015fel este un termen folosit pentru a descrie un coco\u015f t\u00e2n\u0103r sau un coco\u015f cu pene ornamentale, astfel este un termen asociat cu fudulii de coco\u015fi."
+    },
+    {
+        "clue": "Propune o variant\u0103 la pronosport!",
+        "answer": "oR",
+        "prediction": "PARIU",
+        "rationale": "Pronosport este un joc de noroc \u00een care juc\u0103torii pot plasa pariuri pe diverse evenimente sportive. Deci, a propune o variant\u0103 la pronosport \u00eenseamn\u0103 a face un pariu, sau mai exact, a alege una dintre variantele oferite pentru a plasa un pariu."
+    },
+    {
+        "clue": "O lume f\u0103r\u0103 grani\u0163e!",
+        "answer": "UM",
+        "prediction": "GLOBALIZARE",
+        "rationale": "Expresia 'o lume f\u0103r\u0103 grani\u0163e' sugereaz\u0103 o stare \u00een care limitele geografice, economice \u0219i politice nu mai reprezint\u0103 o barier\u0103. GLOBALIZARE este un termen care descrie procesul de interconectare \u0219i integrare a economiilor, societ\u0103\u021bilor \u0219i culturilor de pe \u00eentreg globul, reduc\u00e2nd efectiv importan\u021ba grani\u021belor na\u021bionale."
+    },
+    {
+        "clue": "Subiect de discu\u0163ie",
+        "answer": "ORAL",
+        "prediction": "TEMA",
+        "rationale": "Un subiect de discu\u0163ie reprezint\u0103 o idee, o problem\u0103 sau o chestiune care este dezbatut\u0103 sau analizat\u0103. \u00cen limba rom\u00e2n\u0103, termenul cel mai potrivit pentru a descrie acest concept este \"TEMA\", deoarece el se refer\u0103 la un subiect sau o chestiune care este supus\u0103 discu\u021biei, analizei sau dezbaterii."
+    },
+    {
+        "clue": "Cea... dreapt\u0103",
+        "answer": "aIA",
+        "prediction": "MAINA",
+        "rationale": "Expresia 'Cea... dreapt\u0103' este o expresie comun\u0103 \u00een limba rom\u00e2n\u0103 care se refer\u0103 la m\u00e2na dreapt\u0103, adic\u0103 partea corpului care este situat\u0103 \u00een partea dreapt\u0103 a corpului. De obicei, expresia este folosit\u0103 pentru a descrie o persoan\u0103 care este mai priceput\u0103 sau mai abil\u0103 cu m\u00e2na dreapt\u0103."
+    },
+    {
+        "clue": "Aburit la mas\u0103",
+        "answer": "FIERT",
+        "prediction": "FIERT",
+        "rationale": "Aburit la mas\u0103 inseamna ca alimentul a fost preparat prin fierbere, proces care implica introducerea alimentului in apa clocotita pentru a-l face comestibil. Deci, FIERT este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Vechea lege a cre\u015ftinilor",
+        "answer": "EDIcT",
+        "prediction": "VETECHIULTESTAMENT",
+        "rationale": "Termenul 'Vechea lege' face referire la perioada din biblie inainte de venirea lui Iisus Hristos, care este descrisa in Vechiul Testament. Acesta reprezinta legea sau regulile care guvernau poporul evreu timp de mii de ani si a fost redactata in cartile Vechiului Testament."
+    },
+    {
+        "clue": "Tare de urechi",
+        "answer": "ACUT",
+        "prediction": "SURD",
+        "rationale": "Tare de urechi este un termen comun folosit pentru a descrie o pierdere a auzului sau o dificultate de a auzi. In acest context, SURD este cel mai probabil raspuns, deoarece descrie exact afectiunea mentionata in clue."
+    },
+    {
+        "clue": "A \u00eenconjura cu ostilitate",
+        "answer": "ASEDIa",
+        "prediction": "\u00ceNCERCI",
+        "rationale": "A \u00eenconjura cu ostilitate sugereaz\u0103 ideea de a ataca sau a asedia din toate p\u0103r\u021bile, ceea ce se potrive\u0219te cu verbul 'a \u00eencerci' care are sensul de a ataca sau a asedia un loc sau o persoan\u0103."
+    },
+    {
+        "clue": "Bani \u00een schimbul armelor (sg.)",
+        "answer": "pISTOL",
+        "prediction": "PRES",
+        "rationale": "Expresia 'Bani \u00een schimbul armelor' sugereaz\u0103 o tranzac\u021bie \u00een care se ofer\u0103 bani \u00een schimbul armelor. \u00cen contextul istoric sau al nostru contemporan, termenul care se potrive\u0219te acestei descrieri este 'pres', care \u00eentr-un sens mai larg sau \u00een contexte specifice, s-ar putea referi la o form\u0103 de plat\u0103 sau compensare, de\u0219i \u00een limbajul comun 'pres' \u00eenseamn\u0103 de obicei 'a ap\u0103sa'. \u00cens\u0103, \u00eentr-un context mai larg sau \u00een func\u021bie de provenien\u021ba \u0219i uzul regional al cuv\u00e2ntului, ar putea fi interpretat ca o form\u0103 de r\u0103scump\u0103rare sau plat\u0103. \u00cen lipsa unui context maispecific, o interpretare mai potrivit\u0103 ar putea fi 'pre\u021b' sau un termen similar care s\u0103 \u00eentruchipeze ideea de schimb sau tranzac\u021bie. \u00cen consecin\u021b\u0103, 'pre\u021b' ar fi o alegere mai rezonabil\u0103 pentru a descrie 'Bani \u00een schimbul armelor'."
+    },
+    {
+        "clue": "Ascunzi\u015f prin p\u0103durice",
+        "answer": "TUFA",
+        "prediction": "VICILE",
+        "rationale": "Ascunzis prin padurice sugereaza un loc ascuns sau izolat, vicile fiind un termen folosit pentru a descrie un astfel de loc, de obicei, un ad\u0103post sau un refugiu \u00een mijlocul naturii, \u00eentr-o p\u0103durice."
+    },
+    {
+        "clue": "A da cu flit",
+        "answer": "RaMA",
+        "prediction": "APLICATE",
+        "rationale": "A da cu flit este o expresie romanesc\u0103 care \u00eenseamn\u0103 a lovi sau a bate cu putere, dar \u0219i a \u00eencerca cu st\u0103ruin\u021b\u0103 sau a face eforturi pentru a ob\u021bine ceva. \u00cen acest context, 'a da cu flit' ar putea fi echivalent cu 'a aplica' sau 'a \u00eencerca cu insisten\u021b\u0103'. Cu toate acestea, o traducere mai potrivit\u0103 \u0219i care se \u00eencadreaz\u0103 \u00een expresia dat\u0103 ar fi 'a se str\u0103dui' sau 'a face eforturi', dar av\u00e2nd \u00een vedere contextul \u0219i expresia 'a da cu flit', o alt\u0103 variant\u0103 ar fi 'a \u00eempinge' sau 'a for\u021ba', \u00eens\u0103 r\u0103spunsul care pare mai apropiat de a da cu flit \u00eentr-un context mai larg \u0219i uzual ar putea fi 'a bate' sau 'a lovi', dar 'a aplica' pare a fi un termen care, \u00eentr-un anumit context, ar putea descrie ac\u021biunea de a face ceva cu insisten\u021b\u0103."
+    },
+    {
+        "clue": "Luat \u00een nume de r\u0103u",
+        "answer": "INAMIC",
+        "prediction": "INSULTAT",
+        "rationale": "Luat \u00een nume de r\u0103u inseamna a fi ofensat sau jignit, ceea ce se poate traduce prin a fi insultat. Deci, INSULTAT este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Socotit printre favori\u0163i",
+        "answer": "ATu",
+        "prediction": "TITULAR",
+        "rationale": "Cuvantul 'titular' se refera la o persoana sau un lucru considerat ca fiind printre primii sau cei mai buni, deci poate fi socotit printre favoriti. In contextul sportului sau al unor competitii, titularul este adesea considerat un favorit."
+    },
+    {
+        "clue": "Min\u0103 de c\u0103rbune (masc.)",
+        "answer": "BRUN",
+        "prediction": "OCNA",
+        "rationale": "Termenul 'min\u0103' se refer\u0103 la o exploatare subteran\u0103 pentru extragerea unor resurse minerale, cum ar fi c\u0103rbunele. 'Mina de c\u0103rbune' este un loc unde se extrage c\u0103rbunele. Prin urmare, 'OCNA' este un termen care se potrive\u0219te contextului, fiind o min\u0103 de c\u0103rbune. De asemenea, 'OCNA' este un cuv\u00e2nt care exist\u0103 \u00een limba rom\u00e2n\u0103 \u0219i este folosit \u00een contextul mineritului."
+    },
+    {
+        "clue": "Blacheu la toc!",
+        "answer": "EU",
+        "prediction": "NASCOCELE",
+        "rationale": "Expresia 'Blacheu la toc!' este o expresie colloquiala care se refera la o lovitura puternica sau o lovitur\u0103 pe nas, rezult\u00e2nd \u00een curgerea de s\u00e2nge. Nasocolele este termenul medical care descrie o asemenea situatie, \u0219i anume curgerea s\u00e2ngelui din nas."
+    },
+    {
+        "clue": "Dreapt\u0103 ca lum\u00e2narea",
+        "answer": "FAClIE",
+        "prediction": "DI_RECT\u0102",
+        "rationale": "Expresia 'Dreapt\u0103 ca lum\u00e2narea' este o expresie comun\u0103 \u00een limba rom\u00e2n\u0103 care se refer\u0103 la ceva sau cineva care este perfect drept, adic\u0103 f\u0103r\u0103 abateri sau curbe. Prin urmare, r\u0103spunsul este o cuv\u00e2nt care se potrive\u0219te cu aceast\u0103 imagine: DI_RECT\u0102."
+    },
+    {
+        "clue": "Darul \u00eenceputului de an",
+        "answer": "TORT",
+        "prediction": "CADOU DE ANUL NOU",
+        "rationale": "Darul \u00eenceputului de an se refer\u0103 la un cadou oferit cu ocazia Anului Nou. \u00cen acest context, cel mai probabil raspuns este CADOU DE ANUL NOU, deoarece aceasta este o tradi\u021bie comun\u0103 \u00een multe culturi de a oferi cadouri pentru a marca \u00eenceputul unui an nou."
+    },
+    {
+        "clue": "Lovitur\u0103 din fa\u0163a por\u0163ii",
+        "answer": "CIOc",
+        "prediction": "\u044e\u0449\u0438\u0445",
+        "rationale": "Lovitur\u0103 din fa\u0163a por\u0163ii este un termen folosit \u00een sport, \u00een special \u00een fotbal. O lovitura din fata portii inseamna o lovitura care este efectuata de un jucator din fata portii adverse. \u00cen acest context,arksul potrivit ar fi \".\u015eUT\", deoarece \u015futul este o lovitura comun\u0103 folosit\u0103 de juc\u0103tori pentru a \u00eencerca s\u0103 scoreze."
+    },
+    {
+        "clue": "Schimbare de atitudine",
+        "answer": "PORT",
+        "prediction": "CAPSUIRE",
+        "rationale": "Schimbare de atitudine se refer\u0103 la modificarea unei perspective sau a unei opinii. Cuv\u00e2ntul CAPSUIRE descrie o schimbare brusc\u0103 sau o \u00eentors\u0103tur\u0103 \u00eentr-o situa\u021bie, atitudine sau opinie, ceea ce face ca acesta s\u0103 fie un r\u0103spuns potrivit pentru o schimbare de atitudine."
+    },
+    {
+        "clue": "Tratate de dermatologie (sg.)",
+        "answer": "RAIoASA",
+        "prediction": "BOAL\u0102",
+        "rationale": "Dermatologia se ocup\u0103 cu studiul \u0219i tratarea bolilor de piele. Prin urmare, un termen care face referire la tratate de dermatologie se refer\u0103 la o boal\u0103, \u00een general, sau la o categorie de boli, \u00een acest caz, fiind singurul cuv\u00e2nt care se potrive\u0219te."
+    },
+    {
+        "clue": "Principiu conving\u0103tor",
+        "answer": "CREZ",
+        "prediction": "ARGUMENT",
+        "rationale": "Un principiu conving\u0103tor este o idee sau o teorie care are o baz\u0103 solid\u0103 \u0219i este sus\u021binut\u0103 de dovezi sau ra\u021bionamente logice. \u00cen limba rom\u00e2n\u0103, termenul 'argument' se potrive\u0219te cel mai bine pentru a descrie un astfel de principiu, deoarece el implica prezentarea unor motive sau dovezi conving\u0103toare pentru a sus\u021bine o anumit\u0103 pozi\u021bie sau idee."
+    },
+    {
+        "clue": "Ruj ro\u015fu!",
+        "answer": "Rj",
+        "prediction": "MACAR",
+        "rationale": "Rujul rosu este un produs cosmetic folosit pentru a colora buzele. MACAR este un termen comun folosit pentru a descrie rujul, in special pe cel de culoare rosie."
+    },
+    {
+        "clue": "R\u0103mas \u00een urma r\u0103zboiului",
+        "answer": "LES",
+        "prediction": "V\u0102DUV",
+        "rationale": "R\u0103mas \u00een urma r\u0103zboiului se refer\u0103 la consecin\u021bele unui r\u0103zboi, iar una dintre ele poate fi pierderea unui so\u021b sau a unui membru al familiei. V\u0103duv \u00eenseamn\u0103 a r\u0103mas f\u0103r\u0103 so\u021b, deci este un consecin\u021b\u0103 direct\u0103 a r\u0103zboiului. De\u0219i exist\u0103 \u0219i alte posibile consecin\u021be, V\u0102DUV pare a fi un r\u0103spuns rezonabil."
+    },
+    {
+        "clue": "Unu tras pe roat\u0103!",
+        "answer": "UO",
+        "prediction": "CIFRA",
+        "rationale": "Unu tras pe roat\u0103 se refer\u0103 la cifra 8, care este un 0 sau un cerc cu o linie tras\u0103 prin mijloc, \u0219i arat\u0103 ca un 0 tras pe roat\u0103, adic\u0103 un cerc \u00een care s-a trasat num\u0103r\u0103toarea de pe o roat\u0103, respectiv cifra 8 \u00een forma sa de scris de m\u00e2n\u0103 sau tip\u0103rit\u0103."
+    },
+    {
+        "clue": "Emisiune radiofonic\u0103",
+        "answer": "AUDIo",
+        "prediction": "PROGRAM",
+        "rationale": "O emisiune radiofonica este adesea un program difuzat prin radio, care poate include muzica, dialoguri, interviuri sau alte tipuri de con\u021binut. Termenul \"program\" este utilizat frequent \u00een contextul radiodifuziunii pentru a descrie o transmisiune planificat\u0103."
+    },
+    {
+        "clue": "Depuse la vedere!",
+        "answer": "DE",
+        "prediction": "EXPUSE",
+        "rationale": "Depuse la vedere inseamna expuse sau afisate in mod vizibil, astfel incat sa poata fi vazute usor. EXPUSE este cel mai probabil raspuns deoarece se potriveste cel mai bine contextului acestei expresii."
+    },
+    {
+        "clue": "Belea curat\u0103",
+        "answer": "PAS",
+        "prediction": "NEVAST\u0102",
+        "rationale": "Expresia \"belea curat\u0103\" este un proverb rom\u00e2nesc care se refer\u0103 la o persoan\u0103, de obicei o nevast\u0103, care este considerat\u0103 a fi foarte curat\u0103 \u0219i \u00eengrijit\u0103. \u00cen acest context, termenul \u201ebelea\u201d este folosit pentru a descrie o persoan\u0103 care este extrem de atent\u0103 la cur\u0103\u021benie \u0219i ordine."
+    },
+    {
+        "clue": "In r\u0103sucit pentru funii!",
+        "answer": "NI",
+        "prediction": "\u00ceNCRE\u021aIT",
+        "rationale": "Clue-ul 'In r\u0103sucit pentru funii' sugereaz\u0103 o ac\u021biune de r\u0103sucire sau \u00eencol\u0103cire, care \u00een contextul funiilor se refer\u0103 la ac\u021biunea de a \u00eempleti sau a r\u0103suci firele pentru a forma o funie. \u00cencre\u021bit \u00eenseamn\u0103 a r\u0103suci sau a str\u00e2nge ceva, cum ar fi firele unei funii, pentru a o face mai puternic\u0103 sau mai rezistent\u0103."
+    },
+    {
+        "clue": "Curs\u0103 cu mers accelerat",
+        "answer": "RaID",
+        "prediction": "ALERGARE",
+        "rationale": "Cursa cu mers accelerat se refera la o deplasare rapida, similar cu alergarea. Alergarea implica o miscare rapida a picioarelor, fiind o forma de deplasare accelerata."
+    },
+    {
+        "clue": "Pl\u0103ti\u0163i la lichidare",
+        "answer": "ASASINI",
+        "prediction": "DECONTATI",
+        "rationale": "Expresia 'Pl\u0103ti\u0163i la lichidare' sugereaz\u0103 ac\u021biunea de a pl\u0103ti sau de a compensa anumite datorii, obliga\u021bii financiare la momentul lichid\u0103rii unei afaceri, tranzac\u021bii sau proces. 'Decontat' \u00eenseamn\u0103 a pl\u0103ti sau a compensa o sum\u0103 de bani, astfel 'decontati' este forma corect\u0103 a verbului la participiu trecut, care se potrive\u0219te contextului dat."
+    },
+    {
+        "clue": "Loc... amenajat la ospiciu!",
+        "answer": "IcI",
+        "prediction": "DE DETENTIE",
+        "rationale": "Cuvantul \"ospiciu\" are o conotatie negativa si se refera adesea la un loc de detentie. Prin urmare, locul amenajat la ospiciu este probabil o \"-camera de detentie\" sau un loc similar, dar un sinonim pentru \"camera de detentie\" este \"loc de detentie\". Deci, \"Loc... amenajat la ospiciu\" este probable \"Loc de detentie\"."
+    },
+    {
+        "clue": "Absent la discu\u0163ii",
+        "answer": "TACUT",
+        "prediction": "LIPSA",
+        "rationale": "Absent la discu\u0163ii inseamna ca o persoana nu este prezenta la o discutie sau o intalnire. LIPSA este un termen care descrie aceasta situatie, indicand faptul ca cineva nu este prezent sau nu participa la discutie."
+    },
+    {
+        "clue": "Mul\u0163ime separat\u0103",
+        "answer": "CEATa",
+        "prediction": "INSUL\u0102",
+        "rationale": "O mul\u021bime separat\u0103 poate fi interpretat\u0103 ca o cantitate sau o grupare de ceva care este izolat\u0103 sau separat\u0103 de restul. \u00cen acest context, INSUL\u0102 poate fi v\u0103zut\u0103 ca o por\u021biune de p\u0103m\u00e2nt separat\u0103 de uscatul principal prin ap\u0103, reprezent\u00e2nd o mul\u021bime separat\u0103 \u00eentr-un sens geografic. De asemenea, termenul poate fi aplicat \u00een sens metaforic pentru orice grupare izolat\u0103."
+    },
+    {
+        "clue": "Cu haina pe el \u00een cas\u0103",
+        "answer": "UMERAS",
+        "prediction": "\u00ceNC\u0102LZIT",
+        "rationale": "Cu haina pe el \u00een cas\u0103 sugereaz\u0103 c\u0103 persoana respectiv\u0103 poart\u0103 haine adecvate pentru a se \u021bine cald, deci \u00eenc\u0103lzit. \u00cen acest context, \u00ceNC\u0102LZIT este cel mai probabil r\u0103spuns, deoarece se refer\u0103 la starea de a fi \u00eembr\u0103cat corespunz\u0103tor pentru a men\u021bine o temperatur\u0103 confortabil\u0103 \u00een cas\u0103."
+    },
+    {
+        "clue": "O chestie care te lumineaz\u0103",
+        "answer": "BEC",
+        "prediction": "IDEE",
+        "rationale": "O chestie care te lumineaz\u0103 poate fi interpretat\u0103 ca o idee care \u00ee\u021bi vine \u00een minte \u0219i te ajut\u0103 s\u0103 \u00een\u021belegi sau s\u0103 rezolvi o problem\u0103. \u00cen acest context, IDEE este cel mai probabil r\u0103spuns, deoarece o idee poate s\u0103 te 'lumineze' sau s\u0103 \u00ee\u021bi clarifice mintea."
+    },
+    {
+        "clue": "O noapte lung\u0103 (masc.)",
+        "answer": "POLAR",
+        "prediction": "GERMAN",
+        "rationale": "Clue-ul 'O noapte lung\u0103' poate fi interpretat ca o referire la cuv\u00e2ntul 'noapte' av\u00e2nd o lung\u0103 durat\u0103, dar \u00een contextul cruciogramelor, el se refer\u0103 la faptul c\u0103 cuv\u00e2ntul 'noapte' are o lung\u0103 traducere \u00een limba german\u0103, care este 'Nacht' pentru noapte, dar expresia 'o noapte lung\u0103' este sinonim\u0103 cu expresia 'o noapte' av\u00e2nd o corespondent \u00een limba german\u0103. \u00cens\u0103, \u00een cazul de fa\u021b\u0103, cuv\u00e2ntul 'german' este folosit pentru a reda ideea c\u0103 'noapte' \u00een limba german\u0103 este 'Nacht' \u0219i are o lung\u0103 durat\u0103 ca no\u021biune abstract\u0103, dar se refer\u0103 la o porecl\u0103 sau un termen deosebit, care \u00eentr-adev\u0103r este 'german' deoarece \u00een limba rom\u00e2n\u0103 se spune 'o noapte lung\u0103' \u0219i \u00een limba german\u0103 se traduce prin expresia similar\u0103. \u00cen contextul rom\u00e2nesc, termenul 'german' \u00eenseamn\u0103 a avea o noapte lung\u0103 de durat\u0103 \u00een activitate, ceea ce se refer\u0103 la Mun\u021bii German de l\u00e2ng\u0103 Sibiu sau mai exact anonim 'o noapte lung\u0103' e cunoscut sub numele 'Partidul German' \u0219i 'o noapte' \u00eenseamn\u0103 durata \u00een timp, \u0219i atunci se traduce prin cuv\u00e2ntul 'german'."
+    },
+    {
+        "clue": "Face o introducere vorbind de imagine",
+        "answer": "FOTO",
+        "prediction": "PREZINTA",
+        "rationale": "Clue-ul 'Face o introducere vorbind de imagine' sugereaz\u0103 ac\u021biunea de a prezenta sau a descrie o imagine, astfel \u00eenc\u00e2t persoana care vorbe\u0219te ofer\u0103 o introducere sau o prezentare a respectivei imagini. Deci, 'PREZINTA' este cel mai probabil r\u0103spuns deoarece implic\u0103 actul de a vorbi despre sau a descrie ceva, inclusiv o imagine."
+    },
+    {
+        "clue": "E vremea unei istorii",
+        "answer": "ERA",
+        "prediction": "EPoca",
+        "rationale": "Expresia 'E vremea unei istorii' sugereaz\u0103 o perioad\u0103 sau o er\u0103 specific\u0103 \u00een care se desf\u0103\u0219oar\u0103 o poveste sau o serie de evenimente. Cuv\u00e2ntul 'EPoca' se refer\u0103 la o perioad\u0103 de timp caracterizat\u0103 prin anumite evenimente, mi\u0219c\u0103ri culturale sau fenomene istorice, ceea ce se potrive\u0219te cu contextul 'vremea unei istorii'."
+    },
+    {
+        "clue": "Mioara e dragostea lui",
+        "answer": "CIOBAN",
+        "prediction": "IUBITA",
+        "rationale": "Mioara este un nume feminin, astfel \u00eenc\u00e2t \u201eMioara e dragostea lui\u201d sugereaz\u0103 o rela\u021bie de dragoste sau iubire. Prin urmare, cel mai probabil r\u0103spuns este IUBITA, deoarece aceasta este o persoan\u0103 iubit\u0103 sau dragostea cuiva."
+    },
+    {
+        "clue": "Admiteri grele",
+        "answer": "RABDARI",
+        "prediction": "MARTURISIRI",
+        "rationale": "Admiterea unor gre\u0219eli sau a unor fapte negative poate fi considerat\u0103 o m\u0103rturisire. \u00cen contextul psihologic sau penal, m\u0103rturisirile sunt adesea asociate cu recunoa\u0219terea unor fapte gre\u0219ite sau ilegale, fiind astfel 'grele' din punct de vedere emo\u021bional sau consecin\u021belor juridice."
+    },
+    {
+        "clue": "Puse la saltea!",
+        "answer": "LT",
+        "prediction": "PERNE",
+        "rationale": "Salteaua este un obiect din mobilierul unei camere de dormit, iar pernele sunt puse de obicei pe saltea pentru a o face mai confortabil\u0103. Deci, PERNE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Face s\u0103-\u015fi piard\u0103 culoarea",
+        "answer": "CLOR",
+        "prediction": "DECOLORAZ\u0102",
+        "rationale": "Cuv\u00e2ntul \u201edecoloraz\u0103\u201d \u00eenseamn\u0103 a face ca un obiect sau o substan\u021b\u0103 s\u0103-\u0219i piard\u0103 culoarea, indiferent dac\u0103 este vorba de materiale textile, p\u0103r, sau alte tipuri de suprafe\u021be. Acest termen este cel mai relevant \u0219i precis pentru a descrie ac\u021biunea de a face s\u0103 se piard\u0103 culoarea."
+    },
+    {
+        "clue": "M\u00e2na b\u0103gat\u0103-n foc",
+        "answer": "ARSA",
+        "prediction": "GARANTAT",
+        "rationale": "Expresia 'M\u00e2na b\u0103gat\u0103-n foc' este o metafor\u0103 care \u00eenseamn\u0103 c\u0103 ceva este garantat, sigur sau f\u0103r\u0103 \u00eendoial\u0103. Deci, GARANTAT este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "D\u0103 dovad\u0103 de lips\u0103 a calit\u0103\u0163ii",
+        "answer": "REA",
+        "prediction": "SLABE\u015eTE",
+        "rationale": "D\u0103 dovad\u0103 de lips\u0103 a calit\u0103\u0163ii inseamn\u0103 a ar\u0103ta un nivel sc\u0103zut de performan\u021b\u0103 sau calitate. SLABE\u015eTE este un verb care descrie o ac\u021biune de a sl\u0103bi sau a sc\u0103dea \u00een intensitate sau calitate, ceea ce se potrive\u0219te cu ideea de a da dovad\u0103 de lips\u0103 a calit\u0103\u0163ii."
+    },
+    {
+        "clue": "Vine m\u00e2ine dup\u0103 ea.",
+        "answer": "IERI",
+        "prediction": "POIM\u00c2INE",
+        "rationale": "Expresia 'Vine m\u00e2ine dup\u0103 ea' se refer\u0103 la ordinea zilelor s\u0103pt\u0103m\u00e2nii. 'Poim\u00e2ine' este un adverb care \u00eenseamn\u0103 'azi-noapte' sau 'm\u00e2ine', dar \u00een contextul zilelor s\u0103pt\u0103m\u00e2nii, 'poim\u00e2ine' este ziua care vine dup\u0103 'm\u00e2ine'. Deci, 'poim\u00e2ine' este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "A ac\u0163iona cu deta\u015fare",
+        "answer": "TRANSA",
+        "prediction": "A SE ABB\u0162INE",
+        "rationale": "A ac\u0163iona cu deta\u015fare inseamna a nu lua parte activa la o anumita situa\u021bie sau a nu se implica emotional. Verbul 'a se ab\u021bine' sugereaz\u0103 o atitudine de neutralitate sau de neparticipare, ceea ce se potriveste cu ideea de a ac\u021biona cu deta\u0219are."
+    },
+    {
+        "clue": "Trage datorit\u0103 mu\u015fchilor lui",
+        "answer": "REN",
+        "prediction": " \u00ceNTINDE",
+        "rationale": "Trage datorit\u0103 mu\u015fchilor lui inseamna ca o persoana \u00eentinde sau trage un obiect folosind puterea musculara. \u00ceNTINDE este verbul romanesc care descrie aceasta actiune."
+    },
+    {
+        "clue": "Unu cu covrig \u00een coad\u0103!",
+        "answer": "UO",
+        "prediction": "\u0218ARPE",
+        "rationale": "Expresia 'Unu cu covrig \u00een coad\u0103' este o descriere metaforic\u0103 care se potrive\u0219te cu forma \u0219i aspectul unui \u0219arpe, av\u00e2nd \u00een vedere c\u0103 un covrig are o form\u0103 r\u0103sucit\u0103, similar\u0103 cu mi\u0219carea sinuoas\u0103 a unui \u0219arpe. Prin urmare, \u0218ARPE este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Pus pe fug\u0103",
+        "answer": "ATLET",
+        "prediction": "ALUNGAT",
+        "rationale": "Expresia 'pus pe fug\u0103' sugereaz\u0103 faptul c\u0103 cineva sau ceva a fost determinat s\u0103 plece repede sau s\u0103 se \u00eendep\u0103rteze. 'Alungat' este un verb care se potrive\u0219te bine acestei situa\u021bii, deoarece implic\u0103 ac\u021biunea de a face pe cineva s\u0103 plece sau s\u0103 fug\u0103."
+    },
+    {
+        "clue": "Face semn la obraz",
+        "answer": "RID",
+        "prediction": "SARUTA",
+        "rationale": "A face semn la obraz inseamna a arata dragoste sau afec\u021biune cuiva. Un mod comun de a face acest lucru este prin sarutat, care poate implica atingerea buzelor de obrazul unei persoane."
+    },
+    {
+        "clue": "Meseria lor r\u0103m\u00e2ne... de c\u0103ru\u0163\u0103",
+        "answer": "ROTARI",
+        "prediction": "VII",
+        "rationale": "Se pare a fi o aluzie la o veche expresie din limba rom\u00e2n\u0103, unde 'meseria de c\u0103ru\u021b\u0103' face referire la o meserie mai veche, care folosea c\u0103ru\u021be pentru transport. R\u0103spunsul 'VII' face aluzie la faptul c\u0103 'meseria lor r\u0103m\u00e2ne de c\u0103ru\u021b\u0103', adic\u0103 a r\u0103mas \u00een urm\u0103, nefiind la fel de avansat\u0103 ca \u00een prezent. Cu toate acestea, dup\u0103 o analiz\u0103 mai atent\u0103 \u0219i folosind un limbaj mai vulgar, expresia pare a sugera 'meseria lor r\u0103m\u00e2ne pe c\u0103ru\u021b\u0103', ceea ce \u00eenseamn\u0103 'meseria lor r\u0103m\u00e2ne \u00een urm\u0103' sau nu mai este la mod\u0103. Analiz\u00e2nd contextul mai larg, unii ar putea interpreta expresia ca 'VII' din cauza faptului c\u0103 \u00eenseamn\u0103 literal '\u0219apte', dar \u00een acest caz pare a fi mai mult o aluzie la un joc de cuvinte sau o expresie veche, deci vom alege varianta 'VII' ca timp verbal, adic\u0103 a treia form\u0103 a verbului 'a r\u0103m\u00e2ne'. Unii ar putea spune 'a r\u0103mas' ar fi un verb mai potrivit, dar dup\u0103 analizarea expresiei date pare a fi mai mult despre o 'meserie de c\u0103ru\u021b\u0103', folosit\u0103 \u0219i \u00een sensul de un lucru r\u0103mas \u00een urm\u0103 sau nemai folosit."
+    },
+    {
+        "clue": "Se \u00eencing la hor\u0103",
+        "answer": "ITARI",
+        "prediction": "L\u0102UTARI",
+        "rationale": "Hor\u0103 este un dans tradi\u021bional rom\u00e2nesc, iar l\u0103utarii sunt cei care c\u00e2nt\u0103 la instrumente muzicale, cum ar fi vioara, acordeonul sau \u021bambalul, pentru a \u00eenso\u021bi dansul. De obicei, l\u0103utarii se \u00eencing la hor\u0103, adic\u0103 \u00ee\u0219i \u00eencep spectacolul muzical pentru a anima dansul."
+    },
+    {
+        "clue": "Sub acoperire... face fa\u0163\u0103 agen\u0163ilor",
+        "answer": "CROM",
+        "prediction": "ACOPERIT",
+        "rationale": "Clue-ul 'Sub acoperire... face fa\u0163\u0103 agen\u0163ilor' sugereaz\u0103 o situa\u021bie \u00een care cineva ac\u021bioneaz\u0103 \u00een secret sau sub o identitate fals\u0103 pentru a evita detectarea de c\u0103tre agen\u021bi, probabil din domeniul intelligence sau aplic\u0103rii legii. Termenul 'acoperit' se refer\u0103 la ac\u021biunea de a fi protejat sau ascuns, deci 'ACOPERIT' este cel mai probabil r\u0103spuns, deoarece se potrive\u0219te contextului de a face fa\u021b\u0103 agen\u021bilor sub o identitate protejat\u0103 sau ascuns\u0103."
+    },
+    {
+        "clue": "Lovituri venite de jos \u00een sus",
+        "answer": "UPERCUTURI",
+        "prediction": "PUTE",
+        "rationale": "\u00centr-un context de lupt\u0103 sau sport, lovituri venite de jos \u00een sus pot fi numite pute, care sunt lovituri date cu pumnul sau piciorul de jos \u00een sus. Acest termen este frecvent utilizat \u00een arte mar\u021biale sau box."
+    },
+    {
+        "clue": "Un ansamblu de facult\u0103\u0163i",
+        "answer": "MORAL",
+        "prediction": "UNIVERSITATE",
+        "rationale": "Un ansamblu de facult\u0103\u0163i se refer\u0103 la o institu\u0163ie de \u00eenv\u0103\u0163\u0103m\u00e2nt superior care cuprinde mai multe facult\u0103\u0163i. \u00cen acest context, UNIVERSITATE este cel mai probabil r\u0103spuns, deoarece reprezint\u0103 o institu\u0163ie care include multiple facult\u0103\u0163i, cum ar fi facult\u0103\u0163i de medicin\u0103, inginerie, \u015ftiin\u0163e, arte etc."
+    },
+    {
+        "clue": "Plimbatul cu familia",
+        "answer": "ROIT",
+        "prediction": "TRASEU",
+        "rationale": "Plimbatul cu familia poate implica o excursie sau o drume\u021bie pe un anumit traseu, astfel \u00eenc\u00e2t TRASEU reprezint\u0103 un r\u0103spuns probabil pentru aceast\u0103 activitate."
+    },
+    {
+        "clue": "A lucra la definitivat",
+        "answer": "ELABORA",
+        "prediction": "A PREG\u0102TI",
+        "rationale": "Cuv\u00e2ntul 'definitivat' se refer\u0103 la o perioad\u0103 de preg\u0103tire sau de specializare \u00eentr-un anumit domeniu, de obicei la sf\u00e2r\u0219itul studiilor. Prin urmare, a lucra la definitivat \u00eenseamn\u0103 a preg\u0103ti sau a finaliza aceast\u0103 etap\u0103 de preg\u0103tire."
+    },
+    {
+        "clue": "Nuia!",
+        "answer": "DA",
+        "prediction": "BAT",
+        "rationale": "Nuia inseamna un obiect lung si subtil, adesea folosit pentru a lovi sau a atinge ceva. In acest context, BAT este cel mai probabil raspuns, deoarece poate fi folosit ca un sinonim pentru nuia."
+    },
+    {
+        "clue": "C\u0103rare pe mijloc!",
+        "answer": "RA",
+        "prediction": "DRUM",
+        "rationale": "C\u0103rare pe mijloc sugereaz\u0103 o posibil\u0103 cale sau drum \u00een mijlocul unui spa\u021biu. \u00cen limba rom\u00e2n\u0103, \u201edrum\u201d este un termen comun care se refer\u0103 la o cale sau o rut\u0103, ceea ce face ca DRUM s\u0103 fie un r\u0103spuns plauzibil."
+    },
+    {
+        "clue": "A face o manevra de a c\u00e2\u015ftiga teren",
+        "answer": "DRENA",
+        "prediction": "AVANSAT",
+        "rationale": "A face o manevra de a c\u00e2\u015ftiga teren implica a lua o initiative sau a efectua o actiune care duce la ob\u021binerea unui avantaj sau a unei pozi\u021bii mai bune. AVANSAT poate fi folosit \u00een acest context pentru a descrie actiunea de a face un pas \u00eenainte sau de a c\u00e2\u015ftiga teren \u00eentr-un sens strategic."
+    },
+    {
+        "clue": "Barc\u0103 folosit\u0103 la inunda\u0163ii",
+        "answer": "ARCA",
+        "prediction": "CANC\u0102",
+        "rationale": "\u00cen contextul inunda\u021biilor, barca folosit\u0103 pentru a naviga prin apele \u00eenalte este adesea o canea, care este o barc\u0103 mic\u0103, u\u0219oar\u0103 \u0219i manevrabil\u0103, potrivit\u0103 pentru astfel de situa\u021bii."
+    },
+    {
+        "clue": "Obiectiv de telescop (pl.)",
+        "answer": "ASTRI",
+        "prediction": "OBIECTE CERESTI",
+        "rationale": "Obiectivul unui telescop se refera la fenomenele sau obiectele pe care le studiaz\u0103. \u00cen acest context, obiectivele unui telescop pot include stele, planete, galaxii etc., care pot fi denumite generic 'obiecte ceresti'."
+    },
+    {
+        "clue": "Firav la trup!",
+        "answer": "IRA",
+        "prediction": "SLAB",
+        "rationale": "Firav la trup inseamna ca o persoana are o constitutie fizica slaba, nu prea robusta. Deci, SLAB este cel mai probabil raspuns, deoarece descrie o persoana cu o greutate sau o muscularitate redusa."
+    },
+    {
+        "clue": "O vorb\u0103 \u015foptit\u0103",
+        "answer": "ALO",
+        "prediction": "\u015eOPTITUR\u0102",
+        "rationale": "O vorb\u0103 \u015foptit\u0103 se refer\u0103 la un cuv\u00e2nt sau o fraz\u0103 care este spus\u0103 \u00een \u015foapt\u0103, adic\u0103 \u00een mod confiden\u0163ial sau discret. \u015eOPTITUR\u0102 este un termen care se potrive\u015fte perfect acestei defini\u0163ii, deoarece se refer\u0103 la un cuv\u00e2nt sau o expresie care este spus\u0103 \u00een \u015foapt\u0103."
+    },
+    {
+        "clue": "Umbl\u0103ri de colo p\u00een\u0103 colo",
+        "answer": "FOIRI",
+        "prediction": "H\u0102ITUIAL\u0102",
+        "rationale": "Umbl\u0103ri de colo p\u00een\u0103 colo sugereaz\u0103 o mi\u0219care haotic\u0103 \u0219i lipsit\u0103 de scop, ceea ce se potrive\u0219te cu sensul cuvantului H\u0102ITUIAL\u0102, care descrie o plimbare f\u0103r\u0103 direc\u021bie clar\u0103 sau o umblare \u00eencoace \u0219i \u00eencolo."
+    },
+    {
+        "clue": "Succesiune r\u0103mas\u0103 \u00een pronun\u0163are.",
+        "answer": "ETC",
+        "prediction": "SECVEN\u021a\u0102",
+        "rationale": "Succesiune r\u0103mas\u0103 \u00een pronun\u0163are se refer\u0103 la modul \u00een care se pronun\u021b\u0103 un \u0219ir de sunete sau cuvinte. SECVEN\u021a\u0102 este termenul care descrie aceast\u0103 ordine sau succesiune de elemente \u00eentr-un lan\u021b de vorbire, inclusiv \u00een pronun\u021barea corect\u0103 a sunetelor."
+    },
+    {
+        "clue": "Alunec\u0103 iarna pe z\u0103pad\u0103",
+        "answer": "BOB",
+        "prediction": "PATINEAZA",
+        "rationale": "Alunecarea pe z\u0103pad\u0103 iarna poate fi asociat\u0103 cu activit\u0103\u021bi recreative, cum ar fi patinajul. \u00cen limba rom\u00e2n\u0103, verbul 'a patina' sau 'patineaz\u0103' descrie ac\u021biunea de a aluneca sau de a se deplasa pe ghea\u021b\u0103 sau z\u0103pad\u0103, folosind patine. Prin urmare, PATINEAZA este un r\u0103spuns plauzibil pentru aceast\u0103 activitate."
+    },
+    {
+        "clue": "Numai tras afar\u0103 \u00ee\u015fi arat\u0103 secretele",
+        "answer": "SERTAR",
+        "prediction": "\u015eI\u015eA",
+        "rationale": "\u015ei\u015fa este un obiect care are un con\u0163inut ascuns, care poate fi descoperit numai atunci c\u00e2nd este tras\u0103 sau scoas\u0103 afar\u0103, de exemplu, \u015fi\u015fa unei sticle sau a unui balon. Astfel, \u015eI\u015eA este cel mai probabil r\u0103spuns la aceast\u0103 ghicitoare."
+    },
+    {
+        "clue": "Expunere la mas\u0103",
+        "answer": "ETALARE",
+        "prediction": "ETALARE",
+        "rationale": "Expunerea la masa face referire la modul \u00een care m\u00e2ncarea sau produsele sunt prezentate \u00eentr-un mod atractiv \u0219i organizat. Etalarea este procesul de a aranja \u0219i a expune produsele sau m\u00e2ncarea \u00eentr-un mod care s\u0103 fie atractiv \u0219i s\u0103 atrag\u0103 aten\u021bia cump\u0103r\u0103torilor sau a oaspe\u021bilor."
+    },
+    {
+        "clue": "Imaginea automobilo\u015ftilor \u00een afara \u0163\u0103rii",
+        "answer": "RO",
+        "prediction": "IMAGINE",
+        "rationale": "Clue-ul \"Imaginea automobilo\u015ftilor \u00een afara \u0163\u0103rii\" se refer\u0103 probabil la percep\u021bia sau reprezentarea pe care oamenii din str\u0103in\u0103tate o au despre \u0219oferi. Cu toate acestea, av\u00e2nd \u00een vedere contextul \u0219i forma de exprimare, termenul \"Imagine\" poate fi \u00een\u021beles ca \"reputa\u021bie\" sau percep\u021bia general\u0103. Deci, \"IMAGINE\" ar fi un cuv\u00e2nt care se refer\u0103 la modul \u00een care sunt percepu\u021bi \u0219oferii rom\u00e2ni \u00een afara \u021b\u0103rii."
+    },
+    {
+        "clue": "Are un num\u0103r la banii t\u0103i din banc\u0103",
+        "answer": "CONT",
+        "prediction": "IBAN",
+        "rationale": "Un IBAN (Cod de Identificare a Contului Bancar) este un cod unic care identific\u0103 un cont bancar \u0219i permite efectuarea de tranzac\u021bii financiare. Acesta include un num\u0103r care este asociat contului dumneavoastr\u0103 de banc\u0103."
+    },
+    {
+        "clue": "Ne vine aproape bine",
+        "answer": "INTIM",
+        "prediction": "PLACE",
+        "rationale": "Expresia 'Ne vine aproape bine' poate fi interpretata ca o fraza care descrie o situatie sau un lucru care ni se potriveste, care este pe placul nostru. In acest context, 'place' are sensul de a fi pe placul cuiva, a fi apreciat. Deci, PLACE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Aflat\u0103 la cap\u0103tul lumii",
+        "answer": "APOCALIPSA",
+        "prediction": "AUSTRALIA",
+        "rationale": "Expresia 'aflat\u0103 la cap\u0103tul lumii' sugereaz\u0103 o loca\u021bie foarte \u00eendep\u0103rtat\u0103. Australia este un continent \u0219i o \u021bar\u0103 situat\u0103 \u00een emisfera sudic\u0103, ceea ce o face s\u0103 fie uneori perceput\u0103 ca fiind 'la cap\u0103tul lumii' datorit\u0103 pozi\u021bion\u0103rii sale geografice unice \u0219i a distan\u021bei fa\u021b\u0103 de alte continente. De asemenea, expresia poate fi metaforic\u0103, dar \u00een contextul geografic, Australia este un r\u0103spuns plauzibil."
+    },
+    {
+        "clue": "O patim\u0103 arz\u0103toare",
+        "answer": "FUMAT",
+        "prediction": "PATIMA",
+        "rationale": "Termenul 'patim\u0103' se refer\u0103 \u00een general la o emo\u021bie puternic\u0103 sau la o dorin\u021b\u0103 intens\u0103. C\u00e2nd este descris\u0103 ca 'arz\u0103toare', aceast\u0103 patim\u0103 sugeraz\u0103 o pasiune profund\u0103 sau o obsesie. \u00cen contextul psihologic \u0219i filozofic, o 'patim\u0103' poate fi \u00eens\u0103\u0219i defini\u021bia unei astfel de st\u0103ri suflete\u0219ti. Cu toate acestea, av\u00e2nd \u00een vedere contextul \u0219i expresia 'arz\u0103toare', un alt termen care ar putea fi relevant \u0219i care ar face leg\u0103tura direct\u0103 cu 'o patim\u0103 arz\u0103toare' ar fi 'pasiune'. \u00cens\u0103, din perspectiva limbii rom\u00e2ne \u0219i a nuan\u021belor Sale, 'patim\u0103' acoper\u0103 mai bine o gam\u0103 larg\u0103 de emo\u021bii \u0219i st\u0103ri intense, inclusiv pasiunea, iubirea, gelozia, etc. Prin urmare, 'patim\u0103' r\u0103m\u00e2ne un r\u0103spuns plauzibil, de\u0219i, \u00een contexte specifice, 'pasiune' ar fi o alternativ\u0103 valabil\u0103."
+    },
+    {
+        "clue": "Expus la vedere",
+        "answer": "MIOP",
+        "prediction": "VEZIBIL",
+        "rationale": "Expus la vedere inseamna ca ceva este clar vizibil sau poate fi vazut usor. VEZIBIL este cel mai probabil raspuns deoarece descrie perfect starea de a fi expus la vedere, fiind un termen care se refera direct la vizibilitate."
+    },
+    {
+        "clue": "Ecoul unuia suspendat \u00een timpul jocului",
+        "answer": "UTA",
+        "prediction": "TIMPUL",
+        "rationale": "Ecoul unuia suspendat \u00een timpul jocului se refer\u0103 probabil la o situa\u021bie \u00een care un juc\u0103tor este suspendat sau temporal oprit din a juca, astfel \u00eenc\u00e2t acest 'ecou' ar putea fi interpretat ca o referire la momentul sau perioada \u00een care aceast\u0103 suspendare are loc. Cu toate acestea, o interpretare mai subtil\u0103 ar sugera c\u0103 'ecoul' ar putea fi un cuv\u00e2nt care sun\u0103 asem\u0103n\u0103tor cu 'unul suspendat', \u0219i \u00een acest context, 'TIMPUL' nu pare a fi un r\u0103spuns direct. O analiz\u0103 mai profund\u0103 a contextului 'suspendat \u00een timpul jocului' sugereaz\u0103 c\u0103 r\u0103spunsul ar putea fi legat de sunete sau cuvinte care apar \u00een jocuri, ca de exemplu 'timeout' \u00een englez\u0103, care se traduce prin 'timp' \u00een roman\u0103. Astfel, consider\u00e2nd toate posibilit\u0103\u021bile, un r\u0103spuns mai probabil ar fi un cuv\u00e2nt care se refer\u0103 la o pauz\u0103 \u00een timpul unui joc, \u0219i \u00eentr-un context mai abstract, 'ecoul' ar putea fi interpretat ca o referin\u021b\u0103 la 'timpul' \u00een sine, mai degrab\u0103 dec\u00e2t la o reflectare auditiv\u0103. Deci, 'TIMPUL' pare a fi un r\u0103spuns rezonabil, de\u0219i este nevoie de o interpretare creativ\u0103 a cliului dat."
+    },
+    {
+        "clue": "Prins\u0103 \u00een urm\u0103rire",
+        "answer": "ATENTA",
+        "prediction": "URM\u0102RIT\u0102",
+        "rationale": "Prins\u0103 \u00een urm\u0103rire sugereaz\u0103 ideea de a fi urm\u0103rit\u0103 sau persecutat\u0103, deci URM\u0102RIT\u0102 este cel mai probabil raspuns. Acest cuv\u00e2nt corespunde contextului dat de enunt."
+    },
+    {
+        "clue": "Re\u0163inut cu ni\u015fte probleme",
+        "answer": "RETICENT",
+        "prediction": "BLOCAT",
+        "rationale": "Cuv\u00e2ntul 're\u0163inut' din aceast\u0103 expresie sugereaz\u0103 ideea de a fi oprit sau limitat de ceva. \u00cen contextul unei persoane care se confrunt\u0103 cu ni\u0219te probleme, 're\u0163inut' poate \u00eensemna c\u0103 persoana este \u00eempiedicat\u0103 s\u0103 progreseze sau s\u0103 continue din cauza acestor probleme. 'BLOCAT' este un termen care descrie aceast\u0103 situa\u021bie, suger\u00e2nd c\u0103 persoana este oprit\u0103 sau \u00eempiedicat\u0103 de problemele respective."
+    },
+    {
+        "clue": "Alifie bun\u0103... la transpira\u0163ie!",
+        "answer": "IR",
+        "prediction": "BOROXA",
+        "rationale": "Alifie bun\u0103... la transpira\u0163ie sugereaz\u0103 o substan\u021b\u0103 care ajut\u0103 la protejarea pielii \u00eempotriva irita\u021biilor cauzate de transpira\u021bie. Boroxa este un produs cunoscut pentru propriet\u0103\u021bile sale de protec\u021bie \u0219i \u00eengrijire a pielii, fiind adesea utilizat \u00een situa\u021bii \u00een care pielea este expus\u0103 la fric\u021biune sau transpira\u021bie sporit\u0103."
+    },
+    {
+        "clue": "\u00cenchis\u0103 u\u015for la buton",
+        "answer": "MANSETA",
+        "prediction": "\u00ceNCHEIAT\u0102",
+        "rationale": "\u00cenchis\u0103 u\u015for la buton sugereaz\u0103 o ac\u021biune de a \u00eenchide ceva, \u00een special o hain\u0103 sau o pies\u0103 de \u00eembr\u0103c\u0103minte, printr-un sistem de \u00eenchidere simplu, cum ar fi un buton. \u00ceNCHEIAT\u0102 este cel mai probabil r\u0103spuns deoarece descrie starea unui obiect care a fost \u00eenchis prin acest sistem."
+    },
+    {
+        "clue": "Fire de oameni la b\u0103tr\u00e2ne\u0163e",
+        "answer": "SIVE",
+        "prediction": "ALBIREA",
+        "rationale": "Fire de oameni la b\u0103tr\u00e2ne\u0163e face referire la schimb\u0103rile fizice care apar odat\u0103 cu \u00eemb\u0103tr\u00e2nirea. Albirea p\u0103rului este unul dintre semnele cele mai comune ale b\u0103tr\u00e2ne\u021bii."
+    },
+    {
+        "clue": "\u00cemp\u0103r\u0163itul teritoriului pe regiuni",
+        "answer": "TINUT",
+        "prediction": "DELIMITAREA",
+        "rationale": "\u00cemp\u0103r\u0163itul teritoriului pe regiuni se refer\u0103 la procesul de definire \u0219i separare a zonelor geografice distincte. Delimitarea este termenul care descrie cel mai bine aceast\u0103 activitate, deoarece implic\u0103 stabilirea limitelor \u0219i frontierelor \u00eentre regiuni."
+    },
+    {
+        "clue": "Lucr\u0103tor \u00eentr-o cas\u0103 de mod\u0103 veche",
+        "answer": "ARGAT",
+        "prediction": "CROITOR",
+        "rationale": "Un lucr\u0103tor \u00eentr-o cas\u0103 de mod\u0103 veche se refer\u0103 probabil la o persoan\u0103 care lucreaz\u0103 \u00een domeniul confec\u021bion\u0103rii \u00eembr\u0103c\u0103mintei. CROITOR este un termen care descrie o persoan\u0103 care taie \u0219i coase \u021bes\u0103turi pentru a crea haine, ceea ce se potrive\u0219te CONTEXTULUI unei case de mod\u0103 veche."
+    },
+    {
+        "clue": "\u00censemnul \u0163\u0103rii... pe un protest european!",
+        "answer": "RO",
+        "prediction": "DRAPEL",
+        "rationale": "\u00censemnul unei \u021b\u0103ri este adesea reprezentat prin drapelul s\u0103u na\u021bional. \u00cen contextul unui protest european, este posibil ca drapelul s\u0103 fie arborat sau afi\u0219at ca simbol al identit\u0103\u021bii \u0219i suveranit\u0103\u021bii na\u021bionale."
+    },
+    {
+        "clue": "Albii din zona polar\u0103",
+        "answer": "NINSI",
+        "prediction": "URSII POLARI",
+        "rationale": "Albii din zona polar\u0103 se refer\u0103 la culoarea alb\u0103 a unor animale care tr\u0103iesc \u00een regiunile polare. Ursii polari sunt cunoscu\u021bi pentru blana lor alb\u0103, care le ajut\u0103 s\u0103 se camufleze \u00een z\u0103pada \u0219i ghe\u021burile din zona polar\u0103."
+    },
+    {
+        "clue": "Mitic\u0103 pe valuri",
+        "answer": "ARCA",
+        "prediction": "NALUCA",
+        "rationale": "NALUCA este un termen mitic care se refer\u0103 la o creatur\u0103 legendar\u0103 asociat\u0103 cu marea \u0219i valurile. De obicei, este descris\u0103 ca o femeie frumoas\u0103, care \u00ee\u0219i petrece via\u021ba pe valuri, asemenea sirenelor din mitologia greac\u0103. Deci, NALUCA este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Pofte\u015fte... dup\u0103 unii",
+        "answer": "IA",
+        "prediction": "L\u0102COMIE\u015eTE",
+        "rationale": "Expresia 'Pofte\u015fte... dup\u0103 unii' sugereaz\u0103 dorin\u021ba sau pofta cuiva de a face ceva, \u00een special de a m\u00e2nca. L\u0103comie\u0219te este un verb care exprim\u0103 ac\u021biunea de a pofi sau a avea poft\u0103 de ceva, ceea ce face ca acesta s\u0103 fie un r\u0103spuns potrivit pentru aceast\u0103 ghicitoare."
+    },
+    {
+        "clue": "A monta fitile",
+        "answer": "IRITA",
+        "prediction": "Aprinde",
+        "rationale": "A monta fitile inseamna a le fixa sau a le pune la locul potrivit pentru a putea fi aprinse. Cu toate acestea, in contextul utilizarii fitilelor, verbul 'a monta' poate fi interpretat ca 'a pregati pentru a arde' sau 'a aprinde'. Deci, un sinonim al 'a monta fitile' ar fi 'a aprinde', sau 'a pune fitilul la$MESSAJ'. Cuvantul 'aprinde' are sensul de a face sa ard\u0103, sau a da drumul la ardere."
+    },
+    {
+        "clue": "Rodul concep\u0163iei la maturitate",
+        "answer": "IDEE",
+        "prediction": "ROD",
+        "rationale": "Concep\u0163ia se refer\u0103 la ideea sau planul ini\u021bial, iar rodul concep\u0163iei la maturitate se refer\u0103 la rezultatul final al unei idei sau plan, adic\u0103 la rodul sau rezultatul matur. \u00cen acest context, ROD este cel mai probabil r\u0103spuns, deoarece se refer\u0103 la rezultatul final al unui proces de dezvoltare sau maturare."
+    },
+    {
+        "clue": "\u0162inute la piept pentru siguran\u0163\u0103",
+        "answer": "VESTE",
+        "prediction": "BARETE",
+        "rationale": "Baretele sunt accesorii utilizate pentru a prinde sau a fixa diferite obiecte, inclusiv la piept, pentru a le mentine in pozitia corecta sau pentru a le proteja. In acest context, baretele pot fi utilizate pentru a tine obiecte la piept pentru siguran\u0163\u0103, de exemplu, un portofel sau un obiect de valoare."
+    },
+    {
+        "clue": "Pedepse aplicate de p\u0103rin\u0163i",
+        "answer": "AFURISENII",
+        "prediction": "OPRELI\u015eTI",
+        "rationale": "Opri\u0219ti sunt pedepse sau corec\u021bii aplicate de p\u0103rin\u021bi copiilor lor pentru a-i disciplina sau a-i \u00eenv\u0103\u021ba s\u0103 se comporte corect. Termenul este comun \u00een limba rom\u00e2n\u0103 \u0219i se refer\u0103 \u00een special la m\u0103suri educative luate de p\u0103rin\u021bi pentru a corecta comportamentul copiilor."
+    },
+    {
+        "clue": "For\u0163ele de munc\u0103",
+        "answer": "PUTERI",
+        "prediction": "MUNCITORI",
+        "rationale": "For\u0163ele de munc\u0103 reprezint\u0103 ansamblul persoanelor care desf\u0103\u0219oar\u0103 o activitate profesional\u0103 sau un grup de oameni care lucreaz\u0103 \u00eentr-un anumit domeniu. Prin urmare, termenul cel mai adecvat pentru a descrie for\u0163ele de munc\u0103 este 'MUNCITORI'."
+    },
+    {
+        "clue": "O groaz\u0103 de p\u0103c\u0103to\u015fi",
+        "answer": "IAD",
+        "prediction": "IAD",
+        "rationale": "Expresia 'o groaz\u0103 de p\u0103c\u0103to\u015fi' sugereaz\u0103 un loc unde se afl\u0103 o mul\u021bime de oameni r\u0103i sau p\u0103c\u0103to\u0219i. \u00cen acest context, IADul este un loc mitologic asociat cu pedepsirea p\u0103c\u0103to\u0219ilor, fiind un r\u0103spuns plauzibil pentru aceast\u0103 expresie."
+    },
+    {
+        "clue": "P\u0103tur\u0103 alb\u0103 cu puf",
+        "answer": "OMAT",
+        "prediction": "PLAPUMA",
+        "rationale": "O plapum\u0103 este o p\u0103tur\u0103 umplut\u0103 cu puf, folosit\u0103 pentru a se \u00eenc\u0103lzi \u00een timpul somnului sau pentru a se acoperi pe canapea. Este un obiect casnic comun, ceea ce face ca PLAPUMA s\u0103 fie cel mai probabil r\u0103spuns la aceast\u0103 defini\u021bie."
+    },
+    {
+        "clue": "Lipsit de temei",
+        "answer": "VAN",
+        "prediction": "NE\u00eeNTemeiat",
+        "rationale": "Lipsit de temei inseamna ca ceva nu are o baza solida sau o justificare valabila. In limba romana, cuvantul NE\u00eeNTemeiat exprima aceasta idee, descriind o situatie sau o decizie care nu are o motivatie clara sau o justificare rationala."
+    },
+    {
+        "clue": "Piele de capr\u0103 dus\u0103 la t\u0103b\u0103car!",
+        "answer": "CA",
+        "prediction": "BLAN\u0102",
+        "rationale": "Pielea de capr\u0103 dus\u0103 la t\u0103b\u0103car \u00eenseamn\u0103 c\u0103 a fost prelucrat\u0103 pentru a deveni o blan\u0103. T\u0103b\u0103carul este un profesionist care se ocup\u0103 cu prelucrarea \u0219i finisarea pieilor brute pentru a le transforma \u00een piei sau bl\u0103nuri folositoare."
+    },
+    {
+        "clue": "Rezultatul s\u0103riturii de la trambulin\u0103",
+        "answer": "IMERSIE",
+        "prediction": "\u00ceN\u0102L\u0162ARE",
+        "rationale": "S\u0103ritura de la trambulin\u0103 implic\u0103 o mi\u0219care brusc\u0103 \u0219i o cre\u0219tere a \u00een\u0103l\u021bimii. Deci, rezultatul s\u0103riturii de la trambulin\u0103 este o \u00een\u0103l\u021bare \u00een aer."
+    },
+    {
+        "clue": "A cere o reexaminare",
+        "answer": "ATACA",
+        "prediction": "ATACA",
+        "rationale": "A cere o reexaminare poate implica contestarea unei decizii sau a unei situatii. In acest context, verbul 'a ataca' poate semnifica a contesta sau a solicita o reevaluare, deci ATACA este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Eliberat pe cau\u0163iune",
+        "answer": "GIR",
+        "prediction": "LIBERAT",
+        "rationale": "Eliberat pe cau\u0163iune inseamna ca o persoana a fost eliberata din arest sau detentie, dupa ce a platit o cau\u0163iune. LIBERAT este un termen care se potriveste contextului juridic si descrie starea unei persoane care a fost eliberata din detentie."
+    },
+    {
+        "clue": "A b\u0103ga \u00een ispit\u0103",
+        "answer": "TENTA",
+        "prediction": "\u00ceNCURCA",
+        "rationale": "A b\u0103ga \u00een ispit\u0103 \u00eenseamn\u0103 a \u00eencerca pe cineva s\u0103 fac\u0103 ceva r\u0103u sau gre\u0219it, a-i provoca tenta\u021bia. \u00ceNCURCA poate fi un verb care se potrive\u0219te acestei defini\u021bii, deoarece \u00eenseamn\u0103 a pune pe cineva \u00eentr-o situa\u021bie dificil\u0103 sau a-i crea o tenta\u021bie."
+    },
+    {
+        "clue": "Centru privat!",
+        "answer": "IV",
+        "prediction": "ACAS\u0102",
+        "rationale": "Centru privat se refer\u0103 la un loc \u00een care o persoan\u0103 se simte \u00een siguran\u021b\u0103 \u0219i confortabil, fiind protejat de exterior. \u00cen acest context, ACAS\u0102 este cel mai probabil r\u0103spuns, deoarece reprezint\u0103 spa\u021biul privat \u0219i personal al unei persoane."
+    },
+    {
+        "clue": "Marea cea mare",
+        "answer": "IMENSITATE",
+        "prediction": "OCEANUL",
+        "rationale": "Marea cea mare este o expresie folosita pentru a descrie o mare foarte mare sau un ocean. In acest context, OCEANUL este cel mai probabil raspuns, deoarece este un termen generic care se refera la o masa mare de apa sarata."
+    },
+    {
+        "clue": "Accelerator la hipodrom",
+        "answer": "PINTEN",
+        "prediction": "CAL",
+        "rationale": "La hipodrom, acceleratorul inseamna de fapt un mijloc de a creste viteza. In contextul cursele de cai, CALUL este participantul principal si Cel care poate fi accelerat sau incitat sa ruleze mai repede."
+    },
+    {
+        "clue": "F\u0103cut cu ochiul",
+        "answer": "RAS",
+        "prediction": "F\u0102T\u00cdS",
+        "rationale": "Expresia 'f\u0103cut cu ochiul' inseamna a face un semn sau un gest cu ochiul, adesea pentru a transmite un mesaj sau pentru a face o aluzie. F\u0102T\u00cdS este un verb care descrie exact aceast\u0103 ac\u021biune."
+    },
+    {
+        "clue": "Ales \u00een cadrul partidelor",
+        "answer": "SOT",
+        "prediction": "DELEGAT",
+        "rationale": "\u00cen contextul partidelor politice, termenul 'ales' se refer\u0103 de obicei la procesul de selectare a reprezentan\u021bilor. Delegatul este persoana aleas\u0103 pentru a reprezenta interesele sau opiniile unui grup sau ale unui partid, deci DELEGAT este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Cel ce ofer\u0103 ciubuc",
+        "answer": "TURC",
+        "prediction": "TUTUNGER",
+        "rationale": "Ciubucul este un obiect folosit pentru a fuma tutun. Persoana care ofer\u0103 ciubuc este probabil cel care vinde sau ofer\u0103 tutun, iar \u00een acest context, tutunger este cuv\u00e2ntul care se potrive\u0219te cel mai bine, deoarece tutungerul este persoana care vinde tutun sau produse din tutun."
+    },
+    {
+        "clue": "Autoritatea tutelar\u0103",
+        "answer": "APARATOARE",
+        "prediction": "TUTELA",
+        "rationale": "Tutela este un concept care se refer\u0103 la autoritatea sau \u00eengrijirea exercitat\u0103 de o persoan\u0103 sau o institu\u021bie asupra unei alte persoane, de obicei un minor, care nu are capacitatea de a se \u00eengriji pe sine. Prin urmare, termenul roman 'TUTELA' este cel mai potrivit pentru a descrie conceptul de 'autoritate tutelar\u0103'."
+    },
+    {
+        "clue": "Mas\u0103 inconsistent\u0103",
+        "answer": "BIRUIT",
+        "prediction": "TOTUL",
+        "rationale": "Masa inconsistent\u0103 se refer\u0103 la o cantitate sau o sum\u0103 care nu are o m\u0103rime precis\u0103 sau o compozi\u021bie omogen\u0103, put\u00e2nd fi interpretat\u0103 ca \u201etotul\u201d \u00eentr-un sens mai larg."
+    },
+    {
+        "clue": "Pies\u0103 mutat\u0103 \u00een deschidere",
+        "answer": "ALBA",
+        "prediction": "PEDON",
+        "rationale": "\u00cen jocul de \u0219ah, pedonul este piesa care se mut\u0103 \u00een deschidere, adic\u0103 la \u00eenceputul jocului. Pedonii sunt primele piese mutate pentru a deschide calea celorlalte piese mai puternice."
+    },
+    {
+        "clue": "Salvarea... calicilor",
+        "answer": "COLAC",
+        "prediction": "SOC",
+        "rationale": "Expresia 'a salva calicilor' este o expresie proverbial\u0103 care se refer\u0103 la a evita o situa\u021bie dificil\u0103 sau periculoas\u0103. \u00cen acest context, 'a salva' \u00eenseamn\u0103 a evita, \u0219i 'calicilor' se refer\u0103 la oameni nesocoti\u021bi sau lene\u0219i care ar putea fi \u00een pericol. Prin urmare, 'SOC' este un cuv\u00e2nt care se potrive\u0219te \u00een acest context, deoarece poate fi folosit \u00een expresia 'a da soc' sau 'a lua soc', ceea ce \u00eenseamn\u0103 a evita ceva, a se feri de ceva, sau a g\u0103si o solu\u021bie pentru a evita o problem\u0103."
+    },
+    {
+        "clue": "Adus la cuno\u0219tin\u021b\u0103",
+        "answer": "STIUT",
+        "prediction": "INFORMAT",
+        "rationale": "Adus la cuno\u0219tin\u021b\u0103 inseamn\u0103 a fi anun\u021bat sau a avea cuno\u0219tin\u021b\u0103 despre ceva. \u00cen acest context, termenul INFORMAT este cel mai potrivit, deoarece se refer\u0103 la faptul de a primi sau de a furniza informa\u021bii despre un anumit subiect."
+    },
+    {
+        "clue": "Trec\u0103toare pentru oameni adul\u021bi",
+        "answer": "ADOLESCENTA",
+        "prediction": "V\u00c2RST\u0102",
+        "rationale": "Trec\u0103toare pentru oameni adul\u021bi se refer\u0103 la faptul c\u0103 perioada de adult\u021bin\u021b\u0103 este una trec\u0103toare, adic\u0103 are un \u00eenceput \u0219i un sf\u00e2r\u0219it. Prin urmare, vocalistul sau cuv\u00e2ntul care se potriveste cel mai bine acestui sens ar fi V\u00c2RST\u0102, care descrie perioada sau etapa vie\u021bii."
+    },
+    {
+        "clue": "\u021ainuturi vestice!",
+        "answer": "TI",
+        "prediction": "VEDENII",
+        "rationale": "Clue-ul '\u021ainuturi vestice!' pare a se refere la regiuni geografice. Vedenii pot fi interpretate ca \u021binuturi sau regiuni, \u0219i \u00een acest context, 'vestice' sugereaz\u0103 regiuni din vest. \u00cens\u0103, av\u00e2nd \u00een vedere tonul exclamativ \u0219i contextul, o interpretare mai probabil\u0103 ar fi o referire la 'Vedeania' sau '\u021binuturile vechilor vase', dar \u00eentr-un limbaj mai popular \u0219i uzual, oamenii ar putea spune 'Vedenii' ca o prescurtare pentru \u021binuturile vestice ale \u021b\u0103rii noastre, unde se afl\u0103 jude\u021bele din vestul Rom\u00e2niei."
+    },
+    {
+        "clue": "Trimis pe tu\u0219e!",
+        "answer": "TS",
+        "prediction": "AFURISIT",
+        "rationale": "Cuv\u00e2ntul 'tu\u0219e' din expresia 'trimis pe tu\u0219e' sugereaz\u0103 o expulzare sau alungare brusc\u0103, fiind o expresie colocvial\u0103 care se refer\u0103 la a-l trimite pe cineva \u00eentr-un loc nepl\u0103cut sau la a-l alunga. 'Afurisit' este un cuv\u00e2nt care exprim\u0103 o astfel de alungare sau condamnare, fiind o variant\u0103 posibil\u0103 pentru a descrie ac\u021biunea de a trimite pe cineva undeva \u00een mod abrupt sau cu m\u00e2nie."
+    },
+    {
+        "clue": "Intrate \u00een hor\u0103!",
+        "answer": "OR",
+        "prediction": "PRINS",
+        "rationale": "Intrate \u00een hor\u0103! sugereaz\u0103 o ac\u021biune de a \u00eencepe sau a se al\u0103tura unei hor\u0103, care este un dans tradi\u021bional rom\u00e2nesc. Verbul 'a prinde' \u00een acest context se refer\u0103 la a \u00eencepe sau a se al\u0103tura unei activit\u0103\u021bi, deci 'prins' este cel mai probabil r\u0103spuns, suger\u00e2nd persoanele care au \u00eenceput s\u0103 danseze hor\u0103."
+    },
+    {
+        "clue": "Categoria pan\u0103",
+        "answer": "IC",
+        "prediction": "SPECIE",
+        "rationale": "Categoria pan\u0103 se refer\u0103 la o grup\u0103 sau clas\u0103 de p\u0103s\u0103ri, astfel \u00eenc\u00e2t SPECIE este cel mai probabil r\u0103spuns. \u00cen biologie, termenul de specie desemneaz\u0103 o unitate de clasificare pentru organismele vii, iar p\u0103s\u0103rile sunt adesea clasificate \u00een diferite specii."
+    },
+    {
+        "clue": "Te servesc \u00een orice fel",
+        "answer": "OSPATARITE",
+        "prediction": "LA DISPOZITIE",
+        "rationale": "Expresia 'Te servesc \u00een orice fel' sugereaz\u0103 disponibilitatea de a ajuta sau de a face ceva pentru cineva, oricare ar fi nevoia. 'La dispozi\u021bie' este o expresie care \u00eenseamn\u0103 a fi gata s\u0103 ofere asisten\u021b\u0103 sau servicii, ceea ce se potrive\u0219te cu sensul dat de clue."
+    },
+    {
+        "clue": "Sunt pe cale... de schimbare",
+        "answer": "ACE",
+        "prediction": "EVOLUEZ",
+        "rationale": "Expressia 'Sunt pe cale...' sugereaza o schimbare in desfasurare sau o evolutie. Verbul 'evoluez' inseamna a suferi o schimbare, a te schimba, a(te) transforma, deci este cel mai probabil raspuns."
+    },
+    {
+        "clue": "\u00cempungeri frontale",
+        "answer": "ACUZE",
+        "prediction": "ATACURi",
+        "rationale": "\u00cempungeri frontale se refer\u0103 la o ac\u021biune de atac sau ofensiv\u0103 direct\u0103 \u0219i agresiv\u0103, astfel 'atacuri' este cel mai probabil r\u0103spuns deoarece define\u0219te o serie de \u00eempungeri sau atacuri frontale \u00een context militar, sportiv sau \u00een orice alt context care implic\u0103 confrunt\u0103ri directe."
+    },
+    {
+        "clue": "Iese la b\u0103taie",
+        "answer": "LASA",
+        "prediction": "SE CONTRAZICE",
+        "rationale": "Iese la b\u0103taie poate avea multiple sensuri, dar in contextul unei discu\u021bii sau al unui conflict, a ie\u0219i la b\u0103taie \u00eenseamn\u0103 de obicei a intra \u00eentr-o disput\u0103 sau a se contrazice cu cineva. Deci, SE CONTRAZICE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Culori din epoca bronzului",
+        "answer": "ARAMII",
+        "prediction": "OCRU, VERDE, MARO",
+        "rationale": "In epoca bronzului, oamenii nu aveau acces la o gama larga de culori ca cei de astazi. Culorile disponibile erau in principal cele naturale, cum ar fi ocrul, verdele si maroul, care se regasau in mediul inconjurator sau puteau fi obtinute din anumite minerale sau plante. Prin urmare, aceste culori sunt mai probabil sa fie asociate cu epoca bronzului."
+    },
+    {
+        "clue": "Tip... imobil",
+        "answer": "CLADIRE",
+        "prediction": "CAS\u0102",
+        "rationale": "Termenul 'imobil' se refer\u0103 la o proprietate nefinalizat\u0103 sau un bun care nu poate fi mutat. \u00cen contextul dat, 'tip... imobil' sugereaz\u0103 un tip de proprietate imobiliar\u0103, iar 'cas\u0103' este un tip comun de imobil."
+    },
+    {
+        "clue": "D\u0103 contur p\u0103m\u00e2ntului",
+        "answer": "APA",
+        "prediction": "RELIEFUL",
+        "rationale": "Relieful reprezint\u0103 totalitatea formelor de \u00eentindere \u0219i \u00een\u0103l\u021bime ale suprafe\u021bei P\u0103m\u00e2ntului. Prin urmare, relieful este cel care d\u0103 contur p\u0103m\u00e2ntului, fiind o reprezentare a variatelor sale forme \u0219i structuri geografice."
+    },
+    {
+        "clue": "Trup de gazel\u0103!",
+        "answer": "ZE",
+        "prediction": "CORP",
+        "rationale": "Cuvantul 'trup' este un sinonim pentru 'corp', care se refera la partea principal\u0103 a unui animal, inclusiv a unei gazele. De asemenea, gazela este un animal, deci trupul ei se refera la corpul acesteia."
+    },
+    {
+        "clue": "Datul \u00een c\u0103r\u021bi",
+        "answer": "EROU",
+        "prediction": "GHICIT",
+        "rationale": "Datul \u00een c\u0103r\u021bi se refer\u0103 la capacitatea de a ghici sau prevedea evenimente viitoare. \u00cen acest context, GHICIT este cel mai probabil r\u0103spuns, deoarece serefer\u0103 la actul de a face previziuni sau presupuneri despre viitor."
+    },
+    {
+        "clue": "Coapt\u0103 \u00een \u021best",
+        "answer": "ARGILA",
+        "prediction": "P\u00c2INE",
+        "rationale": "Cuv\u00e2ntul 'coapt\u0103' sugereaz\u0103 procesul de g\u0103tire a alimentelor, \u00een special a celor care necesit\u0103 expunere la c\u0103ldur\u0103. \u00cen contextul cuv\u00e2ntului '\u021best', care este un vas de lut sau de metal folosit pentru coacere, Portughez\u0103 nu este relevant\u0103, iar '\u021best' este folosit \u00een principal pentru a coace p\u00e2ine. Deci, 'P\u00c2INE' este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Unit\u0103\u021bi de produc\u021bie",
+        "answer": "ARI",
+        "prediction": "ATALE",
+        "rationale": "Unit\u0103\u021bile de produc\u021bie se refer\u0103 la cantitatea sau volumul de bunuri sau servicii produse. \u00cen acest context, ATALE reprezint\u0103 o unitate de m\u0103sur\u0103, mai exact o unitate de produc\u021bie sau o cantitate standardizat\u0103 de produse."
+    },
+    {
+        "clue": "P\u0103m\u00e2ntul din vatr\u0103",
+        "answer": "CLIN",
+        "prediction": "CENU\u015e\u0102",
+        "rationale": "P\u0103m\u00e2ntul din vatr\u0103 se refer\u0103 la resturile arse care r\u0103m\u00e2n \u00een urma unui foc, adic\u0103 cenu\u0219a. Deci, CENU\u015e\u0102 este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Nisipul c\u0103lcat de pa\u0219i",
+        "answer": "EMIRAT",
+        "prediction": "URM\u0102",
+        "rationale": "Nisipul c\u0103lcat de pa\u0219i se refer\u0103 la urmele l\u0103sate de pa\u0219i pe nisip. Deci, cel mai probabil r\u0103spuns este URM\u0102, care \u00eenseamn\u0103 urm\u0103 sau urme l\u0103sate de pa\u0219i."
+    },
+    {
+        "clue": "Se aplic\u0103 pentru corec\u021bie",
+        "answer": "BCATOALCA",
+        "prediction": "CORECTUR\u0102",
+        "rationale": "Cuv\u00e2ntul \"corec\u021bie\" trimite direct la ideea de \u00eendreptare sau rectificare a unor gre\u0219eli. \u00cen contextul edit\u0103rii sau al procesului de verificare, termenul \u201ecorectur\u0103\u201d este folosit pentru a descrie ac\u021biunea de a corecta texte, adic\u0103 de a aplica modific\u0103ri pentru a \u00eenl\u0103tura gre\u0219elile. Prin urmare, \u00een cazul unui proces de corec\u021bie, cel mai probabil termen asociat este \u201ecorectur\u0103\"."
+    },
+    {
+        "clue": "Puntea superioar\u0103",
+        "answer": "IODISCA",
+        "prediction": "ARCADA",
+        "rationale": "Puntea superioar\u0103 se refer\u0103 la partea superioar\u0103 a unei structuri, cum ar fi o punte dentar\u0103. \u00cen context dentar, arcada superioar\u0103 este ansamblul din\u021bilor superiori, iar 'arcad\u0103' este un termen care se potrive\u0219te acestei descrieri."
+    },
+    {
+        "clue": "Albul fe\u021bei",
+        "answer": "PAL",
+        "prediction": "TEN",
+        "rationale": "Albul fe\u021bei se refer\u0103 la partea alb\u0103 a fe\u021bei, adic\u0103 tenul. Tenul este stratul exterior al pielii fe\u021bei, care poate fi de diferite nuan\u021be, de la deschis la \u00eenchis."
+    },
+    {
+        "clue": "Prezent la apel",
+        "answer": "RLO",
+        "prediction": "PREZENT",
+        "rationale": "Este un termen uzual folosit \u00een contextul apelului, atunci c\u00e2nd se verific\u0103 prezen\u021ba persoanelor. 'Prezent la apel' \u00eenseamn\u0103 c\u0103 o anumit\u0103 persoan\u0103 este fizic prezent\u0103 atunci c\u00e2nd este strigat numele ei."
+    },
+    {
+        "clue": "Umbl\u0103 cu momeli",
+        "answer": "PESCARI",
+        "prediction": "PESCUITESTE",
+        "rationale": "Umbl\u0103 cu momeli este o expresie care inseamna a pescui, adica a folosi momeli pentru a prinde pesti. Deci, PESCUITESTE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "R\u0103s\u0103rit\u0103... la \u021bar\u0103",
+        "answer": "UALTA",
+        "prediction": "LUNA",
+        "rationale": "Expresia 'R\u0103s\u0103rit\u0103... la \u021bar\u0103' face trimitere la fenomenul astronomic al r\u0103s\u0103ririi Lunii, care este mai vizibil\u0103 \u00een zonele rurale datorit\u0103 lipsei polu\u0103rii luminoase. De asemenea, 'la \u021bar\u0103' sugereaz\u0103 un mediu rural, unde observarea Lunii este facilitat\u0103."
+    },
+    {
+        "clue": "Form\u0103 de clasificare",
+        "answer": "AL",
+        "prediction": "CATEGORIE",
+        "rationale": "O forma de clasificare reprezinta o modalitate de a grupa obiecte, concepte sau entitati in functie de caracteristici comune. CATEGORIE este un termen generic care se potriveste contextual, desi exista si alte variante posibile, cum ar fi 'tip', 'gen', 'specie', sau 'clasa'. CATEGORIE pare a fi cel mai cuprinzator si adecvat raspuns, deoarece acopera o gama larga de domenii, de la stiintele exacte la stiintele sociale si humanities."
+    },
+    {
+        "clue": "Genul scurt!",
+        "answer": "GN",
+        "prediction": "FEMININ",
+        "rationale": "In limba romana, termenul 'gen' se refera la genul gramatical, care poate fi masculin, feminin sau neutr. De asemenea, 'scurt' poate fi interpretat ca o trimitere la faptul ca forma scurta a unui cuvant este adesea asociata cu genul feminin. Prin urmare, cel mai probabil raspuns este FEMININ."
+    },
+    {
+        "clue": "Omul de l\u00e2ng\u0103 mine",
+        "answer": "ICESTA",
+        "prediction": "APROPRIAT",
+        "rationale": "Omul de l\u00e2ng\u0103 mine se refer\u0103 la o persoan\u0103 aflat\u0103 \u00een proximitatea mea. \u00cen acest context, cuv\u00e2ntul \"APROPRIAT\" \u00eenseamn\u0103 cel mai apropiat sau din apropiere. Acest cuv\u00e2nt poate fi folosit \u0219i pentru a desemna pe cineva care este al\u0103turi de mine sau \u00eemi este aproape, astfel fiind o variant\u0103 pentru \"omul de l\u00e2ng\u0103 mine\"."
+    },
+    {
+        "clue": "Prezent... cotidian",
+        "answer": "AZI",
+        "prediction": "ZILNIC",
+        "rationale": "Cuvantul 'cotidian' se refera la ceva care apare sau se intampla zilnic, adica in fiecare zi. 'Zilnic' este un adjectiv care descrie ceva care este prezent sau se intampla in mod regulat, cotidian. Deci, ZILNIC este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Vorbe dulci",
+        "answer": "ACADELE",
+        "prediction": "FLATULENTE",
+        "rationale": "Vorbele dulci pot fi numite si flatulente, deoarece acestea sunt expresii complimentare sau lauda, adesea folosite pentru a incuraja sau a face pe cineva sa se simta bine."
+    },
+    {
+        "clue": "Numere extrase din tabele",
+        "answer": "SCORURI",
+        "prediction": "DATE",
+        "rationale": "Numere extrase din tabele pot fi numite 'date statistice' sau pur si simplu 'date', deoarece reprezinta informatii numerice extrase dintr-o sursa organizata, cum ar fi o tabela."
+    },
+    {
+        "clue": "Comprimat luat \u00eenainte de pr\u00e2nz",
+        "answer": "AM",
+        "prediction": "ASPIRIN\u0102",
+        "rationale": "Comprimat luat \u00eenainte de pr\u00e2nz se refer\u0103 probabil la un medicament care se ia diminea\u021ba, \u00eenainte de masa de pr\u00e2nz. Aspirina este un medicament comun care se ia sub form\u0103 de comprimat \u0219i poate fi \u021binut\u0103 minte ca fiind luat\u0103 \u00een acest interval al zilei pentru a preveni diverse afec\u021biuni, cum ar fi bolile cardiovasculare."
+    },
+    {
+        "clue": "Revenire dup\u0103 o b\u0103taie bun\u0103",
+        "answer": "ATERIZARE",
+        "prediction": "RECUPERA",
+        "rationale": "Revenire dup\u0103 o b\u0103taie bun\u0103 sugereaz\u0103 recuperarea dup\u0103 o perioad\u0103 dificil\u0103 sau o experien\u021b\u0103 nepl\u0103cut\u0103. RECUPERA este un verb care descrie ac\u021biunea de a-\u0219i reveni sau de a se restabili dup\u0103 o situa\u021bie dificil\u0103, ceea ce face ca acesta s\u0103 fie cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Se pronun\u021b\u0103 u\u0219or",
+        "answer": "LIN",
+        "prediction": "SEIFONETIZEAZA",
+        "rationale": "Cu toate ca seifoneteaza este un cuvant lung, el se pronunta usor, avand un sunet redes si o structura fonetica simpla, care permite o pronuntare usoara."
+    },
+    {
+        "clue": "\u00centreprinz\u0103tor particular",
+        "answer": "TEMERAR",
+        "prediction": "ANTREPRENOR",
+        "rationale": "\u00centreprinz\u0103tor particular se refer\u0103 la o persoan\u0103 care desf\u0103\u0219oar\u0103 o activitate economic\u0103 \u00een nume propriu, adic\u0103 are o afacere proprie. Termenul cel mai potrivit pentru a descrie o astfel de persoan\u0103 \u00een limba rom\u00e2n\u0103 este ANTREPRENOR, care denot\u0103 o persoan\u0103 care ini\u021biaz\u0103 \u0219i conduce o afacere, asum\u00e2ndu-\u0219i riscurile \u0219i beneficiile acesteia."
+    },
+    {
+        "clue": "E \u00een toate doagele",
+        "answer": "BUTIE",
+        "prediction": "APA",
+        "rationale": "Expressia 'E \u00een toate doagele' este o expresie idiomatic\u0103 care se refer\u0103 la ceva ce este foarte r\u0103sp\u00e2ndit sau prezent peste tot. \u00cen contextul dozelor de b\u0103uturi, apa este un ingredient comun care se reg\u0103se\u0219te \u00een majoritatea b\u0103uturilor, fiind astfel prezent\u0103 '\u00een toate doagele'."
+    },
+    {
+        "clue": "Termen de predare",
+        "answer": "ORA",
+        "prediction": "DEADLINE",
+        "rationale": "Termen de predare se refera la o data limita pana la care o sarcina sau o lucrare trebuie indeplinita. In limba romana, termenul 'deadline' este des utilizat in contexto profesional si educational, reprezentand data limita pentru predarea unei lucrari, proiect sau sarcini."
+    },
+    {
+        "clue": "P\u0103trundere for\u021bat\u0103",
+        "answer": "ATAC",
+        "prediction": "INVAZIE",
+        "rationale": "P\u0103trunderea for\u021bat\u0103 implic\u0103 o intrare neautorizat\u0103 sau o ocupare a unui spa\u021biu, teritoriu sau sistem, fapt ce corespunde defini\u021biei termenului 'invazie'. Acest termen descrie o ac\u021biune de p\u0103trundere cu for\u021ba, adesea \u00een context militar, spa\u021bial, informatic sau chiar biologic, \u0219i deci este cel mai potrivit r\u0103spuns pentru aceast\u0103 descriere."
+    },
+    {
+        "clue": "Cel care pic\u0103",
+        "answer": "BIRUIT",
+        "prediction": "CADET",
+        "rationale": "Cel care pic\u0103 se refer\u0103 la o persoan\u0103 care sufer\u0103 o c\u0103dere. Cuv\u00e2ntul CADET este un substantiv \u00een limba rom\u00e2n\u0103 care poate \u00eensemna \u201ecel care pic\u0103\u201d sau \u201ecel care cade\u201d, fiind folosit \u00een contexte variate, inclusiv literale \u0219i figurative, pentru a descrie persoane care sufer\u0103 o c\u0103dere fizic\u0103 sau metaforic\u0103."
+    },
+    {
+        "clue": "Probe de concurs",
+        "answer": "COLABORARI",
+        "prediction": "SUBIECTE",
+        "rationale": "In contextul unui concurs, mai ales cel educational, probele de concurs se refera la subiectele sau temele propuse pentru a testa cunostintele participantilor. Prin urmare, SUBIECTE este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Dovad\u0103 de iubire",
+        "answer": "IDOL",
+        "prediction": "SARUT",
+        "rationale": "O sarutare este adesea considerata un gest de afectiune si dragoste intre doua persoane. Prin urmare, SARUT este o dovada de iubire."
+    },
+    {
+        "clue": "Om... cu carte",
+        "answer": "ROMAN",
+        "prediction": "INVATAT",
+        "rationale": "Expressia \"om cu carte\" este o expresie comun\u0103 \u00een limba rom\u00e2n\u0103 care se refer\u0103 la o persoan\u0103 educat\u0103, cualificat\u0103 sau instruit\u0103. Deci, INVATAT este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Bine coapt\u0103",
+        "answer": "MATURA",
+        "prediction": "PIPETEA",
+        "rationale": "Termenul 'bine coapt\u0103' sugereaz\u0103 un grad ridicat de g\u0103tire sau coacere, \u00een special \u00een contextul prepar\u0103rii alimentelor, cum ar fi p\u00e2inea sau alte produse de panifica\u021bie. 'Pipetea' este un cuv\u00e2nt care descrie un produs de panifica\u021bie bine copt, cu o crust\u0103 aurie \u0219i crocant\u0103, suger\u00e2nd o coacere perfect\u0103."
+    },
+    {
+        "clue": "Punct de vedere exprimat \u00eentr-un protest!",
+        "answer": "EST",
+        "prediction": "REVENDICARE",
+        "rationale": "Un protest implica de obicei exprimarea unor puncte de vedere sau a unor nemultumiri fata de o situatie. O revendicare reprezinta un punct de vedere sau o cerere exprimata in mod public, deseori in cadrul unui protest."
+    },
+    {
+        "clue": "Internate la spital!",
+        "answer": "IT",
+        "prediction": "BOLNAVI",
+        "rationale": "Cuv\u00e2ntul 'Internate'are sensul de a fi spitalizat sau a fi admis \u00een spital pentru tratament. Deci, cel mai probabil raspuns este 'BOLNAVI', care se refer\u0103 la persoanele care sunt spitalizate."
+    },
+    {
+        "clue": "Poftit la mas\u0103",
+        "answer": "NESAT",
+        "prediction": "POFTIT",
+        "rationale": "Cuv\u00e2ntul 'poftit' este folosit \u00een expresia 'a fi poftit la mas\u0103', care \u00eenseamn\u0103 a fi invitat s\u0103 m\u0103n\u00e2nci sau a fi a\u015fteptat la o mas\u0103. Prin urmare, 'poftit' este cel mai potrivit r\u0103spuns pentru aceast\u0103 ghicitoare."
+    },
+    {
+        "clue": "R\u0103sp\u00e2ndit\u0103 prin lume",
+        "answer": "LARGA",
+        "prediction": " GLOBALA",
+        "rationale": "R\u0103sp\u00e2ndit\u0103 prin lume se refer\u0103 la ceva care acoper\u0103 sau se reg\u0103se\u0219te \u00een \u00eentreaga lume, deci are o acoperire sau o prezen\u021b\u0103 la nivel mondial. GLOBALA descrie \u00een mod precis aceast\u0103 no\u021biune."
+    },
+    {
+        "clue": "Eviden\u0163iat \u00een propria firm\u0103",
+        "answer": "NEON",
+        "prediction": "ASSOCIERE",
+        "rationale": "Cand cineva este evidentiat in propria firma, inseamna ca el este un asociat sau actionar semnificativ al respectivei firme. Deci, cel mai probabil raspuns este ASOCIERE sau o varianta a acestui cuvant, care descrie participarea sau asocierea cuiva in cadrul respectivei firme."
+    },
+    {
+        "clue": "Ars\u0103 la ochi",
+        "answer": "OALA",
+        "prediction": "UR\u00c2T\u0102",
+        "rationale": "Cuv\u00e2ntul 'ars\u0103' \u00eenseamn\u0103 a fi sup\u0103rat sau enervat, iar expresia 'ars\u0103 la ochi' sugereaz\u0103 o stare de nemul\u021bumire sau sup\u0103rare vizibil\u0103. 'Ur\u00e2t\u0103' \u00eenseamn\u0103 exact asta, o persoan\u0103 care arat\u0103 sup\u0103rat\u0103 sau nemul\u021bumit\u0103."
+    },
+    {
+        "clue": "Un fel de friptur\u0103",
+        "answer": "ARS",
+        "prediction": "MITITEI",
+        "rationale": "Mititeii sunt o preparare traditional\u0103 rom\u00e2neasc\u0103, fiind \u00een esen\u021b\u0103 o fel de friptur\u0103 sau m\u00e2ncare din carne tocat\u0103, de obicei de porc, \u0219i condimente, preparat\u0103 la gr\u0103tar sau pe plit\u0103."
+    },
+    {
+        "clue": "Unitate model",
+        "answer": "TIP",
+        "prediction": "ETALON",
+        "rationale": "Unitate model se refera la un standard sau o referin\u021b\u0103 utilizat\u0103 pentru comparare sau m\u0103surare. \u00cen acest context, ETALON este un termen care desemneaz\u0103 un model sau un standard de referin\u021b\u0103, fiind astfel cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "A soate \u00een eviden\u0163\u0103",
+        "answer": "APELA",
+        "prediction": "RELIEFA",
+        "rationale": "A soate \u00een eviden\u0163\u0103 se refer\u0103 la a face ca ceva sau cineva s\u0103 fie vizibil sau remarcat. Relieful \u00eenseamn\u0103 \u00een general, reprezentarea unor forma\u021biuni geografice pe o suprafa\u021b\u0103 plan\u0103, dar poate fi folosit \u0219i pentru a descrie modul \u00een care ceva iese \u00een eviden\u021b\u0103. \u00cen contextul artistic sau al prezent\u0103rii, a soate \u00een eviden\u021b\u0103 poate \u00eensemna \u0219i a pune \u00een valoare sau a eviden\u021bia anumite tr\u0103s\u0103turi. \u00cens\u0103, \u00een contextul general al crossword-ului, RELIEFA este un termen care poate fi asociat cu ideea de a scoate \u00een eviden\u021b\u0103 o anumit\u0103 form\u0103 sau aspect."
+    },
+    {
+        "clue": "Sc\u0103pat de sarcini",
+        "answer": "USOR",
+        "prediction": "PENSIONAT",
+        "rationale": "Sc\u0103pat de sarcini poate \u00eensemna eliberat de responsabilit\u0103\u021bi sau obliga\u021bii, ceea ce ar corespunde cu ideea de a fi pensionat, adic\u0103 a fi scapat de sarcinile \u0219i responsabilit\u0103\u021bile legate de o slujb\u0103 sau o carier\u0103."
+    },
+    {
+        "clue": "A lucra cu aten\u0163ie",
+        "answer": "TRATA",
+        "prediction": "A CROIT",
+        "rationale": "A lucra cu aten\u0163ie poate implica o activitate care necesita o atentie deosebita si o execu\u0163ie meticuloas\u0103. A croti (a croi) inseamna a t\u0103ia sau a modela cu aten\u0163ie, de obicei \u00een contextul croitoriei sau al prelucrarii unor materiale."
+    },
+    {
+        "clue": "\u00cenv\u00e2rtita pe loc",
+        "answer": "ROTATIE",
+        "prediction": "ROTITIE",
+        "rationale": "\u00cenv\u00e2rtita pe loc sugereaz\u0103 o mi\u0219care circular\u0103 sau de rota\u021bie \u00eentr-un singur loc. Cuv\u00e2ntul ROTITIE este un termen folosit pentru a descrie un fel de mi\u0219care sau o ac\u021biune care implic\u0103 rotirea sau \u00eenv\u00e2rtirea \u00een jurul propriei axe, f\u0103r\u0103 a schimba pozi\u021bia general\u0103. Acest termen poate fi aplicat \u00een diferite contexte, cum ar fi dansul sau mi\u0219c\u0103rile automate."
+    },
+    {
+        "clue": "Fond scriptic!",
+        "answer": "IP",
+        "prediction": "BANCA",
+        "rationale": "Fond scriptic se refera la banca, fiind o institutie financiara care se ocupa cu operatiuni scriptice, cum ar fi manipularea fondurilor si a conturilor."
+    },
+    {
+        "clue": "Intrat \u00een blocaj",
+        "answer": "INERT",
+        "prediction": "INCOMPATIBIL",
+        "rationale": "Intrat \u00een blocaj poate implica o situatie in care doua sau mai multe parti nu pot functiona impreuna sau se blocheaza reciproc. INCOMPATIBIL este un termen care sugereaza aceasta situatie de neconcordanta sau de nefunctionare a unor mecanisme sau sisteme."
+    },
+    {
+        "clue": "\u0162int\u0103 luat\u0103 \u00een obiectiv",
+        "answer": "STEA",
+        "prediction": "\u021aINT\u0102",
+        "rationale": "\u0162int\u0103 luat\u0103 \u00een obiectiv se refer\u0103 la o \u0163int\u0103 care este vizat\u0103 sau focalizat\u0103, \u00een special \u00een contextul fotografiei sau al armelor de foc. Deci, \u021aINT\u0102 este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Jocuri la care se prind s\u0103tenii",
+        "answer": "CIMILITURI",
+        "prediction": "GHICITORI",
+        "rationale": "Jocurile la care se prind s\u0103tenii pot fi diferite, dar unul dintre cele mai cunoscute \u0219i tradi\u021bionale este jocul de ghicitori. Acesta este un joc popular \u00een care oamenii \u00eencearc\u0103 s\u0103 ghiceasc\u0103 un cuv\u00e2nt, o fraz\u0103 sau o expresie, pe baza unor indicii sau descrieri. Deci, GHICITORI este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Un moment de referin\u0163\u0103",
+        "answer": "ODATA",
+        "prediction": "REPER",
+        "rationale": "Un moment de referin\u0163\u0103 coincide cu conceptul de reper, care este un punct de referin\u021b\u0103 sau o baz\u0103 de compara\u021bie. \u00cen acest context, reperul poate fi considerat un moment cheie, o etap\u0103 important\u0103 sau o referin\u021b\u0103 \u00eentr-un proces, eveniment sau dezvoltare."
+    },
+    {
+        "clue": "O urm\u0103rire cu c\u00e2ntec",
+        "answer": "ISON",
+        "prediction": "C\u00c2NTARE",
+        "rationale": "O urm\u0103rire cu c\u00e2ntec face referire la o urm\u0103rire sau o persecu\u021bie \u00eenso\u021bit\u0103 de un c\u00e2ntec sau o melodie, ceea ce implic\u0103 o interpretare poetic\u0103 sau metaforic\u0103. C\u00c2NTARE poate fi un r\u0103spuns posibil, deoarece \u00eenseamn\u0103 actul de a c\u00e2nta sau de a urm\u0103ri cu un c\u00e2ntec, \u00eens\u0103 \u00een contextul uzual al crossword-urilor, un termen mai potrivit ar putea fi C\u00c2NTECUL, cu toate c\u0103 exactitatea acestuia depinde mult de specificul contextului sau.localelor culturale. O alt\u0103 posibilitate, care pare mai relevant\u0103, este C\u00c2NTEC cu sensul de urm\u0103rire cu c\u00e2ntec, poate fi mai degrab\u0103 o referin\u021b\u0103 la o expresie poetic\u0103 sau regional\u0103, dar ea este diferit\u0103."
+    },
+    {
+        "clue": "Trup\u0103 de sportivi",
+        "answer": "LOT",
+        "prediction": "ECHIPA",
+        "rationale": "O trup\u0103 de sportivi este un grup de persoane care concureaz\u0103 \u00eempreun\u0103 \u00eentr-un anumit sport. Termenul cel mai potrivit pentru a descrie un astfel de grup este ECHIPA, care se refer\u0103 la un grup de persoane care lucreaz\u0103 sau concureaz\u0103 \u00eempreun\u0103 pentru a atinge un obiectiv comun."
+    },
+    {
+        "clue": "B\u0103t\u0103i \u00een fa\u0163a scenei",
+        "answer": "ROPOTE",
+        "prediction": "APLAUZEMENTE",
+        "rationale": "B\u0103t\u0103i \u00een fa\u0163a scenei se refer\u0103 la aplauzele primite de arti\u0219ti sau actori dup\u0103 o reprezenta\u021bie. Aplauzele sunt o form\u0103 de apreciere \u0219i recunoa\u0219tere a performance-ului, deci APLAUZEMENTE este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "A porni \u00een for\u0163\u0103",
+        "answer": "ALUNGA",
+        "prediction": "DESPOV\u0102R\u0102",
+        "rationale": "A porni \u00een for\u0163\u0103 poate \u00eensemna a \u00eencepe sau a demara ceva cu putere sau energie. \u00cen acest context, verbul DESPOV\u0102R\u0102 \u00eenseamn\u0103 a da drumul, a lansa sau a declan\u015fa ceva cu for\u0163\u0103, ceea ce se potrive\u015fte bine cu ideea de a porni \u00een for\u0163\u0103."
+    },
+    {
+        "clue": "Z\u0103rit \u00een dep\u0103rtare",
+        "answer": "RAR",
+        "prediction": "Z\u0102RIT",
+        "rationale": "Z\u0103rit \u00een dep\u0103rtare este un verb care descrie actul de a vedea ceva de la distan\u021b\u0103. De obicei, termenul utilizat \u00een acest context este 'z\u0103rit', care se refer\u0103 la a observa sau a vedea ceva de departe, dar un sinonim mai potrivit ar fi 'v\u0103zut', \u00eens\u0103 'z\u0103rit' este mai specific \u00een contextul dat. Cu toate acestea, verbul 'a z\u0103ri' este cel care descrie cel mai bine ac\u021biunea de a vedea ceva de la distan\u021b\u0103, deci 'Z\u0102RIT' este un r\u0103spuns plauzibil, \u00eens\u0103 \u00eentr-un context de crossword, r\u0103spunsul ar trebui s\u0103 fie un substantiv sau un adjectiv. Un substantiv care ar putea descrie aceast\u0103 ac\u021biune ar fi 'silueta' sau 'contur', \u00eens\u0103 cel mai potrivit ar fi 'plesnit' nu este corect \u00een context, ci mai degrab\u0103 'vedere' sau 'zbor', dar niciunul dintre acestea nu sunt sinonime directe. 'Z\u0103rit' poate fi \u0219i un adjective, deci r\u0103spunsul ar putea fi o descriere a obiectului care este 'z\u0103rit', \u0219i \u00een acest context, 'V\u0102ZUT' ar fi mai corect, dar dac\u0103 ne referim la un obiect 'z\u0103rit' atunci ar trebui s\u0103 ne referim la un substantiv care face referire la o 'vedere' sau un 'contur' aflat la distan\u021b\u0103. Astfel, av\u00e2nd \u00een vedere contextul, o traducere mai bun\u0103 a \u00eentreb\u0103rii ar fi 'aflat la orizont', \u0219i \u00een acest context, 'z\u0103rit \u00een dep\u0103rtare' poate face referire la un obiect aflat la distan\u021b\u0103, iar un sinonim pentru 'a z\u0103ri' ar fi 'a vedea', sau 'a observa', dar r\u0103spunsul ar trebui s\u0103 fie un substantiv. Deci, \u00een contextul crossword-ului, ar trebui s\u0103 ne referim la un obiect, \u0219i \u00een acest caz, ar putea fi 'orizont', sau 'siluet\u0103', dar cel mai bun r\u0103spuns ar fi unul care face referire la 'a vedea' sau 'a observa ceva de la distan\u021b\u0103'. \u00cen acest context, r\u0103spunsul 'Z\u0102RIT' pare a fi mai pu\u021bin adecvat, deoarece crossword-urile de obicei Cer un r\u0103spuns care s\u0103 fie un cuv\u00e2nt sau o expresie mai specific\u0103 \u0219i mai pu\u021bin generic\u0103. Un alt r\u0103spuns posibil \u0219i care ar fi mai specific ar fi 'figura', dar \u0219i 'uria\u0219', deoarece poate fi 'v\u0103zut de la distan\u021b\u0103', \u00eens\u0103 \u00een contextul dat, r\u0103spunsul pare a fi mai mult legat de 'a observa ceva de la distan\u021b\u0103'. Cu toate acestea, un r\u0103spuns care pare mai adecvat pentru \u00eentrebarea dat\u0103 ar fi 'APARI\u021aIE', deoarece face referire la un obiect sau o persoan\u0103 care este 'z\u0103rit\u0103' \u00een dep\u0103rtare, dar care are un sens mai larg \u0219i mai abstract, f\u0103c\u00e2nd referire la 'a ap\u0103rea' sau 'a fi v\u0103zut', dar \u00een contextul crossword-ului, 'APARI\u021aIE' pare a fi un r\u0103spuns prea generic \u0219i prea larg, \u0219i care nu face referire la Ideea de 'a z\u0103ri' sau 'a vedea ceva de la distan\u021b\u0103'. Deci, r\u0103spunsul 'Z\u0102RIT' pare a fi un r\u0103spuns plauzibil, dar nu pare a fi cel mai bun, din cauza faptului c\u0103 nu face referire la un obiect sau un substantiv specific, \u0219i care face referire la 'a vedea ceva de la distan\u021b\u0103'. Astfel, un r\u0103spuns mai bun ar fi 'ORIZONT', deoarece face referire la 'un loc aflat la distan\u021b\u0103', \u0219i care este 'v\u0103zut' sau 'z\u0103rit' \u00een dep\u0103rtare. Deci, r\u0103spunsul 'ORIZONT' pare a fi un r\u0103spuns mai bun \u0219i mai specific, care face referire la un loc sau o 'vedere' aflat\u0103 la distan\u021b\u0103, \u0219i care este 'v\u0103zut\u0103' sau 'z\u0103rit\u0103'."
+    },
+    {
+        "clue": "Efective complete (sg.)",
+        "answer": "REALA",
+        "prediction": "EFECTIV",
+        "rationale": "Termenul 'efective complete' se refer\u0103 la un num\u0103r \u00eentreg sau la o cantitate complet\u0103 de ceva. \u00cen acest context, 'efective' este folosit pentru a descrie ceva care este complet sau \u00eentreg. Deci, 'EFECTIV' este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Tocat f\u0103r\u0103 m\u0103sur\u0103!",
+        "answer": "TT",
+        "prediction": "BARZAT",
+        "rationale": "Expresia 'tocat f\u0103r\u0103 m\u0103sur\u0103' sugereaz\u0103 o ac\u021biune de t\u0103iere sau divizare f\u0103r\u0103 a urma vreo regul\u0103 sau m\u0103sur\u0103 precis\u0103. Cuv\u00e2ntul 'barzat' \u00eenseamn\u0103 toc\u00e2t sau t\u0103iat \u00een mod haotic, f\u0103r\u0103 ordine sau regularitate, ceea ce se potrive\u0219te bine cu sensul expresiei date."
+    },
+    {
+        "clue": "Centru industrial",
+        "answer": "ORAS",
+        "prediction": "ORA\u015e",
+        "rationale": "Un centru industrial este de obicei un ora\u0219 care g\u0103zduie\u0219te o varietate de fabrici, uzine \u0219i alte facilit\u0103\u021bi industriale. Termenul de ora\u0219 este cel mai potrivit pentru a descrie un centru industrial, deoarece ora\u0219ele sunt adesea asociate cu activit\u0103\u021bi economice \u0219i industriale."
+    },
+    {
+        "clue": "Recunoscu\u0163i prin fapte bune",
+        "answer": "APTI",
+        "prediction": "CUNOSCUTI",
+        "rationale": "Recunoscu\u0163i prin fapte bune inseamna ca respectivele persoane sunt apreciate pentru realiz\u0103rile lor pozitive. Deci, CUNOSCUTI este cel mai probabil raspuns, deoarece sugereaz\u0103 o reputa\u021bie bun\u0103 \u0219i aprecierea altor persoane."
+    },
+    {
+        "clue": "Maici plecate de la Roma!",
+        "answer": "RO",
+        "prediction": "MAMELE",
+        "rationale": "Maici plecate de la Roma este un joc de cuvinte. 'Maici' poate fi interpretat ca 'mamele' sau 'm\u0103icu\u021be', dar \u00een contextul 'plecate de la Roma', se refer\u0103 probabil la 'mamelle', adic\u0103 's\u00e2ni' sau 'mamele', iar Roma face referire la capitelul roman, care are o forma specifica, incluzand adesea elemente decorative sub forma unor mamele sau capete de animal."
+    },
+    {
+        "clue": "Tulpina unei plante!",
+        "answer": "AN",
+        "prediction": "TRAICHIN\u0102",
+        "rationale": "Tulpina unei plante este partea deasupra solului care sustine frunzele, florile si fructele. In terminologia botanica, tulpina este desemnata ca traichin\u0103."
+    },
+    {
+        "clue": "P\u0103catul lui s\u0103 fie...",
+        "answer": "ERES",
+        "prediction": "VINA",
+        "rationale": "P\u0103catul lui s\u0103 fie... este o expresie care sugereaz\u0103 ca vina sau responsabilitatea pentru o anumit\u0103 situa\u021bie sau ac\u021biune apar\u021bine cuiva. Deci, VINA este cel mai probabil raspuns."
+    },
+    {
+        "clue": "Vine dup\u0103 o bere",
+        "answer": "AMETEALA",
+        "prediction": "CHEQUE",
+        "rationale": "Expresia 'Vine dup\u0103 o bere' sugereaz\u0103 o ordine sau o secven\u021b\u0103, unde 'dup\u0103' indic\u0103 o urm\u0103rire \u00een timp sau spa\u021biu. \u00cen contextul \u00een care se serve\u0219te bere, 'cheque' sau 'nota de plat\u0103' este ceva ce vine dup\u0103 consumarea b\u0103uturii, adic\u0103 atunci c\u00e2nd consumatorul trebuie s\u0103 pl\u0103teasc\u0103 pentru ceea ce a comandat."
+    },
+    {
+        "clue": "Finalul unui banc bun",
+        "answer": "RAS",
+        "prediction": "PUNC\u021aIA",
+        "rationale": "Finalul unui banc bun este de obicei reprezentat de o concluzie amuzant\u0103 sau o \u00eentors\u0103tur\u0103 nea\u0219teptat\u0103, care constituie punctul culminant al glumei. \u00cen limba rom\u00e2n\u0103, acest moment este numit \u201epunct\u0103\u201d, ceea ce face ca r\u0103spunsul cel mai potrivit s\u0103 fie PUNC\u021aIA."
+    },
+    {
+        "clue": "Dedica\u0163ie de la l\u0103utari",
+        "answer": "ORATIE",
+        "prediction": "C\u00c2NTEC",
+        "rationale": "Dedicatia de la l\u0103utari se refer\u0103 la o melodie sau o pies\u0103 muzical\u0103 interpretat\u0103 de ace\u0219tia. De obicei, l\u0103utarii c\u00e2nt\u0103 c\u00e2ntece tradi\u021bionale sau moderne, a\u0219adar, C\u00c2NTEC este cel mai probabil r\u0103spuns."
+    },
+    {
+        "clue": "Foc mistuitor",
+        "answer": "INTENS",
+        "prediction": "PARIU",
+        "rationale": "Foc mistuitor inseamna o patima sau o dorinta puternica, si in acest context, PARIU este o expresie care se refera la o dorinta sau o aspiratie intensa, puternica."
+    },
+    {
+        "exact_matches": 4.0,
+        "sbert_mean": 0.47639761671423914,
+        "sbert_std": 0.12781707570137307
+    }
+]
