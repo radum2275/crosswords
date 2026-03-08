@@ -10,7 +10,10 @@ We have generated two datasets with clues and solutions, both with a similar str
 
 ## Project Structure
 
-- Folder `gen-clue-sol-datasets` has code used to generate the main dataset (subfolder `gen-main-dataset`) and the baseline dataset (subfolder `gen-baseline-dataset`). Subfolder `gen-baseline-dataset` has a detailed README file on its own. No detailed knowledge of folder `gen-clue-sol-dataset` is required, since their intended results, namely files `extracted_data.json` and `baseline-dataset.json`, are already generated and made available in folder `data`.
+- Foder `src` has source code, with the following structure:
+  - Folder `gen-clue-sol-datasets` has code used to generate the main dataset (subfolder `gen-main-dataset`) and the baseline dataset (subfolder `gen-baseline-dataset`). Subfolder `gen-baseline-dataset` has a detailed README file on its own. No detailed knowledge of folder `gen-clue-sol-dataset` is required, since their intended results, namely files `extracted_data.json` and `baseline-dataset.json`, are already generated and made available in folder `data`.
+  - Folder `crosswords` has code that runs LLMs on our data.
+- Folder `data` includes the input `*.json` files mentioned, as well as output data files.
 
 ## Manual Annotation of LLM Explanations
 
