@@ -1,8 +1,14 @@
 # crosswords
 LLMs and crossword puzzles
 
+## Important Datasets
 
-# Manual annotation of LLM explanations
+We have generated two datasets with clues and solutions, both with a similar structure, and both available in folder `data`:
+
+- The main dataset is `extracted_data.json`, which is the benchmark that we propose for LLM evaluation. It contains clues and solutions from published crosswords puzzles where clues are meant to trick the reader. Often they have two more more meanings, where the more obvious meaning is wrong (i.e., it doesn't match the solution), and a second, correct meaning is more subtle to find.
+- The baseline dataset is `baseline-dataset.json`. It contains general knowledge questions and answers extracted from thematic puzzles.
+
+## Manual annotation of LLM explanations
 
 Part of the LLM explanations have been manually checked with a process that contains the following steps:
 
