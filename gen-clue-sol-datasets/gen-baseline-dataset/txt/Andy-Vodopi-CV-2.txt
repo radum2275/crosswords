@@ -1,0 +1,122 @@
+
+
+Education
+
+Dublin City University – Honours Bachelor of Computer Science Degree 2021 -
+2025
+
+IT Skills
+Languages: Proficient in TypeScript, JavaScript, and Python, Familiar with
+Java.
+
+Web Development: Experienced with React.js, Next.js, Node.js, and Django
+for full-stack applications.
+
+Databases: Skilled in PostgreSQL and Prisma ORM.
+
+Authentication & APIs: Implemented secure auth with NextAuth.js and
+built/consumed RESTful APIs.
+
+Tools & Workflow: Proficient with Git, Docker, and GitLab CI/CD.
+
+Operating Systems: Hands-on experience with Linux.
+
+Networking: Understanding of TCP/IP, DNS, DHCP, subnets, cabling, and
+switch/router configuration for small networks.
+
+Hardware & Infrastructure: Introductory knowledge of computer hardware and
+server components acquired through coursework and independent study; eager
+to build hands-on expertise.
+
+Administration & Office Tools: Microsoft Word, Excel, Outlook.
+
+
+
+Projects
+Snap-Py – Final-Year University Project
+Full-stack collaborative web app for learning Python via drag-and-drop
+blocks.
+
+
+Next.js, TypeScript, PostgreSQL, Docker, GitLab CI/CD.
+Features authentication, friend system, and community sharing.
+
+Zoom Transcript Reader
+Django and LangChain app analysing meeting transcripts for topics and
+speaker metrics.
+
+
+
+
+
+Work Experience
+
+
+Currys – Sales Assistant (06/2021 – 08/2022)
+Provided technical support and customer service in a fast-paced electronics
+retail environment. Developed strong problem-solving and communication
+skills applicable to on-call rotations.
+
+
+Completed courses: Public Speaking Course, First Aid Course, OOP Course,
+The Linux Foundation Course, Microsoft’s Fundamentals of Computer
+Networking, Cisco Networking Course.
+
+
+(Earlier non-IT roles available on request; removed for relevance)
+
+
+
+
+
+
+
+Additional Skills
+
+Languages: Fluent in Albanian & English
+
+
+Communication & Customer Service: Strong interpersonal skills developed
+through front-line retail and technical project teamwork; professional
+phone and email communication.
+
+
+Organisation & Accuracy: Able to prioritise tasks, meet service-level
+agreements, and maintain meticulous records.
+
+
+Team Collaboration: Comfortable working cross-functionally with sales,
+compliance, and technical staff.
+
+
+Problem Solving & Complaint Handling: Experience resolving customer issues
+efficiently and courteously.
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+Luke Daly
+ 
+Advisory Sales Specialist
+Technology Lifecycle Services Account Manager
+Phone: +353 86 8440317
+E-mail: Lukedaly@ie.ibm.com
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+// File structure based on [c] Jesse Weisbeck, MIT/GPL
+(function($) {
+  $(function() {
+    var puzzleData = 
+[     {'answer': 'SA', 'clue': '1)\t\tCodiță de narcisă!', 'orientation': 'across', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'ZAMBILA', 'clue': '--\t\tPlantă erbacee perenă din familia liliaceelor, cu frunze crescute dintr-un bulb, cu flori roz, albe, violete sau albastre', 'orientation': 'across', 'position': 2, 'startx': 4, 'starty': 1},
+      {'answer': 'ENEA', 'clue': '2)\t\t Pictor român, născut în Valea Arinilor, județul Bacău, la 28 mai 1897, autorul tabloului „Flori de primăvară” (Nicu)', 'orientation': 'across', 'position': 3, 'startx': 1, 'starty': 2},
+      {'answer': 'ACSAN', 'clue': '--\t\t„Primăvara cosmică” este volumul de poezii, cu care a debutat în anul 1962, acest scriitor și traducător bucureștean (Ion)', 'orientation': 'across', 'position': 4, 'startx': 6, 'starty': 2},
+      {'answer': 'FILIP', 'clue': '3)\t\t Liric basarabean, autorul poeziei „Duminicile primăverii anului 1989” (Iulian)', 'orientation': 'across', 'position': 5, 'startx': 1, 'starty': 3},
+      {'answer': 'SAJD', 'clue': '--\t\t„Stay Alive Just Drive” (acronim)', 'orientation': 'across', 'position': 6, 'startx': 7, 'starty': 3},
+      {'answer': 'ENE', 'clue': '4)\t\t Poezia „Ploaie de mai” îi aparține acestui scriitor, traducător și publicist autohton (Gheorghe)', 'orientation': 'across', 'position': 7, 'startx': 1, 'starty': 4},
+      {'answer': 'AP', 'clue': '--\t\tLa început de aprilie!', 'orientation': 'across', 'position': 8, 'startx': 5, 'starty': 4},
+      {'answer': 'COR', 'clue': '--\t\tCântec executat pe mai multe voci', 'orientation': 'across', 'position': 9, 'startx': 8, 'starty': 4},
+      {'answer': 'NASTA', 'clue': '5)\t\t Versurile destinate copiilor cu titlul „8 Martie” sunt oferite tiparului de acest poet din țara noastră (Nicolae)', 'orientation': 'across', 'position': 10, 'startx': 3, 'starty': 5},
+      {'answer': 'SE', 'clue': '--\t\tPrimele semănături!', 'orientation': 'across', 'position': 11, 'startx': 9, 'starty': 5},
+      {'answer': 'IRA', 'clue': '6)\t\t Firav la mijloc!', 'orientation': 'across', 'position': 12, 'startx': 1, 'starty': 6},
+      {'answer': 'VI', 'clue': '--\t\tPrimele viorele!', 'orientation': 'across', 'position': 13, 'startx': 7, 'starty': 6},
+      {'answer': 'SO', 'clue': '7)\t\t Debut solar!', 'orientation': 'across', 'position': 14, 'startx': 1, 'starty': 7},
+      {'answer': 'AEM', 'clue': '--\t\t„Aeroports de Montreal” (siglă)', 'orientation': 'across', 'position': 15, 'startx': 4, 'starty': 7},
+      {'answer': 'EMS', 'clue': '--\t\tRâu în Germania', 'orientation': 'across', 'position': 16, 'startx': 8, 'starty': 7},
+      {'answer': 'DAN', 'clue': '8)\t\t „Corabia cu păsări călătoare” este poemul care a fost inclus în volumul, apărut anul 1949 cu titlul „Bună dimineața”, al acestui poet român (George)', 'orientation': 'across', 'position': 17, 'startx': 2, 'starty': 8},
+      {'answer': 'AURIC', 'clue': '--\t\tCompozitor francez care a asigurat muzica pentru mai multe filme dintre care amintim comedia „Un picnic pe iarbă”, regizat de Marcel Cravenne (Georges)', 'orientation': 'across', 'position': 18, 'startx': 6, 'starty': 8},
+      {'answer': 'CIUCURENCU', 'clue': '9)\t\t Artist român al penelului, autorul tablourilor semnificative pentru tema noastră, intitulate „Primăvara” și „1Mai liber” (Alexandru)', 'orientation': 'across', 'position': 19, 'startx': 1, 'starty': 9},
+      {'answer': 'ANDRITOIU', 'clue': '10)\t\t „Venim cu sentimentul primăverii/ acut, în toți, uitând că ore bat, / Genealogic arbori, merii, perii/ ne smulg din vârsta timpului uscat”; versurile sunt preluate din poezia „Sentimentul primăverii” care ne-a fost oferită de acest poet și traducător autohton (Alexandru)', 'orientation': 'across', 'position': 20, 'startx': 1, 'starty': 10},
+      {'answer': 'SEFERIS', 'clue': '1)\t\tPoet grec, laureat al Premiului Nobel pentru Literatură în anul 1963, autorul poeziei „Primăvară după Cristos” (Giorgos)', 'orientation': 'down', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'CA', 'clue': '--\t\tDebut călduros!', 'orientation': 'down', 'position': 19, 'startx': 1, 'starty': 9},
+      {'answer': 'ANIN', 'clue': '2)\t\t Arbore cu frunze ovale, cu flori verzui-roșiatice, care crește pe malurile râurilor', 'orientation': 'down', 'position': 21, 'startx': 2, 'starty': 1},
+      {'answer': 'RODIN', 'clue': '--\t\tSculptor, grafician și pictor francez, autorul lucrării „Primăvara eternă” (Auguste)', 'orientation': 'down', 'position': 22, 'startx': 2, 'starty': 6},
+      {'answer': 'ELENA', 'clue': '3)\t\t Mama împăratului Constantin cel Mare, sărbătorită împreună cu fiul său, la data de 21 mai a fiecărui an', 'orientation': 'down', 'position': 23, 'startx': 3, 'starty': 2},
+      {'answer': 'AUD', 'clue': '--\t\tLocalitate în SUA', 'orientation': 'down', 'position': 24, 'startx': 3, 'starty': 8},
+      {'answer': 'ZAI', 'clue': '4)\t\t Puhoi de apă care produce inundații mai ales primăvara', 'orientation': 'down', 'position': 2, 'startx': 4, 'starty': 1},
+      {'answer': 'ANCR', 'clue': '--\t\t„Australian National Construction Review” (siglă)', 'orientation': 'down', 'position': 15, 'startx': 4, 'starty': 7},
+      {'answer': 'PASTE', 'clue': '5)\t\t Sărbătoare religioasă celebrată în timpul primăverii de creștini în amintirea învierii lui Cristos', 'orientation': 'down', 'position': 25, 'startx': 5, 'starty': 3},
+      {'answer': 'UI', 'clue': '--\t\tUlmi fără sevă!', 'orientation': 'down', 'position': 26, 'startx': 5, 'starty': 9},
+      {'answer': 'MA', 'clue': '6)\t\t Primele sunt din martie!', 'orientation': 'down', 'position': 27, 'startx': 6, 'starty': 1},
+      {'answer': 'PT', 'clue': '--\t\tPost gol!', 'orientation': 'down', 'position': 28, 'startx': 6, 'starty': 4},
+      {'answer': 'MART', 'clue': '--\t\tDenumirea populară o micului obiect de podoabă, legat cu un fir de culoare roșie și albă, care se portă în luna martie ca simbol al primăverii', 'orientation': 'down', 'position': 29, 'startx': 6, 'starty': 7},
+      {'answer': 'BCS', 'clue': '7)\t\t „British Computer Society” (siglă)', 'orientation': 'down', 'position': 30, 'startx': 7, 'starty': 1},
+      {'answer': 'AV', 'clue': '--\t\tÎn navă!', 'orientation': 'down', 'position': 31, 'startx': 7, 'starty': 5},
+      {'answer': 'UEO', 'clue': '--\t\t„Uniunea Europei Occidentale” (siglă)', 'orientation': 'down', 'position': 32, 'startx': 7, 'starty': 8},
+      {'answer': 'ISAC', 'clue': '8)\t\t Poet român născut la 27 mai 1886 la Cluj, autorul poeziei „Primăvara” (Emil)', 'orientation': 'down', 'position': 33, 'startx': 8, 'starty': 1},
+      {'answer': 'IERNI', 'clue': '--\t\tAnotimpul care precede primăvara (pl.)', 'orientation': 'down', 'position': 34, 'startx': 8, 'starty': 6},
+      {'answer': 'LAJOS', 'clue': '9)\t\t Scriitor impresionist maghiar, din creația căruia cităm poezia „Primăvară în cimitirul Hajongard” (Aprily)', 'orientation': 'down', 'position': 35, 'startx': 9, 'starty': 1},
+      {'answer': 'MICU', 'clue': '--\t\t„Ghiocelul” este creația lirică scrisă pentru copii de acest poet, prozator și publicist autohton (Mircea)', 'orientation': 'down', 'position': 36, 'startx': 9, 'starty': 7},
+      {'answer': 'ANDREESCU', 'clue': '10)\t\t Pânza în ulei „Începutul primăverii”, ne-a fost oferită de acest important pictor român (Ion)', 'orientation': 'down', 'position': 37, 'startx': 10, 'starty': 1}]
+    $('#puzzle-wrapper').crossword(puzzleData, `BUN VENIT, PRIMĂVARĂ!...`, 'Constantin BRAȘOVEANU – Ploiești');
+  })
+})(jQuery)
