@@ -8,7 +8,11 @@ We have generated two datasets with clues and solutions, both with a similar str
 - The main dataset is `extracted_data.json`, which is the benchmark that we propose for LLM evaluation. It contains clues and solutions from published crosswords puzzles where clues are meant to trick the reader. Often they have two more more meanings, where the more obvious meaning is wrong (i.e., it doesn't match the solution), and a second, correct meaning is more subtle to find.
 - The baseline dataset is `baseline-dataset.json`. It contains general knowledge questions and answers extracted from thematic puzzles.
 
-## Manual annotation of LLM explanations
+## Project Structure
+
+- Folder `gen-clue-sol-datasets` has code used to generate the main dataset (subfolder `gen-main-dataset`) and the baseline dataset (subfolder `gen-baseline-dataset`). Subfolder `gen-baseline-dataset` has a detailed README file on its own. No detailed knowledge of folder `gen-clue-sol-dataset` is required, since their intended results, namely files `extracted_data.json` and `baseline-dataset.json`, are already generated and made available in folder `data`.
+
+## Manual Annotation of LLM Explanations
 
 Part of the LLM explanations have been manually checked with a process that contains the following steps:
 
