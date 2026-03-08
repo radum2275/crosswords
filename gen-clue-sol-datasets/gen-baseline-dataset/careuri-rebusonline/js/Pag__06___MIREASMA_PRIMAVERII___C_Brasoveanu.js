@@ -1,0 +1,48 @@
+// File structure based on [c] Jesse Weisbeck, MIT/GPL
+(function($) {
+  $(function() {
+    var puzzleData = 
+[     {'answer': 'PRIMAVARA', 'clue': '1)\t\tAnotimpul care se percepe ca un nou început, ca un simbol al bucuriei, energiei și optimismului, al renașterii naturii și al speranțelor', 'orientation': 'across', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'RASADI', 'clue': '2)\t\t A transplanta o plantă din seră sau din răsadniță în grădină sau în câmp, atunci când condițiile naturale ale primăverii sunt optime pentru dezvoltarea ei în aer liber', 'orientation': 'across', 'position': 2, 'startx': 1, 'starty': 2},
+      {'answer': 'ORG', 'clue': '--\t\t„Orange” (abr.)', 'orientation': 'across', 'position': 3, 'startx': 8, 'starty': 2},
+      {'answer': 'IM', 'clue': '3)\t\t Luate din timp... din primăvară!', 'orientation': 'across', 'position': 4, 'startx': 1, 'starty': 3},
+      {'answer': 'MIESS', 'clue': '--\t\tPictor român de etnie germană, născut la Brașov, s-a remarcat cu predilecție în domeniul peisagisticii sub influența impresionismului german, autorul tabloului „Primăvara” (Friedrich)', 'orientation': 'across', 'position': 5, 'startx': 4, 'starty': 3},
+      {'answer': 'ENEA', 'clue': '4)\t\t Pictor băcăuan care în anul 1934 a reprezentat România la Expoziția Internațională de Pictură de la Paris, unde a primit medalia de argint, autorul lucrării, în context, intitulată „Primăvară” (Nicu)', 'orientation': 'across', 'position': 6, 'startx': 1, 'starty': 4},
+      {'answer': 'ROSSI', 'clue': '--\t\tCântăreț și actor francez cu voce de tenor, interpretul melodiei „Primăvara la Rio” (Tino)', 'orientation': 'across', 'position': 7, 'startx': 6, 'starty': 4},
+      {'answer': 'RID', 'clue': '5)\t\t Urmă lăsată pe față de trecerea timpului', 'orientation': 'across', 'position': 8, 'startx': 1, 'starty': 5},
+      {'answer': 'IUC', 'clue': '--\t\t„Independent User Center” (acronim)', 'orientation': 'across', 'position': 9, 'startx': 5, 'starty': 5},
+      {'answer': 'OO', 'clue': '--\t\tDouă ouă!', 'orientation': 'across', 'position': 10, 'startx': 9, 'starty': 5},
+      {'answer': 'CROS', 'clue': '6)\t\t Precursor al Simbolismului, acest poet francez a oferit tiparului versurile cu titlul „Cele patru anotimpuri: Primăvara” (Charles)', 'orientation': 'across', 'position': 11, 'startx': 2, 'starty': 6},
+      {'answer': 'AARC', 'clue': '--\t\t„Asian American Resource Center” (acronim)', 'orientation': 'across', 'position': 12, 'startx': 7, 'starty': 6},
+      {'answer': 'AE', 'clue': '7)\t\t Început și sfârșit de aprilie!', 'orientation': 'across', 'position': 13, 'startx': 1, 'starty': 7},
+      {'answer': 'DARCLEE', 'clue': '--\t\tCântăreață română de operă cu voce de soprană, supranumită „Privighetoarea Carpaților”, care a interpretat rolul Iris din opera cu același nume de Pietro Mascagni în anul 1898 la Teatro dell’Opera din Roma (Hariclea)', 'orientation': 'across', 'position': 14, 'startx': 4, 'starty': 7},
+      {'answer': 'DAN', 'clue': '8)\t\t „Corabia cu păsări călătoare” este poemul care a fost inclus în volumul „Bună dimineața” a acestui poet român (George)', 'orientation': 'across', 'position': 15, 'startx': 1, 'starty': 8},
+      {'answer': 'CAI', 'clue': '--\t\t„La paștele... ”, expresie creată de popor, pentru ceva ce nu poate să se întâmple vreodată (neart.)', 'orientation': 'across', 'position': 16, 'startx': 5, 'starty': 8},
+      {'answer': 'SI', 'clue': '--\t\tCozi de toporași!', 'orientation': 'across', 'position': 17, 'startx': 9, 'starty': 8},
+      {'answer': 'ANIN', 'clue': '9)\t\t Înfrunzitul de pe malul apei', 'orientation': 'across', 'position': 18, 'startx': 1, 'starty': 9},
+      {'answer': 'TURC', 'clue': '--\t\t„Omul încântător răspândește florile în afară și păstrează ghimpii pentru el”, este un proverb al acestui popor din sud- estul Europei', 'orientation': 'across', 'position': 19, 'startx': 6, 'starty': 9},
+      {'answer': 'MULLER', 'clue': '10)\t\t Cu pânza „Bujori” ne încântă privirea această pictoriță din țara noastră (Elena... Stăncescu)', 'orientation': 'across', 'position': 20, 'startx': 1, 'starty': 10},
+      {'answer': 'CUC', 'clue': '--\t\tPasăre migratoare cu coada lungă cu pete albe și pene cenușii, care își depune ouăle în cuiburi străine pentru a fi clocite', 'orientation': 'across', 'position': 21, 'startx': 8, 'starty': 10},
+      {'answer': 'PRIER', 'clue': '1)\t\tDenumirea populară pentru a patra lună a anului', 'orientation': 'down', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'ADAM', 'clue': '--\t\tPoet și prozator gălățean, autorul volumului de versuri „Scrisori din țara cocorilor albi” în care întâlnim și titlul „Primăvara” (Sergiu)', 'orientation': 'down', 'position': 13, 'startx': 1, 'starty': 7},
+      {'answer': 'RAMNICEANU', 'clue': '2)\t\t „Ulcică cu flori de primăvară” este tabloul semnat de această pictoriță autohtonă (Merica)', 'orientation': 'down', 'position': 22, 'startx': 2, 'starty': 1},
+      {'answer': 'IS', 'clue': '3)\t\t Coadă de iris!', 'orientation': 'down', 'position': 23, 'startx': 3, 'starty': 1},
+      {'answer': 'EDR', 'clue': '--\t\t„Event Data Recorder” (acronim)', 'orientation': 'down', 'position': 24, 'startx': 3, 'starty': 4},
+      {'answer': 'NIL', 'clue': '--\t\tFluviu în Africa', 'orientation': 'down', 'position': 25, 'startx': 3, 'starty': 8},
+      {'answer': 'MAMA', 'clue': '4)\t\t Ziua de 8 martie este sărbătoarea tuturor doamnelor, dintre care menționăm aici pe cele mai iubite ființe din viața noastră (sg)', 'orientation': 'down', 'position': 26, 'startx': 4, 'starty': 1},
+      {'answer': 'OD', 'clue': '--\t\tSunt la modă!', 'orientation': 'down', 'position': 27, 'startx': 4, 'starty': 6},
+      {'answer': 'NL', 'clue': '--\t\tCel natural e pe margini!', 'orientation': 'down', 'position': 28, 'startx': 4, 'starty': 9},
+      {'answer': 'ADI', 'clue': '5)\t\t Esență de mlădiță!', 'orientation': 'down', 'position': 29, 'startx': 5, 'starty': 1},
+      {'answer': 'ISAC', 'clue': '--\t\tLiric clujean, autorul poeziei „Primăvara domnișoarei bătrâne” (Emil)', 'orientation': 'down', 'position': 9, 'startx': 5, 'starty': 5},
+      {'answer': 'VIERU', 'clue': '6)\t\t „Bună vreme, ghiocel!/ Bună vreme, băiețel!... ”, versurile sunt preluate din poezia, , Ghiocelul” din creația acestui liric român născut în Republica Moldova (Grigore)', 'orientation': 'down', 'position': 30, 'startx': 6, 'starty': 1},
+      {'answer': 'RATR', 'clue': '--\t\t„Rook And The Ravens” (acronim)', 'orientation': 'down', 'position': 31, 'startx': 6, 'starty': 7},
+      {'answer': 'SOCACIU', 'clue': '7)\t\t Autor român de muzică folk, realizator de televiziune și fost parlamentar, interpretul melodiei „Floare din floare” (Victor)', 'orientation': 'down', 'position': 32, 'startx': 7, 'starty': 3},
+      {'answer': 'ROSS', 'clue': '8)\t\t Renumită cântăreață americană, din repertoriul căreia amintim cântecul „Primăvara a sosit” (Diana)', 'orientation': 'down', 'position': 33, 'startx': 8, 'starty': 1},
+      {'answer': 'AL', 'clue': '--\t\tÎn vale!', 'orientation': 'down', 'position': 34, 'startx': 8, 'starty': 6},
+      {'answer': 'RC', 'clue': '--\t\tE dus la rece!', 'orientation': 'down', 'position': 35, 'startx': 8, 'starty': 9},
+      {'answer': 'AR', 'clue': '9)\t\t Apar primele în arbori!', 'orientation': 'down', 'position': 36, 'startx': 9, 'starty': 1},
+      {'answer': 'SORESCU', 'clue': '--\t\tScriitor român, fost ministru al culturii, autorul poeziei „Mai... ”, din care cităm versurile: „La primăvară, când, iar, sumbră, / Sub poala soarelui cea grea, / Pământului veți face umbră, / O veți mânca atunci pe ea... ” (Marin)', 'orientation': 'down', 'position': 37, 'startx': 9, 'starty': 4},
+      {'answer': 'GHIOCEI', 'clue': '10)\t\t Plantă erbacee perenă cu frunze liniare, cu o singură floare albă în formă de clopoțel, care înflorește la începutul primăverii (pl.)', 'orientation': 'down', 'position': 38, 'startx': 10, 'starty': 2}]
+    $('#puzzle-wrapper').crossword(puzzleData, `MIREASMA PRIMĂVERII`, 'Constantin BRAȘOVEANU – Ploiești');
+  })
+})(jQuery)

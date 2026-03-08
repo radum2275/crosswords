@@ -1,0 +1,45 @@
+// File structure based on [c] Jesse Weisbeck, MIT/GPL
+(function($) {
+  $(function() {
+    var puzzleData = 
+[     {'answer': 'PROMOROACA', 'clue': '1)\t\tStrat subțire de gheață, format iarna din vapori sau din picături de apă, pe suprafața pământului', 'orientation': 'across', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'IOAN', 'clue': '2)\t\t Figura centrală a creștinismului și a islamului, predicator și botezător pe malurile Iordanului, sărbătorit la șapte ianuarie', 'orientation': 'across', 'position': 2, 'startx': 3, 'starty': 2},
+      {'answer': 'LAL', 'clue': '--\t\tScriitor hunedorean, redactor de film și scenarist, autorul volumului „A intrat iarna-n sat” (Romulus)', 'orientation': 'across', 'position': 3, 'startx': 8, 'starty': 2},
+      {'answer': 'TA', 'clue': '3)\t\t Resturi de gheață!', 'orientation': 'across', 'position': 4, 'startx': 1, 'starty': 3},
+      {'answer': 'IL', 'clue': '--\t\tIntrate în vilă!', 'orientation': 'across', 'position': 5, 'startx': 4, 'starty': 3},
+      {'answer': 'ABRU', 'clue': '--\t\tLocalitate în Norvegia', 'orientation': 'across', 'position': 6, 'startx': 7, 'starty': 3},
+      {'answer': 'IVANESCU', 'clue': '4)\t\t „Vremea zăpezilor” este titlul poeziei al cărui autor este acest poet, eseist și traducător român, din care cităm versurile: „timpul zăpezilor- un fel de a spune/ că revezi o față, pe care n-ai mai privit-o demult, / și umbli spre ea prin zăpadă scriind urme/ într-un timp, trecut de acum, unde n-ai mai fost și e mult” (Mircea)', 'orientation': 'across', 'position': 7, 'startx': 1, 'starty': 4},
+      {'answer': 'NANA', 'clue': '5)\t\t Numele de scenă a rapperului și D. J. -lui german, interpretul piesei „Lasă să plouă”', 'orientation': 'across', 'position': 8, 'startx': 1, 'starty': 5},
+      {'answer': 'TS', 'clue': '--\t\tTras pe margini!', 'orientation': 'across', 'position': 9, 'startx': 6, 'starty': 5},
+      {'answer': 'CE', 'clue': '--\t\tPrimele semne de ceață!', 'orientation': 'across', 'position': 10, 'startx': 9, 'starty': 5},
+      {'answer': 'ALA', 'clue': '6)\t\t Cel din avalanșă!', 'orientation': 'across', 'position': 11, 'startx': 1, 'starty': 6},
+      {'answer': 'PA', 'clue': '--\t\tIntrate în zăpadă!', 'orientation': 'across', 'position': 12, 'startx': 5, 'starty': 6},
+      {'answer': 'ARC', 'clue': '--\t\tEste în dotarea unui Săgetător', 'orientation': 'across', 'position': 13, 'startx': 8, 'starty': 6},
+      {'answer': 'TALIANU', 'clue': '7)\t\t Poet bănățean de o mare sensibilitate, autorul volumului de versuri „Iarna pră ogaș” (Petre)', 'orientation': 'across', 'position': 14, 'startx': 1, 'starty': 7},
+      {'answer': 'IO', 'clue': '--\t\tOi întoarse din drum!', 'orientation': 'across', 'position': 15, 'startx': 9, 'starty': 7},
+      {'answer': 'ONESA', 'clue': '8)\t\t „Flori de gheață” este filmul regizat de Anghel Moga, în care a fost distribuită și această talentată actriță autohtonă (Anda)', 'orientation': 'across', 'position': 16, 'startx': 1, 'starty': 8},
+      {'answer': 'SAVA', 'clue': '--\t\tPoet român, autorul volumului „Lacrimi uscate” în care a fost inclusă și poezia „A nins” (Paul)', 'orientation': 'across', 'position': 17, 'startx': 7, 'starty': 8},
+      {'answer': 'RS', 'clue': '9)\t\t Curs în aval!', 'orientation': 'across', 'position': 18, 'startx': 1, 'starty': 9},
+      {'answer': 'TAMAS', 'clue': '--\t\tInterpretul transilvănean al colindului „Mare iarnă s-o lăsat” (Aurel)', 'orientation': 'across', 'position': 19, 'startx': 6, 'starty': 9},
+      {'answer': 'IANCU', 'clue': '10)\t\t Compozitor român al cărui album „Melodii alese” conține și piesa „Un fulg de nea” (Mișu)', 'orientation': 'across', 'position': 20, 'startx': 1, 'starty': 10},
+      {'answer': 'NITA', 'clue': '--\t\tFilozof român contemporan din lucrările căruia amintim, articolul „Iarna vrajbei noastre” (Adrian)', 'orientation': 'across', 'position': 21, 'startx': 7, 'starty': 10},
+      {'answer': 'PATINATORI', 'clue': '1)\t\tSportivi care execută o serie de elemente specifice precum sărituri, piruete după o anumită coregrafie, pe o suprafață acoperită de gheață', 'orientation': 'down', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'AVALANSA', 'clue': '2)\t\t Masă de zăpadă care se pune în mișcare și alunecă pe versantul sau pe valea unui munte', 'orientation': 'down', 'position': 22, 'startx': 2, 'starty': 3},
+      {'answer': 'OI', 'clue': '3)\t\t Animalele domestice care iarna sunt adăpostite în saivane si sunt hrănite cu fân, siloz și cereale', 'orientation': 'down', 'position': 23, 'startx': 3, 'starty': 1},
+      {'answer': 'ANALE', 'clue': '--\t\tScriere istorică concisă în ordine cronologică, an de an, a unor evenimente importante din existența unui stat', 'orientation': 'down', 'position': 24, 'startx': 3, 'starty': 4},
+      {'answer': 'MOINA', 'clue': '4)\t\t Timp ceva mai călduros și umed, care urmează iarna după o perioadă de îngheț puternic', 'orientation': 'down', 'position': 25, 'startx': 4, 'starty': 1},
+      {'answer': 'ISAC', 'clue': '--\t\tTabloul „Iarna la Timișoara” a fost realizat de acest pictor bănățean (Ioan)', 'orientation': 'down', 'position': 26, 'startx': 4, 'starty': 7},
+      {'answer': 'OALE', 'clue': '5)\t\t Vase întrebuințate la pregătirea termică a sarmalelor', 'orientation': 'down', 'position': 27, 'startx': 5, 'starty': 1},
+      {'answer': 'PAA', 'clue': '--\t\t„Pan American Airways” (siglă)', 'orientation': 'down', 'position': 12, 'startx': 5, 'starty': 6},
+      {'answer': 'RN', 'clue': '6)\t\t Piele de ren!', 'orientation': 'down', 'position': 28, 'startx': 6, 'starty': 1},
+      {'answer': 'STAN', 'clue': '--\t\tInterpretă de folclor a cântecului dobrogean, din repertoriul căreia amintim melodia „Ceață, ceață, negureață” (Aneta)', 'orientation': 'down', 'position': 29, 'startx': 6, 'starty': 4},
+      {'answer': 'ACS', 'clue': '7)\t\t „Peisaj cu zăpadă” este titlul tabloului creat de acest pictor clujean de etnie maghiară (Ferenc)', 'orientation': 'down', 'position': 6, 'startx': 7, 'starty': 3},
+      {'answer': 'USAN', 'clue': '--\t\t„United States Approved Name” (acronim)', 'orientation': 'down', 'position': 30, 'startx': 7, 'starty': 7},
+      {'answer': 'ALBU', 'clue': '8)\t\t Poetă și ziaristă din județul Călărași, autoarea poeziei „Colind” (Florența)', 'orientation': 'down', 'position': 31, 'startx': 8, 'starty': 1},
+      {'answer': 'AMI', 'clue': '--\t\tAflate în cămin!', 'orientation': 'down', 'position': 32, 'startx': 8, 'starty': 8},
+      {'answer': 'CAR', 'clue': '9)\t\t Conform proverbului, acest mijloc de transport este construit de omul gospodar iarna, pentru a fi folosit vara', 'orientation': 'down', 'position': 33, 'startx': 9, 'starty': 1},
+      {'answer': 'CRIVAT', 'clue': '--\t\tVânt puternic și rece care suflă iarna în Moldova și în Câmpia Dunării dinspre nord-est', 'orientation': 'down', 'position': 10, 'startx': 9, 'starty': 5},
+      {'answer': 'ALUNECOASA', 'clue': '10)\t\t Suprafață acoperită de o pojghiță de gheață, lucioasă, fără asperități pe care se cădea foarte ușor', 'orientation': 'down', 'position': 34, 'startx': 10, 'starty': 1}]
+    $('#puzzle-wrapper').crossword(puzzleData, `E TOTUȘI IARNĂ!...`, 'Constantin BRAȘOVEANU – Ploiești');
+  })
+})(jQuery)
