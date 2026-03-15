@@ -221,7 +221,12 @@ def load_data(file_name: str) -> List[Dict[str, Any]]:
         print(e)
         return None
     
-async def process_data(data: List[Dict[str, Any]], backend: Backend, version: str, prefix_len: int):
+async def process_data(
+        data: List[Dict[str, Any]], 
+        backend: Backend, 
+        version: str, 
+        prefix_len: int,
+        num_samples: int = None):
     """
     Process the dataset
     
@@ -239,10 +244,16 @@ async def process_data(data: List[Dict[str, Any]], backend: Backend, version: st
     references = []
     predictions = []
     corutines = []
-    for item in data[:200]:
+    if num_samples is not None:
+        data = data[:num_samples]
+
+    for item in data:
         answer = item["answer"] # ground truth answer (Romanian)
         clue_text = item["clue"] # clue text (Romanian)
         num_letters = len(answer)
+        if num_letters <= 2:
+            continue # skip very short answers for which prefix hint is not relevant
+        
         prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
 
         if version == "v1":
