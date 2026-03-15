@@ -1,0 +1,45 @@
+// File structure based on [c] Jesse Weisbeck, MIT/GPL
+(function($) {
+  $(function() {
+    var puzzleData = 
+[     {'answer': 'MALANCIOIU', 'clue': '1)\t\t„A stat ninsoarea, a stat viscolul, a stat tot, / Nimic nu mai pică acum nici din cer, / Nici de pe-acest pământ, oricât ai aștepta/ La fereastra albită de ger”; versurile sunt preluate din poezia „A stat ninsoarea” și sunt scrise de această poetă, eseistă și publicistă argeșeană (Ileana)', 'orientation': 'across', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'ORASEL', 'clue': '2)\t\t Spațiu de recreere pentru copii, amenajat de regulă într-un parc, care oferă atracții pe teme specifice în apropierea și în timpul sărbătorilor de iarnă', 'orientation': 'across', 'position': 2, 'startx': 1, 'starty': 2},
+      {'answer': 'LUR', 'clue': '--\t\tTrompetă metalică cu aspectul asemănător unui șarpe, a cărei denumire în suedeză înseamnă „sirenă de ceață”', 'orientation': 'across', 'position': 3, 'startx': 8, 'starty': 2},
+      {'answer': 'NI', 'clue': '3)\t\t Ninsori incipiente!', 'orientation': 'across', 'position': 4, 'startx': 1, 'starty': 3},
+      {'answer': 'AN', 'clue': '--\t\tSe schimbă în noaptea de revelion', 'orientation': 'across', 'position': 5, 'startx': 4, 'starty': 3},
+      {'answer': 'GAGA', 'clue': '--\t\tCântăreață, textieră și actriță americană, interpreta melodiei „Brad de Crăciun” (Lady)', 'orientation': 'across', 'position': 6, 'startx': 7, 'starty': 3},
+      {'answer': 'TEG', 'clue': '4)\t\t „Thermal Electric Generator” (acronim)', 'orientation': 'across', 'position': 7, 'startx': 1, 'starty': 4},
+      {'answer': 'ANDRA', 'clue': '--\t\tNumele de scenă pe care îl are Alexandra Irina Măruță, vedetă de televiziune și cântăreață de muzică pop și R-and-B, autoarea albumului muzical „Vis de iarnă”', 'orientation': 'across', 'position': 8, 'startx': 5, 'starty': 4},
+      {'answer': 'ESOP', 'clue': '5)\t\t Povestirea alegorică „Plugarul și șarpele înghețat de frig” îl are autor pe acest cunoscut fabulist elen', 'orientation': 'across', 'position': 9, 'startx': 1, 'starty': 5},
+      {'answer': 'EVU', 'clue': '--\t\tPoet, prozator și publicist român care și-a pus semnătura pe volumul de poeme „Purpura iarna” (Eugen)', 'orientation': 'across', 'position': 10, 'startx': 6, 'starty': 5},
+      {'answer': 'FAY', 'clue': '6)\t\t „Acea noapte, acea zi de iarnă ’33” este volumul al cărui autor este acest scriitor și genealogist francez originar din România (Ștefan)', 'orientation': 'across', 'position': 11, 'startx': 1, 'starty': 6},
+      {'answer': 'AGT', 'clue': '--\t\t„Automated Guideway Transit” (acronim)', 'orientation': 'across', 'position': 12, 'startx': 5, 'starty': 6},
+      {'answer': 'ET', 'clue': '--\t\tUrme de îngheț!', 'orientation': 'across', 'position': 13, 'startx': 9, 'starty': 6},
+      {'answer': 'INAR', 'clue': '7)\t\t Cultivatorul unei plante textile, din care se confecționează țesături, răcoroase vara și călduroase iarna', 'orientation': 'across', 'position': 14, 'startx': 1, 'starty': 7},
+      {'answer': 'MRA', 'clue': '--\t\t„Mutual Recognition Agreement” (acronim)', 'orientation': 'across', 'position': 15, 'startx': 8, 'starty': 7},
+      {'answer': 'OU', 'clue': '8)\t\t Cadou la final!', 'orientation': 'across', 'position': 16, 'startx': 1, 'starty': 8},
+      {'answer': 'CARAION', 'clue': '--\t\tPoet, critic literar, traducător și jurnalist român, autorul poeziei „Iarna la Olănești” (Ion)', 'orientation': 'across', 'position': 17, 'startx': 4, 'starty': 8},
+      {'answer': 'CICO', 'clue': '9)\t\t Băutură răcoritoare românească cu gust de citrice', 'orientation': 'across', 'position': 18, 'startx': 3, 'starty': 9},
+      {'answer': 'CUC', 'clue': '--\t\tScriitoare și jurnalistă autohtonă, autoarea volumului de poezii pentru copii „Versuri scrise pe zăpadă” (Melania)', 'orientation': 'across', 'position': 19, 'startx': 8, 'starty': 9},
+      {'answer': 'EMINESCU', 'clue': '10)\t\t Cea mai importantă voce din literatura română, este autorul care a oferit tiparului poezia cu titlul „Când crivățul cu iarna... ” (Mihai)', 'orientation': 'across', 'position': 20, 'startx': 1, 'starty': 10},
+      {'answer': 'MONTEFIORE', 'clue': '1)\t\tIstoric, scriitor și prezentator de televiziune britanic, autorul romanului de ficțiune „O noapte de iarnă” (Simon Sebag)', 'orientation': 'down', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'ARIESANU', 'clue': '2)\t\t „O pasăre în iarnă” este romanul care a văzut lumina tiparului sub semnătura acestui prozator și jurnalist mureșean (Ion)', 'orientation': 'down', 'position': 21, 'startx': 2, 'starty': 1},
+      {'answer': 'LA', 'clue': '3)\t\t Cuprinse de avalanșă!', 'orientation': 'down', 'position': 22, 'startx': 3, 'starty': 1},
+      {'answer': 'GOYA', 'clue': '--\t\tImportant pictor și grafician spaniol, creatorul tabloului în ulei pe pânză intitulat „Furtuna de zăpadă” (Francisco De)', 'orientation': 'down', 'position': 23, 'startx': 3, 'starty': 4},
+      {'answer': 'CI', 'clue': '--\t\tColaci fără băutură!', 'orientation': 'down', 'position': 18, 'startx': 3, 'starty': 9},
+      {'answer': 'ASA', 'clue': '4)\t\t Tasat pe mijloc!', 'orientation': 'down', 'position': 24, 'startx': 4, 'starty': 1},
+      {'answer': 'RCIN', 'clue': '--\t\t„Accenture Customer Innovation Network” (acronim)', 'orientation': 'down', 'position': 25, 'startx': 4, 'starty': 7},
+      {'answer': 'NENA', 'clue': '5)\t\t Cântăreață germană de faimă internațională, interpreta melodiei „Ura, ninge!”', 'orientation': 'down', 'position': 26, 'startx': 5, 'starty': 1},
+      {'answer': 'ACE', 'clue': '--\t\tCristale de gheață subțiri și ascuțite', 'orientation': 'down', 'position': 27, 'startx': 5, 'starty': 8},
+      {'answer': 'CL', 'clue': '6)\t\t Primele clinchete... de clopoței!', 'orientation': 'down', 'position': 28, 'startx': 6, 'starty': 1},
+      {'answer': 'NEGUROS', 'clue': '--\t\tTimp mohorât cu multă ceață', 'orientation': 'down', 'position': 29, 'startx': 6, 'starty': 4},
+      {'answer': 'GDVT', 'clue': '7)\t\t „German Dual Vocational Training” (acronim)', 'orientation': 'down', 'position': 6, 'startx': 7, 'starty': 3},
+      {'answer': 'OLARU', 'clue': '8)\t\t Scriitoare și publicistă din țara noastră, care a realizat creația lirică „Vis cu zăpadă” (Lucia... Nenati)', 'orientation': 'down', 'position': 30, 'startx': 8, 'starty': 1},
+      {'answer': 'MICU', 'clue': '--\t\tPoet, scriitor și publicist autohton, autorul volumului de proză „Secretul doamnei de zăpadă” (Mircea)', 'orientation': 'down', 'position': 15, 'startx': 8, 'starty': 7},
+      {'answer': 'IUGA', 'clue': '9)\t\t „Irosirea zăpezilor” este volumul publicat, în context, de acest poet și traducător maramureșean (Ion)', 'orientation': 'down', 'position': 31, 'startx': 9, 'starty': 1},
+      {'answer': 'EROU', 'clue': '--\t\tPersonajul „Bădica Traian”, din Plugușorul nostru tradițional', 'orientation': 'down', 'position': 13, 'startx': 9, 'starty': 6},
+      {'answer': 'URA', 'clue': '10)\t\t A transmite „La mulți ani!”', 'orientation': 'down', 'position': 32, 'startx': 10, 'starty': 1},
+      {'answer': 'STANCU', 'clue': '--\t\t„Copacii prea negrii, ne ies în drum, / Umbrele lor clătinate sunt fum”, versurile sunt preluate din poezia „Cântec în ceață” a scriitorului teleormănean care a primit Premiul Herder în anul 1971 (Zaharia)', 'orientation': 'down', 'position': 33, 'startx': 10, 'starty': 5}]
+    $('#puzzle-wrapper').crossword(puzzleData, `E IARNĂ!...`, 'Constantin BRAȘOVEANU – Ploiești');
+  })
+})(jQuery)

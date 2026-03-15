@@ -1,0 +1,45 @@
+// File structure based on [c] Jesse Weisbeck, MIT/GPL
+(function($) {
+  $(function() {
+    var puzzleData = 
+[     {'answer': 'GRIGORESCU', 'clue': '1)\t\tPictor român, unul dintre fondatorii picturii moderne din țara noastră, autorul tabloului „Toamna la Fontainebleau” (Nicolae)', 'orientation': 'across', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'RADU', 'clue': '2)\t\t Cântăreață autohtonă de muzică populară și de romanțe, interpreta melodiei „Dacă-n douăzeci de toamne” (Ioana)', 'orientation': 'across', 'position': 2, 'startx': 1, 'starty': 2},
+      {'answer': 'ISPIR', 'clue': '--\t\tTânără ilustratoare de carte în mediul tradițional și digital din România, autoarea sugestivei lucrări cu titlul „Noiembrie” (Oana)', 'orientation': 'across', 'position': 3, 'startx': 6, 'starty': 2},
+      {'answer': 'AC', 'clue': '3)\t\t Pe fundul sacului!', 'orientation': 'across', 'position': 4, 'startx': 1, 'starty': 3},
+      {'answer': 'TAMAIOS', 'clue': '--\t\tVarietate de struguri dulci, care au un puternic gust aromat (sg.)', 'orientation': 'across', 'position': 5, 'startx': 4, 'starty': 3},
+      {'answer': 'PORUMB', 'clue': '4)\t\t Plantă cerealieră, originală din America Centrală, care reprezintă alături de grâu, 80 la sută din producția mondială de cereale alimentare, ce se recoltează toamna', 'orientation': 'across', 'position': 6, 'startx': 1, 'starty': 4},
+      {'answer': 'NCU', 'clue': '--\t\t„North Central University” (siglă)', 'orientation': 'across', 'position': 7, 'startx': 8, 'starty': 4},
+      {'answer': 'EREI', 'clue': '5)\t\t Munți calcaroși din partea centrală a Siciliei', 'orientation': 'across', 'position': 8, 'startx': 1, 'starty': 5},
+      {'answer': 'AR', 'clue': '--\t\tSfârșit de Brumar!', 'orientation': 'across', 'position': 9, 'startx': 6, 'starty': 5},
+      {'answer': 'IC', 'clue': '6)\t\t Pană pentru spart lemne de foc', 'orientation': 'across', 'position': 10, 'startx': 2, 'starty': 6},
+      {'answer': 'MU', 'clue': '--\t\tLa intrare în mustărie!', 'orientation': 'across', 'position': 11, 'startx': 5, 'starty': 6},
+      {'answer': 'GLA', 'clue': '--\t\tGreater London Authority (acronim)', 'orientation': 'across', 'position': 12, 'startx': 8, 'starty': 6},
+      {'answer': 'STOL', 'clue': '7)\t\t Formațiune mare de păsări migratoare de același fel, observate pe cerul toamnei', 'orientation': 'across', 'position': 13, 'startx': 1, 'starty': 7},
+      {'answer': 'DOREN', 'clue': '--\t\t„Toamna poartă mai mult aur în buzunar decât toate celelalte anotimpuri la un loc” a afirmat acest poet, scriitor și critic literar american (Mark Van...)', 'orientation': 'across', 'position': 14, 'startx': 6, 'starty': 7},
+      {'answer': 'PALER', 'clue': '8)\t\t Scriitor și jurnalist român, autorul fermecătorului citat: „Toamna este un andante melancolic și grațios care pregătește admirabilul adagio al iernii” (Octavian)', 'orientation': 'across', 'position': 15, 'startx': 1, 'starty': 8},
+      {'answer': 'RAS', 'clue': '--\t\tTăiat de la rădăcină', 'orientation': 'across', 'position': 16, 'startx': 7, 'starty': 8},
+      {'answer': 'ENESCU', 'clue': '9)\t\t Compozitor și muzician autohton, autorul melodiei „Septembrie” (Adrian)', 'orientation': 'across', 'position': 17, 'startx': 5, 'starty': 9},
+      {'answer': 'CRETIA', 'clue': '10)\t\t „Norii” este volumul care a văzut lumina tiparului sub semnătura acestui traducător, filolog, eminescolog și profesor universitar clujean (Petru)', 'orientation': 'across', 'position': 18, 'startx': 1, 'starty': 10},
+      {'answer': 'SUR', 'clue': '--\t\tUn om cu semnele toamnei la tâmple', 'orientation': 'across', 'position': 19, 'startx': 8, 'starty': 10},
+      {'answer': 'GRAPE', 'clue': '1)\t\tUnelte agricole cu discuri sau cu dinți, folosite pentru mărunțirea, afânarea și netezirea pământului și pentru acoperirea boabelor după semănat', 'orientation': 'down', 'position': 1, 'startx': 1, 'starty': 1},
+      {'answer': 'SPIC', 'clue': '--\t\tInflorescență caracteristică plantelor graminee', 'orientation': 'down', 'position': 13, 'startx': 1, 'starty': 7},
+      {'answer': 'RACORITA', 'clue': '2)\t\t Vreme de toamnă cu temperatura ceva mai scăzută', 'orientation': 'down', 'position': 20, 'startx': 2, 'starty': 1},
+      {'answer': 'ID', 'clue': '3)\t\t Urme de rid!', 'orientation': 'down', 'position': 21, 'startx': 3, 'starty': 1},
+      {'answer': 'RECOLTE', 'clue': '--\t\tProdusele toamnei, care sunt adunate de pe terenurile cultivate și din livezi, fiind rezultatele muncii agricultorilor sau pomicultorilor din timpul anului', 'orientation': 'down', 'position': 22, 'startx': 3, 'starty': 4},
+      {'answer': 'GUTUI', 'clue': '4)\t\t Arbore de mărime medie, unicul membru din genul cydonia, originar din regiunea Caucazului, este un pom fructifer înrudit cu mărul și părul, iar fructele sale, care se culeg toamna, sunt mari, galbene, aromate și acoperite cu puf', 'orientation': 'down', 'position': 23, 'startx': 4, 'starty': 1},
+      {'answer': 'LE', 'clue': '--\t\tUltimele migdale!', 'orientation': 'down', 'position': 24, 'startx': 4, 'starty': 7},
+      {'answer': 'AM', 'clue': '5)\t\t Miez de bame!', 'orientation': 'down', 'position': 25, 'startx': 5, 'starty': 3},
+      {'answer': 'REI', 'clue': '--\t\t„Real Estate Investing” (acronim)', 'orientation': 'down', 'position': 26, 'startx': 5, 'starty': 8},
+      {'answer': 'RIMBAUD', 'clue': '6)\t\t Poet francez precursor al simbolismului, autorul poeziei „Boema mea” din care cităm versurile: „Și către toamnă, vai, mă trage ața!/ M-aplec, și-aud picioarele cum cântă/ La orga drumului flămândă!” (Arthur)', 'orientation': 'down', 'position': 27, 'startx': 6, 'starty': 1},
+      {'answer': 'NA', 'clue': '--\t\tToamna e pe sfârșite!', 'orientation': 'down', 'position': 28, 'startx': 6, 'starty': 9},
+      {'answer': 'ESA', 'clue': '7)\t\t „European Space Agency” (siglă)', 'orientation': 'down', 'position': 29, 'startx': 7, 'starty': 1},
+      {'answer': 'ORE', 'clue': '--\t\tTrecerea la cea de iarnă se face în ultima duminică din luna octombrie (pl.)', 'orientation': 'down', 'position': 30, 'startx': 7, 'starty': 7},
+      {'answer': 'SPIN', 'clue': '8)\t\t Structură ascuțită sub formă de țeapă, care crește pe tulpina sau ramurile unei plante', 'orientation': 'down', 'position': 31, 'startx': 8, 'starty': 1},
+      {'answer': 'GRASS', 'clue': '--\t\t„Înainte ca gălbenușurile verzui să se veștejească, / găinile clocesc o toamnă timpurie... ”, versurile sunt preluate din poezia „Fasole și pere” a acestui scriitor, sculptor, pictor și grafician german (Gunter)', 'orientation': 'down', 'position': 12, 'startx': 8, 'starty': 6},
+      {'answer': 'CIOCULESCU', 'clue': '9)\t\t Poet, scriitor, eseist, traducător și critic literar român care și-a făcut debutul ca prozator cu volumul de nuvele „Palatul de toamnă” (Barbu)', 'orientation': 'down', 'position': 32, 'startx': 9, 'starty': 1},
+      {'answer': 'URSU', 'clue': '10)\t\t Regizor timișorean care realizat filmul „Septembrie”, avându-i în rolurile principale pe actorii Anda Onesa și Geo Costiniu (Timotei)', 'orientation': 'down', 'position': 33, 'startx': 10, 'starty': 1},
+      {'answer': 'AN', 'clue': '--\t\tPuse primele în antal!', 'orientation': 'down', 'position': 34, 'startx': 10, 'starty': 6},
+      {'answer': 'UR', 'clue': '--\t\tBura prin centru!', 'orientation': 'down', 'position': 35, 'startx': 10, 'starty': 9}]
+    $('#puzzle-wrapper').crossword(puzzleData, `TOAMNĂ GRI!...`, 'Constantin BRAȘOVEANU – Ploiești');
+  })
+})(jQuery)
