@@ -226,6 +226,7 @@ async def process_data(
         backend: Backend, 
         version: str, 
         prefix_len: int,
+        dataset_type: str,
         num_samples: int = None):
     """
     Process the dataset
@@ -239,7 +240,10 @@ async def process_data(
     print(f"Processing {len(data)} clues...")
     print(f"Using LLM: {backend.model_id}")
     print(f"Prompt version: {version}")
-    
+    print(f"Dataset type: {dataset_type}")
+
+    assert dataset_type in ["clues", "baseline"], f"Unknown dataset type: {dataset_type}"
+
     results = []
     references = []
     predictions = []
@@ -248,12 +252,16 @@ async def process_data(
         data = data[:num_samples]
 
     for item in data:
-        answer = item["answer"] # ground truth answer (Romanian)
-        clue_text = item["clue"] # clue text (Romanian)
+        if dataset_type == "clues":
+            answer = item["answer"] # ground truth answer (Romanian)
+            clue_text = item["clue"] # clue text (Romanian)
+        elif dataset_type == "baseline":
+            answer = item["solution"] # ground truth answer (Romanian)
+            clue_text = item["clue"] # clue text (Romanian)
+
         num_letters = len(answer)
         if num_letters <= 2:
             continue # skip very short answers for which prefix hint is not relevant
-        
         prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
 
         if version == "v1":
@@ -324,11 +332,14 @@ async def process_data(
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_id', type=str, default="llama")
+    parser.add_argument('--dataset_file', type=str)
+    parser.add_argument('--dataset_type', type=str, default="clues")
     parser.add_argument('--version', type=str, default="v3")
     parser.add_argument('--prefix_len', type=int, default=0)
+    parser.add_argument('--output_name', type=str)
+    parser.add_argument('--output_dir', type=str)
 
     args = parser.parse_args()
-
 
     # Create a Mellea RITS backend
     if args.model_id == "llama":
@@ -355,12 +366,12 @@ if __name__ == '__main__':
         raise ValueError(f"Unknown LLM backend.")
 
     prefix_len = args.prefix_len
-    path = "/home/radu/storage/git/crosswords/data"
-    data = load_data(os.path.join(path, "extracted_data.json"))
-    results = asyncio.run(process_data(data, backend, args.version, prefix_len))
+    dataset_type = args.dataset_type
+    data = load_data(args.dataset_file)
+    results = asyncio.run(process_data(data, backend, args.version, prefix_len, dataset_type))
 
-    output_filename = f"out_{args.model_id}_{args.version}_{prefix_len}.json"
-    with open(os.path.join(path, output_filename), "w") as fp:
+    output_filename = f"{args.output_name}_{args.model_id}_{args.version}_{prefix_len}.json"
+    with open(os.path.join(args.output_dir, output_filename), "w") as fp:
         json.dump(results, fp, indent=4)
 
     print("Done.")
