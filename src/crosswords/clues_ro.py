@@ -19,9 +19,13 @@ from mellea.stdlib.requirements import req, check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
 
 from mellea_ibm.rits import RITSBackend, RITS
+from mellea.core import FancyLogger
+
+# Disable Mellea logging
+FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
-from src.crosswords.utils import strip_code_fences, validate_json_code_block
+from src.crosswords.utils import strip_code_fences, validate_json_code_block, batcher
 
 INSTRUCTION_V1 = """
 You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
@@ -227,7 +231,10 @@ async def process_data(
         version: str, 
         prefix_len: int,
         dataset_type: str,
-        num_samples: int = None):
+        num_samples: int = None, 
+        batch_size: int = 100,
+        output_filename: str = "results.json"
+) -> List[Dict[str, Any]]:
     """
     Process the dataset
     
@@ -247,71 +254,78 @@ async def process_data(
     results = []
     references = []
     predictions = []
-    corutines = []
+    
     if num_samples is not None:
         data = data[:num_samples]
 
-    for item in data:
-        if dataset_type == "clues":
-            answer = item["answer"] # ground truth answer (Romanian)
-            clue_text = item["clue"] # clue text (Romanian)
-        elif dataset_type == "baseline":
-            answer = item["solution"] # ground truth answer (Romanian)
-            clue_text = item["clue"] # clue text (Romanian)
+    print(f"Processing data in batches of {batch_size}...")
+    for batch in batcher(data, batch_size=batch_size, progress=True):
+        corutines = []
+        for item in batch:
+            if dataset_type == "clues":
+                answer = item["answer"] # ground truth answer (Romanian)
+                clue_text = item["clue"] # clue text (Romanian)
+            elif dataset_type == "baseline":
+                answer = item["solution"] # ground truth answer (Romanian)
+                clue_text = item["clue"] # clue text (Romanian)
 
-        num_letters = len(answer)
-        if num_letters <= 2:
-            continue # skip very short answers for which prefix hint is not relevant
-        prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
+            num_letters = len(answer)
+            if num_letters <= 2:
+                continue # skip very short answers for which prefix hint is not relevant
+            prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
 
-        if version == "v1":
-            instruction = INSTRUCTION_V1
-            user_variables = {"clue_text": clue_text}
-        elif version == "v2":
-            instruction = INSTRUCTION_V2
-            user_variables = {"clue_text": clue_text, "num_letters": num_letters}
-        elif version == "v3":
-            instruction = INSTRUCTION_V3
-            user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+            if version == "v1":
+                instruction = INSTRUCTION_V1
+                user_variables = {"clue_text": clue_text}
+            elif version == "v2":
+                instruction = INSTRUCTION_V2
+                user_variables = {"clue_text": clue_text, "num_letters": num_letters}
+            elif version == "v3":
+                instruction = INSTRUCTION_V3
+                user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
 
-        # Perform the instruction with validation
-        corutine = mfuncs.ainstruct(
-            instruction,
-            context=SimpleContext(),
-            backend=backend,
-            requirements=[
-                check(
-                    "The output must be a valid JSON dictionary with markdown code fences.",
-                    validation_fn=simple_validate(
-                        lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
-                    ),
-                )
-            ],
-            user_variables=user_variables,
-            icl_examples=[],
-            strategy=RejectionSamplingStrategy(loop_budget=5),
-            return_sampling_results=True,
-        )
-        corutines.append(corutine)
-    print(f"[Atomizer] Awaiting for the async execution ...")
-    outputs = await asyncio.gather(*(corutines[i] for i in range(len(corutines))))        
-    for i, output in enumerate(outputs):
-        if output.success:
-            answer = data[i]["answer"]
-            clue = data[i]["clue"]
-            cleaned = strip_code_fences(str(output))
-            pred_dict = json.loads(cleaned)
-            prediction = pred_dict["answer"]
-            rationale = pred_dict["rationale"]
-            references.append(answer)
-            predictions.append(prediction)
-            results.append({
-                "clue": clue,
-                "answer": answer,
-                "prediction": prediction,
-                "rationale": rationale,
-            })
-    
+            # Perform the instruction with validation
+            c = mfuncs.ainstruct(
+                instruction,
+                context=SimpleContext(),
+                backend=backend,
+                requirements=[
+                    check(
+                        "The output must be a valid JSON dictionary with markdown code fences.",
+                        validation_fn=simple_validate(
+                            lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
+                        ),
+                    )
+                ],
+                user_variables=user_variables,
+                icl_examples=[],
+                strategy=RejectionSamplingStrategy(loop_budget=5),
+                return_sampling_results=True,
+            )
+            corutines.append(c)
+
+        # print(f"Awaiting for the async batch execution ...")
+        outputs = await asyncio.gather(*(corutines[i] for i in range(len(corutines))))        
+        for i, output in enumerate(outputs):
+            if output.success:
+                answer = batch[i]["answer"]
+                clue = batch[i]["clue"]
+                cleaned = strip_code_fences(str(output))
+                pred_dict = json.loads(cleaned)
+                prediction = pred_dict["answer"]
+                rationale = pred_dict["rationale"]
+                references.append(answer)
+                predictions.append(prediction)
+                results.append({
+                    "clue": clue,
+                    "answer": answer,
+                    "prediction": prediction,
+                    "rationale": rationale,
+                })
+        # Save intermediate results after each batch
+        with open(output_filename, "w") as f:
+            json.dump(results, f, indent=4, ensure_ascii=False)
+
     print(f"Finished {len(data)} data points")
     print(f"Generated {len(predictions)} answers to {len(references)} questions.")
     print(f"Computing scores: exact match and sbert.")
@@ -326,6 +340,10 @@ async def process_data(
     print(f"Exact match: {np.sum(exact_matches)}")
     print(f"SBERT score: {np.mean(sbert_scores):.4f} / {np.std(sbert_scores):.4f}")
 
+    # Write final results to file
+    with open(output_filename, "w") as fp:
+        json.dump(results, fp, indent=4)
+
     return results
 
     
@@ -338,6 +356,7 @@ if __name__ == '__main__':
     parser.add_argument('--prefix_len', type=int, default=0)
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
+    parser.add_argument('--batch_size', type=int, default=100)
 
     args = parser.parse_args()
 
@@ -368,10 +387,18 @@ if __name__ == '__main__':
     prefix_len = args.prefix_len
     dataset_type = args.dataset_type
     data = load_data(args.dataset_file)
-    results = asyncio.run(process_data(data, backend, args.version, prefix_len, dataset_type))
-
     output_filename = f"{args.output_name}_{args.model_id}_{args.version}_{prefix_len}.json"
-    with open(os.path.join(args.output_dir, output_filename), "w") as fp:
-        json.dump(results, fp, indent=4)
+    output_filename = os.path.join(args.output_dir, output_filename)
+    results = asyncio.run(
+        process_data(
+            data, 
+            backend, 
+            args.version, 
+            prefix_len, 
+            dataset_type, 
+            batch_size=args.batch_size,
+            output_filename=output_filename
+        )
+    )
 
     print("Done.")
