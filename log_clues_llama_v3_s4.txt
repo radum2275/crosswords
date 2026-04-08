@@ -1,0 +1,13 @@
+Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_llama_v3_4.json ...
+Traceback (most recent call last):
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 468, in <module>
+    eval_results(output_filename)
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 260, in eval_results
+    results = load_json_utf8_relaxed(output_filename)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 246, in load_json_utf8_relaxed
+    with open(path, "r", encoding="utf-8-sig", newline="") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/radu/storage/git/crosswords/data/results/clues_llama_v3_4.json'
+FINISHED CPU 11.68 MEM 0 MAXMEM 6056992 STALE 0 MAXMEM_RSS 756168
+<time name="ALL">11730</time>

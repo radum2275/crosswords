@@ -1,0 +1,16 @@
+Processing 1172 clues...
+Using LLM: ibm-granite/granite-4.0-h-small
+Prompt version: v2
+Dataset type: baseline
+Initial number of clues: 1172
+After filtering out short answers, 1148 clues remain.
+Processing data in batches of 200...
+  0%|          | 0/1148 [00:00<?, ?it/s] 17%|█▋        | 200/1148 [00:54<04:20,  3.65it/s] 35%|███▍      | 400/1148 [01:22<02:26,  5.12it/s] 52%|█████▏    | 600/1148 [01:51<01:33,  5.85it/s] 70%|██████▉   | 800/1148 [02:49<01:16,  4.58it/s] 87%|████████▋ | 1000/1148 [03:19<00:28,  5.18it/s]100%|██████████| 1148/1148 [03:19<00:00,  5.77it/s]
+Finished 1148 data points
+Generated 1147 answers to 1147 questions.
+Evaluating results from /home/radu/storage/git/crosswords/data/results/baseline_granite_v2_1.json ...
+Evaluation results: {'num_samples': 1147, 'exact_matches': 130.0, 'accuracy': 0.11333914559721012, 'sbert_mean': 0.5623394578773245, 'sbert_std': 0.18740285745228563}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/baseline_granite_v2_1.json ...
+Done.
+FINISHED CPU 4074.11 MEM 0 MAXMEM 8912628 STALE 48 MAXMEM_RSS 1130380
+<time name="ALL">4074190</time>

@@ -1,30 +1,41 @@
 [build-system]
-requires = [
-    "setuptools>=60",
-    "setuptools-scm>=8.0"]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "crosswords"
 version = "0.0.1"
-description = "LLMs and Crossword Puzzles"
+description = "Factuality Assessment for Foundation Models"
 authors = [
-    {name = "Radu Marinescu",email = "radu.marinescu@gmail.com"},
-    {name = "Adi Botea",email = "abotea@yahoo.com"},
+    {name = "Radu Marinescu", email = "radu.marinescu@ie.ibm.com"},
+    {name = "Adi Botea", email = "abotea@yahoo.com"},
 ]
 license = {text = "Apache-2.0"}
 readme = "README.md"
-requires-python = ">=3.10"
-classifiers=[
-    "License :: OSI Approved :: Apache Software License"
-]
-dependencies = [
-    # TODO: figure out correct versions dependencies
-    "mellea",
+requires-python = ">=3.11"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
 ]
 
-[tool.setuptools.packages.find]
-exclude = ["tests", "tests.*"]
-namespaces = false
+dependencies = [
+    "mellea (==0.4.0)",
+    "python-dotenv (>=1.2.2)",
+    "pyyaml (>=6.0.0)",
+    "torch (==2.8.0)",
+    "transformers (==5.3.0)",
+    "bert-score (>=0.3.13)",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "mypy", "build", "twine"]
 
 [project.urls]
 Source = "https://github.com/radum2275/crosswords"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crosswords"]
+
+[tool.hatch.build.targets.sdist]
+exclude = ["docs/", "data/", "lib/", "tests/"]

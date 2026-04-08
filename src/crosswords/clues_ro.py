@@ -10,6 +10,7 @@ import json
 import numpy as np
 import mellea.stdlib.functional as mfuncs
 
+from bert_score import BERTScorer
 from dotenv import load_dotenv
 from typing import Any, Dict, List
 from mellea.backends import Backend
@@ -25,7 +26,7 @@ from mellea.core import FancyLogger
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
-from src.crosswords.utils import strip_code_fences, validate_json_code_block, batcher
+from crosswords.utils import strip_code_fences, validate_json_code_block, batcher
 
 INSTRUCTION_V1 = """
 You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
@@ -225,6 +226,74 @@ def load_data(file_name: str) -> List[Dict[str, Any]]:
         print(e)
         return None
     
+import json
+import re
+from typing import Any, Union
+
+_TRAILING_COMMAS_RE = re.compile(r",(\s*[}\]])")
+
+def load_json_utf8_relaxed(path: Union[str, "os.PathLike"]) -> Any:
+    """
+    Load a JSON file containing Unicode (e.g., Romanian diacritics) reliably.
+    Also tolerates common non-standard JSON issue: trailing commas before } or ].
+
+    Example tolerated input:
+      [
+        {"x": 1},
+      ]
+    """
+    # utf-8-sig removes BOM if present, while still handling normal UTF-8
+    with open(path, "r", encoding="utf-8-sig", newline="") as f:
+        text = f.read()
+
+    # Remove trailing commas before closing braces/brackets
+    text = _TRAILING_COMMAS_RE.sub(r"\1", text)
+
+    return json.loads(text)
+
+def eval_results(output_filename: str) -> Dict[str, Any]:
+    """
+    Evaluate the results from the output file.
+    """
+
+    print(f"Evaluating results from {output_filename} ...")
+    results = load_json_utf8_relaxed(output_filename)
+
+    assert len(results) > 0, "No results to evaluate."
+    references = []
+    predictions = []
+    for item_dict in results:
+        assert "answer" in item_dict.keys() and "prediction" in item_dict.keys(), "Each result dictionary must have 'answer' and 'prediction' keys."  
+        answer = item_dict["answer"]
+        prediction = item_dict["prediction"]
+        if prediction is None:
+            prediction = ""
+        references.append(answer)
+        predictions.append(prediction)
+
+    scorer = BERTScorer(model_type='bert-base-uncased', device='cpu')
+
+    exact_matches = [1.0 if ref.lower() == pred.lower() else 0.0 for ref, pred in zip(references, predictions)]
+    sbert_scores = [get_sbert(ref, pred, scorer) for ref, pred in zip(references, predictions)]
+    
+    num_exact_matches = float(np.sum(exact_matches))
+    num_samples = len(results)
+    eval_results = {
+        "num_samples": num_samples,
+        "exact_matches": num_exact_matches, 
+        "accuracy": float(num_exact_matches / num_samples),
+        "sbert_mean": float(np.mean(sbert_scores)), 
+        "sbert_std": float(np.std(sbert_scores))
+    }
+    
+    print(f"Evaluation results: {eval_results}")
+    print(f"Saving evaluation results to {output_filename} ...")
+    results.append(eval_results)
+    with open(output_filename, "w") as f:
+        json.dump(results, f, indent=4)
+
+    return eval_results
+
 async def process_data(
         data: List[Dict[str, Any]], 
         backend: Backend, 
@@ -258,20 +327,27 @@ async def process_data(
     if num_samples is not None:
         data = data[:num_samples]
 
+    print(f"Initial number of clues: {len(data)}")
+    
+    # Filter out the 2 letter answers
+    if dataset_type == "clues":
+        data = [item for item in data if len(item["answer"]) > 2]
+        answer_key = "answer"
+        clue_key = "clue"
+    elif dataset_type == "baseline":
+        data = [item for item in data if len(item["solution"]) > 2]
+        answer_key = "solution"
+        clue_key = "clue"
+
+    print(f"After filtering out short answers, {len(data)} clues remain.")
     print(f"Processing data in batches of {batch_size}...")
     for batch in batcher(data, batch_size=batch_size, progress=True):
         corutines = []
         for item in batch:
-            if dataset_type == "clues":
-                answer = item["answer"] # ground truth answer (Romanian)
-                clue_text = item["clue"] # clue text (Romanian)
-            elif dataset_type == "baseline":
-                answer = item["solution"] # ground truth answer (Romanian)
-                clue_text = item["clue"] # clue text (Romanian)
+            answer = item[answer_key]
+            clue_text = item[clue_key]
 
             num_letters = len(answer)
-            if num_letters <= 2:
-                continue # skip very short answers for which prefix hint is not relevant
             prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
 
             if version == "v1":
@@ -302,14 +378,15 @@ async def process_data(
                 strategy=RejectionSamplingStrategy(loop_budget=5),
                 return_sampling_results=True,
             )
+
             corutines.append(c)
 
         # print(f"Awaiting for the async batch execution ...")
         outputs = await asyncio.gather(*(corutines[i] for i in range(len(corutines))))        
         for i, output in enumerate(outputs):
             if output.success:
-                answer = batch[i]["answer"]
-                clue = batch[i]["clue"]
+                answer = batch[i][answer_key]
+                clue = batch[i][clue_key]
                 cleaned = strip_code_fences(str(output))
                 pred_dict = json.loads(cleaned)
                 prediction = pred_dict["answer"]
@@ -328,21 +405,6 @@ async def process_data(
 
     print(f"Finished {len(data)} data points")
     print(f"Generated {len(predictions)} answers to {len(references)} questions.")
-    print(f"Computing scores: exact match and sbert.")
-
-    from bert_score import BERTScorer
-    scorer = BERTScorer(model_type='bert-base-uncased', device='cpu')
-
-    exact_matches = [1.0 if ref.lower() == pred.lower() else 0.0 for ref, pred in zip(references, predictions)]
-    sbert_scores = [get_sbert(ref, pred, scorer) for ref, pred in zip(references, predictions)]
-    
-    results.append({"exact_matches": float(np.sum(exact_matches)), "sbert_mean": float(np.mean(sbert_scores)), "sbert_std": float(np.std(sbert_scores))})
-    print(f"Exact match: {np.sum(exact_matches)}")
-    print(f"SBERT score: {np.mean(sbert_scores):.4f} / {np.std(sbert_scores):.4f}")
-
-    # Write final results to file
-    with open(output_filename, "w") as fp:
-        json.dump(results, fp, indent=4)
 
     return results
 
@@ -357,48 +419,55 @@ if __name__ == '__main__':
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
     parser.add_argument('--batch_size', type=int, default=100)
+    parser.add_argument('--num_samples', type=int, default=None)
+    parser.add_argument('--eval_only', action='store_true')
 
     args = parser.parse_args()
-
-    # Create a Mellea RITS backend
-    if args.model_id == "llama":
-        backend = RITSBackend(
-            RITS.LLAMA_3_3_70B_INSTRUCT, 
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "granite":
-        backend = RITSBackend(
-            RITS.GRANITE_4_H_SMALL, 
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "mistral":
-        backend = RITSBackend(
-            RITS.MISTRAL_LARGE_3_675B_2512, 
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "gpt-oss":
-        backend = RITSBackend(
-            RITS.GPT_OSS_120B,
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    else:
-        raise ValueError(f"Unknown LLM backend.")
-
     prefix_len = args.prefix_len
     dataset_type = args.dataset_type
-    data = load_data(args.dataset_file)
     output_filename = f"{args.output_name}_{args.model_id}_{args.version}_{prefix_len}.json"
     output_filename = os.path.join(args.output_dir, output_filename)
-    results = asyncio.run(
-        process_data(
-            data, 
-            backend, 
-            args.version, 
-            prefix_len, 
-            dataset_type, 
-            batch_size=args.batch_size,
-            output_filename=output_filename
+
+    if not args.eval_only:
+        # Create a Mellea RITS backend
+        if args.model_id == "llama":
+            backend = RITSBackend(
+                RITS.LLAMA_3_3_70B_INSTRUCT, 
+                model_options={ModelOption.MAX_NEW_TOKENS: 4096}
+            )
+        elif args.model_id == "granite":
+            backend = RITSBackend(
+                RITS.GRANITE_4_H_SMALL, 
+                model_options={ModelOption.MAX_NEW_TOKENS: 4096}
+            )
+        elif args.model_id == "mistral":
+            backend = RITSBackend(
+                RITS.MISTRAL_LARGE_3_675B_2512, 
+                model_options={ModelOption.MAX_NEW_TOKENS: 4096}
+            )
+        elif args.model_id == "gpt-oss":
+            backend = RITSBackend(
+                RITS.GPT_OSS_120B,
+                model_options={ModelOption.MAX_NEW_TOKENS: 4096}
+            )
+        else:
+            raise ValueError(f"Unknown LLM backend.")
+
+        data = load_data(args.dataset_file)
+        results = asyncio.run(
+            process_data(
+                data, 
+                backend, 
+                args.version, 
+                prefix_len, 
+                dataset_type, 
+                num_samples=args.num_samples,
+                batch_size=args.batch_size,
+                output_filename=output_filename
+            )
         )
-    )
+
+    # Evaluate results
+    eval_results(output_filename)
 
     print("Done.")

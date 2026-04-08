@@ -1,0 +1,16 @@
+Processing 1172 clues...
+Using LLM: meta-llama/llama-3-3-70b-instruct
+Prompt version: v1
+Dataset type: baseline
+Initial number of clues: 1172
+After filtering out short answers, 1148 clues remain.
+Processing data in batches of 200...
+  0%|          | 0/1148 [00:00<?, ?it/s] 17%|█▋        | 200/1148 [00:16<01:19, 11.93it/s] 17%|█▋        | 200/1148 [00:29<01:19, 11.93it/s] 35%|███▍      | 400/1148 [00:42<01:22,  9.03it/s] 52%|█████▏    | 600/1148 [01:02<00:57,  9.48it/s] 52%|█████▏    | 600/1148 [01:20<00:57,  9.48it/s] 70%|██████▉   | 800/1148 [01:20<00:34,  9.98it/s] 70%|██████▉   | 800/1148 [01:40<00:34,  9.98it/s] 87%|████████▋ | 1000/1148 [02:14<00:23,  6.26it/s]100%|██████████| 1148/1148 [02:14<00:00,  8.56it/s]
+Finished 1148 data points
+Generated 1148 answers to 1148 questions.
+Evaluating results from /home/radu/storage/git/crosswords/data/results/baseline_llama_v1_2.json ...
+Evaluation results: {'num_samples': 1148, 'exact_matches': 313.0, 'accuracy': 0.27264808362369336, 'sbert_mean': 0.6592248927685026, 'sbert_std': 0.2546541155845135}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/baseline_llama_v1_2.json ...
+Done.
+FINISHED CPU 4153.31 MEM 8599264 MAXMEM 9126704 STALE 37 MAXMEM_RSS 1327312
+<time name="ALL">4153390</time>

@@ -1,0 +1,16 @@
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
+Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v3_3.json ...
+Evaluation results: {'num_samples': 26116, 'exact_matches': 15065.0, 'sbert_mean': 0.8580513094211085, 'sbert_std': 0.1994305241917014}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v3_3.json ...
+Done.
+FINISHED CPU 29197.69 MEM 0 MAXMEM 7871704 STALE 1 MAXMEM_RSS 1276036
+<time name="ALL">29197690</time>
