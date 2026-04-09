@@ -1,1 +1,0 @@
-./run_baseline.sh: line 21: ame: command not found

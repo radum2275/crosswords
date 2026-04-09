@@ -1,16 +1,0 @@
-Processing 1172 clues...
-Using LLM: meta-llama/llama-3-3-70b-instruct
-Prompt version: v3
-Dataset type: baseline
-Initial number of clues: 1172
-After filtering out short answers, 1148 clues remain.
-Processing data in batches of 200...
-  0%|          | 0/1148 [00:00<?, ?it/s] 17%|█▋        | 200/1148 [01:28<06:57,  2.27it/s] 35%|███▍      | 400/1148 [04:55<09:52,  1.26it/s] 52%|█████▏    | 600/1148 [05:57<05:12,  1.75it/s] 70%|██████▉   | 800/1148 [07:08<02:48,  2.06it/s] 87%|████████▋ | 1000/1148 [09:38<01:26,  1.72it/s]100%|██████████| 1148/1148 [09:38<00:00,  1.98it/s]
-Finished 1148 data points
-Generated 1147 answers to 1147 questions.
-Evaluating results from /home/radu/storage/git/crosswords/data/results/baseline_llama_v3_4.json ...
-Evaluation results: {'num_samples': 1147, 'exact_matches': 847.0, 'sbert_mean': 0.9125750189047849, 'sbert_std': 0.1636902599640884}
-Saving evaluation results to /home/radu/storage/git/crosswords/data/results/baseline_llama_v3_4.json ...
-Done.
-FINISHED CPU 336.33 MEM 8661436 MAXMEM 9133496 STALE 292 MAXMEM_RSS 1222428
-<time name="ALL">336390</time>

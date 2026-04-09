@@ -1,7 +1,0 @@
-Warning: Empty candidate sentence detected; setting raw BERTscores to 0.
-Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v3_1.json ...
-Evaluation results: {'num_samples': 26115, 'exact_matches': 5288.0, 'sbert_mean': 0.6323314374362329, 'sbert_std': 0.2185523113735139}
-Saving evaluation results to /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v3_1.json ...
-Done.
-FINISHED CPU 21889.94 MEM 0 MAXMEM 7872740 STALE 1 MAXMEM_RSS 1276760
-<time name="ALL">21890010</time>

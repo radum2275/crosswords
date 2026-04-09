@@ -1,6 +1,0 @@
-Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_granite_v3_1.json ...
-Evaluation results: {'num_samples': 26060, 'exact_matches': 1108.0, 'sbert_mean': 0.5432567348931033, 'sbert_std': 0.13717860464353748}
-Saving evaluation results to /home/radu/storage/git/crosswords/data/results/clues_granite_v3_1.json ...
-Done.
-FINISHED CPU 33917.47 MEM 0 MAXMEM 7872492 STALE 0 MAXMEM_RSS 1283580
-<time name="ALL">33917470</time>

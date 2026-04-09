@@ -1,16 +1,0 @@
-Processing 1172 clues...
-Using LLM: openai/gpt-oss-120b
-Prompt version: v1
-Dataset type: baseline
-Initial number of clues: 1172
-After filtering out short answers, 1148 clues remain.
-Processing data in batches of 200...
-  0%|          | 0/1148 [00:00<?, ?it/s] 17%|█▋        | 200/1148 [01:21<06:24,  2.47it/s] 35%|███▍      | 400/1148 [02:47<05:15,  2.37it/s] 52%|█████▏    | 600/1148 [03:18<02:43,  3.35it/s] 70%|██████▉   | 800/1148 [03:45<01:21,  4.28it/s] 87%|████████▋ | 1000/1148 [04:34<00:35,  4.18it/s]100%|██████████| 1148/1148 [04:34<00:00,  4.18it/s]
-Finished 1148 data points
-Generated 1148 answers to 1148 questions.
-Evaluating results from /home/radu/storage/git/crosswords/data/results/baseline_gpt-oss_v1_2.json ...
-Evaluation results: {'num_samples': 1148, 'exact_matches': 379.0, 'accuracy': 0.33013937282229966, 'sbert_mean': 0.677357252959798, 'sbert_std': 0.2603100334218314}
-Saving evaluation results to /home/radu/storage/git/crosswords/data/results/baseline_gpt-oss_v1_2.json ...
-Done.
-FINISHED CPU 4571.12 MEM 0 MAXMEM 9132424 STALE 111 MAXMEM_RSS 1273820
-<time name="ALL">4571160</time>

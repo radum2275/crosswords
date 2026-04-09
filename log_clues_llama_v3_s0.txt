@@ -1,6 +1,0 @@
-Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_llama_v3_0.json ...
-Evaluation results: {'num_samples': 22736, 'exact_matches': 764.0, 'sbert_mean': 0.5195546430174489, 'sbert_std': 0.1283975397221729}
-Saving evaluation results to /home/radu/storage/git/crosswords/data/results/clues_llama_v3_0.json ...
-Done.
-FINISHED CPU 40566.36 MEM 7518432 MAXMEM 8005332 STALE 0 MAXMEM_RSS 1708848
-<time name="ALL">40566470</time>
