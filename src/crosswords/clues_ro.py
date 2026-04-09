@@ -204,6 +204,73 @@ HINT: Raspunsul are {{num_letters}} litere si incepe cu {{prefix_text}}
 ANSWER:
 """
 
+INSTRUCTION_V4_COT = """
+You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
+As a hint, you are given the number of letters that the answer must have and the letters the answer must start with.
+You must use both hints to find the answer.
+You must also think step by step and provide the rationale behind your answer, explaining how you used the hints to find the answer.
+
+Rules:
+- The answer to the given clue must be in Romanian.
+- The answer must have the number letters given as hint and must start with the letters given as hint.
+- Do not use abbreviations.
+- The clue definition may have multiple meanings and you must select the most likely answer.
+- Do not translate verbatim the clue definition in English.
+- You must analyze carefuly the clue to determine the most likely meaning for your answer.
+- Provide the rationale behind your answer, explaining how you used the hints to find the answer.
+
+## When thinking step by step, you should first analyze the clue and provide a list of possible answers that match the clue definition, without using the hints. Then, you should use the hints to narrow down the list of possible answers and find the most likely answer. Finally, you should provide the rationale behind your answer, explaining how you used the hints to find the answer.
+## Mark your thinking process with the following tags: <think> ** your thoughts ** </think>
+
+You must format the final response as a JSON object with the following structure.
+
+```json
+{
+  "answer": "<your answer here>",
+  "rationale": "<your rationale here>"
+}
+```
+
+Use the following examples to learn your task better.
+
+Example 1:
+CLUE: Prins asupra faptului
+HINT: Raspunsul are 6 litere si incepe cu OC
+ANSWER:
+```json
+{
+  "answer": "OCUPAT",
+  "rationale": "Prins asupra faptului inseamna ca persoana respectiva era ocupata cu o anumita activitate la momentul respectiv. Deci, OCUPAT este raspunsul corect pentru ca are 6 litere si incepe cu OC."
+}
+```
+
+Example 2:
+CLUE: Marcată de o purtare abuzivă
+HINT: Raspunsul are 5 litere si incepe cu RO
+ANSWER:
+```json
+{
+  "answer": "ROASA",
+  "rationale": "De exemplu, purtarea abuziva a unei perechi de pantofi implica a uzura pronuntata a pantofilor. ROASA inseamna uzat sau uzura. Mai mult, ROASA este raspunsul corect pentru ca are 5 litere si incepe cu RO."
+}
+```
+
+Example 3:
+CLUE: Unitate de morărit
+HINT: Raspunsul are 3 litere si incepe cu SA
+ANSWER:
+```json
+{
+  "answer": "SAC",
+  "rationale": "Activitatea de morărit implica macinarea graului in faina. De obicei, faina rezultata este pusa intr-un SAC iar cuvantul SAC are 3 litere si incepe cu SA."
+}
+```
+
+CLUE: {{clue_text}}
+HINT: Raspunsul are {{num_letters}} litere si incepe cu {{prefix_text}}
+ANSWER:
+"""
+
 
 load_dotenv()
 
@@ -358,6 +425,9 @@ async def process_data(
                 user_variables = {"clue_text": clue_text, "num_letters": num_letters}
             elif version == "v3":
                 instruction = INSTRUCTION_V3
+                user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+            elif version == "v4":
+                instruction = INSTRUCTION_V4_COT
                 user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
 
             # Perform the instruction with validation
