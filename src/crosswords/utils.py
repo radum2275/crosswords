@@ -84,7 +84,7 @@ def extract_first_square_brackets(input_string: str) -> str:
         return ''
 
 def extract_last_square_brackets(input_string: str) -> str:
-    """Extracts the contents of the FIRST string between square brackets."""
+    """Extracts the contents of the LAST string between square brackets."""
     raw_result = re.findall(r'\[.*?\]', input_string, flags=re.DOTALL)
 
     if raw_result:
@@ -101,6 +101,14 @@ def extract_last_wrapped_response(input_string: str) -> str:
     else:
         return ''
 
+def get_think_tags(input_string: str) -> str:
+    """Extracts the contents of all strings between <think> tags and concatenates them."""
+    raw_result = re.findall(r'<think>(.*?)</think>', input_string, flags=re.DOTALL)
+
+    if raw_result:
+        return "\n".join([strip_string(s) for s in raw_result])
+    else:
+        return ''
 
 def extract_first_code_block(
     input_string: str, ignore_language: bool = False
