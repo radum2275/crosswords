@@ -284,7 +284,7 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
     print(f"Evaluating results from {output_filename} ...")
     results = load_json_utf8_relaxed(output_filename)
 
-    assert len(results) > 0, "No results to evaluate."
+    assert len(results) > 0, "No results to evaluate."    
     references = []
     predictions = []
     for item_dict in results:
@@ -301,6 +301,11 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
     exact_matches = [1.0 if ref.lower() == pred.lower() else 0.0 for ref, pred in zip(references, predictions)]
     sbert_scores = [get_sbert(ref, pred, scorer) for ref, pred in zip(references, predictions)]
     
+    avg_answer_length = np.mean([len(item["answer"]) for item in results if "answer" in item])
+    print(f"Average answer length: {avg_answer_length:.2f} characters.")
+    avg_prediction_length = np.mean([len(item["prediction"]) for item in results if "prediction" in item])
+    print(f"Average prediction length: {avg_prediction_length:.2f} characters.")
+
     num_exact_matches = float(np.sum(exact_matches))
     num_samples = len(results)
     eval_results = {
@@ -308,7 +313,9 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
         "exact_matches": num_exact_matches, 
         "accuracy": float(num_exact_matches / num_samples),
         "sbert_mean": float(np.mean(sbert_scores)), 
-        "sbert_std": float(np.std(sbert_scores))
+        "sbert_std": float(np.std(sbert_scores)),
+        "avg_answer_length": float(avg_answer_length),
+        "avg_prediction_length": float(avg_prediction_length),
     }
     
     print(f"Evaluation results: {eval_results}")
