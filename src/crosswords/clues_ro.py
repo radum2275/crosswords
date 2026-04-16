@@ -417,7 +417,7 @@ async def process_data(
             )
             corutines.append(c)
 
-        # print(f"Awaiting for the async batch execution ...")
+        print(f"Awaiting for the async batch execution ...")
         outputs = await asyncio.gather(*(corutines[i] for i in range(len(corutines))))        
         for i, output in enumerate(outputs):
             if output.success:
@@ -442,6 +442,11 @@ async def process_data(
                     "prediction": prediction,
                     "rationale": rationale,
                 })
+                
+        # Sleep 1 min between batches to avoid rate limits
+        print(f"Sleeping for 1 minute to avoid rate limits ...")
+        await asyncio.sleep(60)
+
         # Save intermediate results after each batch
         with open(output_filename, "w") as f:
             json.dump(results, f, indent=4, ensure_ascii=False)
@@ -461,7 +466,7 @@ if __name__ == '__main__':
     parser.add_argument('--prefix_len', type=int, default=0)
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
-    parser.add_argument('--batch_size', type=int, default=100)
+    parser.add_argument('--batch_size', type=int, default=1024)
     parser.add_argument('--num_samples', type=int, default=None)
     parser.add_argument('--eval_only', action='store_true')
 
