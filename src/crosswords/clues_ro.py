@@ -4,11 +4,12 @@
 # Clue and answer pairs are in Romanian
 
 import os
-import asyncio
+import threading
 import argparse
 import json
 import numpy as np
 import mellea.stdlib.functional as mfuncs
+from concurrent.futures import ThreadPoolExecutor
 
 from bert_score import BERTScorer
 from dotenv import load_dotenv
@@ -331,30 +332,34 @@ class RateLimiter:
     def __init__(self, rate: int, period: float):
         self._rate = rate
         self._period = period
-        self._sem = asyncio.Semaphore(rate)
-        self._refill_task = None
+        self._sem = threading.Semaphore(rate)
+        self._timer = None
 
     def start(self):
-        self._refill_task = asyncio.create_task(self._refill())
+        self._schedule()
 
-    async def _refill(self):
-        while True:
-            await asyncio.sleep(self._period)
-            for _ in range(self._rate):
-                try:
-                    self._sem.release()
-                except ValueError:
-                    break
+    def _schedule(self):
+        self._timer = threading.Timer(self._period, self._refill)
+        self._timer.daemon = True
+        self._timer.start()
 
-    async def acquire(self):
-        await self._sem.acquire()
+    def _refill(self):
+        for _ in range(self._rate):
+            try:
+                self._sem.release()
+            except ValueError:
+                break
+        self._schedule()
+
+    def acquire(self):
+        self._sem.acquire()
 
     def cancel(self):
-        if self._refill_task:
-            self._refill_task.cancel()
+        if self._timer:
+            self._timer.cancel()
 
 
-async def process_data(
+def process_data(
         data: List[Dict[str, Any]],
         backend: Backend,
         version: str,
@@ -408,13 +413,7 @@ async def process_data(
         limiter.start()
         print(f"Rate limiting enabled: {rate_limit} prompts per {period} seconds.")
 
-    async def dispatch(coro):
-        if limiter is not None:
-            await limiter.acquire()
-        return await coro
-
-    corutines = []
-    for item in data:
+    def call_one(item):
         answer = item[answer_key]
         clue_text = item[clue_key]
 
@@ -443,7 +442,10 @@ async def process_data(
                 ),
             )
 
-        c = mfuncs.ainstruct(
+        if limiter is not None:
+            limiter.acquire()
+
+        return mfuncs.instruct(
             instruction,
             context=SimpleContext(),
             backend=backend,
@@ -452,19 +454,21 @@ async def process_data(
             icl_examples=[],
             strategy=RejectionSamplingStrategy(loop_budget=5),
             return_sampling_results=True,
-        )
-        corutines.append(c)
+        ), item
 
-    print(f"Awaiting for the async execution of {len(corutines)} prompts ...")
-    outputs = await asyncio.gather(*(dispatch(c) for c in corutines))
+    max_workers = rate_limit if rate_limit is not None else 32
+    print(f"Submitting {len(data)} prompts to ThreadPoolExecutor (max_workers={max_workers}) ...")
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(call_one, item) for item in data]
+        pairs = [f.result() for f in futures]
 
     if limiter is not None:
         limiter.cancel()
 
-    for i, output in enumerate(outputs):
+    for output, item in pairs:
         if output.success:
-            answer = data[i][answer_key]
-            clue = data[i][clue_key]
+            answer = item[answer_key]
+            clue = item[clue_key]
             if version in ["v1", "v2", "v3"]:
                 cleaned = strip_code_fences(str(output))
                 pred_dict = json.loads(cleaned)
@@ -540,18 +544,16 @@ if __name__ == '__main__':
             raise ValueError(f"Unknown LLM backend.")
 
         data = load_data(args.dataset_file)
-        results = asyncio.run(
-            process_data(
-                data,
-                backend,
-                args.version,
-                prefix_len,
-                dataset_type,
-                num_samples=args.num_samples,
-                output_filename=output_filename,
-                rate_limit=args.rate_limit,
-                period=args.period,
-            )
+        results = process_data(
+            data,
+            backend,
+            args.version,
+            prefix_len,
+            dataset_type,
+            num_samples=args.num_samples,
+            output_filename=output_filename,
+            rate_limit=args.rate_limit,
+            period=args.period,
         )
 
     # Evaluate results
