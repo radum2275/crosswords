@@ -4,7 +4,6 @@
 # Clue and answer pairs are in Romanian
 
 import os
-import threading
 import argparse
 import json
 import numpy as np
@@ -327,38 +326,6 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
 
     return eval_results
 
-class RateLimiter:
-    """Token bucket: releases `rate` tokens every `period` seconds."""
-    def __init__(self, rate: int, period: float):
-        self._rate = rate
-        self._period = period
-        self._sem = threading.Semaphore(rate)
-        self._timer = None
-
-    def start(self):
-        self._schedule()
-
-    def _schedule(self):
-        self._timer = threading.Timer(self._period, self._refill)
-        self._timer.daemon = True
-        self._timer.start()
-
-    def _refill(self):
-        for _ in range(self._rate):
-            try:
-                self._sem.release()
-            except ValueError:
-                break
-        self._schedule()
-
-    def acquire(self):
-        self._sem.acquire()
-
-    def cancel(self):
-        if self._timer:
-            self._timer.cancel()
-
-
 def process_data(
         data: List[Dict[str, Any]],
         backend: Backend,
@@ -367,8 +334,7 @@ def process_data(
         dataset_type: str,
         num_samples: int = None,
         output_filename: str = "results.json",
-        rate_limit: int = None,
-        period: float = 180.0,
+        batch_size: int = 32,
 ) -> List[Dict[str, Any]]:
     """
     Process the dataset
@@ -407,12 +373,6 @@ def process_data(
 
     print(f"After filtering out short answers, {len(data)} clues remain.")
 
-    limiter = None
-    if rate_limit is not None:
-        limiter = RateLimiter(rate=rate_limit, period=period)
-        limiter.start()
-        print(f"Rate limiting enabled: {rate_limit} prompts per {period} seconds.")
-
     def call_one(item):
         answer = item[answer_key]
         clue_text = item[clue_key]
@@ -442,9 +402,6 @@ def process_data(
                 ),
             )
 
-        if limiter is not None:
-            limiter.acquire()
-
         return mfuncs.instruct(
             instruction,
             context=SimpleContext(),
@@ -456,14 +413,14 @@ def process_data(
             return_sampling_results=True,
         ), item
 
-    max_workers = rate_limit if rate_limit is not None else 32
-    print(f"Submitting {len(data)} prompts to ThreadPoolExecutor (max_workers={max_workers}) ...")
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(call_one, item) for item in data]
-        pairs = [f.result() for f in futures]
-
-    if limiter is not None:
-        limiter.cancel()
+    print(f"Submitting {len(data)} prompts in batches of {batch_size} ...")
+    pairs = []
+    for batch_start in range(0, len(data), batch_size):
+        batch = data[batch_start:batch_start + batch_size]
+        with ThreadPoolExecutor(max_workers=len(batch)) as executor:
+            futures = [executor.submit(call_one, item) for item in batch]
+            pairs.extend(f.result() for f in futures)
+        print(f"  Completed batch {batch_start // batch_size + 1} / {(len(data) + batch_size - 1) // batch_size}")
 
     for output, item in pairs:
         if output.success:
@@ -508,8 +465,7 @@ if __name__ == '__main__':
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
     parser.add_argument('--num_samples', type=int, default=None)
-    parser.add_argument('--rate_limit', type=int, default=None, help='Max prompts per period')
-    parser.add_argument('--period', type=float, default=180.0, help='Rate limit window in seconds')
+    parser.add_argument('--batch_size', type=int, default=32, help='Number of prompts per parallel batch')
     parser.add_argument('--eval_only', action='store_true')
 
     args = parser.parse_args()
@@ -552,8 +508,7 @@ if __name__ == '__main__':
             dataset_type,
             num_samples=args.num_samples,
             output_filename=output_filename,
-            rate_limit=args.rate_limit,
-            period=args.period,
+            batch_size=args.batch_size,
         )
 
     # Evaluate results
