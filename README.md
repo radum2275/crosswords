@@ -17,6 +17,8 @@ We have generated two datasets with clues and solutions, both with a similar str
 
 ## Manual Annotation of LLM Explanations
 
+### Manual Annotation for the Benchmark Dataset
+
 Part of the LLM explanations have been manually checked with a process that contains the following steps:
 
 - Convert `*.json` files in folder `data` to `csv`. This is achieved with command
@@ -52,3 +54,15 @@ Total records: 200
 Records with match = True: 119
 Records with rationale_score >= 5: 50
 ```
+
+### Manual Annotation for the Baseline Dataset
+
+The folder ``manual-score-baseline`` contains a manual annotation of the baseline dataset. The steps involved are the following:
+
+- Copied ``json2csv.py`` to the folder ``manual-score-baseline``.
+- Copied files ``baseline_gpt-oss_v4_4.json``,  ``baseline_granite_v4_4.json``,  ``baseline_llama_v3_4.json`` to folder ``manual-score-baseline``.
+- Converted ``json`` files to ``csv`` with the script ``json2csv.py``.
+- Filtered data to obtain a sample of records where all three LLM systems considered are correct (in the three json files used here).
+- Manually scored the first 120 records in the sample dataset, and score results in files ``manual_*.csv``.
+
+The results are remarkably consistent. With very few exceptions, the LLMs have correct explanations for the records analysed.
