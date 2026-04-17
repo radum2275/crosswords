@@ -8,7 +8,6 @@ import argparse
 import json
 import numpy as np
 import mellea.stdlib.functional as mfuncs
-from concurrent.futures import ThreadPoolExecutor
 
 from bert_score import BERTScorer
 from dotenv import load_dotenv
@@ -334,7 +333,6 @@ def process_data(
         dataset_type: str,
         num_samples: int = None,
         output_filename: str = "results.json",
-        batch_size: int = 32,
 ) -> List[Dict[str, Any]]:
     """
     Process the dataset
@@ -413,19 +411,14 @@ def process_data(
             return_sampling_results=True,
         ), item
 
-    print(f"Submitting {len(data)} prompts in batches of {batch_size} ...")
-    pairs = []
-    for batch_start in range(0, len(data), batch_size):
-        batch = data[batch_start:batch_start + batch_size]
-        with ThreadPoolExecutor(max_workers=len(batch)) as executor:
-            futures = [executor.submit(call_one, item) for item in batch]
-            pairs.extend(f.result() for f in futures)
-        print(f"  Completed batch {batch_start // batch_size + 1} / {(len(data) + batch_size - 1) // batch_size}")
-
-    for output, item in pairs:
+    print(f"Submitting {len(data)} prompts sequentially ...")
+    correct = 0
+    for i, item in enumerate(data):
+        output, item = call_one(item)
+        answer = item[answer_key]
+        clue = item[clue_key]
+        status = "OK" if output.success else "FAIL"
         if output.success:
-            answer = item[answer_key]
-            clue = item[clue_key]
             if version in ["v1", "v2", "v3"]:
                 cleaned = strip_code_fences(str(output))
                 pred_dict = json.loads(cleaned)
@@ -445,6 +438,15 @@ def process_data(
                 "prediction": prediction,
                 "rationale": rationale,
             })
+            if prediction.strip().lower() == answer.strip().lower():
+                correct += 1
+            running_acc = correct / len(predictions) * 100
+            print(f"  [{i + 1}/{len(data)}] [{status}] acc={running_acc:.1f}% ({correct}/{len(predictions)})")
+            print(f"    clue:       {clue}")
+            print(f"    answer:     {answer}")
+            print(f"    prediction: {prediction}")
+        else:
+            print(f"  [{i + 1}/{len(data)}] [{status}] clue: {clue}")
 
     with open(output_filename, "w") as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
@@ -465,7 +467,6 @@ if __name__ == '__main__':
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
     parser.add_argument('--num_samples', type=int, default=None)
-    parser.add_argument('--batch_size', type=int, default=32, help='Number of prompts per parallel batch')
     parser.add_argument('--eval_only', action='store_true')
 
     args = parser.parse_args()
@@ -508,7 +509,6 @@ if __name__ == '__main__':
             dataset_type,
             num_samples=args.num_samples,
             output_filename=output_filename,
-            batch_size=args.batch_size,
         )
 
     # Evaluate results
