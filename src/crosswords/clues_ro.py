@@ -26,7 +26,7 @@ from mellea.core import FancyLogger
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
-from crosswords.utils import strip_code_fences, validate_json_code_block, batcher, extract_last_square_brackets, get_think_tags
+from crosswords.utils import strip_code_fences, validate_json_code_block, extract_last_square_brackets, get_think_tags
 
 INSTRUCTION_V1 = """
 You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
@@ -326,15 +326,44 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
 
     return eval_results
 
+class RateLimiter:
+    """Token bucket: releases `rate` tokens every `period` seconds."""
+    def __init__(self, rate: int, period: float):
+        self._rate = rate
+        self._period = period
+        self._sem = asyncio.Semaphore(rate)
+        self._refill_task = None
+
+    def start(self):
+        self._refill_task = asyncio.create_task(self._refill())
+
+    async def _refill(self):
+        while True:
+            await asyncio.sleep(self._period)
+            for _ in range(self._rate):
+                try:
+                    self._sem.release()
+                except ValueError:
+                    break
+
+    async def acquire(self):
+        await self._sem.acquire()
+
+    def cancel(self):
+        if self._refill_task:
+            self._refill_task.cancel()
+
+
 async def process_data(
-        data: List[Dict[str, Any]], 
-        backend: Backend, 
-        version: str, 
+        data: List[Dict[str, Any]],
+        backend: Backend,
+        version: str,
         prefix_len: int,
         dataset_type: str,
-        num_samples: int = None, 
-        batch_size: int = 100,
-        output_filename: str = "results.json"
+        num_samples: int = None,
+        output_filename: str = "results.json",
+        rate_limit: int = None,
+        period: float = 180.0,
 ) -> List[Dict[str, Any]]:
     """
     Process the dataset
@@ -372,84 +401,92 @@ async def process_data(
         clue_key = "clue"
 
     print(f"After filtering out short answers, {len(data)} clues remain.")
-    print(f"Processing data in batches of {batch_size}...")
-    for batch in batcher(data, batch_size=batch_size, progress=True):
-        corutines = []
-        for item in batch:
-            answer = item[answer_key]
-            clue_text = item[clue_key]
 
-            num_letters = len(answer)
-            prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
+    limiter = None
+    if rate_limit is not None:
+        limiter = RateLimiter(rate=rate_limit, period=period)
+        limiter.start()
+        print(f"Rate limiting enabled: {rate_limit} prompts per {period} seconds.")
 
-            if version == "v1":
-                instruction = INSTRUCTION_V1
-                user_variables = {"clue_text": clue_text}
-            elif version == "v2":
-                instruction = INSTRUCTION_V2
-                user_variables = {"clue_text": clue_text, "num_letters": num_letters}
-            elif version == "v3":
-                instruction = INSTRUCTION_V3
-                user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
-            elif version == "v4":
-                instruction = INSTRUCTION_V4_COT
-                user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+    async def dispatch(coro):
+        if limiter is not None:
+            await limiter.acquire()
+        return await coro
 
-            # Perform the instruction with validation
-            requirements = []
-            if version in ["v1", "v2", "v3"]:
-                requirements = check(
-                    "The output must be a valid JSON dictionary with markdown code fences.",
-                    validation_fn=simple_validate(
-                        lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
-                    ),
-                )
+    corutines = []
+    for item in data:
+        answer = item[answer_key]
+        clue_text = item[clue_key]
 
-            c = mfuncs.ainstruct(
-                instruction,
-                context=SimpleContext(),
-                backend=backend,
-                requirements=requirements,
-                user_variables=user_variables,
-                icl_examples=[],
-                strategy=RejectionSamplingStrategy(loop_budget=5),
-                return_sampling_results=True,
+        num_letters = len(answer)
+        prefix_text = answer[:prefix_len] if len(answer) > prefix_len else answer
+
+        if version == "v1":
+            instruction = INSTRUCTION_V1
+            user_variables = {"clue_text": clue_text}
+        elif version == "v2":
+            instruction = INSTRUCTION_V2
+            user_variables = {"clue_text": clue_text, "num_letters": num_letters}
+        elif version == "v3":
+            instruction = INSTRUCTION_V3
+            user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+        elif version == "v4":
+            instruction = INSTRUCTION_V4_COT
+            user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+
+        requirements = []
+        if version in ["v1", "v2", "v3"]:
+            requirements = check(
+                "The output must be a valid JSON dictionary with markdown code fences.",
+                validation_fn=simple_validate(
+                    lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
+                ),
             )
-            corutines.append(c)
 
-        print(f"Awaiting for the async batch execution ...")
-        outputs = await asyncio.gather(*(corutines[i] for i in range(len(corutines))))        
-        for i, output in enumerate(outputs):
-            if output.success:
-                answer = batch[i][answer_key]
-                clue = batch[i][clue_key]
-                if version in ["v1", "v2", "v3"]:
-                    cleaned = strip_code_fences(str(output))
-                    pred_dict = json.loads(cleaned)
-                else:
-                    pred_dict = {
-                        "answer": extract_last_square_brackets(str(output)), 
-                        "rationale": get_think_tags(str(output))
-                    }
-                    
-                prediction = pred_dict["answer"]
-                rationale = pred_dict["rationale"]
-                references.append(answer)
-                predictions.append(prediction)
-                results.append({
-                    "clue": clue,
-                    "answer": answer,
-                    "prediction": prediction,
-                    "rationale": rationale,
-                })
-                
-        # Sleep 1 min between batches to avoid rate limits
-        print(f"Sleeping for 1 minute to avoid rate limits ...")
-        await asyncio.sleep(60)
+        c = mfuncs.ainstruct(
+            instruction,
+            context=SimpleContext(),
+            backend=backend,
+            requirements=requirements,
+            user_variables=user_variables,
+            icl_examples=[],
+            strategy=RejectionSamplingStrategy(loop_budget=5),
+            return_sampling_results=True,
+        )
+        corutines.append(c)
 
-        # Save intermediate results after each batch
-        with open(output_filename, "w") as f:
-            json.dump(results, f, indent=4, ensure_ascii=False)
+    print(f"Awaiting for the async execution of {len(corutines)} prompts ...")
+    outputs = await asyncio.gather(*(dispatch(c) for c in corutines))
+
+    if limiter is not None:
+        limiter.cancel()
+
+    for i, output in enumerate(outputs):
+        if output.success:
+            answer = data[i][answer_key]
+            clue = data[i][clue_key]
+            if version in ["v1", "v2", "v3"]:
+                cleaned = strip_code_fences(str(output))
+                pred_dict = json.loads(cleaned)
+            else:
+                pred_dict = {
+                    "answer": extract_last_square_brackets(str(output)),
+                    "rationale": get_think_tags(str(output))
+                }
+
+            prediction = pred_dict["answer"]
+            rationale = pred_dict["rationale"]
+            references.append(answer)
+            predictions.append(prediction)
+            results.append({
+                "clue": clue,
+                "answer": answer,
+                "prediction": prediction,
+                "rationale": rationale,
+            })
+
+    with open(output_filename, "w") as f:
+        json.dump(results, f, indent=4, ensure_ascii=False)
 
     print(f"Finished {len(data)} data points")
     print(f"Generated {len(predictions)} answers to {len(references)} questions.")
@@ -466,8 +503,9 @@ if __name__ == '__main__':
     parser.add_argument('--prefix_len', type=int, default=0)
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
-    parser.add_argument('--batch_size', type=int, default=1024)
     parser.add_argument('--num_samples', type=int, default=None)
+    parser.add_argument('--rate_limit', type=int, default=None, help='Max prompts per period')
+    parser.add_argument('--period', type=float, default=180.0, help='Rate limit window in seconds')
     parser.add_argument('--eval_only', action='store_true')
 
     args = parser.parse_args()
@@ -504,14 +542,15 @@ if __name__ == '__main__':
         data = load_data(args.dataset_file)
         results = asyncio.run(
             process_data(
-                data, 
-                backend, 
-                args.version, 
-                prefix_len, 
-                dataset_type, 
+                data,
+                backend,
+                args.version,
+                prefix_len,
+                dataset_type,
                 num_samples=args.num_samples,
-                batch_size=args.batch_size,
-                output_filename=output_filename
+                output_filename=output_filename,
+                rate_limit=args.rate_limit,
+                period=args.period,
             )
         )
 
