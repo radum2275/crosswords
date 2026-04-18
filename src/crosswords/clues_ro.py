@@ -4,6 +4,7 @@
 # Clue and answer pairs are in Romanian
 
 import os
+import asyncio
 import argparse
 import json
 import numpy as np
@@ -333,6 +334,8 @@ def process_data(
         dataset_type: str,
         num_samples: int = None,
         output_filename: str = "results.json",
+        batch_size: int = 50,
+        rate_limit: int = 1500,
 ) -> List[Dict[str, Any]]:
     """
     Process the dataset
@@ -371,7 +374,7 @@ def process_data(
 
     print(f"After filtering out short answers, {len(data)} clues remain.")
 
-    def call_one(item):
+    async def acall_one(item):
         answer = item[answer_key]
         clue_text = item[clue_key]
 
@@ -400,7 +403,7 @@ def process_data(
                 ),
             )
 
-        return mfuncs.instruct(
+        return await mfuncs.ainstruct(
             instruction,
             context=SimpleContext(),
             backend=backend,
@@ -411,10 +414,27 @@ def process_data(
             return_sampling_results=True,
         ), item
 
-    print(f"Submitting {len(data)} prompts sequentially ...")
+    print(f"Submitting {len(data)} prompts async (batch_size={batch_size}, rate_limit={rate_limit}/min) ...")
     correct = 0
-    for i, item in enumerate(data):
-        output, item = call_one(item)
+    sem = asyncio.Semaphore(batch_size)
+    interval = 60.0 / rate_limit
+    ordered = [None] * len(data)
+
+    async def run_one(i, item):
+        async with sem:
+            ordered[i] = await acall_one(item)
+
+    async def run_all():
+        tasks = []
+        for i, item in enumerate(data):
+            if i > 0:
+                await asyncio.sleep(interval)
+            tasks.append(asyncio.create_task(run_one(i, item)))
+        await asyncio.gather(*tasks)
+
+    asyncio.run(run_all())
+
+    for i, (output, item) in enumerate(ordered):
         answer = item[answer_key]
         clue = item[clue_key]
         status = "OK" if output.success else "FAIL"
@@ -467,6 +487,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_name', type=str)
     parser.add_argument('--output_dir', type=str)
     parser.add_argument('--num_samples', type=int, default=None)
+    parser.add_argument('--batch_size', type=int, default=50, help='Max concurrent async requests')
+    parser.add_argument('--rate_limit', type=int, default=1500, help='Max requests per minute')
     parser.add_argument('--eval_only', action='store_true')
 
     args = parser.parse_args()
@@ -509,6 +531,8 @@ if __name__ == '__main__':
             dataset_type,
             num_samples=args.num_samples,
             output_filename=output_filename,
+            batch_size=args.batch_size,
+            rate_limit=args.rate_limit,
         )
 
     # Evaluate results
