@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1st argument is the model id (e.g., llama, granite, gpt)
-# 2nd argument is the prompt version (e.g., v1, v2, v3, v4)
+# 2nd argument is the prompt version (e.g., v1, v2, v3, v4, v5)
 
 m=$1
 p=$2
@@ -25,4 +25,8 @@ if [[ "$p" == "v4" ]]; then
         l='log_clues_'${m}'_'${p}'_s'${s}'.txt'
         ./timeout -m 30000000 python src/crosswords/clues_ro.py --model_id $m --dataset_file /home/radu/storage/git/crosswords/data/extracted_data.json --output_dir /home/radu/storage/git/crosswords/data/results --dataset_type clues --version $p --prefix_len $s --output_name clues  >& $l
     done
+fi
+if [[ "$p" == "v5" ]]; then
+    l='log_clues_'${m}'_'${p}'_s0.txt'
+    ./timeout -m 30000000 python src/crosswords/clues_ro.py --model_id $m --dataset_file /home/radu/storage/git/crosswords/data/extracted_data.json --output_dir /home/radu/storage/git/crosswords/data/results --dataset_type clues --version $p --output_name clues  >& $l
 fi

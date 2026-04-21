@@ -229,6 +229,31 @@ HINT: Raspunsul are {{num_letters}} litere si incepe cu {{prefix_text}}
 
 """
 
+INSTRUCTION_V5_COT = """
+You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
+You must also think step by step and provide the rationale behind your answer.
+You will be given a single hint that states the number of letters that the answer must have.
+
+Rules:
+- The clue definition may have multiple meanings and you must select the most likely answer.
+- You must translate the clue definition in English and reason in English.
+- You must analyze carefuly the clue to determine the most likely meaning for your answer.
+- Do not use abbreviations.
+- Provide the rationale behind your answer, explaining how you found the answer.
+- Finally, you must provide the answer in Romanian, wrapped between square brackets like this: [your final answer here].
+
+## When thinking step by step, you should first analyze the clue and provide a list of possible answers that match the clue definition, without using the hints. Then, you should use the hints to narrow down the list of possible answers and find the most likely answer. Finally, you should provide the rationale behind your answer, explaining how you used the hints to find the answer.
+## When you generate the possible candidates, you should generate them in English, even if the final answer must be in Romanian. This is to ensure that you can reason about the meaning of the clue and the possible answers in a more precise way, without being limited by your Romanian vocabulary. After you have generated the possible candidates in English, you can then translate them to Romanian and check which ones satisfy the hint about the number of letters. Finally, you can select the most likely answer in Romanian and provide the rationale behind it.
+## Mark your thinking process with the following tags: <think> ** your thoughts ** </think>
+## Your final answer should be the one that best matches the clue definition and satisfies the hints.
+## Wrap your final answer between square brackets like this: [your final answer here]
+
+CLUE: {{clue_text}}
+HINT: The answer has {{num_letters}} letters.
+
+"""
+
+
 
 load_dotenv()
 
@@ -393,6 +418,9 @@ def process_data(
         elif version == "v4":
             instruction = INSTRUCTION_V4_COT
             user_variables = {"clue_text": clue_text, "num_letters": num_letters, "prefix_text": prefix_text}
+        elif version == "v5":
+            instruction = INSTRUCTION_V5_COT
+            user_variables = {"clue_text": clue_text, "num_letters": num_letters}
 
         requirements = []
         if version in ["v1", "v2", "v3"]:
@@ -442,7 +470,7 @@ def process_data(
             if version in ["v1", "v2", "v3"]:
                 cleaned = strip_code_fences(str(output))
                 pred_dict = json.loads(cleaned)
-            else:
+            elif version in ["v4", "v5"]:
                 pred_dict = {
                     "answer": extract_last_square_brackets(str(output)),
                     "rationale": get_think_tags(str(output))

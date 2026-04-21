@@ -1,0 +1,62 @@
+Processing 30819 clues...
+Using LLM: meta-llama/llama-3-3-70b-instruct
+Prompt version: v4
+Dataset type: clues
+Initial number of clues: 30819
+After filtering out short answers, 26117 clues remain.
+Submitting 26117 prompts async (batch_size=50, rate_limit=1500/min) ...
+Traceback (most recent call last):
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 526, in <module>
+    results = process_data(
+              ^^^^^^^^^^^^^
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 435, in process_data
+    asyncio.run(run_all())
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 433, in run_all
+    await asyncio.gather(*tasks)
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 425, in run_one
+    ordered[i] = await acall_one(item)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/git/crosswords/src/crosswords/clues_ro.py", line 406, in acall_one
+    return await mfuncs.ainstruct(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/stdlib/functional.py", line 795, in ainstruct
+    return await aact(
+           ^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/stdlib/functional.py", line 595, in aact
+    sampling_result = await strategy.sample(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/stdlib/sampling/base.py", line 206, in sample
+    await result.avalue()
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/core/base.py", line 394, in avalue
+    await self.astream()
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/core/base.py", line 481, in astream
+    raise chunks[-1]
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/mellea/helpers/async_helpers.py", line 31, in send_to_queue
+    aresponse = await co
+                ^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/openai/_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radu/anaconda3/envs/crosswords/lib/python3.12/site-packages/openai/_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+FINISHED CPU 138.05 MEM 7257684 MAXMEM 7468548 STALE 10704 MAXMEM_RSS 1195348
+<time name="ALL">138110</time>
