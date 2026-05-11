@@ -424,12 +424,12 @@ def process_data(
 
         requirements = []
         if version in ["v1", "v2", "v3"]:
-            requirements = check(
+            requirements = [check(
                 "The output must be a valid JSON dictionary with markdown code fences.",
                 validation_fn=simple_validate(
                     lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
                 ),
-            )
+            )]
 
         return await mfuncs.ainstruct(
             instruction,

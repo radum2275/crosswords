@@ -21,7 +21,7 @@ if [[ "$p" == "v3" ]]; then
     done
 fi
 if [[ "$p" == "v4" ]]; then
-    for s in 0 1 2 3 4; do
+    for s in 0 1 2 ; do
         l='log_clues_'${m}'_'${p}'_s'${s}'.txt'
         ./timeout -m 30000000 python src/crosswords/clues_ro.py --model_id $m --dataset_file /home/radu/storage/git/crosswords/data/extracted_data.json --output_dir /home/radu/storage/git/crosswords/data/results --dataset_type clues --version $p --prefix_len $s --output_name clues  >& $l
     done
