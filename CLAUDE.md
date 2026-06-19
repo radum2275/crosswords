@@ -14,7 +14,7 @@ The two key fields differ between datasets; `process_data` in `clues_ro.py` sele
 
 ## Running experiments
 
-The entry point is `src/crosswords/clues_ro.py`. Everything else orchestrates or post-processes it.
+The main entry point is `src/crosswords/clues_ro.py` (the solving task). The reverse task — generating clues from answers — lives in its own script, `src/crosswords/gen_clues_ro.py` (see "Clue generation" below). Everything else orchestrates or post-processes these.
 
 The bash runners (`run_clues.sh`, `run_baseline.sh`, `run_*_single.sh`) hardcode absolute paths under `/home/radu/storage/git/crosswords/...` and call a local `./timeout` binary — **they are tuned for the author's machine and will not run as-is here.** To run locally, invoke the Python script directly:
 
@@ -61,6 +61,32 @@ LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library an
 ## Evaluation
 
 `eval_results()` runs automatically after generation (and standalone with `--eval_only`). It computes exact-match accuracy (case-insensitive) and BERTScore F1 (`bert-base-uncased`, CPU) between `answer` and `prediction`, then **appends a summary dict as the final element of the output JSON array**. Be aware: result files therefore end with a stats object, not a clue record — downstream readers must handle this.
+
+## Clue generation (`gen_clues_ro.py`)
+
+A separate, standalone script for the **reverse task**: given an answer, generate short polysemantic Romanian clues. This is what `clues_ro.py` v6 does, extracted into its own file so it can produce *multiple* candidates and score them — it does not share `clues_ro.py`'s code.
+
+```bash
+python src/crosswords/gen_clues_ro.py \
+  --model_id gpt-oss \
+  --dataset_file data/extracted_data.json \
+  --dataset_type clues \
+  --num_candidates 3 \
+  --num_hints 2 \
+  --num_samples 100 \
+  --output_name gen_clues \
+  --output_dir data/results
+```
+
+- Output filename: `{output_name}_{dataset_type}_{model_id}_h{num_hints}.json` (the hint level and dataset type are encoded so different sweeps don't collide).
+- `--num_candidates` (default 3): clues generated per answer, in a single LLM call returning `{"answer", "clues": [...]}`.
+- `--num_hints` (default 0): how many **content words** of the **ground-truth clue** to feed back as a hint. `0` uses `INSTRUCTION_GEN` (no hint); `≥1` uses `INSTRUCTION_GEN_HINTS` with the first N content words (via `get_hint_words`, which skips Romanian stop words in `RO_STOP_WORDS`). If a clue is all stop words the hint is empty and the script falls back to the plain prompt for that item.
+- `--eval_only`: re-score an existing output file (reconstructs the same filename, so pass the same `--dataset_type`/`--model_id`/`--num_hints`).
+- Throttling (`--batch_size`, `--rate_limit`), the async pattern, and the `<think>`-before-JSON parsing are the same as `clues_ro.py`. Note: parsing uses `parse_clues_response` / `validate_clues_response`, which extract the fenced block from *anywhere* in the response (`extract_first_code_block`) — unlike `clues_ro.py`, which only strips a leading fence and would mis-handle a `<think>` preamble before JSON.
+
+Evaluation here is **different from the solving task**: `eval_results()` scores each generated clue against the ground-truth `source_clue` via BERTScore F1, records the best candidate per answer (`best_clue`/`best_sbert`), and appends a `{num_samples, num_scored, sbert_mean, sbert_std}` summary as the final array element. The full clue is scored as-is even when hint words were given (hint leakage is intentionally not removed).
+
+Runner: `run_gen_clues.sh <model_id> <dataset_type> [num_candidates] [num_samples]` sweeps `--num_hints` over `0 1 2`. Like the other runners it hardcodes `/home/radu/...` paths and uses `./timeout`, so it is author-machine-specific.
 
 ## Post-processing & manual annotation
 

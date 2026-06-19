@@ -107,10 +107,11 @@ You are an expert at composing crossword puzzle clues in Romanian.
 Given the correct answer to a crossword (a word in Romanian), you will compose
 {{num_candidates}} distinct candidate clues that could lead to that answer.
 
-As a hint, you are given the first few words of a real clue that a human author
-wrote for this answer. Use these words as a starting point: your clues should
-continue or build upon them so that the full clue stays close in meaning and
-style to what the human author intended.
+As a hint, you are given a few key content words taken from a real clue that a
+human author wrote for this answer (common stop words have been removed). Use
+these words as inspiration: your clues should incorporate or build around them
+so that the full clue stays close in meaning and style to what the human author
+intended.
 
 Important: each clue must be a POLYSEMANTIC clue. This means it should have
 multiple possible meanings and could plausibly lead to several different
@@ -120,7 +121,7 @@ requires some lateral reasoning.
 
 Rules:
 - Every clue must be written in Romanian.
-- Every clue must begin with the given hint words and extend them naturally.
+- Every clue should make use of the given hint words (or close variants).
 - Every clue must be SHORT: a brief definition or phrase, not a full sentence.
 - A clue must NOT be a direct synonym of the answer. It should be an indirect
   definition that requires reasoning to reach the answer.
@@ -145,11 +146,11 @@ Use the following example to learn your task better.
 
 Example:
 ANSWER: SAC
-HINT: Unitate de
+HINT: Unitate morărit
 ```json
 {
   "answer": "SAC",
-  "clues": ["Unitate de morărit", "Unitate de transport pe spinare", "Unitate de masura pentru cartofi"]
+  "clues": ["Unitate de morărit", "Recipient de morărit pentru faina", "Masura veche la morărit"]
 }
 ```
 
@@ -161,12 +162,42 @@ HINT: {{hint_text}}
 load_dotenv()
 
 
+# Common Romanian stop words (and a few function-word forms) that carry little
+# meaning on their own and so make poor content hints.
+RO_STOP_WORDS = {
+    "a", "ai", "al", "ale", "alor", "am", "ar", "as", "au", "ca", "ce", "cei",
+    "cel", "cele", "celor", "cea", "cu", "cum", "da", "dar", "de", "din", "doar",
+    "dupa", "după", "ei", "el", "ele", "este", "eu", "fi", "fie", "fiind", "iar",
+    "in", "în", "isi", "își", "la", "le", "li", "lor", "lui", "mai", "mea",
+    "mele", "meu", "mi", "mie", "mine", "ne", "ni", "noi", "nostru", "nu", "o",
+    "or", "pe", "pentru", "peste", "prin", "sa", "să", "sale", "sau", "său",
+    "se", "si", "și", "sub", "sunt", "ta", "te", "ti", "ție", "tu", "tot",
+    "toti", "toți", "un", "una", "unei", "unele", "unor", "unu", "unui", "va",
+    "vi", "voi", "vor",
+}
+
+
 def get_hint_words(clue: str, num_hints: int) -> str:
-    """Return the first num_hints whitespace-separated words of the clue."""
+    """
+    Return the first num_hints content words of the clue, skipping Romanian
+    stop words (and pure-punctuation tokens) so the hints are informative.
+    Comparison is case-insensitive; the original casing of the kept words is
+    preserved.
+    """
     if num_hints <= 0 or not clue:
         return ""
-    words = clue.split()
-    return " ".join(words[:num_hints])
+    hints = []
+    for word in clue.split():
+        # Strip surrounding punctuation only for the stop-word/empty check.
+        stripped = word.strip(".,;:!?\"'„”«»()[]-")
+        if not stripped:
+            continue
+        if stripped.lower() in RO_STOP_WORDS:
+            continue
+        hints.append(word)
+        if len(hints) >= num_hints:
+            break
+    return " ".join(hints)
 
 
 def get_sbert(reference: str, prediction: str, scorer) -> float:
