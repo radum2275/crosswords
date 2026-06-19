@@ -436,7 +436,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    output_filename = f"{args.output_name}_{args.model_id}_h{args.num_hints}.json"
+    output_filename = f"{args.output_name}_{args.dataset_type}_{args.model_id}_h{args.num_hints}.json"
     output_filename = os.path.join(args.output_dir, output_filename)
 
     if args.eval_only:
