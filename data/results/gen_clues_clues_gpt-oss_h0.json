@@ -1,0 +1,3508 @@
+[
+    {
+        "answer": "pRAF",
+        "source_clue": "\u015eters din datoria personalului de serviciu",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Z\u0103pad\u0103 uscat\u0103 a de\u0219ertului",
+            "Resturi fine ale unui foc",
+            "Pulbere folosit\u0103 la machiaj"
+        ],
+        "rationale": "",
+        "best_clue": "Z\u0103pad\u0103 uscat\u0103 a de\u0219ertului",
+        "best_sbert": 0.5841647386550903
+    },
+    {
+        "answer": "IaTAC",
+        "source_clue": "\u00cenlocuire la ad\u0103postul \u00eentunericului",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sat din C\u00e2mpia Transilvaniei",
+            "Nume de familie \u00eent\u00e2lnit \u00een Ardeal",
+            "Vechi epitet pentru r\u0103uf\u0103c\u0103tor"
+        ],
+        "rationale": "",
+        "best_clue": "Sat din C\u00e2mpia Transilvaniei",
+        "best_sbert": 0.5336079001426697
+    },
+    {
+        "answer": "SMuCIRE",
+        "source_clue": "Mi\u015fcarea de eliberare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sunetul unui geam care cedeaz\u0103",
+            "Ruptur\u0103 \u00een rela\u021bie",
+            "Despicare sub for\u021b\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Despicare sub for\u021b\u0103",
+        "best_sbert": 0.5705155730247498
+    },
+    {
+        "answer": "lOAZA",
+        "source_clue": "Aproape de un nivel inacceptabil",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Curs de ap\u0103 cu nume de refugiu",
+            "Loc de odihn\u0103 \u00een pustiu, dar \u0219i denumire de r\u00e2u",
+            "Destina\u021bie de \u201epauz\u0103\u201d pentru turi\u0219tii de\u0219ertului"
+        ],
+        "rationale": "",
+        "best_clue": "Curs de ap\u0103 cu nume de refugiu",
+        "best_sbert": 0.5556235313415527
+    },
+    {
+        "answer": "BIcI",
+        "source_clue": "Executantul unor lovituri de pedeaps\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Transport cu dou\u0103 ro\u021bi \u0219i pedale",
+            "Mijloc de sport f\u0103r\u0103 motor",
+            "Cadru metalic ce se \u00eenv\u00e2rte pe \u0219osea"
+        ],
+        "rationale": "",
+        "best_clue": "Cadru metalic ce se \u00eenv\u00e2rte pe \u0219osea",
+        "best_sbert": 0.5637039542198181
+    },
+    {
+        "answer": "UNIT",
+        "source_clue": "Rezultat la adunare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Component\u0103 singular\u0103 a unui ansamblu",
+            "Formare militar\u0103 de mic\u0103 amploare",
+            "Baza sistemului metric"
+        ],
+        "rationale": "",
+        "best_clue": "Component\u0103 singular\u0103 a unui ansamblu",
+        "best_sbert": 0.5860662460327148
+    },
+    {
+        "answer": "LIRE",
+        "source_clue": "Bani cheltui\u0163i prin bazar",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sufl\u0103 prin coarde \u0219i prin buzunare",
+            "Veche moned\u0103 cu sunet de harp\u0103",
+            "C\u00e2nt\u0103 \u00een portofel, nu \u00een orchestr\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Sufl\u0103 prin coarde \u0219i prin buzunare",
+        "best_sbert": 0.5805822014808655
+    },
+    {
+        "answer": "oRDIN",
+        "source_clue": "Obliga\u0163ie de serviciu",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Regul\u0103 monastic\u0103",
+            "Instruc\u0163iune oficial\u0103",
+            "Rang onorific"
+        ],
+        "rationale": "",
+        "best_clue": "Instruc\u0163iune oficial\u0103",
+        "best_sbert": 0.569333553314209
+    },
+    {
+        "answer": "PAjI",
+        "source_clue": "Juniori afla\u0163i \u00een preg\u0103tire cu seniorii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Straturi aurii pe c\u00e2mp, dar nu\u2011se topesc",
+            "Ce se adun\u0103 la f\u00e2nar, f\u0103r\u0103 s\u0103 fie fire de metal",
+            "\u00cen iarn\u0103 devine a\u0219ternut pentru animale"
+        ],
+        "rationale": "",
+        "best_clue": "\u00cen iarn\u0103 devine a\u0219ternut pentru animale",
+        "best_sbert": 0.5834547877311707
+    },
+    {
+        "answer": "TANTOS",
+        "source_clue": "Fudulii de coco\u015fi (sg.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "F\u0103r\u0103 grab\u0103, cu migal\u0103",
+            "Pas cu pas, f\u0103r\u0103 fug\u0103",
+            "Lent, dar precis"
+        ],
+        "rationale": "",
+        "best_clue": "F\u0103r\u0103 grab\u0103, cu migal\u0103",
+        "best_sbert": 0.44996386766433716
+    },
+    {
+        "answer": "ORAL",
+        "source_clue": "Subiect de discu\u0163ie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Examen f\u0103r\u0103 h\u00e2rtie",
+            "Mestec\u0103 cuvintele",
+            "Legat de cavitatea bucal\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Legat de cavitatea bucal\u0103",
+        "best_sbert": 0.5353869199752808
+    },
+    {
+        "answer": "aIA",
+        "source_clue": "Cea... dreapt\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Articol + comand\u0103 de a lua",
+            "Pronume de distan\u021b\u0103, feminin",
+            "Cea de la cap\u0103tul din st\u00e2nga"
+        ],
+        "rationale": "",
+        "best_clue": "Articol + comand\u0103 de a lua",
+        "best_sbert": 0.4548528790473938
+    },
+    {
+        "answer": "FIERT",
+        "source_clue": "Aburit la mas\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stadiul apei c\u00e2nd \u00eencepe s\u0103 dea bule",
+            "Furie intens\u0103, ca la foc",
+            "Mod de g\u0103tire prin abur"
+        ],
+        "rationale": "**Step 1 \u2013 Identify core meanings of \u201cFIERT\u201d (fiert).**  \n- participiu pasiv al verbului \u201efierbe\u201d \u2192 \u201eg\u0103tit prin fierbere, \u00een stare de fierbere\u201d.  \n- stare metaforic\u0103: \u201efoarte sup\u0103rat, \u00eenfuriat\u201d (ex.: \u201es-a \u00eenfuriat, a devenit fiert\u201d).  \n- proces termic: \u201ec\u0103ldur\u0103 intens\u0103, foc\u201d.  \n\n**Step 2 \u2013 Find indirect, polysemic ways to allude to each meaning.**  \nI need short, ambiguous phrasing that could also suggest alte cuvinte (ex.: clocot, c\u0103ldur\u0103, sup\u0103) but only \u201cfiert\u201d satisface complet.  \n\n**Clue ideas:**  \n1. Refer to momentul \u00een care apa \u00eencepe s\u0103 dea bule \u2013 poate sugera \u201eclocot\u201d, \u201efierbere\u201d, dar participiul \u201efiert\u201d este op\u021biunea corect\u0103.  \n2. Folosesc metafora furiei ca \u201efoc\u201d \u2013 se poate interpreta ca \u201e\u00eenfuriat\u201d, \u201eagitat\u201d. \u201eFurie la foc\u201d r\u0103m\u00e2ne ambiguu, dar \u201cfiert\u201d capteaz\u0103 ambele sensuri.  \n3. Vorbesc despre metoda de g\u0103tire prin abur \u2013 poate indica \u201ela abur\u201d, \u201ecoapt\u0103\u201d, dar \u201efiert\u201d este termenul de baz\u0103 pentru prepararea prin fierbere.  \n\nAll three sunt scurte, nu sunt sinonime directe, \u0219i fiecare are sensuri multiple, for\u021b\u00e2nd rezolv\u0103torul s\u0103 fac\u0103 leap\u0219a spre \u201cfiert\u201d.",
+        "best_clue": "Mod de g\u0103tire prin abur",
+        "best_sbert": 0.6071646809577942
+    },
+    {
+        "answer": "EDIcT",
+        "source_clue": "Vechea lege a cre\u015ftinilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ordin regal",
+            "Anun\u021b pe st\u00e2lp",
+            "Cuv\u00e2nt de autoritate"
+        ],
+        "rationale": "",
+        "best_clue": "Anun\u021b pe st\u00e2lp",
+        "best_sbert": 0.6045063138008118
+    },
+    {
+        "answer": "ACUT",
+        "source_clue": "Tare de urechi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Unghi sub 90\u00b0",
+            "Durere brusc\u0103 \u0219i intens\u0103",
+            "Semn diacritic ridicat"
+        ],
+        "rationale": "**Possible senses of \u201cacut\u201d**\n1. *Geometric*: unghi <\u202f90\u00b0 (unghi acut).  \n2. *Medical*: stare brusc\u0103, sever\u0103 (ex. durere acut\u0103, boal\u0103 acut\u0103).  \n3. *Linguistic*: accentul (diacriticul) cu forma \u00eenalt\u0103 \u2013 \u201eaccent acut\u201d.  \n\n**Crafting polysemantic clues**\n- Each clue should suggest several possible answers (ex.: \u201eunghi sub 90\u00b0\u201d could also hint at \u201eascu\u021bit\u201d, \u201ev\u00e2rf\u201d); the intended answer is \u201cacut\u201d.\n- Keep them short, Romanian, and indirect.\n\n**Clues selected**\n1. \u201cUnghi sub 90\u00b0\u201d \u2013 points to unghiul acut; could also be descrierea unui v\u00e2rf sau a unei linii ascu\u021bite.  \n2. \u201cDurere brusc\u0103 \u0219i intens\u0103\u201d \u2013 descrie durerea acut\u0103; ar putea sugera \u201emigren\u0103\u201d, \u201ecriz\u0103\u201d etc.  \n3. \u201cSemn diacritic ridicat\u201d \u2013 se refer\u0103 la accentul acut (\u00b4); alte posibilit\u0103\u0163i: \u201eaccent grav\u201d, \u201evirgul\u0103\u201d etc.",
+        "best_clue": "Durere brusc\u0103 \u0219i intens\u0103",
+        "best_sbert": 0.5482499599456787
+    },
+    {
+        "answer": "ASEDIa",
+        "source_clue": "A \u00eenconjura cu ostilitate",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Blocaj \u00een jurul unei cet\u0103\u0163i",
+            "Stare de tensiune \u00een timp de lupt\u0103",
+            "M\u0103sur\u0103 adoptat\u0103 de un imperiu pentru a \u00eenchide un ora\u015f"
+        ],
+        "rationale": "",
+        "best_clue": "M\u0103sur\u0103 adoptat\u0103 de un imperiu pentru a \u00eenchide un ora\u015f",
+        "best_sbert": 0.5688878297805786
+    },
+    {
+        "answer": "pISTOL",
+        "source_clue": "Bani \u00een schimbul armelor (sg.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "P\u0103str\u0103tor al sc\u00e2nteilor",
+            "Dispozitiv de pulverizare rapid\u0103",
+            "M\u00e2na ce nu \u021bine creionul"
+        ],
+        "rationale": "",
+        "best_clue": "P\u0103str\u0103tor al sc\u00e2nteilor",
+        "best_sbert": 0.5332580208778381
+    },
+    {
+        "answer": "TUFA",
+        "source_clue": "Ascunzi\u015f prin p\u0103durice",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "B\u0103\u021b de aprins focul",
+            "Instrument de lovire, f\u0103r\u0103 metal",
+            "Ramur\u0103 uscat\u0103, gata de \u0219emineu"
+        ],
+        "rationale": "**  \n\u201eTUFA\u201d este un substantiv comun \u00een rom\u00e2n\u0103 cu cel pu\u021bin dou\u0103 \u00een\u021belesuri principale:  \n1. bucat\u0103 de lemn uscat, folosit\u0103 la aprinderea focului (\u201etuf\u0103 de foc\u201d);  \n2. unealt\u0103 simpl\u0103 de lemn, b\u0103\u021b sau b\u00e2t\u0103 folosit\u0103 pentru a lovi (ex. \u201ea da cu tufa\u201d).  \n\nPentru fiecare indiciu vreau s\u0103 creez o fraz\u0103 scurt\u0103 care poate fi \u00een\u0163eles \u00een mai multe feluri \u2013 de exemplu, \u201eb\u0103\u021b\u201d sau \u201ebu\u0219tean\u201d ar putea p\u0103rea r\u0103spunsuri posibile, dar numai \u201etuf\u0103\u201d se potrive\u015fte exact cu toate tr\u0103s\u0103turile descrise. Astfel, indiciile r\u0103m\u00e2n polisemantice, iar lectura cea mai evident\u0103 poate sugera alte cuvinte, necesit\u00e2nd o g\u00e2ndire lateral\u0103 pentru a alege \u201eTUFA\u201d.  \n\n**Clue 1** \u2013 \u201eB\u0103\u021b de aprins focul\u201d.  Se poate interpreta ca \u201eb\u0103\u021b\u201d, \u201eb\u0103\u021b de chibrit\u201d, etc., dar doar \u201etuf\u0103\u201d este cuv\u00e2ntul care \u00eenseamn\u0103 exact \u201eb\u0103\u021b de lemn uscat pentru foc\u201d.  \n\n**Clue 2** \u2013 \u201eInstrument de lovire, f\u0103r\u0103 metal\u201d.  Poate indica o b\u00e2t\u0103, un ciocan de lemn, un baston; \u00eens\u0103 defini\u0163ia \u201cf\u0103r\u0103 metal\u201d \u015fi \u201cinstrument de lovire\u201d este exact\u0103 pentru \u201etuf\u0103\u201d.  \n\n**Clue 3** \u2013 \u201eRamur\u0103 uscat\u0103, gata de \u0219emineu\u201d.  O ramur\u0103 uscat\u0103 ar putea fi numit\u0103 \u201ebu\u0219tean\u201d, \u201esc\u00e2nteie\u201d, \u201eb\u0103\u021b\u201d, dar \u00een lexicul rom\u00e2nesc sola potrivit\u0103 este \u201etuf\u0103\u201d.  \n\nToate cele trei indicii sunt scurte, nu sunt sinonime directe ale cuv\u00e2ntului \u0219i pot fi citite \u00een sensuri multiple, \u00eendeplinind cerin\u021ba de polisemanticitate.**",
+        "best_clue": "Ramur\u0103 uscat\u0103, gata de \u0219emineu",
+        "best_sbert": 0.501910388469696
+    },
+    {
+        "answer": "RaMA",
+        "source_clue": "A da cu flit",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cadrul legal",
+            "Structura bicicletei",
+            "Bordura tabloului"
+        ],
+        "rationale": "",
+        "best_clue": "Cadrul legal",
+        "best_sbert": 0.4904921352863312
+    },
+    {
+        "answer": "INAMIC",
+        "source_clue": "Luat \u00een nume de r\u0103u",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ascuns \u00een cuv\u00e2ntul latin pentru prieten",
+            "Rival la pactul de neagresiune",
+            "Etichet\u0103 pe frontul imaginar"
+        ],
+        "rationale": "",
+        "best_clue": "Ascuns \u00een cuv\u00e2ntul latin pentru prieten",
+        "best_sbert": 0.521784782409668
+    },
+    {
+        "answer": "ATu",
+        "source_clue": "Socotit printre favori\u0163i",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Comand\u0103 pentru \u0219oferi, dar \u0219i organ de reglementare",
+            "Semn de pe traseul ora\u0219ului",
+            "Cuv\u00e2nt de trei litere, \u00eenscris pe bilete"
+        ],
+        "rationale": "",
+        "best_clue": "Cuv\u00e2nt de trei litere, \u00eenscris pe bilete",
+        "best_sbert": 0.5953660607337952
+    },
+    {
+        "answer": "BRUN",
+        "source_clue": "Min\u0103 de c\u0103rbune (masc.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ton de p\u0103m\u00e2nt",
+            "Culoare de v\u00e2n\u0103toare",
+            "Nume francez pentru cafea"
+        ],
+        "rationale": "",
+        "best_clue": "Culoare de v\u00e2n\u0103toare",
+        "best_sbert": 0.5005328059196472
+    },
+    {
+        "answer": "FAClIE",
+        "source_clue": "Dreapt\u0103 ca lum\u00e2narea",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u00e2\u0219tig f\u0103r\u0103 efort",
+            "Mijloc de a trece cu u\u0219urin\u021b\u0103",
+            "Avantaj \u00een trafic"
+        ],
+        "rationale": "",
+        "best_clue": "Mijloc de a trece cu u\u0219urin\u021b\u0103",
+        "best_sbert": 0.5094396471977234
+    },
+    {
+        "answer": "TORT",
+        "source_clue": "Darul \u00eenceputului de an",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Deliciu cu straturi \u0219i crem\u0103",
+            "Fapt juridic ne\u00eencadrat, dar r\u0103spl\u0103tit cu daune",
+            "Termen francez pentru \u201epr\u0103jitur\u0103\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "Deliciu cu straturi \u0219i crem\u0103",
+        "best_sbert": 0.5637479424476624
+    },
+    {
+        "answer": "CIOc",
+        "source_clue": "Lovitur\u0103 din fa\u0163a por\u0163ii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lovitur\u0103 cu capul",
+            "Unealt\u0103 f\u0103r\u0103 m\u00e2ner pentru ciocnirile mici",
+            "V\u00e2rful ascu\u021bit al p\u0103s\u0103rii"
+        ],
+        "rationale": "",
+        "best_clue": "Lovitur\u0103 cu capul",
+        "best_sbert": 0.7083993554115295
+    },
+    {
+        "answer": "PORT",
+        "source_clue": "Schimbare de atitudine",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Interfa\u021b\u0103 pentru cablu",
+            "Num\u0103r de acces \u00een internet",
+            "B\u0103utur\u0103 \u00eemb\u0103tr\u00e2nit\u0103 \u00een butoaie"
+        ],
+        "rationale": "",
+        "best_clue": "Num\u0103r de acces \u00een internet",
+        "best_sbert": 0.5009182691574097
+    },
+    {
+        "answer": "RAIoASA",
+        "source_clue": "Tratate de dermatologie (sg.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Str\u0103lucire f\u0103r\u0103 foc",
+            "Sat de l\u00e2ng\u0103 r\u00e2u, cu nume luminos",
+            "Z\u00e2mbet ce \u00eempr\u0103\u0219tie raze"
+        ],
+        "rationale": "",
+        "best_clue": "Str\u0103lucire f\u0103r\u0103 foc",
+        "best_sbert": 0.45848554372787476
+    },
+    {
+        "answer": "CREZ",
+        "source_clue": "Principiu conving\u0103tor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103rturie scurt\u0103",
+            "Spun din sine",
+            "Motto religios"
+        ],
+        "rationale": "",
+        "best_clue": "M\u0103rturie scurt\u0103",
+        "best_sbert": 0.40587273240089417
+    },
+    {
+        "answer": "LES",
+        "source_clue": "R\u0103mas \u00een urma r\u0103zboiului",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Articol hot\u0103r\u00e2t francez, la plural",
+            "Titlu al celebrului roman de Victor Hugo",
+            "Prescurtare pentru sistemul de iluminat exterior"
+        ],
+        "rationale": "",
+        "best_clue": "Titlu al celebrului roman de Victor Hugo",
+        "best_sbert": 0.529628336429596
+    },
+    {
+        "answer": "AUDIo",
+        "source_clue": "Emisiune radiofonic\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cenregistrare f\u0103r\u0103 imagine",
+            "Canal f\u0103r\u0103 televiziune",
+            "Ce se aude, nu se vede"
+        ],
+        "rationale": "",
+        "best_clue": "Canal f\u0103r\u0103 televiziune",
+        "best_sbert": 0.5158916115760803
+    },
+    {
+        "answer": "PAS",
+        "source_clue": "Belea curat\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Trecere prin munte",
+            "Mijloc de a muta mingea",
+            "Mi\u0219care de dans"
+        ],
+        "rationale": "",
+        "best_clue": "Trecere prin munte",
+        "best_sbert": 0.46889838576316833
+    },
+    {
+        "answer": "RaID",
+        "source_clue": "Curs\u0103 cu mers accelerat",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Atac surpriz\u0103",
+            "Aranjament de discuri",
+            "Misiune de poli\u021bie"
+        ],
+        "rationale": "",
+        "best_clue": "Misiune de poli\u021bie",
+        "best_sbert": 0.5393425822257996
+    },
+    {
+        "answer": "ASASINI",
+        "source_clue": "Pl\u0103ti\u0163i la lichidare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Urechiu\u021be lungi, dar cu dou\u0103 \u201eas\u201d \u00een plus",
+            "Misiune nocturn\u0103, f\u0103r\u0103 s\u0103 lase urm\u0103",
+            "Profesioni\u0219ti ai t\u0103ierii discrete"
+        ],
+        "rationale": "",
+        "best_clue": "Misiune nocturn\u0103, f\u0103r\u0103 s\u0103 lase urm\u0103",
+        "best_sbert": 0.5776433944702148
+    },
+    {
+        "answer": "IcI",
+        "source_clue": "Loc... amenajat la ospiciu!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cuv\u00e2nt cu \u201ec\u201d prins \u00eentre dou\u0103 \u201eI\u201d",
+            "\u201eAici\u201d \u00een francez\u0103, \u00eencadrat de dou\u0103 ini\u021biale",
+            "\u00centre dou\u0103 ramuri de metal, singurul segment metalic"
+        ],
+        "rationale": "",
+        "best_clue": "\u201eAici\u201d \u00een francez\u0103, \u00eencadrat de dou\u0103 ini\u021biale",
+        "best_sbert": 0.5686140060424805
+    },
+    {
+        "answer": "TACUT",
+        "source_clue": "Absent la discu\u0163ii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Instruc\u021biune muzical\u0103: nu c\u00e2nta",
+            "Ecoul disperat \u00een de\u0219ert",
+            "Statuia f\u0103r\u0103 glas"
+        ],
+        "rationale": "",
+        "best_clue": "Statuia f\u0103r\u0103 glas",
+        "best_sbert": 0.4512028694152832
+    },
+    {
+        "answer": "CEATa",
+        "source_clue": "Mul\u0163ime separat\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cent\u00e2lnire \u00een cea\u021b\u0103",
+            "C\u00e2t\u0103 de oameni?",
+            "Masa de c\u0103l\u0103tori"
+        ],
+        "rationale": "",
+        "best_clue": "\u00cent\u00e2lnire \u00een cea\u021b\u0103",
+        "best_sbert": 0.5756664872169495
+    },
+    {
+        "answer": "UMERAS",
+        "source_clue": "Cu haina pe el \u00een cas\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sat cu pu\u021bine locuitori",
+            "Punct de oprire al drume\u021bilor",
+            "Nume de familie \u00eent\u00e2lnit \u00een Banat"
+        ],
+        "rationale": "",
+        "best_clue": "Sat cu pu\u021bine locuitori",
+        "best_sbert": 0.6421064734458923
+    },
+    {
+        "answer": "BEC",
+        "source_clue": "O chestie care te lumineaz\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Str\u0103luce\u0219te \u00een priz\u0103",
+            "Parte a unui proiector",
+            "Arde f\u0103r\u0103 flac\u0103r\u0103"
+        ],
+        "rationale": "**  \nThe Romanian word **BEC** primarily denotes an electric light bulb. To make polysemantic clues, I\u2019ll describe characteristics that also fit other light\u2011producing objects (lamp\u0103, lum\u00e2nare, proiector etc.), so the clue could point to several possible answers, but the intended solution is \u201cBEC\u201d. The clues must be short, indirect, and distinct. I\u2019ll use phrases that hint at illumination, placement in a socket, and the fact that it glows without an open flame. **",
+        "best_clue": "Parte a unui proiector",
+        "best_sbert": 0.5640556812286377
+    },
+    {
+        "answer": "POLAR",
+        "source_clue": "O noapte lung\u0103 (masc.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Capetele magnetului",
+            "Molecul\u0103 cu sarcin\u0103 asimetric\u0103",
+            "Reprezentare \u00een cerc a pozi\u021biei"
+        ],
+        "rationale": "",
+        "best_clue": "Reprezentare \u00een cerc a pozi\u021biei",
+        "best_sbert": 0.5096587538719177
+    },
+    {
+        "answer": "FOTO",
+        "source_clue": "Face o introducere vorbind de imagine",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Captur\u0103 de lumin\u0103",
+            "Prefix al energiei",
+            "Album \u00een miniatur\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Prefix al energiei",
+        "best_sbert": 0.46672141551971436
+    },
+    {
+        "answer": "ERA",
+        "source_clue": "E vremea unei istorii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Starea de a fi, exprimat\u0103 \u00een trecut",
+            "Perioad\u0103 istoric\u0103 marcat\u0103 de mari descoperiri",
+            "R\u00e2ul care curge prin jude\u021bul Maramure\u0219"
+        ],
+        "rationale": "",
+        "best_clue": "Perioad\u0103 istoric\u0103 marcat\u0103 de mari descoperiri",
+        "best_sbert": 0.5952799320220947
+    },
+    {
+        "answer": "CIOBAN",
+        "source_clue": "Mioara e dragostea lui",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Vigil al turmei \u00een \u00eentuneric",
+            "C\u0103pitan al oii f\u0103r\u0103 nav\u0103",
+            "Ghizd\u0103 al c\u00e2mpului cu coarne ascunse"
+        ],
+        "rationale": "\u201eCiob\u00e2n\u201d are cel pu\u021bin dou\u0103 sensuri principale:\n1. persoana care poart\u0103 o turm\u0103 de oi (p\u0103stor, \u201eciob\u0103na\u0219\u201d);\n2. figurativ, un om simplu, rustic, uneori prinse \u00een expresii ca \u201eciob\u0103na\u0219 de la sat\u201d.\n\nPentru a crea indicii polisemantice, trebuie s\u0103 aleg expresii care pot sugera:\n* un paznic, un c\u00e2ine de paz\u0103, un paznic nocturn etc.;\n* un c\u0103pitan, un conduc\u0103tor f\u0103r\u0103 mijloace moderne;\n* un persoan care poart\u0103 un baston/coarn\u0103 \u00een mediul rural.\n\nAstfel, fiecare indiciu pare s\u0103 descrie altceva \u2013 dar justific\u0103 \u015fi r\u0103spunsul \u201eciob\u00e2n\u201d prin joc de sensuri.",
+        "best_clue": "Ghizd\u0103 al c\u00e2mpului cu coarne ascunse",
+        "best_sbert": 0.5997015833854675
+    },
+    {
+        "answer": "RABDARI",
+        "source_clue": "Admiteri grele",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Unelte de s\u0103pat \u00een curte, nu de vopsit",
+            "Instrumente lungi cu m\u00e2ner pentru ad\u00e2nciri",
+            "Palete regionale, nu de pictur\u0103"
+        ],
+        "rationale": "The answer **RABDARI** is the plural form of *r\u0103bd\u0103*, a regional Romanian term for a large shovel or spade.  \nTo create polysemantic clues we must refer to meanings that could also suggest other objects (lopat\u0103, b\u00e2t\u0103, unealt\u0103 de curte, etc.) so that the clue is not a direct synonym. Each clue will hint at a digging tool but phrased in a way that could also point to different items (palette, lopat\u0103, b\u00e2t\u0103), forcing the solver to think laterally and land on \u201cr\u0103bdari\u201d.",
+        "best_clue": "Unelte de s\u0103pat \u00een curte, nu de vopsit",
+        "best_sbert": 0.5248414874076843
+    },
+    {
+        "answer": "CLOR",
+        "source_clue": "Face s\u0103-\u015fi piard\u0103 culoarea",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Dezinfectantul bazinului",
+            "Elementul cu un electron \u00een plus",
+            "Gazul galben, cu miros \u00een\u021bep\u0103tor, din piscine"
+        ],
+        "rationale": "",
+        "best_clue": "Elementul cu un electron \u00een plus",
+        "best_sbert": 0.5388429760932922
+    },
+    {
+        "answer": "ARSA",
+        "source_clue": "M\u00e2na b\u0103gat\u0103-n foc",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Semn l\u0103sat de foc",
+            "Stare dup\u0103 o zi la soare",
+            "Rezultat al unei p\u00e2ini uitate \u00een cuptor"
+        ],
+        "rationale": "",
+        "best_clue": "Semn l\u0103sat de foc",
+        "best_sbert": 0.6298801898956299
+    },
+    {
+        "answer": "REA",
+        "source_clue": "D\u0103 dovad\u0103 de lips\u0103 a calit\u0103\u0163ii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Personaj negativ al pove\u0219tilor",
+            "Oppus\u0103 bunei, cu trei litere",
+            "Re \u0219i A, dou\u0103 note dintr-o gam\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Oppus\u0103 bunei, cu trei litere",
+        "best_sbert": 0.5600703954696655
+    },
+    {
+        "answer": "IERI",
+        "source_clue": "Vine m\u00e2ine dup\u0103 ea.",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cuv\u00e2nt din triada temporal\u0103 \u201eieri, azi, m\u00e2ine\u201d",
+            "Abreviere folosit\u0103 uneori \u00een agenda sportiv\u0103 pentru \u201e\u00eent\u00e2lnire de antrenament\u201d",
+            "Titlu scurt al unei reviste de cronici ale trecutului"
+        ],
+        "rationale": "",
+        "best_clue": "Cuv\u00e2nt din triada temporal\u0103 \u201eieri, azi, m\u00e2ine\u201d",
+        "best_sbert": 0.5035998225212097
+    },
+    {
+        "answer": "TRANSA",
+        "source_clue": "A ac\u0163iona cu deta\u015fare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Livrare \u00een zona umbr\u0103",
+            "B\u0103t\u0103lie de lucru",
+            "F\u00e2\u0219\u0103 \u00een serie de comenzi"
+        ],
+        "rationale": "",
+        "best_clue": "Livrare \u00een zona umbr\u0103",
+        "best_sbert": 0.5045814514160156
+    },
+    {
+        "answer": "REN",
+        "source_clue": "Trage datorit\u0103 mu\u015fchilor lui",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Filtru natural",
+            "Organ de filtrare",
+            "Piesa din sistemul excretor"
+        ],
+        "rationale": "",
+        "best_clue": "Organ de filtrare",
+        "best_sbert": 0.4375222623348236
+    },
+    {
+        "answer": "ATLET",
+        "source_clue": "Pus pe fug\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mortal, cu litere amestecate",
+            "F\u0103r\u0103 \u201ei\u201d \u00een atelier",
+            "Dou\u0103 L, o singur\u0103 T, \u015fi un A"
+        ],
+        "rationale": "",
+        "best_clue": "Mortal, cu litere amestecate",
+        "best_sbert": 0.5715808868408203
+    },
+    {
+        "answer": "RID",
+        "source_clue": "Face semn la obraz",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Scos de pe list\u0103, abrev.",
+            "Or\u0103\u0219el din Azerbaydzhan",
+            "Cuv\u00e2nt englezesc ce \u00eenseamn\u0103 eliminare"
+        ],
+        "rationale": "",
+        "best_clue": "Cuv\u00e2nt englezesc ce \u00eenseamn\u0103 eliminare",
+        "best_sbert": 0.593819797039032
+    },
+    {
+        "answer": "ROTARI",
+        "source_clue": "Meseria lor r\u0103m\u00e2ne... de c\u0103ru\u0163\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Schimb\u0103ri de pozi\u021bie ale piesei pe tabla de \u0219ah",
+            "Mi\u0219c\u0103ri circulare ale corpului \u00een balet",
+            "Secven\u021be de imagini pe un disc \u00een care totul se \u00eenv\u00e2rte"
+        ],
+        "rationale": "**  \nThe answer is **ROTARI** (plural of *rotire* \u2013 \u201crotations\u201d, \u201cturns\u201d).  \nTo make polysemantic clues, I will refer to contexts where \u201crot\u0103ri\u201d can be understood, but where a more obvious answer would be a different word (e.g., *mut\u0103ri*, *piruete*, *turnuri*). Each clue will be short, indirect, and allow several plausible solutions, forcing the solver to think laterally to arrive at **ROTARI**.  \n**",
+        "best_clue": "Secven\u021be de imagini pe un disc \u00een care totul se \u00eenv\u00e2rte",
+        "best_sbert": 0.4970054030418396
+    },
+    {
+        "answer": "ITARI",
+        "source_clue": "Se \u00eencing la hor\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Gard alb de margine",
+            "Umbra plantelor din zonele uscate",
+            "Fitoplan folosit la delimitarea \u0219an\u021burilor"
+        ],
+        "rationale": "",
+        "best_clue": "Umbra plantelor din zonele uscate",
+        "best_sbert": 0.547651469707489
+    },
+    {
+        "answer": "CROM",
+        "source_clue": "Sub acoperire... face fa\u0163\u0103 agen\u0163ilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Metal din grupul 6",
+            "Component al o\u021belului inoxidabil",
+            "Str\u0103lucire de ma\u0219in\u0103, nu aur"
+        ],
+        "rationale": "",
+        "best_clue": "Str\u0103lucire de ma\u0219in\u0103, nu aur",
+        "best_sbert": 0.5742976665496826
+    },
+    {
+        "answer": "UPERCUTURI",
+        "source_clue": "Lovituri venite de jos \u00een sus",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lovituri \u00een sus",
+            "T\u0103ieturi de la \u00een\u0103l\u021bime",
+            "Mi\u0219c\u0103ri de box cu pumnul ridicat"
+        ],
+        "rationale": "",
+        "best_clue": "Lovituri \u00een sus",
+        "best_sbert": 0.8541203141212463
+    },
+    {
+        "answer": "MORAL",
+        "source_clue": "Un ansamblu de facult\u0103\u0163i",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Starea de spirit a echipei",
+            "\u00cenv\u0103\u021b\u0103tur\u0103 dintr-o poveste",
+            "Criteriu de conduit\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Starea de spirit a echipei",
+        "best_sbert": 0.6130930185317993
+    },
+    {
+        "answer": "ROIT",
+        "source_clue": "Plimbatul cu familia",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sur\u0103 veche de l\u00e2n\u0103",
+            "M\u0103sur\u0103 de greutate arhaic\u0103",
+            "Unitate de mas\u0103 medieval\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "M\u0103sur\u0103 de greutate arhaic\u0103",
+        "best_sbert": 0.5093311071395874
+    },
+    {
+        "answer": "ELABORA",
+        "source_clue": "A lucra la definitivat",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Creeaz\u0103 prin rafinare",
+            "Proceseaz\u0103 informa\u021bii",
+            "Detaliere prin munc\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Detaliere prin munc\u0103",
+        "best_sbert": 0.5556653738021851
+    },
+    {
+        "answer": "DRENA",
+        "source_clue": "A face o manevra de a c\u00e2\u015ftiga teren",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Actri\u021b\u0103 cu prenume scurt",
+            "Comand\u0103 de evacuare a lichidului",
+            "Tehnic\u0103 de prevenire a acumul\u0103rii apei"
+        ],
+        "rationale": "The word **DRENA** can be interpreted as:\n1. Imperative/3rd\u2011person singular form of the verb *a drena* \u2013 \u201cto drain\u201d (medical or civil engineering context).  \n2. A short female first name, known from the actress **Drena De Niro**.  \n\nTo craft polysemantic clues, each clue should hint at a meaning that could belong to several other crossword answers, making the intended answer less obvious.  \n\n- For the name reading, a clue like \u201cActri\u021b\u0103 cu prenume scurt\u201d could also lead to Ada, Eva, etc.  \n- For the verb meaning, a clue such as \u201cComand\u0103 de evacuare a lichidului\u201d may point to \u201cpompare\u201d, \u201cvalv\u0103\u201d, \u201cdrena\u201d, etc.  \n- A third clue can refer to the engineering sense: \u201cTehnic\u0103 de prevenire a acumul\u0103rii apei\u201d, which could fit \u201ciriga\u021bie\u201d, \u201cimpermeabilizare\u201d, \u201cdrena\u201d\u2026\n\nAll clues are short, Romanian, indirect, and distinct.",
+        "best_clue": "Comand\u0103 de evacuare a lichidului",
+        "best_sbert": 0.5790331363677979
+    },
+    {
+        "answer": "ARCA",
+        "source_clue": "Barc\u0103 folosit\u0103 la inunda\u0163ii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mijloc de salvare \u00een potop",
+            "Cutie cu seif \u00een biseric\u0103",
+            "Vas al lui Noe"
+        ],
+        "rationale": "",
+        "best_clue": "Cutie cu seif \u00een biseric\u0103",
+        "best_sbert": 0.4994281828403473
+    },
+    {
+        "answer": "ASTRI",
+        "source_clue": "Obiectiv de telescop (pl.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Flori de prim\u0103var\u0103 \u0219i corpuri cere\u0219ti",
+            "Semnale str\u0103lucitoare pentru navigatorii nocturni",
+            "Design \u00een tapiserii \u0219i \u00een constela\u021bii"
+        ],
+        "rationale": "",
+        "best_clue": "Semnale str\u0103lucitoare pentru navigatorii nocturni",
+        "best_sbert": 0.4481014907360077
+    },
+    {
+        "answer": "IRA",
+        "source_clue": "Firav la trup!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Foc interior f\u0103r\u0103 sc\u00e2nteieri",
+            "Cuv\u00e2nt \u00een trei litere dintr-un acronym rebel",
+            "Prenume scriptural, de trei litere"
+        ],
+        "rationale": "**  \nThe word **IRA** has at least two clear meanings in Romanian: the emotion *ira* (anger) and the abbreviation for the Irish Republican Army. It can also be a short Biblical or rare personal name.  \n\nTo create polysemantic clues, each clue should be short, indirect, and could point to several possible answers (e.g., other emotions, other three\u2011letter rebel acronyms, other rare names). The most obvious reading should lead away from the intended answer, forcing the solver to think laterally.  \n\n1. \u201cFoc interior f\u0103r\u0103 sc\u00e2nteieri\u201d \u2013 evokes an inner burning that is not a literal fire; could be *ira* (anger) but also *pasiune* or *dor*.  \n2. \u201cCuv\u00e2nt \u00een trei litere dintr-un acronym rebel\u201d \u2013 any three\u2011letter abbreviation of a militant group (IRA, ETA, FMLN, etc.).  \n3. \u201cPrenume scriptural, de trei litere\u201d \u2013 a three\u2011letter Biblical name; could be *Ira*, *Ada*, *Eli*, etc.  \n\nThese satisfy the polysemantic requirement, are short, and are not direct synonyms of the answer. **",
+        "best_clue": "Cuv\u00e2nt \u00een trei litere dintr-un acronym rebel",
+        "best_sbert": 0.4890851676464081
+    },
+    {
+        "answer": "ALO",
+        "source_clue": "O vorb\u0103 \u015foptit\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ecoul ce d\u0103 startul conversa\u021biei",
+            "Cuv\u00e2nt rostit c\u00e2nd sun\u0103 soneria",
+            "Salut la firul de aur"
+        ],
+        "rationale": "",
+        "best_clue": "Salut la firul de aur",
+        "best_sbert": 0.5462153553962708
+    },
+    {
+        "answer": "FOIRI",
+        "source_clue": "Umbl\u0103ri de colo p\u00een\u0103 colo",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ramuri \u0219i birouri",
+            "Pl\u0103ci din p\u0103dure, pagini \u00een tipar",
+            "Verde \u00een natur\u0103, alb \u00een \u0219coal\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Ramuri \u0219i birouri",
+        "best_sbert": 0.5539127588272095
+    },
+    {
+        "answer": "ETC",
+        "source_clue": "Succesiune r\u0103mas\u0103 \u00een pronun\u0163are.",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Semn al unei serii ne\u00eencheiate",
+            "Abreviere \u00eent\u00e2lnit\u0103 \u00een texte",
+            "Ini\u021bialele unui domeniu tehnic"
+        ],
+        "rationale": "**  \nThe answer is **ETC**, the common abbreviation for *et cetera* (\u201c\u0219i altele\u201d).  \nTo make polysemantic clues, I\u2019ll refer to other possible interpretations of the three\u2011letter string:  \n\n* it looks like a *semn* that indicates a list continues \u2013 but readers could also think of an ellipsis, a dash, sau alte semne de punctua\u021bie.  \n* it is an *abreviere* that appears in scrieri; many other abbreviations exist, so the clue must hint at the idea of \u201co abreviere folosit\u0103 \u00een texte\u201d without naming the meaning.  \n* the letters *E\u2011T\u2011C* could be taken as ini\u021bialele unor cuvinte diferite (ex.: \u201eEnergie, Transport, Comunicare\u201d) \u2013 suggesting a \u201cabreviere de la un domeniu tehnic\u201d.  \n\nEach clue will be short, indirect, and allow several plausible answers, while the intended one is **ETC**.  \n**",
+        "best_clue": "Abreviere \u00eent\u00e2lnit\u0103 \u00een texte",
+        "best_sbert": 0.602937638759613
+    },
+    {
+        "answer": "BOB",
+        "source_clue": "Alunec\u0103 iarna pe z\u0103pad\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nume palindromic",
+            "Unitate de schimb din trecut",
+            "Tunsoare scurt\u0103, la mod\u0103 \u00een anii \u201920"
+        ],
+        "rationale": "",
+        "best_clue": "Tunsoare scurt\u0103, la mod\u0103 \u00een anii \u201920",
+        "best_sbert": 0.5832967162132263
+    },
+    {
+        "answer": "SERTAR",
+        "source_clue": "Numai tras afar\u0103 \u00ee\u015fi arat\u0103 secretele",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Compartiment de h\u00e2rtie \u00een birou",
+            "C\u0103su\u021b\u0103 sub blat pentru rechizite",
+            "Spa\u021biu ascuns \u00een dulap pentru bani"
+        ],
+        "rationale": "",
+        "best_clue": "C\u0103su\u021b\u0103 sub blat pentru rechizite",
+        "best_sbert": 0.5903297662734985
+    },
+    {
+        "answer": "ETALARE",
+        "source_clue": "Expunere la mas\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Aranjament pentru vitrine",
+            "Mod de a se l\u0103uda \u00een public",
+            "Prescurtare latin\u0103 \u00eent\u00e2lnit\u0103 \u00een bibliografii"
+        ],
+        "rationale": "",
+        "best_clue": "Mod de a se l\u0103uda \u00een public",
+        "best_sbert": 0.5337704420089722
+    },
+    {
+        "answer": "CONT",
+        "source_clue": "Are un num\u0103r la banii t\u0103i din banc\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cenregistrare pe internet",
+            "Sum\u0103 total\u0103 a \u00eencas\u0103rilor",
+            "Povestea relatat\u0103"
+        ],
+        "rationale": "The Romanian word **CONT** has several distinct senses:\n1. **Cont bancar / de utilizator** \u2013 an account where transactions are recorded.\n2. **Relatare, poveste** \u2013 a \u201ccont\u201d can mean an account of events (a narrative).\n3. **Registru de opera\u0163iuni** \u2013 a ledger, a list of entries.\n\nTo create polysemantic clues, each hint should be brief, indirect and capable of pointing to other plausible answers (profil, poveste, jurnal etc.) while still leading logically to \u201ccont\u201d.  \n\nClue ideas:\n* \u201c\u00cenregistrare pe internet\u201d \u2013 could be \u201ccont\u201d, \u201cprofil\u201d, \u201clogin\u201d.\n* \u201cSum\u0103 total\u0103 a \u00eencas\u0103rilor\u201d \u2013 could be \u201ccifr\u0103\u201d, \u201ctotal\u201d, \u201crezultat\u201d, but also \u201ccont\u201d as the balance of an account.\n* \u201cPovestea relatat\u0103\u201d \u2013 could be \u201cnara\u0163iune\u201d, \u201cistorie\u201d, \u201crelatare\u201d, but also the archaic meaning of \u201ccont\u201d = narrativ\u0103.\n\nAll three are short, Romanian, and each has multiple legitimate interpretations, satisfying the polysemantic requirement.",
+        "best_clue": "Sum\u0103 total\u0103 a \u00eencas\u0103rilor",
+        "best_sbert": 0.5138663053512573
+    },
+    {
+        "answer": "INTIM",
+        "source_clue": "Ne vine aproape bine",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Confiden\u021bial, nu public",
+            "Atmosfer\u0103 de lum\u00e2n\u0103ri \u0219i \u0219oapte",
+            "Leg\u0103tur\u0103 apropiat\u0103, f\u0103r\u0103 protocol"
+        ],
+        "rationale": "",
+        "best_clue": "Atmosfer\u0103 de lum\u00e2n\u0103ri \u0219i \u0219oapte",
+        "best_sbert": 0.5650357007980347
+    },
+    {
+        "answer": "APOCALIPSA",
+        "source_clue": "Aflat\u0103 la cap\u0103tul lumii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ultima parte a profe\u021biei lui Ioan",
+            "Film cu final de catastrof\u0103 total\u0103",
+            "Stare de panic\u0103 c\u00e2nd totul se rupe"
+        ],
+        "rationale": "",
+        "best_clue": "Ultima parte a profe\u021biei lui Ioan",
+        "best_sbert": 0.5773403644561768
+    },
+    {
+        "answer": "FUMAT",
+        "source_clue": "O patim\u0103 arz\u0103toare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Miros de tutun",
+            "Fir de fum, la trecut",
+            "Carne de la gr\u0103tar, f\u0103r\u0103 foc"
+        ],
+        "rationale": "",
+        "best_clue": "Miros de tutun",
+        "best_sbert": 0.5459690690040588
+    },
+    {
+        "answer": "MIOP",
+        "source_clue": "Expus la vedere",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Focalizare pe cel apropiat",
+            "Obiectiv pentru prim\u2011plan",
+            "Perspectiv\u0103 limitat\u0103 la scurt\u0103 distan\u021b\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Focalizare pe cel apropiat",
+        "best_sbert": 0.5354099273681641
+    },
+    {
+        "answer": "UTA",
+        "source_clue": "Ecoul unuia suspendat \u00een timpul jocului",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cen interiorul cuv\u00e2ntului \u201ecaut\u0103\u201d",
+            "Caut\u0103, excluz\u00e2nd primele dou\u0103 litere",
+            "\u201eUita\u201d f\u0103r\u0103 \u201ei\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "\u00cen interiorul cuv\u00e2ntului \u201ecaut\u0103\u201d",
+        "best_sbert": 0.5611051321029663
+    },
+    {
+        "answer": "ATENTA",
+        "source_clue": "Prins\u0103 \u00een urm\u0103rire",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Semnal de pruden\u021b\u0103",
+            "Femeie meticuloas\u0103",
+            "Instruc\u0163iune din manualul de siguran\u021b\u0103"
+        ],
+        "rationale": "The answer is **ATENT\u0102**, the feminine form of the adjective meaning \u201ccareful, watchful\u201d.  \nTo make polysemantic clues, each hint should suggest several possible words (e.g., \u201cavertisment\u201d, \u201ccautela\u201d, \u201ccontabil\u0103\u201d) while still allowing \u201cATENT\u0102\u201d as a valid solution.  \nI will keep each clue short, indirect and ambiguous.\n\n1. \u201cSemnal de pruden\u021b\u0103\u201d \u2013 could be a \u201csemn\u201d, \u201cavertisment\u201d, \u201ccautela\u201d, etc.  \n2. \u201cFemeie meticuloas\u0103\u201d \u2013 could be \u201ccontabil\u0103\u201d, \u201cdetectiv\u0103\u201d, \u201csecretar\u0103\u201d, etc.  \n3. \u201cInstruc\u0163iune din manualul de siguran\u021b\u0103\u201d \u2013 could be \u201caten\u021bie!\u201d, \u201cavertisment\u201d, \u201cprecau\u021bie\u201d, etc.\n\nAll three are brief, Romanian, and polysemantic, pointing to **ATENT\u0102** without being direct synonyms.",
+        "best_clue": "Semnal de pruden\u021b\u0103",
+        "best_sbert": 0.535405158996582
+    },
+    {
+        "answer": "RETICENT",
+        "source_clue": "Re\u0163inut cu ni\u015fte probleme",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "P\u0103str\u00e2nd t\u0103cerea",
+            "St\u0103p\u00e2n al ascunsului",
+            "Nu\u2011\u0219i dezv\u0103luie g\u00e2ndurile"
+        ],
+        "rationale": "",
+        "best_clue": "Nu\u2011\u0219i dezv\u0103luie g\u00e2ndurile",
+        "best_sbert": 0.5512616634368896
+    },
+    {
+        "answer": "MANSETA",
+        "source_clue": "\u00cenchis\u0103 u\u015for la buton",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sat din jude\u021bul Vrancea",
+            "Curs de ap\u0103 din Carpa\u021bii Orientali",
+            "Denomina\u021bie local\u0103 a unei forma\u0163iuni tradi\u0163ionale"
+        ],
+        "rationale": "",
+        "best_clue": "Sat din jude\u021bul Vrancea",
+        "best_sbert": 0.4729696810245514
+    },
+    {
+        "answer": "SIVE",
+        "source_clue": "Fire de oameni la b\u0103tr\u00e2ne\u0163e",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Band\u0103 sub\u021bire de lemn",
+            "F\u00e2\u0219ie metalic\u0103 fin\u0103",
+            "Dung\u0103 delicat\u0103 de pe un \u021bes\u0103tur\u0103"
+        ],
+        "rationale": "**  \nThe word **SIVE** is the plural of *\u0219iv\u0103*, which denotes a thin strip or sliver, often of wood or metal, and can also refer to a fine stripe (as in a pattern).  \nTo make polysemantic clues, I\u2019ll hint at \u201cthin strip\u201d or \u201cstripe\u201d while leaving room for other possible answers such as *banda*, *f\u00e2\u0219ie*, *dunga*, *\u021bigl\u0103*, etc. Each clue will be short, indirect, and capable of suggesting several different words, with **SIVE** being only one viable solution.  \n**",
+        "best_clue": "Dung\u0103 delicat\u0103 de pe un \u021bes\u0103tur\u0103",
+        "best_sbert": 0.5436046719551086
+    },
+    {
+        "answer": "TINUT",
+        "source_clue": "\u00cemp\u0103r\u0163itul teritoriului pe regiuni",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Parte a h\u0103r\u021bii f\u0103r\u0103 ora\u0219e",
+            "P\u0103strat \u00een t\u0103cere de genera\u021bii",
+            "Teritoriu ce se \u00eentinde dincolo de hotare"
+        ],
+        "rationale": "",
+        "best_clue": "Teritoriu ce se \u00eentinde dincolo de hotare",
+        "best_sbert": 0.5894533395767212
+    },
+    {
+        "answer": "ARGAT",
+        "source_clue": "Lucr\u0103tor \u00eentr-o cas\u0103 de mod\u0103 veche",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "F\u0103r\u0103 coaj\u0103",
+            "Cur\u0103\u021bat prin \u00eendep\u0103rtare de \u00eenveli\u0219",
+            "Preg\u0103tit pentru g\u0103tit prin decojire"
+        ],
+        "rationale": "",
+        "best_clue": "Cur\u0103\u021bat prin \u00eendep\u0103rtare de \u00eenveli\u0219",
+        "best_sbert": 0.6048529148101807
+    },
+    {
+        "answer": "NINSI",
+        "source_clue": "Albii din zona polar\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Z\u0103pad\u0103 fin\u0103 \u00een miniatur\u0103",
+            "Stil de dans ce nu se mi\u0219c\u0103",
+            "Cuv\u00e2nt cu dou\u0103 silabe \u0219i dou\u0103 \u201ei\u201d la capete"
+        ],
+        "rationale": "",
+        "best_clue": "Z\u0103pad\u0103 fin\u0103 \u00een miniatur\u0103",
+        "best_sbert": 0.5597343444824219
+    },
+    {
+        "answer": "ARCA",
+        "source_clue": "Mitic\u0103 pe valuri",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Salvat de potop",
+            "Cuf\u0103r sacru al israeli\u021bilor",
+            "Cutie cu comori \u00een basme"
+        ],
+        "rationale": "",
+        "best_clue": "Cutie cu comori \u00een basme",
+        "best_sbert": 0.6014857292175293
+    },
+    {
+        "answer": "IRITA",
+        "source_clue": "A monta fitile",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sup\u0103rare ocular\u0103",
+            "Ro\u0219ea\u021b\u0103 la iris",
+            "Stare provocat\u0103 de lumin\u0103 \u0219i zgomot"
+        ],
+        "rationale": "**Posibile \u00een\u021belesuri ale cuv\u00e2ntului \u201eirita\u201d**  \n1. Form\u0103 verbal\u0103 \u201ea irita\u201d \u2013 a st\u00e2rni disconfort, sup\u0103rare.  \n2. Substantiv medical \u201eirit\u0103\u201d \u2013 inflama\u021bie a irisului, cu ro\u0219ea\u021b\u0103 \u0219i sensibilitate ocular\u0103.  \n\nPentru indicii polysemantice trebuie s\u0103 alegem fraze scurte ce pot fi \u00een\u0163elese \u00een ambele sensuri (sau \u00een alte sensuri) \u015fi care nu sunt sinonime directe ale r\u0103spunsului. \u00cen acela\u015fi timp cititorul trebuie s\u0103 g\u0103seasc\u0103 \u201eirita\u201d printr\u2011o ra\u0163ionare lateral\u0103.  \n\n*Indiciu 1*: \u201eSup\u0103rare ocular\u0103\u201d \u2013 poate \u00eensemna at\u00e2t s\u0103 \u201eirit\u0103m\u201d pe cineva (s\u0103 \u00eel sup\u0103r\u0103m), c\u00e2t \u015fi o \u201eirit\u0103\u201d a ochiului.  \n*Indiciu 2*: \u201eRo\u0219ea\u021b\u0103 la iris\u201d \u2013 descrie clar afec\u0163iunea ocular\u0103, dar ar putea sugera \u0219i o \u201ero\u0219ea\u021b\u0103\u201d general\u0103 cauzat\u0103 de iritare.  \n*Indiciu 3*: \u201eStare provocat\u0103 de lumin\u0103 \u0219i zgomot\u201d \u2013 ambele pot \u201eirita\u201d (\u00een sens figurat), iar lumina poate declan\u015fa o \u201eirit\u0103\u201d.  \n\nToate sunt scurte, nu sunt sinonime directe \u0219i permit interpret\u0103ri multiple.**",
+        "best_clue": "Stare provocat\u0103 de lumin\u0103 \u0219i zgomot",
+        "best_sbert": 0.5323542952537537
+    },
+    {
+        "answer": "IDEE",
+        "source_clue": "Rodul concep\u0163iei la maturitate",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sc\u00e2nteia unui proiect",
+            "Telefon HTC cu nume de g\u00e2nd",
+            "Concept din reclame"
+        ],
+        "rationale": "",
+        "best_clue": "Concept din reclame",
+        "best_sbert": 0.5436022877693176
+    },
+    {
+        "answer": "VESTE",
+        "source_clue": "\u0162inute la piept pentru siguran\u0163\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Se poart\u0103 la frig \u0219i se difuzeaz\u0103 \u00een sta\u021bii",
+            "\u00ce\u021bi aduc c\u0103ldur\u0103 \u0219i informa\u021bii",
+            "\u00cen magazin le g\u0103se\u0219ti \u0219i \u00een ziar le cite\u0219ti"
+        ],
+        "rationale": "",
+        "best_clue": "Se poart\u0103 la frig \u0219i se difuzeaz\u0103 \u00een sta\u021bii",
+        "best_sbert": 0.5799460411071777
+    },
+    {
+        "answer": "AFURISENII",
+        "source_clue": "Pedepse aplicate de p\u0103rin\u0163i",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nasul \u00een sus",
+            "Se consider\u0103 superioare",
+            "M\u00e2ndri, dar f\u0103r\u0103 fund"
+        ],
+        "rationale": "",
+        "best_clue": "Se consider\u0103 superioare",
+        "best_sbert": 0.57781583070755
+    },
+    {
+        "answer": "PUTERI",
+        "source_clue": "For\u0163ele de munc\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sura electric\u0103 a unui motor",
+            "Facult\u0103\u021bi ale unui stat",
+            "Exponentele unui num\u0103r"
+        ],
+        "rationale": "",
+        "best_clue": "Exponentele unui num\u0103r",
+        "best_sbert": 0.4735576808452606
+    },
+    {
+        "answer": "IAD",
+        "source_clue": "O groaz\u0103 de p\u0103c\u0103to\u015fi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Etern\u0103 sta\u021bie de \u00eenc\u0103lzire",
+            "Zon\u0103 de arsur\u0103 f\u0103r\u0103 ap\u0103",
+            "Destina\u021bie evitat\u0103 de credincio\u0219i"
+        ],
+        "rationale": "**  \nThe answer is **IAD** (Romanian for \u201chell\u201d). I need three short, polysemantic clues that are not direct synonyms but could plausibly point to several answers (e.g., \u201ecuptor\u201d, \u201ecazan\u201d, \u201eparc de distrac\u021bii\u201d, etc.), while the most fitting one with a lateral twist is *iad*. I\u2019ll craft clues that evoke ideas of extreme heat, an undesirable destination, or an eternal waiting place, each of which could also describe other things. The clues must be brief, Romanian, and distinct. **",
+        "best_clue": "Destina\u021bie evitat\u0103 de credincio\u0219i",
+        "best_sbert": 0.6277345418930054
+    },
+    {
+        "answer": "OMAT",
+        "source_clue": "P\u0103tur\u0103 alb\u0103 cu puf",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Fulg fin ca praful",
+            "Sat cu acela\u0219i nume ca o pulbere u\u0219oar\u0103",
+            "R\u00e2u de munte cu apele m\u0103cinate"
+        ],
+        "rationale": "",
+        "best_clue": "R\u00e2u de munte cu apele m\u0103cinate",
+        "best_sbert": 0.6487106680870056
+    },
+    {
+        "answer": "VAN",
+        "source_clue": "Lipsit de temei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nume de familie al pictorului de floarea\u2011soarelui",
+            "Transport cu u\u0219\u0103 lateral\u0103, des folosit la mut\u0103ri",
+            "Tip de vehicul \u00eenchiriat pentru grupuri mici"
+        ],
+        "rationale": "",
+        "best_clue": "Transport cu u\u0219\u0103 lateral\u0103, des folosit la mut\u0103ri",
+        "best_sbert": 0.554777204990387
+    },
+    {
+        "answer": "IMERSIE",
+        "source_clue": "Rezultatul s\u0103riturii de la trambulin\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Plonjare f\u0103r\u0103 costumul de scafandru",
+            "Stare de implicare total\u0103",
+            "Termen de fizic\u0103 \u0219i de lectur\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Plonjare f\u0103r\u0103 costumul de scafandru",
+        "best_sbert": 0.581508994102478
+    },
+    {
+        "answer": "ATACA",
+        "source_clue": "A cere o reexaminare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mut\u0103 agresiv\u0103 \u00een deschidere",
+            "Intrare for\u021bat\u0103 pe linie",
+            "Se arunc\u0103 asupra provoc\u0103rii"
+        ],
+        "rationale": "",
+        "best_clue": "Intrare for\u021bat\u0103 pe linie",
+        "best_sbert": 0.6196251511573792
+    },
+    {
+        "answer": "GIR",
+        "source_clue": "Eliberat pe cau\u0163iune",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nu st\u0103 pe loc",
+            "R\u0103spunsul la ce face ceasul",
+            "Ac\u021biunea ro\u021bii"
+        ],
+        "rationale": "",
+        "best_clue": "Nu st\u0103 pe loc",
+        "best_sbert": 0.6523358821868896
+    },
+    {
+        "answer": "TENTA",
+        "source_clue": "A b\u0103ga \u00een ispit\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Acoperire mobil\u0103",
+            "Test sub cer",
+            "P\u00e2nz\u0103 de libertate"
+        ],
+        "rationale": "",
+        "best_clue": "Acoperire mobil\u0103",
+        "best_sbert": 0.5345491170883179
+    },
+    {
+        "answer": "IMENSITATE",
+        "source_clue": "Marea cea mare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sura de necalculat",
+            "Spa\u021biu f\u0103r\u0103 hotare",
+            "Extindere ce nu cunoa\u0219te margini"
+        ],
+        "rationale": "",
+        "best_clue": "Spa\u021biu f\u0103r\u0103 hotare",
+        "best_sbert": 0.6059900522232056
+    },
+    {
+        "answer": "PINTEN",
+        "source_clue": "Accelerator la hipodrom",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sur\u0103 veche a greut\u0103\u0163ii, nu a lungimii",
+            "Nume de familie al unui antrenor de fotbal",
+            "\u00cenc\u0103rc\u0103tur\u0103 mare, dar nu se num\u0103r\u0103 \u00een kilograme"
+        ],
+        "rationale": "",
+        "best_clue": "Nume de familie al unui antrenor de fotbal",
+        "best_sbert": 0.4436812102794647
+    },
+    {
+        "answer": "RAS",
+        "source_clue": "F\u0103cut cu ochiul",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ecoul unei glume bune",
+            "Semn de relaxare \u00een grup",
+            "Sunetul ce r\u0103spunde unui banc"
+        ],
+        "rationale": "",
+        "best_clue": "Ecoul unei glume bune",
+        "best_sbert": 0.586000382900238
+    },
+    {
+        "answer": "SOT",
+        "source_clue": "Ales \u00een cadrul partidelor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cel cu care se \u00eemparte totul",
+            "L\u00e2ng\u0103 el, cuv\u00e2ntul \u201eso\u021bie\u201d cap\u0103t\u0103 sens",
+            "Un partener de via\u021b\u0103, nu de joc"
+        ],
+        "rationale": "",
+        "best_clue": "Cel cu care se \u00eemparte totul",
+        "best_sbert": 0.5098307728767395
+    },
+    {
+        "answer": "TURC",
+        "source_clue": "Cel ce ofer\u0103 ciubuc",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cafea neagr\u0103 f\u0103r\u0103 spum\u0103",
+            "Negustor de covoare \u00een pia\u021b\u0103",
+            "St\u0103p\u00e2n al haremului"
+        ],
+        "rationale": "**  \nThe word **TURC** can denote a person from Turkey, Turkish coffee, or anything characteristically \u201cTurkish\u201d (e.g., a seller of Oriental carpets).  \nTo obtain polysemantic clues, I\u2019ll hint at these cultural aspects without naming them directly, so the surface reading suggests other possible answers (espresso, negustor, b\u0103utur\u0103 f\u0103r\u0103 lapte, etc.).  \nEach clue will be short, indirect, and capable of leading to several guesses, with the intended solution being **TURC**.  \n**",
+        "best_clue": "Cafea neagr\u0103 f\u0103r\u0103 spum\u0103",
+        "best_sbert": 0.5409092307090759
+    },
+    {
+        "answer": "APARATOARE",
+        "source_clue": "Autoritatea tutelar\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Usc\u0103toare cu motor, nu cu aer condi\u021bionat",
+            "Mecanisme anti\u2011umiditate",
+            "Dispozitive ce alung\u0103 apa"
+        ],
+        "rationale": "",
+        "best_clue": "Mecanisme anti\u2011umiditate",
+        "best_sbert": 0.46113139390945435
+    },
+    {
+        "answer": "BIRUIT",
+        "source_clue": "Mas\u0103 inconsistent\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ce nu uit\u0103 berea",
+            "C\u0103zut \u00een lupt\u0103",
+            "St\u0103p\u00e2n al adversarului"
+        ],
+        "rationale": "",
+        "best_clue": "St\u0103p\u00e2n al adversarului",
+        "best_sbert": 0.471565306186676
+    },
+    {
+        "answer": "ALBA",
+        "source_clue": "Pies\u0103 mutat\u0103 \u00een deschidere",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Zori de dragoste medieval\u0103",
+            "Ora\u0219 cu fort\u0103rea\u021b\u0103 roman\u0103",
+            "Nume de culoare clar\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Ora\u0219 cu fort\u0103rea\u021b\u0103 roman\u0103",
+        "best_sbert": 0.5405649542808533
+    },
+    {
+        "answer": "COLAC",
+        "source_clue": "Salvarea... calicilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Rotund\u0103 de la brut\u0103rie",
+            "Inel de salvare pe nav\u0103",
+            "Cerc de cauciuc la bord"
+        ],
+        "rationale": "",
+        "best_clue": "Inel de salvare pe nav\u0103",
+        "best_sbert": 0.4351658225059509
+    },
+    {
+        "answer": "STIUT",
+        "source_clue": "Adus la cuno\u0219tin\u021b\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "F\u0103r\u0103 masc\u0103 de necunoscut",
+            "Despre care nu po\u0163i s\u0103 negi",
+            "Cine are informa\u0163ie \u00een trecut"
+        ],
+        "rationale": "",
+        "best_clue": "F\u0103r\u0103 masc\u0103 de necunoscut",
+        "best_sbert": 0.5830540060997009
+    },
+    {
+        "answer": "ADOLESCENTA",
+        "source_clue": "Trec\u0103toare pentru oameni adul\u021bi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Fat\u0103 \u00een pragul maturit\u0103\u021bii",
+            "Etap\u0103 de dezvoltare \u00een corp \u0219i \u00een via\u021b\u0103",
+            "Protagonist\u0103 a unui roman de tip coming\u2011age"
+        ],
+        "rationale": "",
+        "best_clue": "Etap\u0103 de dezvoltare \u00een corp \u0219i \u00een via\u021b\u0103",
+        "best_sbert": 0.5611886978149414
+    },
+    {
+        "answer": "OSPATARITE",
+        "source_clue": "Te servesc \u00een orice fel",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u0218iroaie de lumin\u0103",
+            "Z\u0103pad\u0103 fin\u0103 pe creste",
+            "Stelu\u021be pe p\u00e2nza nop\u021bii"
+        ],
+        "rationale": "",
+        "best_clue": "Stelu\u021be pe p\u00e2nza nop\u021bii",
+        "best_sbert": 0.5467336773872375
+    },
+    {
+        "answer": "ACE",
+        "source_clue": "Sunt pe cale... de schimbare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cen zbor \u0219i \u00een joc",
+            "Titlu pentru un aviator de elit\u0103",
+            "Cea mai bun\u0103 carte a pachetului"
+        ],
+        "rationale": "**  \nThe answer \u201eACE\u201d poate fi \u00een\u021beles \u00een mai multe feluri:  \n\n1. **\u201eas\u201d** \u2013 carte de joc, dar scris \u00een englez\u0103 devine *ace*.  \n2. **\u201eflying ace\u201d** \u2013 aviator de elit\u0103, un pilot foarte bun.  \n3. **\u201eace\u201d** ca adjectiv de calitate (\u201ecel mai bun\u201d, \u201ede top\u201d).  \n\nPentru fiecare sens pot s\u0103 formulez un indiciu scurt care, pe l\u00e2ng\u0103 sensul evident, poate sugera \u0219i alte cuvinte (de ex. \u201evultur\u201d, \u201ejoker\u201d, \u201eerou\u201d), astfel \u00eenc\u00e2t s\u0103 r\u0103m\u00e2n\u0103 polisemantic.  \n\nClauzele alese:  \n\n- \u201e\u00cen zbor \u0219i \u00een joc\u201d \u2013 se refer\u0103 la un pilot (zbor) \u0219i la o carte de joc (joc).  \n- \u201eTitlu pentru un aviator de elit\u0103\u201d \u2013 ar putea fi \u201eerou\u201d, \u201ev\u00e2n\u0103tor\u201d, dar \u00een jargon e \u201eace\u201d.  \n- \u201eCea mai bun\u0103 carte a pachetului\u201d \u2013 ar putea fi \u201eas\u201d, \u201ejoker\u201d, tot \u201eace\u201d.  \n\nAceste indicii sunt scurte, nu sinonime directe \u0219i pot conduce la alte r\u0103spunsuri, dar \u201eACE\u201d este singura care le satisface pe toate simultan. **",
+        "best_clue": "Cea mai bun\u0103 carte a pachetului",
+        "best_sbert": 0.547471821308136
+    },
+    {
+        "answer": "ACUZE",
+        "source_clue": "\u00cempungeri frontale",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cei arunc\u0103 vina pe altul",
+            "Se spune \u00een sala de judecat\u0103",
+            "Form\u0103 verbal\u0103 ce \u00eencarc\u0103 pe cineva cu vin\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Form\u0103 verbal\u0103 ce \u00eencarc\u0103 pe cineva cu vin\u0103",
+        "best_sbert": 0.5079861879348755
+    },
+    {
+        "answer": "LASA",
+        "source_clue": "Iese la b\u0103taie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Curent de ap\u0103 din Hunedoara",
+            "D\u0103 voie, nu opri",
+            "Sat transilv\u0103nean, nu un sinonim de abandon"
+        ],
+        "rationale": "",
+        "best_clue": "Sat transilv\u0103nean, nu un sinonim de abandon",
+        "best_sbert": 0.5584014058113098
+    },
+    {
+        "answer": "ARAMII",
+        "source_clue": "Culori din epoca bronzului",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Poporul vorbitor al limbii lui Iisus",
+            "Cei s\u0103raci, \u00een limbaj biblic",
+            "Locuitorii regiunii semitice disp\u0103rute"
+        ],
+        "rationale": "",
+        "best_clue": "Poporul vorbitor al limbii lui Iisus",
+        "best_sbert": 0.611146092414856
+    },
+    {
+        "answer": "CLADIRE",
+        "source_clue": "Tip... imobil",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Plan cu niveluri",
+            "Structur\u0103 cu etaje",
+            "Fundament pentru idei"
+        ],
+        "rationale": "",
+        "best_clue": "Plan cu niveluri",
+        "best_sbert": 0.457300066947937
+    },
+    {
+        "answer": "APA",
+        "source_clue": "D\u0103 contur p\u0103m\u00e2ntului",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Curent invizibil",
+            "Substan\u021b\u0103 ce umple conductele ora\u0219ului",
+            "Abrev. a asocia\u021biei pentru protec\u021bia animalelor"
+        ],
+        "rationale": "",
+        "best_clue": "Substan\u021b\u0103 ce umple conductele ora\u0219ului",
+        "best_sbert": 0.5646371245384216
+    },
+    {
+        "answer": "EROU",
+        "source_clue": "Datul \u00een c\u0103r\u021bi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cel ce lupt\u0103 cu cuvinte \u00een pove\u0219ti",
+            "Model de curaj \u00een basme",
+            "Semn de glorie pe medalie"
+        ],
+        "rationale": "",
+        "best_clue": "Model de curaj \u00een basme",
+        "best_sbert": 0.5303877592086792
+    },
+    {
+        "answer": "ARGILA",
+        "source_clue": "Coapt\u0103 \u00een \u021best",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Material de modelare cu m\u00e2na",
+            "Ingredient \u00een masc\u0103 facial\u0103 absorbant\u0103",
+            "P\u0103m\u00e2nt ce se \u00eent\u0103re\u0219te la uscat"
+        ],
+        "rationale": "**  \nThe answer is **ARGIL\u0102**, a type of earthy clay used for pottery, cosmetics, and construction.  \nTo create polysemantic clues, I will refer to contexts where \u201cargil\u0103\u201d is a possible answer, but the wording also fits other materials such as \u201elut\u201d, \u201eciment\u201d, \u201ebicarbonat\u201d etc. Each clue will be short, indirect, and open\u2011ended, so the most obvious interpretation points elsewhere, forcing the solver to think laterally toward \u201cargil\u0103\u201d.  \n**",
+        "best_clue": "Ingredient \u00een masc\u0103 facial\u0103 absorbant\u0103",
+        "best_sbert": 0.5065227746963501
+    },
+    {
+        "answer": "ARI",
+        "source_clue": "Unit\u0103\u021bi de produc\u021bie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Prenume evreiesc ce \u00eenseamn\u0103 \u201eleu\u201d",
+            "Cod IATA al unui ora\u0219 chilian",
+            "Abreviere a unei asocia\u021bii rom\u00e2ne\u0219ti de credit"
+        ],
+        "rationale": "",
+        "best_clue": "Abreviere a unei asocia\u021bii rom\u00e2ne\u0219ti de credit",
+        "best_sbert": 0.5188612341880798
+    },
+    {
+        "answer": "CLIN",
+        "source_clue": "P\u0103m\u00e2ntul din vatr\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pant\u0103 u\u0219oar\u0103",
+            "Abrev. medical\u0103",
+            "\u00cenclinare a drumului"
+        ],
+        "rationale": "The Romanian word **CLIN** principally means \u201c\u00eenclinare\u201d or \u201cpant\u0103\u201d.  \nIt can also appear as the common abbreviation of **clinic\u0103** (medical clinic).  \nTo make polysemantic clues, I will use short phrases that also fit other crossword answers:\n\n1. \u201cPant\u0103 u\u0219oar\u0103\u201d \u2013 could indicate *cliv\u0103*, *\u00eenclinare*, *clin* \u2026  \n2. \u201cAbrev. medical\u0103\u201d \u2013 many abbreviations exist (dr., med., vet.), but *clin* is a legit short form for *clinic\u0103*.  \n3. \u201c\u00cenclinare a drumului\u201d \u2013 again points to *clin*, yet could also suggest *panta*, *derapaj*.\n\nEach clue is brief, indirect, and has several plausible readings, satisfying the polysemantic requirement.",
+        "best_clue": "\u00cenclinare a drumului",
+        "best_sbert": 0.5508202910423279
+    },
+    {
+        "answer": "EMIRAT",
+        "source_clue": "Nisipul c\u0103lcat de pa\u0219i",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Titlu aristocratic \u0219i teritoriu",
+            "Stat cu sufix -at \u00een Orientul Mijlociu",
+            "Regiune condus\u0103 de un conduc\u0103tor arab"
+        ],
+        "rationale": "",
+        "best_clue": "Titlu aristocratic \u0219i teritoriu",
+        "best_sbert": 0.5485217571258545
+    },
+    {
+        "answer": "BCATOALCA",
+        "source_clue": "Se aplic\u0103 pentru corec\u021bie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ignoran\u021b\u0103 for\u021bat\u0103",
+            "Stup\u0103ciune sub constr\u00e2ngere",
+            "Lips\u0103 de \u00een\u021belepciune impus\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Ignoran\u021b\u0103 for\u021bat\u0103",
+        "best_sbert": 0.5773604512214661
+    },
+    {
+        "answer": "IODISCA",
+        "source_clue": "Puntea superioar\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sare cu protec\u021bie anti\u2011gu\u0219\u0103",
+            "Praf alb de buc\u0103t\u0103rie ce con\u021bine I",
+            "Condiment de mas\u0103 cu un element vital"
+        ],
+        "rationale": "",
+        "best_clue": "Sare cu protec\u021bie anti\u2011gu\u0219\u0103",
+        "best_sbert": 0.5159887075424194
+    },
+    {
+        "answer": "PAL",
+        "source_clue": "Albul fe\u021bei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Standard TV analogic european",
+            "Camarad de pe strad\u0103",
+            "Abrev. englez\u0103 pentru nuan\u021b\u0103 deschis\u0103"
+        ],
+        "rationale": "The Romanian word **PAL** can be understood in several ways:\n1. As a *loanword* from English meaning \u201cprieten, camarad\u201d.\n2. As an *acronym* for the analogue television system **Phase Alternating Line**, used in many European countries.\n3. As an *abbreviation* of the English adjective \u201cpale\u201d, i.e., a light or deschis colour tone.\n\nTo create polysemantic clues, each hint should be short, suggest one of these senses, but also be ambiguous enough to allow other plausible answers (e.g., \u201cSECAM\u201d, \u201ccoleg\u201d, \u201clight\u201d).  \n\nThus:\n\n- \u201cStandard TV analogic european\u201d \u2013 points to PAL, but could also hint at SECAM or NTSC.\n- \u201cCamarad de pe strad\u0103\u201d \u2013 suggests PAL (friend), yet could be \u201eb\u0103iat\u201d, \u201ecoleg\u201d.\n- \u201cAbrev. englez\u0103 pentru nuan\u021b\u0103 deschis\u0103\u201d \u2013 hints at PAL (short for *pale*), but could also be \u201clite\u201d, \u201cp\u0103l\u201d.\n\nAll clues are concise, Romanian, and not direct synonyms of the answer.",
+        "best_clue": "Abrev. englez\u0103 pentru nuan\u021b\u0103 deschis\u0103",
+        "best_sbert": 0.5033254623413086
+    },
+    {
+        "answer": "RLO",
+        "source_clue": "Prezent la apel",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ziar digital, trei ini\u021biale",
+            "Cod de aeroport pu\u021bin cunoscut",
+            "Abreviere folosit\u0103 pe site\u2011uri de \u0219tiri"
+        ],
+        "rationale": "The answer **RLO** is a three\u2011letter abbreviation.  \nTo create polysemantic clues, I will refer to contexts where three\u2011letter abbreviations appear (online newspaper, airport code, software tag). Each clue is short, could point to many other abbreviations, but only **RLO** fits the given grid.",
+        "best_clue": "Abreviere folosit\u0103 pe site\u2011uri de \u0219tiri",
+        "best_sbert": 0.4890933036804199
+    },
+    {
+        "answer": "PESCARI",
+        "source_clue": "Umbl\u0103 cu momeli",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "A\u0219teapt\u0103 la marginea apei",
+            "\u00ce\u0219i \u00eenf\u0103\u0219oar\u0103 plasa \u00een jurul jocului",
+            "\u00ce\u0219i caut\u0103 prada \u00een lini\u0219te"
+        ],
+        "rationale": "",
+        "best_clue": "\u00ce\u0219i \u00eenf\u0103\u0219oar\u0103 plasa \u00een jurul jocului",
+        "best_sbert": 0.5419992208480835
+    },
+    {
+        "answer": "UALTA",
+        "source_clue": "R\u0103s\u0103rit\u0103... la \u021bar\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "U + alta",
+            "Litera ce precede 'alta'",
+            "Alt\u0103 cu 'U' la \u00eenceput"
+        ],
+        "rationale": "",
+        "best_clue": "Alt\u0103 cu 'U' la \u00eenceput",
+        "best_sbert": 0.4857496917247772
+    },
+    {
+        "answer": "ICESTA",
+        "source_clue": "Omul de l\u00e2ng\u0103 mine",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pronume demonstrativ feminin arhaic",
+            "Forma veche a lui \u201eaceasta\u201d",
+            "\u00cenglobeaz\u0103 \u201eeste\u201d \u00een pronume vechi"
+        ],
+        "rationale": "",
+        "best_clue": "Forma veche a lui \u201eaceasta\u201d",
+        "best_sbert": 0.5892941355705261
+    },
+    {
+        "answer": "AZI",
+        "source_clue": "Prezent... cotidian",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u00e2nd: r\u0103spuns f\u0103r\u0103 semnul \u00eentreb\u0103rii",
+            "Programul zilnic, nu al s\u0103pt\u0103m\u00e2nii",
+            "Data ce cere doar ziua, nu anul"
+        ],
+        "rationale": "",
+        "best_clue": "C\u00e2nd: r\u0103spuns f\u0103r\u0103 semnul \u00eentreb\u0103rii",
+        "best_sbert": 0.5128598213195801
+    },
+    {
+        "answer": "ACADELE",
+        "source_clue": "Vorbe dulci",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Recompens\u0103 dulce pentru r\u0103bdare",
+            "Zah\u0103r \u00een form\u0103 de ghea\u021b\u0103",
+            "Se sparge, apoi te \u00eenc\u00e2nt\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Recompens\u0103 dulce pentru r\u0103bdare",
+        "best_sbert": 0.6192833185195923
+    },
+    {
+        "answer": "SCORURI",
+        "source_clue": "Numere extrase din tabele",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cifrele pe care le urm\u0103re\u0219te fanii",
+            "Rezultatele perechii de tabla",
+            "Totalurile din tabelul de performan\u021b\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Totalurile din tabelul de performan\u021b\u0103",
+        "best_sbert": 0.6388534903526306
+    },
+    {
+        "answer": "ATERIZARE",
+        "source_clue": "Revenire dup\u0103 o b\u0103taie bun\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u0103dere silen\u021bioas\u0103 din \u00een\u0103l\u021bime",
+            "Cap\u0103tul pistei",
+            "Finalul unei misiuni orbitale"
+        ],
+        "rationale": "",
+        "best_clue": "C\u0103dere silen\u021bioas\u0103 din \u00een\u0103l\u021bime",
+        "best_sbert": 0.6176589727401733
+    },
+    {
+        "answer": "LIN",
+        "source_clue": "Se pronun\u021b\u0103 u\u0219or",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stare f\u0103r\u0103 agita\u021bie",
+            "Suprafa\u021b\u0103 neted\u0103",
+            "Abreviere geometric\u0103 \u00een graficul X\u2011Y"
+        ],
+        "rationale": "The Romanian word **LIN** primarily means \u201csmooth, gentle, calm\u201d. It can also be interpreted as an abbreviation for \u201clinear\u201d in a mathematical or programming context.  \nTo create polysemantic clues, I will choose short phrases that naturally point to several possible answers (e.g., *senin*, *calm*, *neted*, *drept*), while the intended answer \u201cLIN\u201d fits each clue via one of its senses. Each clue will be concise, indirect, and distinct.",
+        "best_clue": "Stare f\u0103r\u0103 agita\u021bie",
+        "best_sbert": 0.6233612298965454
+    },
+    {
+        "answer": "TEMERAR",
+        "source_clue": "\u00centreprinz\u0103tor particular",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Zbor f\u0103r\u0103 verificare a c\u00e2mpului",
+            "Teme + rar",
+            "Pe s\u00e2rm\u0103 f\u0103r\u0103 plas\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Teme + rar",
+        "best_sbert": 0.4233566224575043
+    },
+    {
+        "answer": "BUTIE",
+        "source_clue": "E \u00een toate doagele",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sc\u00e2nteie de p\u0103dure",
+            "Bec improvizat",
+            "R\u0103mas dup\u0103 fumat"
+        ],
+        "rationale": "",
+        "best_clue": "Sc\u00e2nteie de p\u0103dure",
+        "best_sbert": 0.5705936551094055
+    },
+    {
+        "answer": "ORA",
+        "source_clue": "Termen de predare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Rug\u0103ciune matinal\u0103",
+            "Unitate \u0219colar\u0103 de timp",
+            "Semnal al ceasului la amiaz\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Rug\u0103ciune matinal\u0103",
+        "best_sbert": 0.5843584537506104
+    },
+    {
+        "answer": "ATAC",
+        "source_clue": "P\u0103trundere for\u021bat\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mijloc de transport \u00een Bucure\u0219ti",
+            "Lovitur\u0103 ofensiv\u0103 \u00een fotbal",
+            "Criz\u0103 subit\u0103 a inimii"
+        ],
+        "rationale": "",
+        "best_clue": "Criz\u0103 subit\u0103 a inimii",
+        "best_sbert": 0.5154956579208374
+    },
+    {
+        "answer": "BIRUIT",
+        "source_clue": "Cel care pic\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Bere \u0219i uitare",
+            "C\u00e2\u0219tigat prin cedare",
+            "C\u0103zut sub greutatea unui obstacol"
+        ],
+        "rationale": "",
+        "best_clue": "C\u0103zut sub greutatea unui obstacol",
+        "best_sbert": 0.5078126788139343
+    },
+    {
+        "answer": "COLABORARI",
+        "source_clue": "Probe de concurs",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Proiecte cu semn\u0103tur\u0103 comun\u0103",
+            "Munc\u0103 ce aduce credite pentru to\u021bi",
+            "\u00cempreun\u0103 la scen\u0103 sau \u00een laborator"
+        ],
+        "rationale": "",
+        "best_clue": "Proiecte cu semn\u0103tur\u0103 comun\u0103",
+        "best_sbert": 0.48232752084732056
+    },
+    {
+        "answer": "IDOL",
+        "source_clue": "Dovad\u0103 de iubire",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Coloan\u0103 de cult \u00eentr-un altar",
+            "Vedet\u0103 imprimat\u0103 pe poster",
+            "Statuie de bronz a unui erou"
+        ],
+        "rationale": "",
+        "best_clue": "Statuie de bronz a unui erou",
+        "best_sbert": 0.5757484436035156
+    },
+    {
+        "answer": "ROMAN",
+        "source_clue": "Om... cu carte",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pagini de aventur\u0103",
+            "Cet\u0103\u021bean al legendarului imperiu",
+            "Mo\u0219tenire din piatr\u0103 \u0219i h\u00e2rtie"
+        ],
+        "rationale": "",
+        "best_clue": "Pagini de aventur\u0103",
+        "best_sbert": 0.4254717230796814
+    },
+    {
+        "answer": "MATURA",
+        "source_clue": "Bine coapt\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stadiu de coacere al fructului",
+            "C\u00e2nd pomul nu mai are verde \u00een ramuri",
+            "C\u00e2\u0219tig din recolt\u0103, dar \u0219i nivel de dezvoltare"
+        ],
+        "rationale": "",
+        "best_clue": "C\u00e2\u0219tig din recolt\u0103, dar \u0219i nivel de dezvoltare",
+        "best_sbert": 0.5514457821846008
+    },
+    {
+        "answer": "EST",
+        "source_clue": "Punct de vedere exprimat \u00eentr-un protest!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "R\u0103s\u0103rit pe busol\u0103",
+            "Fusul orar standard al coastei de est",
+            "Cuv\u00e2ntul de leg\u0103tur\u0103, f\u0103r\u0103 ultima liter\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "R\u0103s\u0103rit pe busol\u0103",
+        "best_sbert": 0.5509951114654541
+    },
+    {
+        "answer": "NESAT",
+        "source_clue": "Poftit la mas\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Poft\u0103 ne\u00eemplinit\u0103",
+            "Spa\u021biu f\u0103r\u0103 a\u0219ezare rural\u0103",
+            "Negarea prezen\u021bei unui sat"
+        ],
+        "rationale": "",
+        "best_clue": "Poft\u0103 ne\u00eemplinit\u0103",
+        "best_sbert": 0.6851809024810791
+    },
+    {
+        "answer": "LARGA",
+        "source_clue": "R\u0103sp\u00e2ndit\u0103 prin lume",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sur\u0103 muzical\u0103 lent\u0103",
+            "Spa\u021biu f\u0103r\u0103 restric\u021bii laterale",
+            "Generozitate la por\u021bie"
+        ],
+        "rationale": "",
+        "best_clue": "M\u0103sur\u0103 muzical\u0103 lent\u0103",
+        "best_sbert": 0.5489358901977539
+    },
+    {
+        "answer": "NEON",
+        "source_clue": "Eviden\u0163iat \u00een propria firm\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lumin\u0103 de reclam\u0103 pe strad\u0103",
+            "Gaz inert cu lumini colorate",
+            "Termen de mod\u0103 pentru nuan\u021b\u0103 fluorescent\u0103"
+        ],
+        "rationale": "The word **NEON** has several distinct associations:\n1. A bright, coloured light often seen on signage \u2013 \u201clumin\u0103 de reclam\u0103\u201d.\n2. A noble (inert) gas that emits light when electrified \u2013 \u201cgaz inert cu lumini colorate\u201d.\n3. A fashion/design term for a vivid, artificial hue \u2013 \u201cnuan\u021b\u0103 fluorescent\u0103\u201d.\n\nEach of these senses can also point to other possible answers (e.g., \u201eARGON\u201d, \u201eLAMPA\u201d, \u201eROZ\u201d), making the clues polysemantic. I crafted three short Romanian clues that hint at each of these meanings without being direct synonyms.",
+        "best_clue": "Gaz inert cu lumini colorate",
+        "best_sbert": 0.5451425909996033
+    },
+    {
+        "answer": "OALA",
+        "source_clue": "Ars\u0103 la ochi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cencurc\u0103tur\u0103 la foc",
+            "Cupa f\u0103r\u0103 m\u00e2ner",
+            "Vas de g\u0103tit metalic"
+        ],
+        "rationale": "**Cuv\u00e2ntul \u201coal\u0103\u201d** are urm\u0103toarele sensuri:\n1. Vas de g\u0103tit (metal, ceramic\u0103 etc.).\n2. Figurativ, \u201ea fi \u00een oal\u0103\u201d \u00eenseamn\u0103 a fi \u00eentr-o \u00eencurc\u0103tur\u0103, \u00eentr-o situa\u021bie complicat\u0103.\n3. Poate fi \u00een\u021beles ca \u201ecupa f\u0103r\u0103 m\u00e2ner\u201d, adic\u0103 un recipient de lichid f\u0103r\u0103 etichet\u0103 evident\u0103.\n\nPentru fiecare indiciu trebuie s\u0103 formulez o fraz\u0103 scurt\u0103, ambigu\u0103, care ar putea sugera \u0219i alte cuvinte (ex.: \u201enod\u201d, \u201ebol\u201d, \u201etigaie\u201d), astfel \u00eenc\u00e2t cititorul s\u0103 se \u00eendrepte spre \u201eoal\u0103\u201d doar printr-o ra\u021bionare lateral\u0103.\n\n**Indiciu 1 \u2013 sens figurativ**: \u201e\u00cencurc\u0103tur\u0103 la foc\u201d. Aspectul de \u201efoc\u201d sugereaz\u0103 un vas de g\u0103tit, dar \u201e\u00eencurc\u0103tur\u0103\u201d poate \u00eensemna \u0219i o dificultate (nod, impas).  \n\n**Indiciu 2 \u2013 sens literal, dar indirect**: \u201eCupa f\u0103r\u0103 m\u00e2ner\u201d. Nu este un sinonim direct pentru \u201eoal\u0103\u201d, dar descrie un recipient de lichid lipsit de man\u0219\u0103, care ar putea fi un bol, un vas etc.  \n\n**Indiciu 3 \u2013 sens literal, dar cu alt\u0103 posibil\u0103 interpretare**: \u201eVas de g\u0103tit metalic\u201d. Se poate confunda cu \u201etigaie\u201d, \u201ecazan\u201d, \u201ecrati\u021b\u0103\u201d, deci este suficient de ambigu.\n\nToate cele trei indicii sunt scurte, nu sunt sinonime directe \u0219i pot conduce la r\u0103spunsuri multiple, iar citirea cea mai evident\u0103 ar indica alte cuvinte, for\u021b\u00e2nd solu\u021bionarul s\u0103 g\u0103seasc\u0103 \u201eOALA\u201d.",
+        "best_clue": "Cupa f\u0103r\u0103 m\u00e2ner",
+        "best_sbert": 0.6382232308387756
+    },
+    {
+        "answer": "ARS",
+        "source_clue": "Un fel de friptur\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "R\u00e2u din Transilvania",
+            "Starea unui lemn dup\u0103 foc",
+            "Cuv\u00e2nt latin pentru \u201eart\u0103\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "Starea unui lemn dup\u0103 foc",
+        "best_sbert": 0.4598735570907593
+    },
+    {
+        "answer": "TIP",
+        "source_clue": "Unitate model",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mica parte de la cap\u0103t",
+            "Mica recuno\u0219tin\u021b\u0103 la mas\u0103",
+            "Gen, ca \u00een \u201etip de mesaj\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "Mica parte de la cap\u0103t",
+        "best_sbert": 0.4669802188873291
+    },
+    {
+        "answer": "APELA",
+        "source_clue": "A soate \u00een eviden\u0163\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Chemare f\u0103r\u0103 r\u0103spuns",
+            "Recurs la judecat\u0103",
+            "Apeleaz\u0103 la trucuri"
+        ],
+        "rationale": "",
+        "best_clue": "Chemare f\u0103r\u0103 r\u0103spuns",
+        "best_sbert": 0.5657433867454529
+    },
+    {
+        "answer": "USOR",
+        "source_clue": "Sc\u0103pat de sarcini",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nu prea greu",
+            "Facil de rezolvat",
+            "Ton bl\u00e2nd"
+        ],
+        "rationale": "",
+        "best_clue": "Facil de rezolvat",
+        "best_sbert": 0.572593629360199
+    },
+    {
+        "answer": "TRATA",
+        "source_clue": "A lucra cu aten\u0163ie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cot\u0103 de contribu\u021bie impus\u0103 suzeranului",
+            "Abordare serioas\u0103 a unei teme",
+            "Remediu aplicat unei boli"
+        ],
+        "rationale": "",
+        "best_clue": "Remediu aplicat unei boli",
+        "best_sbert": 0.6503171324729919
+    },
+    {
+        "answer": "ROTATIE",
+        "source_clue": "\u00cenv\u00e2rtita pe loc",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Schimb de gard\u0103 \u00een echip\u0103",
+            "Mijlocul unui carusel",
+            "Ciclul de antrenamente la banc\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Mijlocul unui carusel",
+        "best_sbert": 0.5171075463294983
+    },
+    {
+        "answer": "INERT",
+        "source_clue": "Intrat \u00een blocaj",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "F\u0103r\u0103 reac\u021bie chimic\u0103",
+            "Lipsit de impuls",
+            "St\u0103 pe loc"
+        ],
+        "rationale": "",
+        "best_clue": "Lipsit de impuls",
+        "best_sbert": 0.6015619039535522
+    },
+    {
+        "answer": "STEA",
+        "source_clue": "\u0162int\u0103 luat\u0103 \u00een obiectiv",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lumin\u0103 din \u00eentuneric",
+            "Semn de pe trofeu",
+            "Animal cu cinci bra\u021be la fundul m\u0103rii"
+        ],
+        "rationale": "",
+        "best_clue": "Lumin\u0103 din \u00eentuneric",
+        "best_sbert": 0.5943188667297363
+    },
+    {
+        "answer": "CIMILITURI",
+        "source_clue": "Jocuri la care se prind s\u0103tenii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "V\u00e2rfuri m\u0103surate \u00een lichid",
+            "Microb cu poten\u021bial de via\u021b\u0103",
+            "Punct de plecare al genealogiei"
+        ],
+        "rationale": "",
+        "best_clue": "Punct de plecare al genealogiei",
+        "best_sbert": 0.5283055901527405
+    },
+    {
+        "answer": "ODATA",
+        "source_clue": "Un moment de referin\u0163\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pe o singur\u0103 \u00eent\u00e2mplare",
+            "\u00censo\u021bit de altceva",
+            "F\u0103cut odat\u0103, nu mereu"
+        ],
+        "rationale": "",
+        "best_clue": "Pe o singur\u0103 \u00eent\u00e2mplare",
+        "best_sbert": 0.5685784220695496
+    },
+    {
+        "answer": "ISON",
+        "source_clue": "O urm\u0103rire cu c\u00e2ntec",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nota de baz\u0103 a imnului ortodox",
+            "Egal, f\u0103r\u0103 varia\u021bii",
+            "Fundament sonor al corului bizantin"
+        ],
+        "rationale": "",
+        "best_clue": "Nota de baz\u0103 a imnului ortodox",
+        "best_sbert": 0.5434949398040771
+    },
+    {
+        "answer": "LOT",
+        "source_clue": "Trup\u0103 de sportivi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Destin tras la sor\u0163i",
+            "Suprafa\u021b\u0103 delimitat\u0103 pentru construc\u021bii",
+            "Cantitate mare, dar omogen\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Cantitate mare, dar omogen\u0103",
+        "best_sbert": 0.524439811706543
+    },
+    {
+        "answer": "ROPOTE",
+        "source_clue": "B\u0103t\u0103i \u00een fa\u0163a scenei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Zgomot de mul\u021bime \u00een \u0219oapt\u0103",
+            "Veste f\u0103r\u0103 temei",
+            "Ecoul unei furtuni \u00eendep\u0103rtate"
+        ],
+        "rationale": "",
+        "best_clue": "Veste f\u0103r\u0103 temei",
+        "best_sbert": 0.5865785479545593
+    },
+    {
+        "answer": "ALUNGA",
+        "source_clue": "A porni \u00een for\u0163\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Fug\u0103 f\u0103r\u0103 oprire",
+            "\u00cenl\u0103tur\u0103 pe nedorit",
+            "Curge pe pant\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Fug\u0103 f\u0103r\u0103 oprire",
+        "best_sbert": 0.48948633670806885
+    },
+    {
+        "answer": "RAR",
+        "source_clue": "Z\u0103rit \u00een dep\u0103rtare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Registrul Auto Rom\u00e2n",
+            "Mai pu\u021bin des dec\u00e2t o eclips\u0103 total\u0103",
+            "Obiect de colec\u021bie, de multe ori c\u0103utat"
+        ],
+        "rationale": "",
+        "best_clue": "Mai pu\u021bin des dec\u00e2t o eclips\u0103 total\u0103",
+        "best_sbert": 0.41018903255462646
+    },
+    {
+        "answer": "REALA",
+        "source_clue": "Efective complete (sg.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Component\u0103 a lui z",
+            "F\u0103r\u0103 pref\u0103c\u0103torie",
+            "Ce nu e virtual\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "F\u0103r\u0103 pref\u0103c\u0103torie",
+        "best_sbert": 0.4354988634586334
+    },
+    {
+        "answer": "ORAS",
+        "source_clue": "Centru industrial",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Locul unde se adun\u0103 luminile nocturne",
+            "Pozi\u021bie pe hart\u0103 ce nu e sat",
+            "Destina\u021bie a autobuzelor de rute urbane"
+        ],
+        "rationale": "",
+        "best_clue": "Pozi\u021bie pe hart\u0103 ce nu e sat",
+        "best_sbert": 0.46238356828689575
+    },
+    {
+        "answer": "APTI",
+        "source_clue": "Recunoscu\u0163i prin fapte bune",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cen acord cu substantivul",
+            "Cei ce trec examenul",
+            "Potriviri de echip\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Potriviri de echip\u0103",
+        "best_sbert": 0.5723360180854797
+    },
+    {
+        "answer": "ERES",
+        "source_clue": "P\u0103catul lui s\u0103 fie...",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Form\u0103 de a fi, la persoana a doua, \u00een limba vecin\u0103",
+            "Patru litere consecutive din cuv\u00e2ntul \u201eferestre\u201d",
+            "Litera de \u00eenceput a cuv\u00e2ntului \u201eecran\u201d urmat\u0103 de prescurtarea pentru resurse"
+        ],
+        "rationale": "",
+        "best_clue": "Patru litere consecutive din cuv\u00e2ntul \u201eferestre\u201d",
+        "best_sbert": 0.5668174624443054
+    },
+    {
+        "answer": "AMETEALA",
+        "source_clue": "Vine dup\u0103 o bere",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u00e2nd capul nu\u2011\u0219i g\u0103se\u0219te axa",
+            "C\u0103dere brusc\u0103 dup\u0103 o rotire rapid\u0103",
+            "Confuzie total\u0103 a unui turist f\u0103r\u0103 busol\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "C\u0103dere brusc\u0103 dup\u0103 o rotire rapid\u0103",
+        "best_sbert": 0.6683376431465149
+    },
+    {
+        "answer": "RAS",
+        "source_clue": "Finalul unui banc bun",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "R\u0103spuns la banc",
+            "Ecoul unei farse",
+            "Semnal \u00een timpul glumei"
+        ],
+        "rationale": "",
+        "best_clue": "Ecoul unei farse",
+        "best_sbert": 0.6436566710472107
+    },
+    {
+        "answer": "ORATIE",
+        "source_clue": "Dedica\u0163ie de la l\u0103utari",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Rug\u0103ciune \u00een\u0103l\u021bat\u0103 la cer",
+            "Adres\u0103 solemn\u0103 \u00een fa\u021ba mul\u021bimii",
+            "Cuvinte de laud\u0103 rostite la ceremonie"
+        ],
+        "rationale": "",
+        "best_clue": "Adres\u0103 solemn\u0103 \u00een fa\u021ba mul\u021bimii",
+        "best_sbert": 0.6365987658500671
+    },
+    {
+        "answer": "INTENS",
+        "source_clue": "Foc mistuitor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ardere de dor",
+            "Luminozitate maxim\u0103",
+            "Antrenament f\u0103r\u0103 repaus"
+        ],
+        "rationale": "",
+        "best_clue": "Antrenament f\u0103r\u0103 repaus",
+        "best_sbert": 0.4220622479915619
+    },
+    {
+        "answer": "APA",
+        "source_clue": "Trec\u0103toare prin defileu",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stil de citare",
+            "Lichid f\u0103r\u0103 gust",
+            "Stropi din cer"
+        ],
+        "rationale": "",
+        "best_clue": "Lichid f\u0103r\u0103 gust",
+        "best_sbert": 0.5771831274032593
+    },
+    {
+        "answer": "TRECUT",
+        "source_clue": "Timpul orei de istorie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ce nu mai are loc \u00een prezent",
+            "Forma de participiu a verbului de traversat",
+            "Stadiul dup\u0103 ce s-a terminat ceva"
+        ],
+        "rationale": "**Posibile sensuri ale cuv\u00e2ntului \u201eTRECUT\u201d**\n1. Substantiv: perioada anterioar\u0103, \u201etrecutul\u201d.\n2. Adjectiv/particuliu: ceva care a avut loc, \u201e\u00eenaintat\u201d, \u201eterminat\u201d.\n3. Form\u0103 verbal\u0103 a verbului *a trece*: participiul \u201etrecut\u201d.\n4. Sens metaforic: \u201eceva ce nu mai exist\u0103\u201d, \u201eamintire\u201d.\n\n**Strategie de creare a indiciilor polisemantice**\n- Fiecare indiciu trebuie s\u0103 aib\u0103 mai multe interpret\u0103ri posibile (de ex. poate sugera \u201evechi\u201d, \u201edisparut\u201d, \u201efinal\u201d, \u201eparticipiu\u201d etc.).\n- S\u0103 p\u0103strez indiciile scurte, tip \u201edefini\u021bie condensat\u0103\u201d.\n- S\u0103 evit sinonime directe; s\u0103 for\u021bez g\u00e2ndirea lateral\u0103 spre sensul \u201etrecut\u201d \u00een contextul cronologic sau gramatical.\n\n**Propuneri de indicii**\n1. *\u201eCe nu mai are loc \u00een prezent\u201d* \u2013 poate indica \u201etrecut\u201d, dar \u0219i \u201edisp\u0103rut\u201d, \u201evechi\u201d, \u201e\u00eentrerupt\u201d.\n2. *\u201eForma de participiu a verbului de traversat\u201d* \u2013 poate fi \u00een\u021beles ca \u201etrecut\u201d (participiu al lui *a trece*), dar \u0219i ca \u201etraversat\u201d (participiu al verbului *a traversa*), l\u0103s\u00e2nd loc confuziei.\n3. *\u201eStadiul dup\u0103 ce s\u2011a terminat ceva\u201d* \u2013 poate sugera \u201efinal\u201d, \u201esf\u00e2r\u0219it\u201d, \u201e\u00eencheiat\u201d, dar \u0219i \u201etrecut\u201d ca perioad\u0103 \u00eencheiat\u0103.\n\nAceste trei indicii respect\u0103 cerin\u021bele: sunt diferite, scurte, polisemantice \u0219i nu sunt sinonime directe ale r\u0103spunsului.",
+        "best_clue": "Forma de participiu a verbului de traversat",
+        "best_sbert": 0.5785042643547058
+    },
+    {
+        "answer": "PAS",
+        "source_clue": "Unitate \u00een mar\u015f",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Faz\u0103 dintr\u2011o coregrafie",
+            "Transfer cu mingea",
+            "M\u0103rimea unui drum"
+        ],
+        "rationale": "The Romanian word **PAS** has several common meanings:\n1. *Pas* \u2013 un \u201estep\u201d, adic\u0103 o mi\u0219care a piciorului, o unitate de distan\u021b\u0103 \u00een mers.\n2. *Pas* \u2013 un \u201epass\u201d \u00een sport, \u00een special \u00een fotbal, handbal etc.\n3. *Pas* \u2013 un \u201estep\u201d \u00eentr\u2011o coregrafie sau \u00eentr\u2011un proces (faz\u0103, etap\u0103).\n\nPentru a crea indicii polisemantice, fiecare indiciu trebuie s\u0103 poat\u0103 fi citit \u00een cel pu\u021bin dou\u0103 feluri diferite, iar citirea cea mai evident\u0103 s\u0103 sugereze un alt cuv\u00e2nt dec\u00e2t *PAS*. Astfel, solu\u021bionarul trebuie s\u0103 fac\u0103 saltul de la sensul \u201eobviously\u2011read\u201d la sensul ascuns al cuv\u00e2ntului c\u0103utat.\n\nAm ales trei expresii scurte care invit\u0103 la dou\u0103 interpret\u0103ri:\n* \u201eFaz\u0103 dintr\u2011o coregrafie\u201d \u2013 poate fi \u201cpas\u201d (dans) sau \u201cact\u201d, \u201csec\u021biune\u201d.\n* \u201eTransfer cu mingea\u201d \u2013 poate fi \u201cpas\u201d (\u00een fotbal) sau \u201caruncare\u201d, \u201clovitur\u0103\u201d.\n* \u201eM\u0103rimea unui drum\u201d \u2013 poate fi \u201cpas\u201d (lungimea unui pas) sau \u201cmetru\u201d, \u201cetaj\u201d.\n\nToate sunt scurte, nu sunt sinonime directe ale lui *PAS* \u0219i fiecare are sensuri alternative viabile, satisf\u0103c\u00e2nd cerin\u021ba de indicii polisemantice.",
+        "best_clue": "Transfer cu mingea",
+        "best_sbert": 0.3911011517047882
+    },
+    {
+        "answer": "RETORICA",
+        "source_clue": "Ne \u00eenva\u0163\u0103 s\u0103 vorbim frumos",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Arta de a vorbi f\u0103r\u0103 s\u0103 mu\u0219te",
+            "Materie la bacalaureat cu fraze \u00eenflorite",
+            "\u00centreb\u0103ri care nu cer r\u0103spuns"
+        ],
+        "rationale": "",
+        "best_clue": "Arta de a vorbi f\u0103r\u0103 s\u0103 mu\u0219te",
+        "best_sbert": 0.7457209825515747
+    },
+    {
+        "answer": "ULITA",
+        "source_clue": "\u00cen trecere prin sat",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cale ascuns\u0103, f\u0103r\u0103 semn",
+            "\u00centre ziduri, trecere de pe jos",
+            "Strad\u0103 mic\u0103, num\u0103r rareori atribuit"
+        ],
+        "rationale": "",
+        "best_clue": "\u00centre ziduri, trecere de pe jos",
+        "best_sbert": 0.6808511018753052
+    },
+    {
+        "answer": "ARTA",
+        "source_clue": "Creatoare de frumos",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103iestrie \u00een expresie",
+            "Mijloc de a sc\u0103pa de plictiseal\u0103",
+            "Se spune c\u0103 e de la sine"
+        ],
+        "rationale": "",
+        "best_clue": "Mijloc de a sc\u0103pa de plictiseal\u0103",
+        "best_sbert": 0.6358342170715332
+    },
+    {
+        "answer": "PIC",
+        "source_clue": "Ne da pu\u0163in\u0103 ploaie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Un suflu de lichid",
+            "Abreviere de imagine \u00een chat",
+            "Sunet ce imit\u0103 c\u0103derea unei pic\u0103turi"
+        ],
+        "rationale": "**  \nThe Romanian word **\u201epic\u201d** can be interpreted in three ways that lend themselves to indirect, polysemantic clues:  \n\n1. **\u201eun pic\u201d** \u2013 a tiny amount, a minuscule portion.  \n2. Borrowed English \u201cpic\u201d, an informal abbreviation for **picture** used in online messages.  \n3. Onomatopoeic \u201cpic\u201d, the short sound made by a droplet hitting a surface.  \n\nFor each meaning I will craft a short phrase that could equally suggest other words (e.g., \u201ecantitate mic\u0103\u201d, \u201efoto\u201d, \u201eg\u00e2g\u0103it\u201d), so the clue is not a direct synonym of the answer but a lateral hint.  \n\n**Clue ideas:**  \n\n- *\u201eUn suflu de lichid\u201d* \u2013 evokes a droplet (pic) but could also point to \u201epic\u0103tur\u0103\u201d or \u201estrop\u201d.  \n- *\u201eAbreviere de imagine \u00een chat\u201d* \u2013 suggests the English\u2011borrowed \u201epic\u201d, yet another possible answer is \u201efoto\u201d.  \n- *\u201eSunet ce imit\u0103 c\u0103derea unei pic\u0103turi\u201d* \u2013 the onomatopoeia \u201epic\u201d, while the same description could fit \u201eplash\u201d or \u201ecling\u201d.  \n\nThese three short phrases satisfy the requirement of being polysemantic, brief, and distinct. **",
+        "best_clue": "Sunet ce imit\u0103 c\u0103derea unei pic\u0103turi",
+        "best_sbert": 0.603186845779419
+    },
+    {
+        "answer": "RASTEL",
+        "source_clue": "Patul pu\u015ftilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u00e2rlig de lemn din st\u00e2lpul secarului",
+            "F\u00e2\u0219\u0103 groas\u0103 ce \u021bine capul de sus \u00een v\u00e2nt",
+            "Termen de argou pentru \u00eencurc\u0103tur\u0103 greu de descurcat"
+        ],
+        "rationale": "",
+        "best_clue": "C\u00e2rlig de lemn din st\u00e2lpul secarului",
+        "best_sbert": 0.5676481127738953
+    },
+    {
+        "answer": "CER",
+        "source_clue": "Extraterestru v\u0103zut de pe p\u0103m\u00e2nt",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stare de solicitare",
+            "Albastru f\u0103r\u0103 suport",
+            "Mereu sus, niciodat\u0103 \u00eenchis"
+        ],
+        "rationale": "",
+        "best_clue": "Mereu sus, niciodat\u0103 \u00eenchis",
+        "best_sbert": 0.6123526692390442
+    },
+    {
+        "answer": "ERA",
+        "source_clue": "Perioada de la seral!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Imperfectul lui \u201ea fi\u201d",
+            "Diviziune geologic\u0103",
+            "Marca timpului unei civiliza\u021bii"
+        ],
+        "rationale": "",
+        "best_clue": "Marca timpului unei civiliza\u021bii",
+        "best_sbert": 0.4567177891731262
+    },
+    {
+        "answer": "VAR",
+        "source_clue": "Primarul rud\u0103 cu noi",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Albul de pe c\u0103r\u0103mid\u0103",
+            "R\u00e2u francez",
+            "Eu var c\u00e2nd acoper"
+        ],
+        "rationale": "**Possible meanings of \u201cVAR\u201d**\n1. **Nume comun** \u2013 \u201evar\u201d = material alb (varul, varul de construc\u021bie) folosit pentru tencuire sau albire.\n2. **Verb** \u2013 forma de persoana I singular a verbului \u201ea varui\u201d (\u201eeu var\u201d) = aplic varul pe o suprafa\u021b\u0103.\n3. **Toponim** \u2013 r\u00e2ul **Var** din sud\u2011estul Fran\u0163ei (departamentul Var, Coasta de Azur).\n\n**Ideea pentru indicii**\nVreau indicii scurte, ambigue, care s\u0103 poat\u0103 sugera alte cuvinte (ex. \u201ez\u0103pad\u0103\u201d, \u201evopsea\u201d, alt r\u00e2u francez etc.) \u0219i s\u0103 for\u021beze o g\u00e2ndire lateral\u0103 pentru a g\u0103si \u201evar\u201d.  \n\n- Indiciul 1 se refer\u0103 la materialul alb, dar poate fi \u00een\u021beles \u0219i ca \u201evopsea alb\u0103\u201d, \u201eciment\u201d etc.  \n- Indiciul 2 evoc\u0103 clar topografia, dar f\u0103r\u0103 s\u0103 men\u021bioneze numele exact al departamentului; alte r\u00e2uri franceze ar fi posibile r\u0103spunsuri.  \n- Indiciul 3 joac\u0103 pe forma verbal\u0103 \u201eeu var\u201d, dar poate fi citit ca o ac\u021biune de \u201ea vopsi\u201d, \u201ea tencui\u201d etc., l\u0103s\u00e2nd loc pentru alte substantive.\n\nToate sunt scurte, nu sunt sinonime directe \u0219i au cel pu\u021bin dou\u0103 interpret\u0103ri posibile.",
+        "best_clue": "Albul de pe c\u0103r\u0103mid\u0103",
+        "best_sbert": 0.597958505153656
+    },
+    {
+        "answer": "MARET",
+        "source_clue": "Trecut la excep\u0163ional",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mare + T",
+            "Nume de familie fran\u021buzesc",
+            "Mare cu un final"
+        ],
+        "rationale": "",
+        "best_clue": "Mare cu un final",
+        "best_sbert": 0.593217134475708
+    },
+    {
+        "answer": "PARAVAN",
+        "source_clue": "Piedic\u0103 \u00een calea privirilor indiscrete",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Barier\u0103 mobil\u0103 \u00een baie",
+            "Ecran ornamental f\u0103r\u0103 tehnologie",
+            "Separ\u0103 dou\u0103 \u00eenc\u0103peri f\u0103r\u0103 a fi perete"
+        ],
+        "rationale": "The word **paravan** has several senses in Romanian:\n1. A decorative folding screen used to divide a room.\n2. A protective barrier, e.g., a fire\u2011screen or a shield.\n3. A movable partition in a bathroom (shower screen).\n\nFor each clue I\u2019ll hint at one of these meanings while keeping the wording ambiguous enough that other answers such as *perete, perdea, scut, cortin\u0103, vitrin\u0103* could also fit. The clues stay short, are not direct synonyms, and each can be interpreted in more than one way, making the intended answer require a lateral step.",
+        "best_clue": "Separ\u0103 dou\u0103 \u00eenc\u0103peri f\u0103r\u0103 a fi perete",
+        "best_sbert": 0.6438122987747192
+    },
+    {
+        "answer": "ATU",
+        "source_clue": "Avantajul ajungerii la maturitate!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Al t\u0103u, \u00een scriere",
+            "Org. de reglementare turistic\u0103",
+            "Abreviere citit\u0103 ca un singur cuv\u00e2nt"
+        ],
+        "rationale": "",
+        "best_clue": "Abreviere citit\u0103 ca un singur cuv\u00e2nt",
+        "best_sbert": 0.5455577373504639
+    },
+    {
+        "answer": "COBE",
+        "source_clue": "Aduce ve\u015fti proaste",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Tuburi f\u0103r\u0103 cap",
+            "Recipient de laborator",
+            "Obiecte metalice cilindrice"
+        ],
+        "rationale": "",
+        "best_clue": "Tuburi f\u0103r\u0103 cap",
+        "best_sbert": 0.5877166986465454
+    },
+    {
+        "answer": "NERVI",
+        "source_clue": "Ne conduc spre ie\u015fire",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "C\u0103i de transmitere a senza\u0163iilor",
+            "Stare de iritabilitate",
+            "Curajul de a cere ceva"
+        ],
+        "rationale": "",
+        "best_clue": "C\u0103i de transmitere a senza\u0163iilor",
+        "best_sbert": 0.557664155960083
+    },
+    {
+        "answer": "AFIRMATIVE",
+        "source_clue": "Ele dau un r\u0103spuns pozitiv",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Semnal radio de acord",
+            "Mod gramatical care confirm\u0103",
+            "R\u0103spuns de tipul \u201eda\u201d \u00een discu\u021bie"
+        ],
+        "rationale": "",
+        "best_clue": "R\u0103spuns de tipul \u201eda\u201d \u00een discu\u021bie",
+        "best_sbert": 0.604575514793396
+    },
+    {
+        "answer": "TRUPA",
+        "source_clue": "Grup de manevr\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Miez \u0219i regiment",
+            "Forma\u021bie pe scen\u0103 sau pe front",
+            "Structur\u0103 solid\u0103, grup militar"
+        ],
+        "rationale": "",
+        "best_clue": "Structur\u0103 solid\u0103, grup militar",
+        "best_sbert": 0.556888997554779
+    },
+    {
+        "answer": "PICA",
+        "source_clue": "Cade ca bruma",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "M\u0103sur\u0103 tipografic\u0103",
+            "Tulburare de alimenta\u021bie rar\u0103",
+            "Ciobitur\u0103 pe lemn"
+        ],
+        "rationale": "**  \nThe word **pica** has several distinct meanings in Romanian:  \n\n1. *Unitate tipografic\u0103* \u2013 a measure equal to 12 points, used in printing.  \n2. *Tulburare de alimenta\u021bie* \u2013 the medical condition \u201cpica\u201d, in which people eat non\u2011food substances.  \n3. *Ciobitur\u0103 mic\u0103* \u2013 a tiny chip or splinter, especially in wood.  \n\nFor each clue I must give a short, polysemic phrase that could also point to other words (e.g., \u201cpunct\u201d, \u201canorexie\u201d, \u201cciob\u0103\u201d), making the intended answer less obvious and requiring lateral thinking. The three clues will therefore be:  \n\n1. \u201cM\u0103sur\u0103 tipografic\u0103\u201d \u2013 could suggest \u201cpunct\u201d, \u201cem\u201d, etc.  \n2. \u201cTulburare de alimenta\u021bie rar\u0103\u201d \u2013 could suggest \u201canorexie\u201d, \u201cbulimie\u201d.  \n3. \u201cCiobitur\u0103 pe lemn\u201d \u2013 could suggest \u201cciob\u0103\u201d, \u201cciupitur\u0103\u201d.  \n\nAll are brief, indirect, and distinct. **",
+        "best_clue": "Ciobitur\u0103 pe lemn",
+        "best_sbert": 0.5493242144584656
+    },
+    {
+        "answer": "RELICVA",
+        "source_clue": "Tem\u0103 la istorie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ecoul unei ere",
+            "Restul dup\u0103 experiment",
+            "Ce r\u0103m\u00e2ne c\u00e2nd se cur\u0103\u021b\u0103"
+        ],
+        "rationale": "The word **RELICVA** denotes something that remains from the past \u2013 a relic, a leftover, a residue. It can be hinted at via notions of \u201cecho of an era\u201d, \u201cwhat\u2019s left after an experiment\u201d, or \u201cwhat stays after cleaning\u201d. Each of these phrases is short, ambiguous and could point to other answers (e.g., \u201eecou\u201d, \u201ereziduu\u201d, \u201eurme\u201d), making them polysemantic clues. They are not direct synonyms but indirect definitions that require the solver to think laterally toward the idea of a remnant.",
+        "best_clue": "Ce r\u0103m\u00e2ne c\u00e2nd se cur\u0103\u021b\u0103",
+        "best_sbert": 0.5725520253181458
+    },
+    {
+        "answer": "ETIC",
+        "source_clue": "Sus\u0163in\u0103torul ordinii de drept",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Judecat\u0103 moral\u0103",
+            "Perspectiv\u0103 antropologic\u0103 opus\u0103 celui intern",
+            "Regul\u0103 nescris\u0103, dar acceptat\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Perspectiv\u0103 antropologic\u0103 opus\u0103 celui intern",
+        "best_sbert": 0.49409574270248413
+    },
+    {
+        "answer": "ARABI",
+        "source_clue": "O lume p\u0103g\u00e2n\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Popor din de\u0219ertul Arabian",
+            "Tipuri de cafea cu origine oriental\u0103",
+            "Nume de familie \u00eent\u00e2lnit \u00een Rom\u00e2nia"
+        ],
+        "rationale": "",
+        "best_clue": "Tipuri de cafea cu origine oriental\u0103",
+        "best_sbert": 0.5785447359085083
+    },
+    {
+        "answer": "COT",
+        "source_clue": "Abatere... nepedepsit\u0103 la cursuri",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nivel de sus\u021binere al bra\u021bului",
+            "Col\u021bul plecat al unei rame",
+            "Punctul de schimbare al unui traseu"
+        ],
+        "rationale": "",
+        "best_clue": "Col\u021bul plecat al unei rame",
+        "best_sbert": 0.4796169400215149
+    },
+    {
+        "answer": "CRATER",
+        "source_clue": "O gur\u0103 fierbinte",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Urme de explozie",
+            "Fundul unui munte uscat",
+            "Marc\u0103 ad\u00e2ncit\u0103 de un meteor"
+        ],
+        "rationale": "",
+        "best_clue": "Marc\u0103 ad\u00e2ncit\u0103 de un meteor",
+        "best_sbert": 0.5395734906196594
+    },
+    {
+        "answer": "URARE",
+        "source_clue": "Bun\u0103 inten\u0163ie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cuv\u00e2nt la cre\u0219tetul tortului",
+            "Speran\u021b\u0103 exprimat\u0103 \u00een glas",
+            "\u00censufle\u021bire de felicitare"
+        ],
+        "rationale": "**  \n\u201eUrare\u201d este un substantiv ce \u00eenseamn\u0103 dorin\u021b\u0103 adresat\u0103 cu binecuv\u00e2ntare, un mesaj de felicitare, de obicei rostit la s\u0103rb\u0103tori sau la evenimente (nunt\u0103, aniversare). Pentru fiecare indiciu am c\u0103utat o formulare scurt\u0103 care s\u0103 poat\u0103 sugera \u0219i alte cuvinte (toast, felicitare, mesaj, dorin\u021b\u0103) astfel \u00eenc\u00e2t cititorul s\u0103 aib\u0103 mai multe posibilit\u0103\u0163i, iar solu\u0163ia corect\u0103 s\u0103 fie \u201eurare\u201d. Am ales trei expresii diferite, fiecare cu un accent u\u0219or diferit (s\u0103rb\u0103toare, exprimare, context). **",
+        "best_clue": "\u00censufle\u021bire de felicitare",
+        "best_sbert": 0.42710602283477783
+    },
+    {
+        "answer": "ARMA",
+        "source_clue": "Pericol de moarte",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mijloc de atac \u0219i de ap\u0103rare",
+            "Unealt\u0103 cu poten\u021bial letal",
+            "Instrument al r\u0103zboiului sau al negocierii"
+        ],
+        "rationale": "",
+        "best_clue": "Mijloc de atac \u0219i de ap\u0103rare",
+        "best_sbert": 0.5271353125572205
+    },
+    {
+        "answer": "CAS",
+        "source_clue": "Material prelucrat la strung\u0103rie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Abrev. pentru institu\u021bie ce gestioneaz\u0103 pensii",
+            "\u00cen francez\u0103, locuin\u021b\u0103",
+            "Sistem de calcul simbolic, folosit \u00een matematic\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Sistem de calcul simbolic, folosit \u00een matematic\u0103",
+        "best_sbert": 0.564280092716217
+    },
+    {
+        "answer": "ANTET",
+        "source_clue": "Prezentare oficial\u0103 f\u0103cut\u0103 \u00een scris",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pozi\u021bie de sus",
+            "Prin el \u00eencepe oficial o scrisoare",
+            "Linie cu datele expeditorului"
+        ],
+        "rationale": "",
+        "best_clue": "Prin el \u00eencepe oficial o scrisoare",
+        "best_sbert": 0.6063886880874634
+    },
+    {
+        "answer": "PARTER",
+        "source_clue": "E de baz\u0103 pentru constructori",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nivelul de la intrare",
+            "Etaj f\u0103r\u0103 scar\u0103",
+            "Spa\u021biu pentru primul pas"
+        ],
+        "rationale": "",
+        "best_clue": "Spa\u021biu pentru primul pas",
+        "best_sbert": 0.6379557251930237
+    },
+    {
+        "answer": "GRI",
+        "source_clue": "Genul neutru",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nuan\u021ba dintre alb \u0219i negru",
+            "Abreviere a unui standard de sustenabilitate",
+            "Stare de incertitudine, f\u0103r\u0103 claritate"
+        ],
+        "rationale": "",
+        "best_clue": "Nuan\u021ba dintre alb \u0219i negru",
+        "best_sbert": 0.5166410803794861
+    },
+    {
+        "answer": "TEREN",
+        "source_clue": "Legat de glie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Spa\u021biu pentru antrenamente",
+            "\u00cenc\u0103rc\u0103tur\u0103 sub picioare",
+            "Zon\u0103 de desf\u0103\u0219urare a unei conflicte"
+        ],
+        "rationale": "",
+        "best_clue": "Zon\u0103 de desf\u0103\u0219urare a unei conflicte",
+        "best_sbert": 0.5220537185668945
+    },
+    {
+        "answer": "SPALATORIE",
+        "source_clue": "Cas\u0103 cu multe muieri",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Unde detergentul \u00ee\u0219i ia startul cu hainele",
+            "Eco\u2011stop al ma\u0219inii cu tambur",
+            "Tran\u0219\u0103 de ap\u0103 \u00een care murd\u0103ria se dizolv\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Tran\u0219\u0103 de ap\u0103 \u00een care murd\u0103ria se dizolv\u0103",
+        "best_sbert": 0.5772453546524048
+    },
+    {
+        "answer": "INDICATOARE",
+        "source_clue": "\u00ce\u0163i dau drumul u\u015for",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Luminile ce spun s\u0103 virezi",
+            "Semnele ce ghideaz\u0103 traficul",
+            "Marcaje pe tabelul de scor"
+        ],
+        "rationale": "",
+        "best_clue": "Marcaje pe tabelul de scor",
+        "best_sbert": 0.6407428979873657
+    },
+    {
+        "answer": "NOD",
+        "source_clue": "Loc de str\u00e2ngere fireasc\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Punct de \u00eent\u00e2lnire \u00een grafuri",
+            "Gest de aprobare f\u0103r\u0103 voce",
+            "\u00cenl\u0103n\u021buire de fire ce nu se desface"
+        ],
+        "rationale": "",
+        "best_clue": "Gest de aprobare f\u0103r\u0103 voce",
+        "best_sbert": 0.6074672341346741
+    },
+    {
+        "answer": "AER",
+        "source_clue": "Liber este doar afar\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Elementul ce aprinde focul",
+            "Curs invizibil al norilor",
+            "Mediul \u00een care se \u00eenal\u021b\u0103 planorul"
+        ],
+        "rationale": "",
+        "best_clue": "Mediul \u00een care se \u00eenal\u021b\u0103 planorul",
+        "best_sbert": 0.5668960213661194
+    },
+    {
+        "answer": "GEM",
+        "source_clue": "Produs, t\u00e2nguitor, din fructe",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sunetul unei dureri m\u0103runte",
+            "Fructul care se \u00eenvele\u0219te \u00een sirop",
+            "Micul ecou al unui suspin"
+        ],
+        "rationale": "",
+        "best_clue": "Fructul care se \u00eenvele\u0219te \u00een sirop",
+        "best_sbert": 0.5981277823448181
+    },
+    {
+        "answer": "INDUS",
+        "source_clue": "Produs... analogic",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Curs de ap\u0103 din Asia",
+            "F\u0103cut s\u0103 cread\u0103",
+            "Provocat \u00een laborator"
+        ],
+        "rationale": "",
+        "best_clue": "Provocat \u00een laborator",
+        "best_sbert": 0.5772073268890381
+    },
+    {
+        "answer": "SOC",
+        "source_clue": "P\u0103lire de efect",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lovitur\u0103 brusc\u0103",
+            "Form\u0103 scurt\u0103 pentru \u201esocietate\u201d",
+            "Stare de tensiune electric\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Stare de tensiune electric\u0103",
+        "best_sbert": 0.6143965721130371
+    },
+    {
+        "answer": "CUB",
+        "source_clue": "Are putere c\u00e2t trei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Micu\u021bul s\u0103lbatic al p\u0103durii",
+            "Form\u0103 cu \u0219ase fe\u021be egale",
+            "Joc de construc\u021bie cu blocuri"
+        ],
+        "rationale": "",
+        "best_clue": "Form\u0103 cu \u0219ase fe\u021be egale",
+        "best_sbert": 0.6170139908790588
+    },
+    {
+        "answer": "RONDEL",
+        "source_clue": "Poem standardizat",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Etapa unui concurs",
+            "Dans \u00een cerc",
+            "Scut mic, rotund"
+        ],
+        "rationale": "",
+        "best_clue": "Dans \u00een cerc",
+        "best_sbert": 0.47593435645103455
+    },
+    {
+        "answer": "LOVI",
+        "source_clue": "A-i da b\u0103taie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Instruc\u0163iune dintr-un antrenament de lupt\u0103",
+            "Elementul lips\u0103 al infinitivului \u201ea lovi\u201d",
+            "Nume de familie \u00eent\u00e2lnit \u00een regiunea Moldovei"
+        ],
+        "rationale": "",
+        "best_clue": "Instruc\u0163iune dintr-un antrenament de lupt\u0103",
+        "best_sbert": 0.5416849255561829
+    },
+    {
+        "answer": "UDA",
+        "source_clue": "Lichidare de prisos!! (fem.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Comand\u0103 pentru gr\u0103din\u0103",
+            "Sat din Maramure\u0219",
+            "Stare umed\u0103 a p\u0103m\u00e2ntului"
+        ],
+        "rationale": "",
+        "best_clue": "Comand\u0103 pentru gr\u0103din\u0103",
+        "best_sbert": 0.4942202568054199
+    },
+    {
+        "answer": "RUG",
+        "source_clue": "Scena fierbinte a jertfei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Suprafa\u021b\u0103 pe care se apleac\u0103 genunchii credincio\u0219ilor",
+            "Obiect din l\u00e2n\u0103 pentru podea",
+            "Teren scurt de iarb\u0103, preferat de unii sportivi"
+        ],
+        "rationale": "**  \nThe word **RUG** can be interpreted as the English \u201crug\u201d (a carpet) or, in a broader sense, as a \u201cprayer rug\u201d used by believers. Both meanings allow for ambiguous clues that could also point to \u201caltar\u201d, \u201ccovoare\u201d, \u201cc\u00e2mp de rugby\u201d etc. The clues therefore have to be short, indirect and open to more than one plausible answer, making the real solution require a lateral jump to \u201cRUG\u201d.  \n**",
+        "best_clue": "Suprafa\u021b\u0103 pe care se apleac\u0103 genunchii credincio\u0219ilor",
+        "best_sbert": 0.6230013370513916
+    },
+    {
+        "answer": "TIV",
+        "source_clue": "Trasul fustelor jos",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Temelie de disput\u0103",
+            "Sprijin sub o tez\u0103",
+            "Cuv\u00e2nt de trei litere, element de sus\u021binere"
+        ],
+        "rationale": "The word **TIV** is a Romanian noun meaning \u201cbaz\u0103, temei, fundament\u201d.  \nTo create polysemantic clues I will refer to the idea of a \u201cbasis\u201d or \u201csupport\u201d, which can also be interpreted as \u201cpremis\u0103\u201d, \u201cargument\u201d, \u201cpilon\u201d, etc. Each clue will be brief, indirect, and ambiguous enough to suggest several possible answers, while the most fitting one for the given definition is **TIV**.",
+        "best_clue": "Cuv\u00e2nt de trei litere, element de sus\u021binere",
+        "best_sbert": 0.4481821060180664
+    },
+    {
+        "answer": "MAPA",
+        "source_clue": "Vinieta birocra\u0163iei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "\u00cenc\u0103pere pentru acte",
+            "Se poart\u0103 la \u0219coal\u0103",
+            "Acoper\u0103 h\u00e2rtie, nu carte"
+        ],
+        "rationale": "",
+        "best_clue": "Acoper\u0103 h\u00e2rtie, nu carte",
+        "best_sbert": 0.4098767638206482
+    },
+    {
+        "answer": "POMENI",
+        "source_clue": "Mese de luat aminte",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cuv\u00e2nt rostit \u00een timpul slujbei funerare",
+            "Amintire exprimat\u0103 oral",
+            "Repet\u0103 numele \u00een discurs"
+        ],
+        "rationale": "**Possible senses of \u201cpomeni\u201d**\n\n1. Verb, 3\u2011person plural of *a pomeni*: \u201ea aminti, a celebra pe cineva\u201d, de obicei \u00een context religios sau de comemorare.  \n2. Implicit, sensul de \u201ea cita pe nume\u201d \u2013 a men\u021biona pe cineva \u00een vorbe.  \n\n**How to make polysemantic clues**\n\n- Folosesc o expresie care poate descrie \u0219i alte ac\u0163iuni (rug\u0103ciune, citare, nota, elogiu).  \n- P\u0103strez enun\u0163ul scurt, de tip fraz\u0103 nominal\u0103, astfel \u00eenc\u00e2t cititorul s\u0103 se g\u00e2ndeasc\u0103 la mai multe posibile cuvinte, iar \u201epomeni\u201d s\u0103 fie solu\u0163ia mai pu\u0163in evident\u0103.  \n\n**Clues generate**\n\n1. \u201eCuv\u00e2nt rostit \u00een timpul slujbei funerare\u201d \u2013 ar putea fi *rug\u0103ciune*, *omagiu*, *pomeni*.  \n2. \u201eAmintire exprimat\u0103 oral\u201d \u2013 poate fi *poveste*, *ecou*, *pomeni*.  \n3. \u201eRepet\u0103 numele \u00een discurs\u201d \u2013 ar putea fi *citeaz\u0103*, *enumer\u0103*, *pomeni*.\n\nAceste trei formule sunt distincte, scurte \u0219i fiecare are sensuri multiple, dar singura care se potrive\u0219te exact cu r\u0103spunsul dat este \u201epomeni\u201d.",
+        "best_clue": "Amintire exprimat\u0103 oral",
+        "best_sbert": 0.6040376424789429
+    },
+    {
+        "answer": "SUB",
+        "source_clue": "Element de pus u\u015for \u00een inferioritate",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sandwich de tip rapid",
+            "Mijloc de scufundare militar\u0103",
+            "Prefix ce \u00eenseamn\u0103 \u201esub_\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "Sandwich de tip rapid",
+        "best_sbert": 0.5244752168655396
+    },
+    {
+        "answer": "GAZ",
+        "source_clue": "Subiect usor, ce ocup\u0103 \u00eentregul volum",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Esen\u021b\u0103 de energie",
+            "Se rupe sub presiune",
+            "Se simte \u00een stomac"
+        ],
+        "rationale": "**Possible meanings of \u201cGAZ\u201d**\n\n1. Substan\u021b\u0103 chimic\u0103 (hidrogen, metan etc.) \u2013 combustibil, \u201egaz\u201d de uz industrial.  \n2. Aer/flatulen\u021b\u0103 \u00een corp \u2013 se simte \u00een stomac, se rupe sub presiune.  \n3. \u201eA avea gaz\u201d \u2013 stare de efervescen\u021b\u0103, energie, entuziasm.  \n\n**How to hint polysemantically**\n\n- Folosim expresii ce pot descrie \u0219i alte lucruri (baterie, balon, \u201evibe\u201d etc.).  \n- Men\u021bion\u0103m caracteristici generale: \u201eenergie\u201d, \u201epresiune\u201d, \u201esenza\u021bie \u00een stomac\u201d.  \n- Fiecare indiciu este scurt, nu este sinonim direct \u0219i poate fi asociat cu alte cuvinte.\n\n**Clues g\u00e2ndite**\n\n1. **\u201eEsen\u021b\u0103 de energie\u201d** \u2013 ar putea fi \u201ebaterie\u201d, \u201evitalitate\u201d, \u201egaz\u201d.  \n2. **\u201eSe rupe sub presiune\u201d** \u2013 poate descrie un balon, o membran\u0103, un tub; dar \u015fi gazul eliberat.  \n3. **\u201eSe simte \u00een stomac\u201d** \u2013 se refer\u0103 la senza\u021bia de balonare, durere, \u201egaz\u201d.\n\nAcestea sunt distincte, scurte \u0219i fiecare are sens \u00een alte contexte, dar toate pot duce la r\u0103spunsul \u201eGAZ\u201d.",
+        "best_clue": "Se rupe sub presiune",
+        "best_sbert": 0.5471873879432678
+    },
+    {
+        "answer": "RESOU",
+        "source_clue": "Remarcat la \u00eenc\u0103lzire",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Re\u2011sou, vechea moned\u0103 francez\u0103 ref\u0103cut\u0103",
+            "Re\u2011sou, mic\u0103 sum\u0103 reluat\u0103",
+            "Re\u2011sou, \u201ere\u201d la \u00eenceput + \u201esou\u201d de un ban"
+        ],
+        "rationale": "The word **RESOU** can be read as the concatenation of the prefix **re\u2011** (\u201cdin nou\u201d) and the old French coin **sou**.  \nThus any clue that hints at \u201c\u201ere\u2011\u201d + \u201esou\u201d\u201d will be polysemantic: it can suggest other words that also contain a prefix \u201cre\u2011\u201d or a small amount of money, but only \u201cRESOU\u201d matches the exact combination.  \n\nI will therefore craft three short Romanian clues that play on this split, each also evoking another possible reading (e.g., \u201cre\u201d as \u201creprezint\u0103\u201d, \u201csou\u201d as \u201csau\u201d etc.) so the clue is not a direct synonym of the answer.",
+        "best_clue": "Re\u2011sou, vechea moned\u0103 francez\u0103 ref\u0103cut\u0103",
+        "best_sbert": 0.515130341053009
+    },
+    {
+        "answer": "TOP",
+        "source_clue": "Face ordinea ierarhic\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lista campionilor",
+            "Piratul ce se \u00eenv\u00e2rte singur",
+            "Partea superioar\u0103 a unui outfit"
+        ],
+        "rationale": "**Possible meanings of \u201cTOP\u201d in Romanian**\n1. **V\u00e2rf / punct maxim** \u2013 cel mai \u00eenalt, capul unei structuri.  \n2. **Clasament** \u2013 lista celor mai buni (ex.: top 10).  \n3. **Juc\u0103rie rotativ\u0103** \u2013 un \u201etrottinette\u201d / \u201etoptop\u201d, adic\u0103 \u201etop\u201d \u00een sensul de piruet\u0103.  \n4. **Haine** \u2013 piesa vestimentar\u0103 de deasupra (tri\u010dou, bluz\u0103).  \n\n**Strategy for polysemic clues**\n- fiecare indiciu trebuie s\u0103 aib\u0103 cel pu\u021bin dou\u0103 interpret\u0103ri posibile, nu doar s\u0103 fie un sinonim direct.  \n- frazele trebuie s\u0103 fie scurte, nu propozi\u021bii \u00eentregi.  \n- s\u0103 al\u0103m\u0103 fiecare sens principal al cuv\u00e2ntului, l\u0103s\u00e2nd loc altor r\u0103spunsuri (ex.: \u201eclasament\u201d, \u201ebluz\u0103\u201d, \u201ev\u00e2rf\u201d) s\u0103 fie tentante.\n\n**Clue\u20111 (sens de clasament)**\n\u201eLista campionilor\u201d \u2013 poate sugera \u201eclasament\u201d, \u201etabla\u201d sau \u201etop\u201d.  \n\n**Clue\u20112 (sens de juc\u0103rie)**\n\u201ePiratul ce se \u00eenv\u00e2rte singur\u201d \u2013 sugereaz\u0103 \u201etop\u201d (juc\u0103ria) dar ar putea indica \u0219i \u201ev\u00e2rtej\u201d, \u201edizzy toy\u201d.  \n\n**Clue\u20113 (sens de \u00eembr\u0103c\u0103minte)**\n\u201ePartea superioar\u0103 a unui outfit\u201d \u2013 poate fi \u201ebluz\u0103\u201d, \u201etricou\u201d sau \u201etop\u201d.  \n\nAceste trei formule sunt scurte, ambigue \u0219i fiecare poate conduce la alte cuvinte, \u00eens\u0103 \u201eTOP\u201d r\u0103m\u00e2ne r\u0103spunsul unic care le \u00eendepline\u0219te pe toate.",
+        "best_clue": "Lista campionilor",
+        "best_sbert": 0.5751782655715942
+    },
+    {
+        "answer": "BIS",
+        "source_clue": "Mecanismul repet\u0103rilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Chemare la un c\u00e2ntec suplimentar",
+            "Semn de repeti\u021bie \u00een muzic\u0103",
+            "Prefix latin ce \u00eenseamn\u0103 \u201ede dou\u0103 ori\u201d"
+        ],
+        "rationale": "",
+        "best_clue": "Semn de repeti\u021bie \u00een muzic\u0103",
+        "best_sbert": 0.5346449017524719
+    },
+    {
+        "answer": "PUT",
+        "source_clue": "Separ\u0103 coloane de pam\u00e2nt",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sub p\u0103m\u00e2nt, dar nu tunel",
+            "F\u00e2nt\u00e2n\u0103 f\u0103r\u0103 suprafa\u021b\u0103",
+            "Ac\u021biune de a l\u0103sa pe un loc"
+        ],
+        "rationale": "The answer is **PU\u021a** (Romanian for \u201cwell\u201d).  \nTo make polysemantic clues, each hint should suggest more than one possible solution, so the solver must pick the correct one through lateral thinking.\n\n1. \u201cSub p\u0103m\u00e2nt, dar nu tunel\u201d \u2013 could point to *pu\u021b* (well) or to *bunc\u0103r*, *groap\u0103* etc.  \n2. \u201cF\u00e2nt\u00e2n\u0103 f\u0103r\u0103 suprafa\u021b\u0103\u201d \u2013 evokes a well, but also a *f\u00e2nt\u00e2n\u0103 uscat\u0103* or a *buzunar* (figuratively).  \n3. \u201cAc\u021biune de a l\u0103sa pe un loc\u201d \u2013 the English verb \u201cto put\u201d (to place) matches the Romanian past participle *pus*, while the Romanian noun *pu\u021b* also fits as a less obvious reading.\n\nAll three clues are short, indirect, and each can be interpreted in several ways, satisfying the polysemantic requirement.",
+        "best_clue": "Ac\u021biune de a l\u0103sa pe un loc",
+        "best_sbert": 0.6179948449134827
+    },
+    {
+        "answer": "EXTREMITATE",
+        "source_clue": "Sf\u00e2r\u015fit \u00een spa\u0163iu",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Margini ale h\u0103r\u021bii",
+            "Bra\u021bul unui manipulateur",
+            "V\u00e2rfurile ramurilor \u00een toamn\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "V\u00e2rfurile ramurilor \u00een toamn\u0103",
+        "best_sbert": 0.5644990801811218
+    },
+    {
+        "answer": "INSTRUMENTE",
+        "source_clue": "Manuale de interven\u0163ie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Mijloace pentru a modela sunetul",
+            "Documente \u0219i unelte de lucru",
+            "Echipamente pentru m\u0103surare \u0219i performan\u021b\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Documente \u0219i unelte de lucru",
+        "best_sbert": 0.6149196624755859
+    },
+    {
+        "answer": "NOR",
+        "source_clue": "Originea picatului din cer",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Poart\u0103 logic\u0103 cu ie\u0219ire 0 \u00een absen\u021ba semnalelor",
+            "Vapori ce umplu albastrul zilei",
+            "Conjunc\u021bie englez\u0103 folosit\u0103 dup\u0103 nega\u021bie"
+        ],
+        "rationale": "**\nThe Romanian word **NOR** has at least two clear senses:\n1. *Nor* \u2013 a cloud, a mass of water vapour in the sky.  \n2. *NOR* \u2013 the logical NOR gate (negative\u2011OR) used in digital electronics.  \nIt also appears as the English coordinating conjunction \u201cnor\u201d, which can be hinted at in Romanian.\n\nFor each clue I need a short phrase that is ambiguous enough to suggest other possible answers (e.g., \u201ccea\u021b\u0103\u201d, \u201cor\u201d, \u201cNAND\u201d, \u201crou\u0103\u201d) while still allowing a solver to reach **NOR** after lateral thinking.\n\n- **Clue\u202f1** will allude to the electronic meaning, using words like *poart\u0103* (gate) and *ie\u0219ire 0* that could also be read as a physical gate that stays closed.  \n- **Clue\u202f2** will describe the meteorological meaning with a poetic image of the sky, which could also point to \u201ccea\u021b\u0103\u201d, \u201crou\u0103\u201d, etc.  \n- **Clue\u202f3** will refer to the English conjunction, phrased so that other conjunctions (\u201cor\u201d, \u201cbut\u201d) are plausible distractors.\n\nAll clues are brief, Romanian, and not direct synonyms.  \n**",
+        "best_clue": "Vapori ce umplu albastrul zilei",
+        "best_sbert": 0.5529630184173584
+    },
+    {
+        "answer": "ODA",
+        "source_clue": "Vehicul de ridicare \u00een slav\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sal\u0103 de laud\u0103",
+            "Vers de celebrare",
+            "Spa\u021biu pentru festivit\u0103\u021bi"
+        ],
+        "rationale": "",
+        "best_clue": "Spa\u021biu pentru festivit\u0103\u021bi",
+        "best_sbert": 0.5267351269721985
+    },
+    {
+        "answer": "BOX",
+        "source_clue": "Joc sf\u00e2r\u015fit prematur printr-un OK invers",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Incint\u0103 de lemn pe scena teatral\u0103",
+            "Compartiment pentru echipamente audio",
+            "Locul de \u0219edere VIP la meci"
+        ],
+        "rationale": "**Step 1: Identify the meanings of \u201cBOX\u201d.**  \n- Cutie/fierastr\u0103 de depozitare (cutie, cutie metalic\u0103).  \n- Locul separat pentru spectatori \u00een teatru sau stadion (box, loj\u0103, loc VIP).  \n- Carcas\u0103/\u00eenvelitoare pentru echipamente electronice sau audio (speaker\u2011box, power\u2011box).  \n\n**Step 2: Choose three distinct angles that can be read in at least two ways.**  \n1. A theatrical \u201cbox\u201d vs. other theater seats.  \n2. An electronic\u2011equipment \u201cbox\u201d vs. any container.  \n3. A VIP \u201cbox\u201d at a sports arena vs. other privileged spots.\n\n**Step 3: Form short, indirect Romanian clues.**  \n- Keep each clue a brief phrase, not a full sentence.  \n- Avoid direct synonyms like \u201ccutie\u201d.  \n- Ensure each clue could plausibly refer to another word (loja, carcas\u0103, suporter, etc.), making the clue polysemantic.  \n\n**Resulting clues:**  \n1. \u201cIncint\u0103 de lemn pe scena teatral\u0103\u201d \u2013 could be a \u201cbox\u201d or simply a \u201ccamer\u0103 de scen\u0103\u201d.  \n2. \u201cCompartiment pentru echipamente audio\u201d \u2013 could be o \u201ccutie\u201d, o \u201ccarcas\u0103\u201d, etc.  \n3. \u201cLocul de \u0219edere VIP la meci\u201d \u2013 could be o \u201cloja\u201d, o \u201ctribun\u0103 superioar\u0103\u201d, etc.\n\nThese three satisfy the polysemantic requirement and each points to \u201cBOX\u201d.",
+        "best_clue": "Compartiment pentru echipamente audio",
+        "best_sbert": 0.5693286061286926
+    },
+    {
+        "answer": "SNAPS",
+        "source_clue": "T\u0103rie specific nem\u0163easc\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Poze efemere din re\u021bea",
+            "Gust cu ghimbir \u00een cutie",
+            "Sunete de degete la petrecere"
+        ],
+        "rationale": "",
+        "best_clue": "Sunete de degete la petrecere",
+        "best_sbert": 0.4711417555809021
+    },
+    {
+        "answer": "IOD",
+        "source_clue": "\u00centors dup\u0103 unu!",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "IO + D, satelit \u0219i not\u0103",
+            "Halogen cu simbol de o singur\u0103 liter\u0103",
+            "Agent antiseptic \u00een tinctur\u0103, l\u00e2ng\u0103 alcool"
+        ],
+        "rationale": "- \u201eiod\u201d este elementul chimic iod (simbol I, halogen). \u00cen limba rom\u00e2n\u0103 nu are alte sensuri lexicale, a\u0219a c\u0103 indiciile trebuie s\u0103 se bazeze pe jocuri de cuvinte, aluzii la alte domenii (astronomie, notare, chimie, antiseptic).  \n- Pentru a fi \u201epolysemantic\u201d, fiecare indiciu trebuie s\u0103 poat\u0103 sugera \u0219i alte r\u0103spunsuri (de ex. alt halogen, alt agent antiseptic, alt satelit). \u00cens\u0103 doar \u201eiod\u201d satisface toate componentele simultan.  \n- Am ales trei tipuri de indicii: (1) joc de litere (IO + D), (2) descriere remarcabil\u0103, dar nu exclusiv\u0103 (halogen cu simbol unic), (3) aluzie la utilizarea \u00een fotografiere/antiseptic, care poate sugera \u0219i alte substan\u021be.",
+        "best_clue": "IO + D, satelit \u0219i not\u0103",
+        "best_sbert": 0.584283173084259
+    },
+    {
+        "answer": "AUR",
+        "source_clue": "Galbenul etern pre(ten)\u0163ios",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Culoarea r\u0103s\u0103ritului",
+            "Premiul olimpic",
+            "Metalul mitului care nu rugine\u0219te"
+        ],
+        "rationale": "",
+        "best_clue": "Metalul mitului care nu rugine\u0219te",
+        "best_sbert": 0.5662575364112854
+    },
+    {
+        "answer": "CANCER",
+        "source_clue": "Produs al \u00eenmul\u0163iii necontrolate",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Crab zodiacal",
+            "Semn de ap\u0103, dar \u0219i boal\u0103",
+            "Cuv\u00e2nt cu dublu sens: animal \u0219i afec\u0163iune"
+        ],
+        "rationale": "The word **CANCER** has two main meanings in Romanian: the disease (cancer) and the zodiac sign (Cancer), which is also represented by a crab. To create polysemantic clues, each clue will reference both meanings or use a wording that could also hint at other possible answers (e.g., \u201crac\u201d, \u201cboal\u0103\u201d, \u201csemn zodiacal\u201d). The clues are kept short, avoid being direct synonyms, and each presents an alternative plausible interpretation.",
+        "best_clue": "Cuv\u00e2nt cu dublu sens: animal \u0219i afec\u0163iune",
+        "best_sbert": 0.5385259389877319
+    },
+    {
+        "answer": "BEBE",
+        "source_clue": "Pu\u015fti sau pici la s\u00e2nul mamei",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nume de scen\u0103 al unei artiste pop rom\u00e2ne\u0219ti",
+            "Alint pentru micu\u021bul din familie",
+            "Cuv\u00e2nt \u00eent\u00e2lnit adesea \u00een titluri de melodii de dragoste"
+        ],
+        "rationale": "",
+        "best_clue": "Alint pentru micu\u021bul din familie",
+        "best_sbert": 0.5966923236846924
+    },
+    {
+        "answer": "AED",
+        "source_clue": "Ocupa\u0163ie pentru Orfeu",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "B\u0103t\u0103lie contra stop\u2011cardiac",
+            "Semnal de urgen\u021b\u0103 \u00een spital",
+            "Cod medical de trei litere"
+        ],
+        "rationale": "",
+        "best_clue": "B\u0103t\u0103lie contra stop\u2011cardiac",
+        "best_sbert": 0.540277898311615
+    },
+    {
+        "answer": "LUP",
+        "source_clue": "Etalon de foame mare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Vocea nop\u021bii la lun\u0103 plin\u0103",
+            "Urm\u0103ritor al mielului",
+            "Blan\u0103 de lup, din\u021bi ascu\u021bi\u021bi"
+        ],
+        "rationale": "",
+        "best_clue": "Blan\u0103 de lup, din\u021bi ascu\u021bi\u021bi",
+        "best_sbert": 0.5359247326850891
+    },
+    {
+        "answer": "SIM",
+        "source_clue": "Dreptunghiul f\u0103r\u0103 (un) col\u0163 al mobilelor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Abreviere din telecomunica\u021bii",
+            "Program de modelare",
+            "Chip cu identitate de abonat"
+        ],
+        "rationale": "",
+        "best_clue": "Chip cu identitate de abonat",
+        "best_sbert": 0.5143263936042786
+    },
+    {
+        "answer": "TRUC",
+        "source_clue": "Manevr\u0103 iluzorie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Manevr\u0103 de magician",
+            "Metod\u0103 ingenioas\u0103 de rezolvare",
+            "\u00cen\u0219el\u0103ciune tacticat\u0103 \u00een sport"
+        ],
+        "rationale": "",
+        "best_clue": "Manevr\u0103 de magician",
+        "best_sbert": 0.6731459498405457
+    },
+    {
+        "answer": "GOGOSI",
+        "source_clue": "Scorneli din... dospeal\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Rotunde \u0219i glazurate, nu ro\u021bi",
+            "Dulci de la cofet\u0103rie, nu artificii",
+            "Forme pufoase de aluat, nu bucle"
+        ],
+        "rationale": "",
+        "best_clue": "Rotunde \u0219i glazurate, nu ro\u021bi",
+        "best_sbert": 0.5433740615844727
+    },
+    {
+        "answer": "SUL",
+        "source_clue": "Rulat p\u00e2n\u0103 la cap\u0103t",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sudul, f\u0103r\u0103 \u201ed\u201d",
+            "Finalul unui adjectiv precum frumos, c\u00e2nd devine substantiv",
+            "Parte a articolului ce se adaug\u0103 la cuvintele cu termina\u021bie \u00een s"
+        ],
+        "rationale": "The word **SUL** appears in Romanian mainly as the ending formed when the definite article *\u2011ul* is attached to a masculine word that already ends with the letter **s** (e.g., *frumos* \u2192 *frumosul*).  \nThus a clue can reference this grammatical \u201csuffix\u201d.\n\nAnother possible reading is the word **\u201eSudul\u201d** (the South) with the letter **d** removed, which also yields *sul*. This gives an alternative, misleading interpretation, satisfying the requirement that the clue be polysemantic.\n\nUsing these two ideas I prepared three short, indirect clues, each of which could be read in more than one way (e.g., as a direction, a suffix, or a fragment of another word), yet only **SUL** fits all of them precisely.",
+        "best_clue": "Parte a articolului ce se adaug\u0103 la cuvintele cu termina\u021bie \u00een s",
+        "best_sbert": 0.5329515933990479
+    },
+    {
+        "answer": "MAU",
+        "source_clue": "E vorba de vigoare",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Miau, dar cu o liter\u0103 \u00een minus",
+            "Etichet\u0103 dulce",
+            "Nume de familie cu sunet felin"
+        ],
+        "rationale": "",
+        "best_clue": "Nume de familie cu sunet felin",
+        "best_sbert": 0.5961666107177734
+    },
+    {
+        "answer": "BOTEZ",
+        "source_clue": "Ritual de numire",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ritual cu ap\u0103",
+            "D\u0103ruie\u0219te-i un nume",
+            "Numele unei nave la lansare"
+        ],
+        "rationale": "",
+        "best_clue": "Ritual cu ap\u0103",
+        "best_sbert": 0.6736617684364319
+    },
+    {
+        "answer": "REN",
+        "source_clue": "\u0162ap de un pol",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Filtru vital",
+            "Cauz\u0103 a durerii lombare",
+            "Cuv\u00e2nt din expresia \u201ea\u2011\u0219i rupe ___\u201d"
+        ],
+        "rationale": "**Meaning of \u201cren\u201d**\n\n- Principal meaning in Romanian: organul \u201erinichi\u201d (kidney).  \n- It functions as a biological **filtru** al s\u00e2ngelui.  \n- \u00cen limba vorbit\u0103 apare \u00een expresia \u201ea\u2011\u0219i rupe renii\u201d (a fi foarte obosit).  \n- Poate fi confundat cu un filtru mecanic (ex: filtru de ap\u0103), sau cu alte cauze ale durerii lombare.\n\n**Creating polysemantic clues**\n\n1. *Filtru vital* \u2013 poate indica at\u00e2t un filtru pentru ap\u0103/ulei, c\u00e2t \u0219i filtrul vital al corpului (rinichi). 2. *Cauz\u0103 a durerii lombare* \u2013 poate sugera probleme ale coloanei, ale discurilor intervertebrale etc., dar \u0219i afec\u0163iuni renale. 3. *Cuv\u00e2nt din expresia \u201ea\u2011\u0219i rupe ___\u201d* \u2013 cititorul trebuie s\u0103 completeze spa\u0163iul; r\u0103spunsul este \u201erenii\u201d, de unde se extrage forma de baz\u0103 \u201eren\u201d. Toate cele trei sunt scurte, nu sunt sinonime directe \u0219i necesit\u0103 un mic salt logic pentru a ajunge la \u201eren\u201d.",
+        "best_clue": "Filtru vital",
+        "best_sbert": 0.5093238353729248
+    },
+    {
+        "answer": "VIN",
+        "source_clue": "Suport de mi\u015fma\u015f",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Se adun\u0103 la petrecere",
+            "Num\u0103r de \u0219asiu",
+            "Proasp\u0103t din vie"
+        ],
+        "rationale": "",
+        "best_clue": "Num\u0103r de \u0219asiu",
+        "best_sbert": 0.545147180557251
+    },
+    {
+        "answer": "SUT",
+        "source_clue": "Expediere necesar\u0103 golurilor",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lovitur\u0103 rapid\u0103",
+            "Minge \u00een poart\u0103",
+            "Tactic\u0103 de atac"
+        ],
+        "rationale": "",
+        "best_clue": "Minge \u00een poart\u0103",
+        "best_sbert": 0.5451222062110901
+    },
+    {
+        "answer": "EMOTIVITATE",
+        "source_clue": "M\u0103sur\u0103toare de impresii",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Stil muzical, not\u0103 \u0219i sufix al calit\u0103\u021bii",
+            "Emo\u021bie \u00een mi\u0219care, cu ritm accelerat",
+            "C\u00e2nd emo\u2011ti\u2011vite se contopesc \u00eentr-un singur cuv\u00e2nt"
+        ],
+        "rationale": "Pentru \u201eEMOTIVITATE\u201d am c\u0103utat componentele interne ale cuv\u00e2ntului care pot fi sugerate prin defini\u0163ii ambigue:\n\n- **EMO** \u2013 stil muzical/subcultur\u0103.\n- **TI** \u2013 nota muzical\u0103 \u201eti\u201d.\n- **VITE** \u2013 form\u0103 scurt\u0103 pentru \u201evitez\u0103\u201d.\n- **\u2011itate** \u2013 sufix care exprim\u0103 calitatea.\n\nAstfel po\u0163i construi indicii care par s\u0103 descrie trei lucruri diferite (stil muzical, not\u0103, vitez\u0103, sufix), dar combinarea lor d\u0103 exact cuv\u00e2ntul c\u0103utat. Am creat trei indicii diferite, fiecare scurt \u0219i cu poten\u0163ial de interpretare multipla.",
+        "best_clue": "Emo\u021bie \u00een mi\u0219care, cu ritm accelerat",
+        "best_sbert": 0.561521589756012
+    },
+    {
+        "answer": "FRAMANTARI",
+        "source_clue": "Lucru pentru a m\u00e2nca o p\u00e2ine (pl.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "B\u0103t\u0103i f\u0103r\u0103 clopote",
+            "Agita\u021bie \u00een aluat",
+            "G\u00e2nduri \u00eenf\u0103\u0219urate"
+        ],
+        "rationale": "",
+        "best_clue": "B\u0103t\u0103i f\u0103r\u0103 clopote",
+        "best_sbert": 0.5134865045547485
+    },
+    {
+        "answer": "REVENIRE",
+        "source_clue": "Bis la apari\u021bie",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Re\u00eentoarcere la start",
+            "Recidiv\u0103 \u00een terapia cronic\u0103",
+            "Re\u00eennoirea prezen\u021bei pe scen\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Re\u00eentoarcere la start",
+        "best_sbert": 0.5596984028816223
+    },
+    {
+        "answer": "IRIS",
+        "source_clue": "O floare... avut\u0103 \u00een vedere",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Arc de culori \u00een mitologie",
+            "Reglaj de lumin\u0103 al obiectivului foto",
+            "Floare cu coroni\u021b\u0103 ce poart\u0103 numele unei zei\u021be a curcubeului"
+        ],
+        "rationale": "",
+        "best_clue": "Floare cu coroni\u021b\u0103 ce poart\u0103 numele unei zei\u021be a curcubeului",
+        "best_sbert": 0.6440392732620239
+    },
+    {
+        "answer": "UROLOG",
+        "source_clue": "Specialist \u00een filtrele de la bazin",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Jurnal al curentului intern",
+            "Specialist \u00een c\u0103i de scurgere",
+            "Consultant al micilor r\u00e2uri corporale"
+        ],
+        "rationale": "The answer is **UROLOG**, a medical specialist dealing with the urinary and male reproductive systems.  \nTo create polysemantic clues, I look for meanings of the components \u201curo\u2011\u201d (related to urine) and \u201c\u2011log\u201d (a record or a piece of wood).  \nI can allude to a *record* (log) of *internal fluid* (urine) \u2013 a phrase that could also describe a plumber\u2019s notes, a water\u2011flow log, etc.  \nAnother angle is \u201cexpert in drainage routes\u201d, which may be taken as a plumber, a fire\u2011escape planner, or a city\u2011infrastructure specialist, not only a doctor.  \nFinally, I can hint at \u201cconsultant for tiny body rivers\u201d, which could be interpreted as a poet describing metaphorical streams, a physiologist, or even a water\u2011resource manager.  \nAll three clues are short, indirect, and each has plausible alternative readings, satisfying the polysemantic requirement.",
+        "best_clue": "Specialist \u00een c\u0103i de scurgere",
+        "best_sbert": 0.6890708804130554
+    },
+    {
+        "answer": "DUNAREAN",
+        "source_clue": "Se leag\u0103 de fluviul nostru...",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Locuitor al unei ape mari",
+            "Cine are s\u00e2nge de pe\u0219te \u0219i de c\u00e2mpie",
+            "Denumit dup\u0103 un r\u00e2u ce str\u0103bate zece \u021b\u0103ri"
+        ],
+        "rationale": "",
+        "best_clue": "Denumit dup\u0103 un r\u00e2u ce str\u0103bate zece \u021b\u0103ri",
+        "best_sbert": 0.534792959690094
+    },
+    {
+        "answer": "VANZARI",
+        "source_clue": "F\u0103cute pe bani",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sat din Buz\u0103u",
+            "Reduceri la etichet\u0103",
+            "Cifr\u0103 de afaceri zilnic\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Sat din Buz\u0103u",
+        "best_sbert": 0.5342533588409424
+    },
+    {
+        "answer": "LOBATE",
+        "source_clue": "Frunzele... cu trimitere la unele organe interne",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lovitur\u0103 \u00eenalt\u0103, cu traiectorie larg\u0103",
+            "Frunz\u0103 cu margini ad\u00e2nc \u00eencise",
+            "Structur\u0103 cerebral\u0103 segmentat\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Frunz\u0103 cu margini ad\u00e2nc \u00eencise",
+        "best_sbert": 0.608479380607605
+    },
+    {
+        "answer": "VAR",
+        "source_clue": "Lapte de cas\u0103",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Material alb \u00een construc\u021bii",
+            "Cuv\u00e2nt cheie \u00een JavaScript",
+            "Departament francez de coast\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Departament francez de coast\u0103",
+        "best_sbert": 0.4852285087108612
+    },
+    {
+        "answer": "OSAN",
+        "source_clue": "Tr\u0103ie\u015fte \u00eentr-o \u021bar\u0103 din N. Rom\u00e2niei (var.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ora\u0219 cu baz\u0103 aerian\u0103 l\u00e2ng\u0103 Seul",
+            "Un an al scheletului",
+            "Dop\u0103 de lemn pentru sticl\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Ora\u0219 cu baz\u0103 aerian\u0103 l\u00e2ng\u0103 Seul",
+        "best_sbert": 0.5373157262802124
+    },
+    {
+        "answer": "REALA",
+        "source_clue": "Nu are pic de imagina\u021bie (fem.)",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Num\u0103r f\u0103r\u0103 parte imaginar\u0103",
+            "Ce nu e doar \u00een minte",
+            "Adev\u0103rat\u0103, nu doar \u00een aparen\u021b\u0103"
+        ],
+        "rationale": "",
+        "best_clue": "Num\u0103r f\u0103r\u0103 parte imaginar\u0103",
+        "best_sbert": 0.5655555129051208
+    },
+    {
+        "num_samples": 250,
+        "num_scored": 250,
+        "sbert_mean": 0.5528094941377639,
+        "sbert_std": 0.06237413158317026
+    }
+]
