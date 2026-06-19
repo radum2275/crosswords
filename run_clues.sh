@@ -30,3 +30,7 @@ if [[ "$p" == "v5" ]]; then
     l='log_clues_'${m}'_'${p}'_s0.txt'
     ./timeout -m 30000000 python src/crosswords/clues_ro.py --model_id $m --dataset_file /home/radu/storage/git/crosswords/data/extracted_data.json --output_dir /home/radu/storage/git/crosswords/data/results --dataset_type clues --version $p --output_name clues  >& $l
 fi
+if [[ "$p" == "v6" ]]; then
+    l='log_clues_'${m}'_'${p}'_s0.txt'
+    ./timeout -m 30000000 python src/crosswords/clues_ro.py --model_id $m --dataset_file /home/radu/storage/git/crosswords/data/extracted_data.json --output_dir /home/radu/storage/git/crosswords/data/results --dataset_type clues --version $p --output_name clues --num_samples 100  >& $l
+fi

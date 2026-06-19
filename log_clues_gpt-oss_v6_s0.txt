@@ -1,0 +1,846 @@
+Processing 30819 clues...
+Using LLM: openai/gpt-oss-120b
+Prompt version: v6
+Dataset type: clues
+Initial number of clues: 100
+After filtering out short answers, 82 clues remain.
+Submitting 82 prompts async (batch_size=50, rate_limit=1500/min) ...
+  [1/82] [OK] acc=0.0% (0/1)
+    clue:       Şters din datoria personalului de serviciu
+    answer:     pRAF
+    prediction: {
+  "clue": "Ce învelește amintirile unei biblioteci vechi când lumina o străbate?",
+  "answer": "pRAF"
+}
+  [2/82] [OK] acc=0.0% (0/2)
+    clue:       Înlocuire la adăpostul întunericului
+    answer:     IaTAC
+    prediction: <think>
+The answer is **IATAC**.  
+We can split it into two Romanian words: **“ia”** (imperative of “a lua”, meaning “take”) and **“tac”** (imperative of “a tăcea”, meaning “be silent”).  
+A clue that mentions both actions will point to the concatenation **IATAC**, while each part also has an independent meaning, making the clue polysemantic.  
+Among possible clues, the short sentence “Comandă de a lua și de a tăcea” directly references the two imperatives without being a synonym of the whole word, thus satisfying the requirements.
+</think>
+
+```json
+{
+  "clue": "Comandă de a lua și de a tăcea",
+  "answer": "IaTAC"
+}
+```
+  [3/82] [OK] acc=0.0% (0/3)
+    clue:       Mişcarea de eliberare
+    answer:     SMuCIRE
+    prediction: <think>
+**Pasul 1 – Înțelegerea sensului cuvântului „SMUCIRe”**  
+„Smucire” se referă la actul de a rupe, de a dezlega, de a ceda sub presiune (ex.: „smucire de fire”, „smucire de articulație”).
+
+**Pasul 2 – Generarea de indicii polysemice**  
+Vreau o propoziție scurtă ce poate descrie „smucire”, dar care, prin ambiguitate, ar putea sugera şi alte cuvinte precum „ruptură”, „crăpare”, „liniște”, „cedare”.  
+Formule posibile:
+- „Când ceva cedează sub forță”
+- „Momentul în care rezistența se rupe”
+- „Faptul de a ceda sub presiune”
+
+Toate au aceeaşi structură de sens: ele descriu un fenomen de cedare, dar nu sunt sinonime directe ale lui „smucire”.
+
+**Pasul 3 – Alegerea celei mai potrivite variante**  
+„Când ceva cedează sub forță” este scurtă, clară şi permite interpretări multiple (ruptură, crăpare, cedare, smucire). Este suficient de indirectă pentru a nu fi un sinonim exact, dar specifică bine ideea de „smucire”.
+
+**Pasul 4 – Verificarea**  
+- Sens principal: smucire = cedare sub forță.  
+- Alte posibile răspunsuri: „ruptură”, „crăpare”, „cedare”. Deci indiciul este polysemantic.
+
+**Concluzie** – Folosesc această frază ca indiciu.
+</think>
+
+```json
+{
+  "clue": "Când ceva cedează sub forță",
+  "answer": "SMUCIRE"
+}
+```
+  [4/82] [OK] acc=0.0% (0/4)
+    clue:       Aproape de un nivel inacceptabil
+    answer:     lOAZA
+    prediction: {
+  "clue": "Cuvânt scurt ce încurajează o echipă în luptă",
+  "answer": "LOZĂ"
+}
+  [5/82] [OK] acc=0.0% (0/5)
+    clue:       Executantul unor lovituri de pedeapsă
+    answer:     BIcI
+    prediction: {
+  "answer": "BICI",
+  "clue": "Călăreț fără cal"
+}
+  [6/82] [OK] acc=0.0% (0/6)
+    clue:       Rezultat la adunare
+    answer:     UNIT
+    prediction: <think>
+I need a Romanian clue whose wording can be interpreted in more than one way, yet the intended answer is the string **UNIT**.  
+The word “unit” (taken from English) can mean both a basic measure and a military formation.  
+If I phrase the clue as “Măsură standard și grup militar”, it evokes both meanings.  
+A solver could also think of the Romanian equivalent “unitate”, so the clue is polysemantic.  
+Thus the clue satisfies the requirement: it is indirect, short, and has multiple possible answers, with “UNIT” being the correct one.
+</think>
+
+```json
+{
+  "clue": "Măsură standard și grup militar",
+  "answer": "UNIT"
+}
+```
+  [7/82] [OK] acc=0.0% (0/7)
+    clue:       Bani cheltuiţi prin bazar
+    answer:     LIRE
+    prediction: {
+  "clue": "Cuvânt ce poate desemna atât o formă scurtă de poezie, cât și o monedă străină",
+  "answer": "LIRE"
+}
+  [8/82] [OK] acc=0.0% (0/8)
+    clue:       Obligaţie de serviciu
+    answer:     oRDIN
+    prediction: {
+  "clue": "Îndemn la conformitate sau document bancar",
+  "answer": "oRDIN"
+}
+  [9/82] [OK] acc=0.0% (0/9)
+    clue:       Juniori aflaţi în pregătire cu seniorii
+    answer:     PAjI
+    prediction: {
+  "clue": "Fire subțiri ce pot servi și ca pași pe o potecă.",
+  "answer": "PAjI"
+}
+  [10/82] [OK] acc=0.0% (0/10)
+    clue:       Fudulii de cocoşi (sg.)
+    answer:     TANTOS
+    prediction: {
+  "answer": "TANTOS",
+  "clue": "Pădure fără deschidere"
+}
+  [11/82] [OK] acc=0.0% (0/11)
+    clue:       Subiect de discuţie
+    answer:     ORAL
+    prediction: {
+  "answer": "ORAL",
+  "clue": "Despre vorbire, nu despre scriere"
+}
+  [12/82] [OK] acc=0.0% (0/12)
+    clue:       Cea... dreaptă
+    answer:     aIA
+    prediction: ```json
+{
+  "answer": "aIA",
+  "clue": "Abreviere ce, pronunțată, devine un pronume demonstrativ"
+}
+```
+  [13/82] [OK] acc=0.0% (0/13)
+    clue:       Aburit la masă
+    answer:     FIERT
+    prediction: {
+  "clue": "Nu e crud.",
+  "answer": "FIERT"
+}
+  [14/82] [OK] acc=0.0% (0/14)
+    clue:       Vechea lege a creştinilor
+    answer:     EDIcT
+    prediction: ```json
+{
+  "answer": "EDICT",
+  "clue": "Decizie emisă fără consultări"
+}
+```
+  [15/82] [OK] acc=0.0% (0/15)
+    clue:       Tare de urechi
+    answer:     ACUT
+    prediction: {
+  "clue": "Unghi ascuțit și stare severă",
+  "answer": "ACUT"
+}
+  [16/82] [OK] acc=0.0% (0/16)
+    clue:       A înconjura cu ostilitate
+    answer:     ASEDIa
+    prediction: ```json
+{
+  "answer": "ASEDIA",
+  "clue": "Stare de blocare impusă prin înconjurare militară"
+}
+```
+  [17/82] [OK] acc=0.0% (0/17)
+    clue:       Bani în schimbul armelor (sg.)
+    answer:     pISTOL
+    prediction: <think>
+The answer is **pistol**.  
+I need a Romanian clue that is indirect and could point to several objects, but only “pistol” matches unambiguously.
+
+A good polysemantic clue can revolve around the word **„declanșator”** – a trigger.  
+Both a **pistol** and many non‑weapon objects (e.g., a button, un computer switch) have a trigger and are used to start something quickly.  
+
+Thus the short sentence **„Obiect ce declanșează rapiditatea”** works:
+- It describes a pistol (a firearm that fires a shot instantly).
+- It could also describe a button, a switch, etc., giving the required ambiguity.
+
+The clue is not a synonym of “pistol”, it is an indirect definition that relies on the shared notion of a trigger, satisfying the polysemantic requirement.
+</think>
+
+```json
+{
+  "clue": "Obiect ce declanșează rapiditatea",
+  "answer": "pistol"
+}
+```
+  [18/82] [OK] acc=0.0% (0/18)
+    clue:       Ascunziş prin pădurice
+    answer:     TUFA
+    prediction: {
+  "answer": "TUFA",
+  "clue": "Multe fire îmbinate, dar fără scântei"
+}
+  [19/82] [OK] acc=0.0% (0/19)
+    clue:       A da cu flit
+    answer:     RaMA
+    prediction: <think>
+We need a Romanian clue that is polysemantic (has multiple meanings) and could point to several answers, but only "RAMA" fits uniquely. "RAMA" has meanings: 1) frame (for picture, photo, etc.), 2) branch (of a tree), 3) railway track (rare), 4) a part of a machine (e.g., gun). The clue should be short, indirect, not a direct synonym. A good clue: "Sprijin pentru tablou și parte a pomului". This mentions two meanings: a frame (sprijin pentru tablou) and a branch (parte a pomului). Both are definitions of "ramă". This is polysemantic and indirect enough. It could also hint at "cadru", "tijă", but only "ramă" matches both contexts well. So we choose this clue.
+
+Now output JSON.
+</think>
+
+```json
+{
+  "clue": "Sprijin pentru tablou și parte a pomului",
+  "answer": "RAMA"
+}
+```
+  [20/82] [OK] acc=0.0% (0/20)
+    clue:       Luat în nume de rău
+    answer:     INAMIC
+    prediction: {
+  "clue": "Cel ce nu are niciun amic",
+  "answer": "INAMIC"
+}
+  [21/82] [OK] acc=0.0% (0/21)
+    clue:       Socotit printre favoriţi
+    answer:     ATu
+    prediction: ```json
+{
+  "answer": "ATu",
+  "clue": "Instituție care reglementează circulaţia în oraş"
+}
+```
+  [22/82] [OK] acc=0.0% (0/22)
+    clue:       Mină de cărbune (masc.)
+    answer:     BRUN
+    prediction: {
+  "answer": "BRUN",
+  "clue": "Nume de familie și nuanță de culoare"
+}
+  [23/82] [OK] acc=0.0% (0/23)
+    clue:       Dreaptă ca lumânarea
+    answer:     FAClIE
+    prediction: <think>
+I need a Romanian clue that could be interpreted in more than one way, leading to different possible answers, but the intended answer is **FAClIE** (meaning “facție”, a political or religious group).  
+A good way to create polysemantic clues is to use a double definition where each part can describe a different word that looks alike.  
+The word “făclie” (with ă) means “torch”, an object that gives light, especially at demonstrations.  
+Therefore the clue “Grup rupt dintr-un partid sau instrument de lumină la proteste” can point either to **FAClIE** (facție) or to **FĂCLIE** (torch).  
+Both meanings are plausible, making the clue polysemantic, while only the answer given matches the required spelling.  
+I will keep the clue concise, as required, and present the final JSON.
+</think>
+
+```json
+{
+  "clue": "Grup rupt dintr-un partid sau instrument de lumină la proteste",
+  "answer": "FAClIE"
+}
+```
+  [24/82] [OK] acc=0.0% (0/24)
+    clue:       Darul începutului de an
+    answer:     TORT
+    prediction: <think>
+The answer is **TORT**. I need a Romanian clue that is indirect and polysemantic, i.e., it can hint at more than one concept, but only **TORT** fits both meanings. In Romanian, “tort” is both a sweet cake and, borrowed from French/English, a term in law meaning a civil wrong (delict). Therefore a clue that mentions a legal wrongdoing and a celebratory dessert will be ambiguous enough and will lead uniquely to “tort”. 
+
+Possible clues considered:
+1. “Fapt ilicit în drept, dar și desert de sărbătoare”
+2. “Greșeală legală ce se servește la aniversare”
+3. “Termen juridic pentru prejudiciu, dar și dulceață de petrecere”
+
+I chose the first because it is concise, clearly contains two distinct senses (legal and culinary) and does not directly synonymize “tort” with “cake” or “delict”. 
+
+Thus the final clue is:
+**“Fapt ilicit în drept, dar și desert de sărbătoare.”**
+</think>
+
+```json
+{
+  "clue": "Fapt ilicit în drept, dar și desert de sărbătoare",
+  "answer": "TORT"
+}
+```
+  [25/82] [OK] acc=0.0% (0/25)
+    clue:       Lovitură din faţa porţii
+    answer:     CIOc
+    prediction: <think>
+The Romanian word **cioc** has at least two meanings:
+1. *Beak* of a bird – a physical, pointed part.
+2. *Collision, clash* (slang/figurative) – a strong impact or hit.
+
+To create a polysemantic clue, I need a short sentence that can refer to either meaning, so that several words (e.g., “cioc”, “ciocan”, “pumn”, etc.) could be plausible answers. The clue must not be a direct synonym of “cioc”.  
+
+A concise Romanian phrase that fits both senses is **„Lovitură puternică”**.  
+- In the “collision/clash” sense, a *cioc* is literally a strong hit.  
+- In the “beak” sense, one could think of the sharp point of a bird’s beak delivering a strong bite or peck, which is also a type of “lovitură”.
+
+Thus the clue is indirect, ambiguous, and satisfies the polysemantic requirement, while the intended answer remains *CIOC*.
+</think>
+
+```json
+{
+  "clue": "Lovitură puternică",
+  "answer": "CIOC"
+}
+```
+  [26/82] [OK] acc=0.0% (0/26)
+    clue:       Schimbare de atitudine
+    answer:     PORT
+    prediction: <think>
+Pentru cuvântul **PORT** trebuie să găsim un indiciu în română care să aibă sensuri multiple (ex: „poartă de intrare pentru nave” – sensul de „port” maritim, şi „poartă de intrare pentru date” – sensul de „port” în informatică). O propoziție scurtă, nu sinonimă directă, dar care poate conduce și la alte cuvinte (de exemplu „golf”, „gate”, „terminal”), îndeplinește cerința de polysemantică. Am formulat indiciul: **„Poartă de acces pentru nave și date.”** Acesta descrie exact sensul de „port” (harbor și port de calculator), dar ar putea fi interpretat și ca „terminal”, „golf” etc., deci rămâne ambiguu pentru alte cuvinte, dar pentru grila dată „PORT” este singura potrivire corectă.
+</think>
+
+```json
+{
+  "clue": "Poartă de acces pentru nave și date.",
+  "answer": "PORT"
+}
+```
+  [27/82] [OK] acc=0.0% (0/27)
+    clue:       Tratate de dermatologie (sg.)
+    answer:     RAIoASA
+    prediction: {
+  "clue": "Zâmbetul ei este ca o rază",
+  "answer": "RAIoASA"
+}
+  [28/82] [OK] acc=0.0% (0/28)
+    clue:       Principiu convingător
+    answer:     CREZ
+    prediction: {
+  "answer": "CREZ",
+  "clue": "Motto al unei organizații"
+}
+  [29/82] [OK] acc=0.0% (0/29)
+    clue:       Rămas în urma războiului
+    answer:     LES
+    prediction: <think>
+**Step 1 – Identifying possible meanings of “LES”**  
+- În limba engleză, cuvântul de comparație „less” înseamnă „mai puțin”.  
+- Dacă eliminăm una dintre litere („s”) rămâne „les”.  
+- „Les” este şi forma de plural a articolului hotărât în limba franceză.  
+- „LES” poate fi, de asemenea, abreviere pentru diverse expresii (ex. *Local Emergency Services*), dar acestea nu sunt uzuale în română.
+
+**Step 2 – Construirea unor indicii polysemantice**  
+Vrem un enunț care să poată fi interpretat în mai multe feluri (articol francez, abreviere etc.), însă pentru care singura variantă care se potriveşte în grila de cuvinte de trei litere este „LES”.  
+Un indiciu de tipul: *„Cuvânt de comparație în engleză, scurtat prin omisiunea unei litere”* are exact această calitate:  
+- poate sugera „less” (cuvânt englezesc) → „les” prin scurtare,  
+- poate sugera și „les” ca articol francez, dar în acea lectură nu este vorba de „scurtare”.  
+Astfel, definiţia este indirectă şi permite mai multe interpretări.
+
+**Step 3 – Alegerea celei mai bune variante**  
+Din variantele generate, „Cuvânt de comparație în engleză, fără una dintre literele sale” este scurt, clar, nu este un sinonim direct al lui „LES” şi oferă două căi de gândire (reducere a cuvântului „less” sau căutarea unui articol francez). Prin urmare, este indiciul potrivit.
+
+**Răspuns final**
+```json
+{
+  "answer": "LES",
+  "clue": "Cuvânt de comparație în engleză, fără una dintre literele sale"
+}
+```
+</think>
+  [30/82] [OK] acc=0.0% (0/30)
+    clue:       Emisiune radiofonică
+    answer:     AUDIo
+    prediction: {
+  "answer": "AUDIO",
+  "clue": "Ce poţi auzi şi apoi păstra pe un suport digital"
+}
+  [31/82] [OK] acc=0.0% (0/31)
+    clue:       Belea curată
+    answer:     PAS
+    prediction: <think>
+The answer is **PAS**.  
+Possible meanings of „pas” in Romanian:
+- Pas = piciorul sau mișcarea făcută cu piciorul (step, footstep).  
+- Pas = parte a unui dans („pas de danse”).  
+- Pas = etapă, progres (“un pas înainte”).  
+
+To make a polysemantic clue, I need a sentence that could describe several concepts such as „pas”, „treaptă”, „etapă”, „progres”, etc., but only „PAS” matches the intended answer.  
+A short, indirect definition that fits this is:
+
+**„Fiecare mișcare spre înainte.”**
+
+- This can refer to a *pas* (step).  
+- It can also refer to a *treaptă* or *etapă*, giving the needed ambiguity.
+
+Thus the clue is suitably polysemantic and leads uniquely to the given answer PAS.
+</think>
+
+```json
+{
+  "clue": "Fiecare mișcare spre înainte",
+  "answer": "PAS"
+}
+```
+  [32/82] [OK] acc=0.0% (0/32)
+    clue:       Cursă cu mers accelerat
+    answer:     RaID
+    prediction: {
+  "answer": "RAID",
+  "clue": "Combinație de discuri sau de soldaţi"
+}
+  [33/82] [OK] acc=0.0% (0/33)
+    clue:       Plătiţi la lichidare
+    answer:     ASASINI
+    prediction: <think>
+The answer is **ASASINI**, the plural form of “asasin” (assassin).  
+To craft a polysemantic clue, I need a short Romanian sentence that can point to several possible groups of killers, not just assassins, so that the clue is ambiguous.  
+A sentence like “Grupul care ucide în tăcere” fits: it describes assassins, but could also suggest alte grupuri criminale (criminali, teroriști, mercenari). Thus the clue is indirect and polysemantic, and the only answer among the possibilities that matches the given answer is **ASASINI**. 
+</think>
+
+```json
+{
+  "answer": "ASASINI",
+  "clue": "Grupul care ucide în tăcere"
+}
+```
+  [34/82] [OK] acc=0.0% (0/34)
+    clue:       Loc... amenajat la ospiciu!
+    answer:     IcI
+    prediction: {
+  "clue": "În limba franceză, indică apropierea vorbitorului",
+  "answer": "ICI"
+}
+  [35/82] [OK] acc=0.0% (0/35)
+    clue:       Absent la discuţii
+    answer:     TACUT
+    prediction: {
+  "answer": "TACUT",
+  "clue": "Este prezent, dar nu spune niciun cuvânt."
+}
+  [36/82] [OK] acc=0.0% (0/36)
+    clue:       Mulţime separată
+    answer:     CEATa
+    prediction: {
+  "answer": "CEATA",
+  "clue": "Stup de oameni"
+}
+  [37/82] [OK] acc=0.0% (0/37)
+    clue:       Cu haina pe el în casă
+    answer:     UMERAS
+    prediction: {
+  "answer": "UMERAS",
+  "clue": "Cel ce-ţi mângâie orgoliul fără să spună adevărul"
+}
+  [38/82] [OK] acc=0.0% (0/38)
+    clue:       O chestie care te luminează
+    answer:     BEC
+    prediction: {
+  "answer": "BEC",
+  "clue": "Se înșurubează în soclu și luminează"
+}
+  [39/82] [OK] acc=0.0% (0/39)
+    clue:       O noapte lungă (masc.)
+    answer:     POLAR
+    prediction: {
+  "answer": "POLAR",
+  "clue": "Se referă la două capete cu sarcini opuse"
+}
+  [40/82] [OK] acc=0.0% (0/40)
+    clue:       Face o introducere vorbind de imagine
+    answer:     FOTO
+    prediction: {
+  "clue": "Imagine prin lumină ce se dezvoltă în camera întunecată",
+  "answer": "FOTO"
+}
+  [41/82] [OK] acc=0.0% (0/41)
+    clue:       E vremea unei istorii
+    answer:     ERA
+    prediction: {
+  "answer": "ERA",
+  "clue": "Măsură veche de distanță și etapă cronologică"
+}
+  [42/82] [OK] acc=0.0% (0/42)
+    clue:       Mioara e dragostea lui
+    answer:     CIOBAN
+    prediction: {
+  "clue": "Cine veghează turma și nu predică la biserică",
+  "answer": "CIOBAN"
+}
+  [43/82] [OK] acc=0.0% (0/43)
+    clue:       Admiteri grele
+    answer:     RABDARI
+    prediction: {
+  "answer": "RABDARI",
+  "clue": "Ce nume poartă cei ce își păstrează calmul în așteptare?"
+}
+  [44/82] [OK] acc=0.0% (0/44)
+    clue:       Face să-şi piardă culoarea
+    answer:     CLOR
+    prediction: <think>
+Vreau să creez un indiciu polisemantic pentru cuvântul „CLOR”. 
+„Clor” este elementul chimic (Cl) prezent în sare (NaCl). Un indiciu precum „Este în sare, dar nu este sare” poate fi interpretat fie ca „sodiu” (Na), fie ca „clor” (Cl), deci are sensuri multiple, dar doar una corespunde răspunsului dat. Indiciul nu este un sinonim direct, ci o definiție indirectă ce cere să se gândească la compoziția sării. 
+Selectez acest indiciu ca fiind cel mai potrivit.
+</think>
+
+```json
+{
+  "clue": "Este în sare, dar nu este sare",
+  "answer": "CLOR"
+}
+```
+  [45/82] [OK] acc=0.0% (0/45)
+    clue:       Mâna băgată-n foc
+    answer:     ARSA
+    prediction: {
+  "answer": "ARSA",
+  "clue": "Starea unui băț de chibrit după utilizare"
+}
+  [46/82] [OK] acc=0.0% (0/46)
+    clue:       Dă dovadă de lipsă a calităţii
+    answer:     REA
+    prediction: ```json
+{
+  "clue": "Poate descrie o faptă și o vreme",
+  "answer": "REA"
+}
+```
+  [47/82] [OK] acc=0.0% (0/47)
+    clue:       Vine mâine după ea.
+    answer:     IERI
+    prediction: {
+  "clue": "Cuvânt ce marchează ziua premergătoare celei curente",
+  "answer": "IERI"
+}
+  [48/82] [OK] acc=0.0% (0/48)
+    clue:       A acţiona cu detaşare
+    answer:     TRANSA
+    prediction: {
+  "clue": "Se taie în bucăţi, apoi se vinde în rate",
+  "answer": "TRANSA"
+}
+  [49/82] [OK] acc=0.0% (0/49)
+    clue:       Trage datorită muşchilor lui
+    answer:     REN
+    prediction: {
+  "clue": "Filtru vital al corpului",
+  "answer": "REN"
+}
+  [50/82] [OK] acc=0.0% (0/50)
+    clue:       Pus pe fugă
+    answer:     ATLET
+    prediction: {
+  "clue": "Cine își pune corpul în mișcare în competiție",
+  "answer": "ATLET"
+}
+  [51/82] [OK] acc=0.0% (0/51)
+    clue:       Face semn la obraz
+    answer:     RID
+    prediction: {
+  "answer": "RID",
+  "clue": "Reacție sonoră la o glumă"
+}
+  [52/82] [OK] acc=0.0% (0/52)
+    clue:       Meseria lor rămâne... de căruţă
+    answer:     ROTARI
+    prediction: {
+  "clue": "Cei ce se rotesc la întâlniri pentru cauze umanitare",
+  "answer": "ROTARI"
+}
+  [53/82] [OK] acc=0.0% (0/53)
+    clue:       Se încing la horă
+    answer:     ITARI
+    prediction: {
+  "answer": "ITARI",
+  "clue": "Insecte cu aripi scurte, deseori găsite în lemn uscat"
+}
+  [54/82] [OK] acc=0.0% (0/54)
+    clue:       Sub acoperire... face faţă agenţilor
+    answer:     CROM
+    prediction: {
+  "answer": "CROM",
+  "clue": "Metodă de separare în laborator și element al oțelului inoxidabil"
+}
+  [55/82] [OK] acc=0.0% (0/55)
+    clue:       Lovituri venite de jos în sus
+    answer:     UPERCUTURI
+    prediction: {
+  "answer": "UPERCUTURI",
+  "clue": "U pe percuturi"
+}
+  [56/82] [OK] acc=0.0% (0/56)
+    clue:       Un ansamblu de facultăţi
+    answer:     MORAL
+    prediction: {
+  "clue": "Învățătură trasă dintr-o naraţiune",
+  "answer": "MORAL"
+}
+  [57/82] [OK] acc=0.0% (0/57)
+    clue:       Plimbatul cu familia
+    answer:     ROIT
+    prediction: ```json
+{
+  "answer": "ROIT",
+  "clue": "Este în stare să dea urmași, dar nu este încă gravid."
+}
+```
+  [58/82] [OK] acc=0.0% (0/58)
+    clue:       A lucra la definitivat
+    answer:     ELABORA
+    prediction: {
+  "clue": "Pune în ordine idei neclare",
+  "answer": "ELABORA"
+}
+  [59/82] [OK] acc=0.0% (0/59)
+    clue:       A face o manevra de a câştiga teren
+    answer:     DRENA
+    prediction: {
+  "clue": "Actriță și act de a scoate apa",
+  "answer": "DRENA"
+}
+  [60/82] [OK] acc=0.0% (0/60)
+    clue:       Barcă folosită la inundaţii
+    answer:     ARCA
+    prediction: {
+  "clue": "Obiect sacru ce adăpostește legământul",
+  "answer": "ARCA"
+}
+  [61/82] [OK] acc=0.0% (0/61)
+    clue:       Obiectiv de telescop (pl.)
+    answer:     ASTRI
+    prediction: <think>
+**Step 1 – Identify meanings of “ASTRI”.**  
+- În limba română, „astri” este forma de plural a cuvântului arhaic **astru**, care înseamnă „stea”. Deci „astri” = „stele”.  
+- De asemenea, „astru” este denumirea unui peşte de apă sărată; pluralul „astri” poate fi înţeles ca „peşti”.  
+
+**Step 2 – Găsire de definiţii polisemantice.**  
+Vreau o definiție scurtă care să poată indica atât „stele” (cel mai comun sens modern al cuvântului) cât şi alte cuvinte posibile, astfel încât să rămână ambiguă. O expresie ca „Puncte luminoase pe cer” se potriveşte:  
+- Pentru cititorul obișnuit este obviousă „stele”.  
+- Pentru cine ştie sensul arhaic, răspunsul corect este „astri”.  
+
+**Step 3 – Verificare că nu este sinonim direct.**  
+“Puncte luminoase pe cer” nu este un sinonim literal al cuvântului „astri”; descrie un fenomen și cere interpretare.  
+
+**Step 4 – Selectarea celei mai bune variante.**  
+Această frază este scurtă, clară și permite două interpretări (stele, corpuri luminoase) – deci respectă cerința de polisemantică. 
+
+</think>
+
+```json
+{
+  "clue": "Puncte luminoase pe cer",
+  "answer": "ASTRI"
+}
+```
+  [62/82] [OK] acc=0.0% (0/62)
+    clue:       Firav la trup!
+    answer:     IRA
+    prediction: {
+  "clue": "Furie interioară și, totodată, un cont de economii pentru pensie",
+  "answer": "IRA"
+}
+  [63/82] [OK] acc=0.0% (0/63)
+    clue:       O vorbă şoptită
+    answer:     ALO
+    prediction: <think>
+Pentru cuvântul **ALO** trebuie să găsesc o definiție în română care să nu fie un sinonim direct, ci să facă referire la una dintre semnificațiile sale (întrebare/ salut la telefon) și să poată fi interpretată și în alte sensuri, astfel încât să fie „polysemantic”. Am enumerat câteva variante:
+
+1. **„Cuvânt rostit când se ridică firul”** – poate indica „alo” (la telefon) dar și „fir” ca „trădare” etc.  
+2. **„Salut la distanță”** – poate fi „alo” (la telefon) sau „salut” ca gest de respect.  
+3. **„Răspuns la sunetul telefonului”** – poate sugera „alo” dar și „răspuns” ca „da” sau „da, vin”.
+
+Între acestea, varianta (1) are cel mai clar caracter polysemantic: „cuvânt rostit când se ridică firul” se referă evident la apelul telefonic, dar „fir” poate fi înțeles și ca „fir de discuție”, „fir de ață” etc., iar „cuvânt rostit” ar putea fi orice, nu neapărat „alo”. Astfel, doar „alo” se potrivește complet cu întregul indiciu.
+
+Prin urmare aleg această formulare ca indiciu final.
+</think>
+
+```json
+{
+  "clue": "Cuvânt rostit când se ridică firul",
+  "answer": "ALO"
+}
+```
+  [64/82] [OK] acc=0.0% (0/64)
+    clue:       Umblări de colo pînă colo
+    answer:     FOIRI
+    prediction: {
+  "clue": "Ce se întoarce în timpul lecturii",
+  "answer": "FOIRI"
+}
+  [65/82] [OK] acc=0.0% (0/65)
+    clue:       Succesiune rămasă în pronunţare.
+    answer:     ETC
+    prediction: {
+  "answer": "ETC",
+  "clue": "Abreviere ce indică atât un sistem de taxare electronică, cât și o continuare a unei enumerări"
+}
+  [66/82] [OK] acc=0.0% (0/66)
+    clue:       Alunecă iarna pe zăpadă
+    answer:     BOB
+    prediction: {
+  "answer": "BOB",
+  "clue": "Tuns în mod scurt, dar și greutate ce se atârnă unui pendul"
+}
+  [67/82] [OK] acc=0.0% (0/67)
+    clue:       Numai tras afară îşi arată secretele
+    answer:     SERTAR
+    prediction: {
+  "answer": "SERTAR",
+  "clue": "Locul în care biroul își ascunde hârtiile"
+}
+  [68/82] [OK] acc=0.0% (0/68)
+    clue:       Expunere la masă
+    answer:     ETALARE
+    prediction: {
+  "answer": "ETALARE",
+  "clue": "Dispunere de produse în vitrine, dar și referire la alte persoane"
+}
+  [69/82] [OK] acc=0.0% (0/69)
+    clue:       Are un număr la banii tăi din bancă
+    answer:     CONT
+    prediction: {
+  "clue": "E locul unde se înscriu toate intrările și ieșirile",
+  "answer": "CONT"
+}
+  [70/82] [OK] acc=0.0% (0/70)
+    clue:       Ne vine aproape bine
+    answer:     INTIM
+    prediction: {
+  "clue": "În timp, dar nu la timp",
+  "answer": "INTIM"
+}
+  [71/82] [OK] acc=0.0% (0/71)
+    clue:       Aflată la capătul lumii
+    answer:     APOCALIPSA
+    prediction: {
+  "answer": "APOCALIPSA",
+  "clue": "Titlu biblic al unei cărţi și expresie pentru haos total"
+}
+  [72/82] [OK] acc=0.0% (0/72)
+    clue:       O patimă arzătoare
+    answer:     FUMAT
+    prediction: {
+  "answer": "FUMAT",
+  "clue": "Poate descrie un bărbat și un pește"
+}
+  [73/82] [OK] acc=0.0% (0/73)
+    clue:       Expus la vedere
+    answer:     MIOP
+    prediction: {
+  "clue": "Pomi în oglindă",
+  "answer": "MIOP"
+}
+  [74/82] [OK] acc=0.0% (0/74)
+    clue:       Ecoul unuia suspendat în timpul jocului
+    answer:     UTA
+    prediction: {
+  "answer": "UTA",
+  "clue": "Universitate tehnică situată pe malul Crișului"
+}
+  [75/82] [OK] acc=0.0% (0/75)
+    clue:       Prinsă în urmărire
+    answer:     ATENTA
+    prediction: {
+  "clue": "Fata care nu ratează niciun indiciu",
+  "answer": "ATENTA"
+}
+  [76/82] [OK] acc=0.0% (0/76)
+    clue:       Reţinut cu nişte probleme
+    answer:     RETICENT
+    prediction: {
+  "clue": "Nu se laudă cu reușitele",
+  "answer": "RETICENT"
+}
+  [77/82] [OK] acc=0.0% (0/77)
+    clue:       Închisă uşor la buton
+    answer:     MANSETA
+    prediction: {
+  "clue": "Încheie un segment al corpului",
+  "answer": "MANSETA"
+}
+  [78/82] [OK] acc=0.0% (0/78)
+    clue:       Fire de oameni la bătrâneţe
+    answer:     SIVE
+    prediction: {
+  "clue": "E parte a hainei și a unei conducte.",
+  "answer": "SIVE"
+}
+  [79/82] [OK] acc=0.0% (0/79)
+    clue:       Împărţitul teritoriului pe regiuni
+    answer:     TINUT
+    prediction: <think>
+The word **TINUT** (spelled without diacritics) corresponds to Romanian “ținut”, which has at least two distinct senses:
+1. A *region* or *territory*.
+2. The past participle of *a ține* – “held”, “kept”.
+
+A good polysemantic clue must suggest both senses without naming either directly, so the solver can think of several possibilities (e.g., „zonă”, „tradiție”, „obiect păstrat”, „stare de deținere”). A short Romanian sentence that captures this ambiguity is:
+
+**“Ce poate fi o zonă sau ceva păstrat.”**
+
+- “O zonă” points to the geographic meaning *ținut*.
+- “Ceva păstrat” points to the participial meaning *ținut* = „ținut, păstrat”.
+
+Other candidate clues were considered, such as “Locul pe care îl deține un rege” (could suggest tron, regat, ținut) but it leans more toward a regal domain and is less balanced between the two senses. The chosen clue equally balances the two meanings, making it suitably polysemantic.
+</think>
+
+```json
+{
+  "clue": "Ce poate fi o zonă sau ceva păstrat",
+  "answer": "TINUT"
+}
+```
+  [80/82] [OK] acc=0.0% (0/80)
+    clue:       Lucrător într-o casă de modă veche
+    answer:     ARGAT
+    prediction: {
+  "clue": "Acoperit cu metal prețios",
+  "answer": "ARGAT"
+}
+  [81/82] [OK] acc=0.0% (0/81)
+    clue:       Albii din zona polară
+    answer:     NINSI
+    prediction: {
+  "answer": "NINSI",
+  "clue": "Când temperaturile scad sub zero, se poate observa ..."
+}
+  [82/82] [OK] acc=0.0% (0/82)
+    clue:       Mitică pe valuri
+    answer:     ARCA
+    prediction: <think>
+We need a Romanian clue for the answer “ARCA”. The clue must be polysemantic, i.e., it can suggest several different words, but only “ARCA” fits the intended definition. “Arca” can be:
+
+1. The chest (arca de valori) used in churches or banks.
+2. The boat (Arca lui Noe) that saved life during the flood.
+3. A generic container or box.
+
+A short sentence that can hint at both the chest and the boat, without being a direct synonym, is “Cutie de salvare”.  
+- As a “cutie”, it points to a chest.  
+- As a “salvare”, it evokes the biblical Ark that saved humanity.  
+
+Other possible answers (e.g., “cufă”, “vagon”) could also fit “cutie de salvare”, making the clue polysemantic, but the intended crossword answer is “ARCA”.
+
+Thus the best clue is: **“Cutie de salvare”**.
+</think>
+
+```json
+{
+  "clue": "Cutie de salvare",
+  "answer": "ARCA"
+}
+```
+Finished 82 data points
+Generated 82 answers to 82 questions.
+Evaluating results from /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v6_0.json ...
+Average answer length: 4.78 characters.
+Average prediction length: 248.57 characters.
+Evaluation results: {'num_samples': 82, 'exact_matches': 0.0, 'accuracy': 0.0, 'sbert_mean': 0.4119910101701574, 'sbert_std': 0.07992512735818133, 'avg_answer_length': 4.780487804878049, 'avg_prediction_length': 248.5731707317073}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/clues_gpt-oss_v6_0.json ...
+Done.
+FINISHED CPU 84.64 MEM 7848040 MAXMEM 8391800 STALE 14 MAXMEM_RSS 1476824
+<time name="ALL">84700</time>
