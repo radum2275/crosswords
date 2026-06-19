@@ -11,7 +11,10 @@ import asyncio
 import argparse
 import json
 
+import numpy as np
 import mellea.stdlib.functional as mfuncs
+
+from bert_score import BERTScorer
 
 from dotenv import load_dotenv
 from typing import Any, Dict, List
@@ -99,8 +102,77 @@ ANSWER: SAC
 ANSWER: {{answer_text}}
 """
 
+INSTRUCTION_GEN_HINTS = """
+You are an expert at composing crossword puzzle clues in Romanian.
+Given the correct answer to a crossword (a word in Romanian), you will compose
+{{num_candidates}} distinct candidate clues that could lead to that answer.
+
+As a hint, you are given the first few words of a real clue that a human author
+wrote for this answer. Use these words as a starting point: your clues should
+continue or build upon them so that the full clue stays close in meaning and
+style to what the human author intended.
+
+Important: each clue must be a POLYSEMANTIC clue. This means it should have
+multiple possible meanings and could plausibly lead to several different
+answers, but only one of them is the given answer. The more obvious reading of
+the clue should ideally point elsewhere, so that finding the given answer
+requires some lateral reasoning.
+
+Rules:
+- Every clue must be written in Romanian.
+- Every clue must begin with the given hint words and extend them naturally.
+- Every clue must be SHORT: a brief definition or phrase, not a full sentence.
+- A clue must NOT be a direct synonym of the answer. It should be an indirect
+  definition that requires reasoning to reach the answer.
+- The {{num_candidates}} clues must be distinct from one another.
+- Do not translate the answer or the clues into English.
+- Reason step by step: first consider the possible meanings of the answer and
+  how the hint words constrain the clue, then craft and refine the candidates.
+- Mark your reasoning with the following tags: <think> ** your thoughts ** </think>
+- After your reasoning, output the final response as a JSON object inside a
+  markdown code block, with exactly the following structure:
+
+```json
+{
+  "answer": "<the input answer here>",
+  "clues": ["<clue 1>", "<clue 2>", "<clue 3>"]
+}
+```
+
+The "clues" array must contain exactly {{num_candidates}} clues.
+
+Use the following example to learn your task better.
+
+Example:
+ANSWER: SAC
+HINT: Unitate de
+```json
+{
+  "answer": "SAC",
+  "clues": ["Unitate de morărit", "Unitate de transport pe spinare", "Unitate de masura pentru cartofi"]
+}
+```
+
+ANSWER: {{answer_text}}
+HINT: {{hint_text}}
+"""
+
 
 load_dotenv()
+
+
+def get_hint_words(clue: str, num_hints: int) -> str:
+    """Return the first num_hints whitespace-separated words of the clue."""
+    if num_hints <= 0 or not clue:
+        return ""
+    words = clue.split()
+    return " ".join(words[:num_hints])
+
+
+def get_sbert(reference: str, prediction: str, scorer) -> float:
+    """BERTScore F1 between a reference and a prediction string."""
+    _, _, F1 = scorer.score([prediction], [reference])
+    return F1.cpu().detach().numpy().tolist()[0]
 
 
 def parse_clues_response(text: str) -> Dict[str, Any]:
@@ -143,6 +215,7 @@ def process_data(
         backend: Backend,
         dataset_type: str,
         num_candidates: int,
+        num_hints: int = 0,
         num_samples: int = None,
         output_filename: str = "gen_clues.json",
         batch_size: int = 50,
@@ -155,12 +228,15 @@ def process_data(
     :param backend: mellea backend used to call the LLM
     :param dataset_type: "clues" or "baseline" (selects the answer field)
     :param num_candidates: number of candidate clues to request per answer
+    :param num_hints: number of leading words of the ground-truth clue to give
+        as a hint (0 = no hint, use the plain generation prompt)
     """
 
     print(f"Generating clues for {len(data)} answers...")
     print(f"Using LLM: {backend.model_id}")
     print(f"Dataset type: {dataset_type}")
     print(f"Candidates per answer: {num_candidates}")
+    print(f"Hint words from ground-truth clue: {num_hints}")
 
     assert dataset_type in ["clues", "baseline"], f"Unknown dataset type: {dataset_type}"
 
@@ -183,7 +259,20 @@ def process_data(
 
     async def acall_one(item):
         answer = item[answer_key]
-        user_variables = {"answer_text": answer, "num_candidates": num_candidates}
+
+        # With num_hints >= 1, feed the first num_hints words of the real clue
+        # as a hint and use the hint-aware prompt; otherwise plain generation.
+        hint_text = get_hint_words(item.get(clue_key, ""), num_hints)
+        if num_hints >= 1 and hint_text:
+            instruction = INSTRUCTION_GEN_HINTS
+            user_variables = {
+                "answer_text": answer,
+                "num_candidates": num_candidates,
+                "hint_text": hint_text,
+            }
+        else:
+            instruction = INSTRUCTION_GEN
+            user_variables = {"answer_text": answer, "num_candidates": num_candidates}
 
         requirements = [check(
             "The output must contain a valid JSON code block with 'answer' and 'clues' keys.",
@@ -193,7 +282,7 @@ def process_data(
         )]
 
         return await mfuncs.ainstruct(
-            INSTRUCTION_GEN,
+            instruction,
             context=SimpleContext(),
             backend=backend,
             requirements=requirements,
@@ -248,6 +337,8 @@ def process_data(
         results.append({
             "answer": answer,
             "source_clue": source_clue,
+            "hint": get_hint_words(source_clue, num_hints),
+            "num_hints": num_hints,
             "clues": clues,
             "rationale": rationale,
         })
@@ -265,6 +356,68 @@ def process_data(
     return results
 
 
+def eval_results(output_filename: str) -> Dict[str, Any]:
+    """
+    Score the generated clues against the ground-truth (source) clue using
+    BERTScore F1. For each answer with at least one generated clue, the best
+    candidate (highest F1 vs the source clue) is taken as the predicted clue.
+    A summary dict is appended as the final element of the output file.
+    """
+
+    print(f"Evaluating generated clues from {output_filename} ...")
+    with open(output_filename, "r", encoding="utf-8") as f:
+        results = json.load(f)
+
+    assert len(results) > 0, "No results to evaluate."
+
+    scorer = BERTScorer(model_type='bert-base-uncased', device='cpu')
+
+    best_scores = []
+    num_scored = 0
+    for item in results:
+        source_clue = item.get("source_clue", "")
+        clues = item.get("clues", [])
+        # Need a reference clue and at least one candidate to score.
+        if not source_clue or not clues:
+            item["best_clue"] = None
+            item["best_sbert"] = None
+            continue
+
+        scored = [(c, get_sbert(source_clue, c, scorer)) for c in clues if c]
+        if not scored:
+            item["best_clue"] = None
+            item["best_sbert"] = None
+            continue
+
+        best_clue, best_sbert = max(scored, key=lambda t: t[1])
+        item["best_clue"] = best_clue
+        item["best_sbert"] = float(best_sbert)
+        best_scores.append(best_sbert)
+        num_scored += 1
+
+    if best_scores:
+        sbert_mean = float(np.mean(best_scores))
+        sbert_std = float(np.std(best_scores))
+    else:
+        sbert_mean = 0.0
+        sbert_std = 0.0
+
+    summary = {
+        "num_samples": len(results),
+        "num_scored": num_scored,
+        "sbert_mean": sbert_mean,
+        "sbert_std": sbert_std,
+    }
+
+    print(f"Evaluation results: {summary}")
+    print(f"Saving evaluation results to {output_filename} ...")
+    results.append(summary)
+    with open(output_filename, "w") as f:
+        json.dump(results, f, indent=4)
+
+    return summary
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_id', type=str, default="gpt-oss")
@@ -272,15 +425,24 @@ if __name__ == '__main__':
     parser.add_argument('--dataset_type', type=str, default="clues")
     parser.add_argument('--num_samples', type=int, default=None)
     parser.add_argument('--num_candidates', type=int, default=3)
+    parser.add_argument('--num_hints', type=int, default=0,
+                        help='Number of leading words of the ground-truth clue to give as hint (0 = none)')
     parser.add_argument('--output_name', type=str, default="gen_clues")
     parser.add_argument('--output_dir', type=str, default=".")
     parser.add_argument('--batch_size', type=int, default=50, help='Max concurrent async requests')
     parser.add_argument('--rate_limit', type=int, default=1500, help='Max requests per minute')
+    parser.add_argument('--eval_only', action='store_true',
+                        help='Skip generation and only score an existing output file')
 
     args = parser.parse_args()
 
-    output_filename = f"{args.output_name}_{args.model_id}.json"
+    output_filename = f"{args.output_name}_{args.model_id}_h{args.num_hints}.json"
     output_filename = os.path.join(args.output_dir, output_filename)
+
+    if args.eval_only:
+        eval_results(output_filename)
+        print("Done.")
+        raise SystemExit(0)
 
     # Create a Mellea RITS backend
     if args.model_id == "llama":
@@ -312,10 +474,14 @@ if __name__ == '__main__':
         backend,
         args.dataset_type,
         args.num_candidates,
+        num_hints=args.num_hints,
         num_samples=args.num_samples,
         output_filename=output_filename,
         batch_size=args.batch_size,
         rate_limit=args.rate_limit,
     )
+
+    # Score the generated clues against the ground-truth clues.
+    eval_results(output_filename)
 
     print("Done.")
