@@ -1,0 +1,984 @@
+Generating clues for 1172 answers...
+Using LLM: openai/gpt-oss-120b
+Dataset type: baseline
+Candidates per answer: 3
+Hint words from ground-truth clue: 1
+Initial number of answers: 1172
+After filtering out short answers, 1148 answers remain.
+Limited to 250 answers (num_samples=250).
+Submitting 250 prompts async (batch_size=50, rate_limit=1500/min) ...
+  [1/250] [OK] answer: ZAMBILA
+    clue: Plantă fără încruntări
+    clue: Plantă cu frunze ce se deschid ca un zâmbet
+    clue: Plantă și gest de fericire în prezent
+  [2/250] [OK] answer: ENEA
+    clue: Model pentru pictori din antichitate
+    clue: Subiect al numeroaselor picturi eroice
+    clue: Erou al legendelor ilustrate de pictori
+  [3/250] [OK] answer: ACSAN
+    clue: Primăvara, pe scurt în calendar
+    clue: Primăvara, cu inițialele A.C.S.A.N.
+    clue: Primăvara, când se aud ‘ac…san’ în zori
+  [4/250] [OK] answer: FILIP
+    clue: Liric, dar și deltoid
+    clue: Liric în corp, nu pe hârtie
+    clue: Liric și anatomic
+  [5/250] [OK] answer: ENE
+    clue: Direcție indicată în poezie
+    clue: Abreviere întâlnită în antologii poetice
+    clue: Semn de orientare în strofe
+  [6/250] [OK] answer: COR
+    clue: Cântec al grupului
+    clue: Cântec liturgic de biserică
+    clue: Cântec cu voci multiple
+  [7/250] [OK] answer: NASTA
+    clue: Versurile de stradă
+    clue: Versurile din underground
+    clue: Versurile rapiereștilor
+  [8/250] [OK] answer: DAN
+    clue: Corabia cu comandantul Dan
+    clue: Corabia, dar cu doar trei litere
+    clue: Corabia cu nume scurt și masculin
+  [9/250] [OK] answer: AURIC
+    clue: Compozitor de note de aur
+    clue: Nume de metal pentru compozitor
+    clue: Compozitor al alchimiei sonore
+  [10/250] [OK] answer: CIUCURENCU
+    clue: Artist cu pene vii
+    clue: Artist ascuns în iarbă
+    clue: Artist în zbor de dimineață
+  [11/250] [OK] answer: ANDRITOIU
+    clue: „Venim!” – strigătură ce ascunde un nume de familie
+    clue: „Venim!” – chemare ce devine prenume în poezie
+    clue: „Venim!” – urare de sosire ce se maschează în cognomen
+  [12/250] [OK] answer: SEFERIS
+    clue: Poet grec, al cărui nume înseamnă „carte” în ebraică
+    clue: Poet al cărui nume seamănă cu un volum de lectură
+    clue: Poet, a cărui denumire este și cuvânt pentru „volum” în limba ebraică
+  [13/250] [OK] answer: ANIN
+    clue: Arbore cu fructe albe, netede
+    clue: Sat lângă Arbore, județul Suceava
+    clue: Copac cu frunze argintii, din familia rosacelor
+  [14/250] [FAIL] answer: RODIN
+  [15/250] [OK] answer: ELENA
+    clue: Mama regelui Mihai I
+    clue: Mama din saga regală greco‑română
+    clue: Mama cu nume ce înseamnă „lumina”
+  [16/250] [OK] answer: PASTE
+    clue: Sărbătoare în spaniolă
+    clue: Sărbătoare cu toți vecinii, fără foc de artificii
+    clue: Sărbătoare scurtă, în weekend, de obicei cu muzică
+  [17/250] [OK] answer: MART
+    clue: Denumirea lunii cu Mărțișor
+    clue: Denumirea unei piețe de desfacere
+    clue: Denumirea abreviată a lunii ce precede aprilie
+  [18/250] [OK] answer: ISAC
+    clue: Poet cu prenume din Vechiul Testament
+    clue: Poet al cărui nume este și al unui profet biblic
+    clue: Poet cu nume ce apare în Geneza
+  [19/250] [OK] answer: IERNI
+    clue: Anotimpul cu zăpadă și gheață
+    clue: Anotimpul când soarele se ascunde
+    clue: Anotimpul care inspiră sărituri pe gheață
+  [20/250] [OK] answer: LAJOS
+    clue: Nume de scriitor maghiar
+    clue: Prenume de autor, întâlnit şi la curţi
+    clue: Autor cu inițialele L.A.
+  [21/250] [OK] answer: MICU
+    clue: Personaj din nuvela „Ghiocelul”
+    clue: Diminutiv al lui mic, la fel de delicat ca un ghiocel
+    clue: Sufix al adjectivului ce descrie floarea din „Ghiocelul”
+  [22/250] [OK] answer: ANDREESCU
+    clue: Pânza de familie a lui Andrei
+    clue: Pânza ce poartă nume de familie
+    clue: Pânza cu sufix de nepot
+  [23/250] [OK] answer: MALANCIOIU
+    clue: Stat de la marginea Munților Harghitei
+    clue: Stat al pădurilor de brad, în inima Transilvaniei
+    clue: Stat în zona etnografică a secuiștilor
+  [24/250] [OK] answer: ORASEL
+    clue: Spațiu urban mic
+    clue: Spațiu de locuit fără statut de capitală
+    clue: Spațiu pe hartă, cu nume în diminutiv
+  [25/250] [OK] answer: LUR
+    clue: Trompetă fără supape
+    clue: Instrument de vânătoare, ca o trompetă sălbatică
+    clue: Trompetă de munte, din lemn
+  [26/250] [OK] answer: GAGA
+    clue: Cântăreață cu nume de stare de nebunie
+    clue: Cântăreață al cărei nume înseamnă confuzie
+    clue: Cântăreață ce poartă un nume ce sună ca un copil amețit
+  [27/250] [OK] answer: ANDRA
+    clue: Numele ce răsună pe topurile de muzică
+    clue: Numele agenției franceze pentru deșeuri nucleare
+    clue: Numele de scenă al Mariei Oteanu
+  [28/250] [OK] answer: ESOP
+    clue: Povestirea cu tâlc despre animale
+    clue: Autorul poveștilor cu înțelepciune
+    clue: Povestirea moralizatoare din Grecia
+  [29/250] [OK] answer: EVU
+    clue: Eu cu V
+    clue: Pronume + vers
+    clue: Eu, presărat cu V
+  [30/250] [OK] answer: FAY
+    clue: Acea zână în engleză
+    clue: Acea apariție efemeră, descrisă ca „fairy”
+    clue: Acea nume scurt, de tip feminin, cu ecou de basm
+  [31/250] [OK] answer: INAR
+    clue: Cultivatorul pe un sol inar
+    clue: Cultivatorul și rezistența inar
+    clue: Cultivatorul în fața inarului
+  [32/250] [OK] answer: CARAION
+    clue: Poet purtător
+    clue: Poet cu sarcină
+    clue: Poet și zvon de greutate
+  [33/250] [OK] answer: CICO
+    clue: Băutură la pachet, de la producătorul de deserturi pentru copii
+    clue: Băutură cu aromă de ciocolată, formată în cutii de mic dejun
+    clue: Băutură ce poartă numele unui brand popular de ciocolată lichidă
+  [34/250] [OK] answer: CUC
+    clue: Scriitoare cu glas de cuib
+    clue: Scriitoare cu ochi roșii
+    clue: Scriitoare cu pene de hârtie
+  [35/250] [OK] answer: EMINESCU
+    clue: Nume cu importantă literară în România
+    clue: Autor cu importantă pentru limba română
+    clue: Figură cu importantă în poezia națională
+  [36/250] [FAIL] answer: MONTEFIORE
+  [37/250] [OK] answer: ARIESANU
+    clue: Pasăre din Arieș
+    clue: Pasăre ce își face cuib lângă Arieș
+    clue: Pasăre de munte așezată în Țara Arieșului
+  [38/250] [OK] answer: GOYA
+    clue: Important pictor spaniol
+    clue: Important satirist al epocii
+    clue: Important oraș argentinian
+  [39/250] [OK] answer: NENA
+    clue: Cântăreață cu hit „Luftballons”
+    clue: Cântăreață germană, anii ’80
+    clue: Cântăreață de la Berlin, „99 baloane”
+  [40/250] [OK] answer: ACE
+    clue: În cristale
+    clue: Fâșii de cristale ascuțite
+    clue: Top de joc ascuns în cristale
+  [41/250] [OK] answer: NEGUROS
+    clue: Apă, după timp
+    clue: Cer, în timp
+    clue: Culoare de timp
+  [42/250] [OK] answer: OLARU
+    clue: Meseria de lut, și nume de scriitoare
+    clue: Lucrător cu lut, și nume de scriitoare
+    clue: Sat din Botoșani, și nume de scriitoare
+  [43/250] [OK] answer: MICU
+    clue: Poet de talie mică
+    clue: Poet cu patru litere
+    clue: Poet ascuns în micuț
+  [44/250] [OK] answer: IUGA
+    clue: Risipe de apă curgătoare
+    clue: Pierderea apei pe traseu
+    clue: Deșertăciune hidrică în vale
+  [45/250] [OK] answer: EROU
+    clue: Personajul cu rol de salvare
+    clue: Personajul dintr-un roman de aventuri
+    clue: Personajul care primeşte medalia
+  [46/250] [OK] answer: URA
+    clue: Se transmite cu ușurință
+    clue: Poate fi transmis fără contact fizic
+    clue: Se transmite și rămâne în suflet
+  [47/250] [OK] answer: STANCU
+    clue: Autor al poeziei „Copacii”
+    clue: Nume de familie în semnătură la „Copacii”
+    clue: Scriitor al versurilor cu titlul „Copacii”
+  [48/250] [OK] answer: PROMOROACA
+    clue: Strat de nuanță maro în pământ
+    clue: Strat ce acoperă rădăcinile în grădină
+    clue: Strat întunecat, fertil, sub frunze
+  [49/250] [OK] answer: IOAN
+    clue: Figură evanghelică
+    clue: Figură din Noul Testament
+    clue: Figură clasică a literaturii române
+  [50/250] [OK] answer: LAL
+    clue: Scriitor de litere, nu de cuvinte
+    clue: Autor cu inițialele L.A.L.
+    clue: Penală de scriitor, trei litere
+  [51/250] [OK] answer: IVANESCU
+    clue: Vremea cu sufixul obișnuit de nume de familie
+    clue: Vremea – iar în aceeași linie, un nume cu „-escu”
+    clue: Vremea, și totodată nume de familie românesc
+  [52/250] [OK] answer: NANA
+    clue: Numele de leagăn cu două a
+    clue: Numele francez al bunicii, cu trei litere
+    clue: Numele pe care îl primește uneori un robot de jucărie
+  [53/250] [OK] answer: ARC
+    clue: Curba din dotarea vânătorului
+    clue: Sprijin din dotarea unui pod
+    clue: Element de dotare ce poate forma o curbă
+  [54/250] [OK] answer: TALIANU
+    clue: Poet cu nume de familie
+    clue: Poet în stil italian
+    clue: Poet al versului fără margine
+  [55/250] [OK] answer: ONESA
+    clue: Floare albă de munte, adesea pomenită în versuri
+    clue: Lăstar de flori ce împodobește pajiștile de la poalele Carpaților
+    clue: Florăreață de pe versuri, legată de dor și speranță
+  [56/250] [OK] answer: SAVA
+    clue: Poet de pe malul Dunării
+    clue: Vers curgător al poetului
+    clue: Cuvânt de poet pe harta hidrografică
+  [57/250] [OK] answer: TAMAS
+    clue: Interpretul cu prenume maghiar
+    clue: Interpretul al cărui nume nu poartă diacritice
+    clue: Interpretul menționat în catalogul de muzică de est
+  [58/250] [OK] answer: IANCU
+    clue: Nume de haiduc și de compozitor
+    clue: Prenume al unui haiduc și al unui compozitor de muzică experimentală
+    clue: Nume întâlnit la un haiduc și la un compozitor de sonate
+  [59/250] [OK] answer: NITA
+    clue: Filozof și mineral
+    clue: Filozof, dar și sat
+    clue: Filozof de piatră
+  [60/250] [OK] answer: PATINATORI
+    clue: Sportivi pe suprafețe care alunecă
+    clue: Sportivi cu lame, nu cu cuțite
+    clue: Sportivi ce nu‑și lasă amprenta pe iarbă
+  [61/250] [OK] answer: AVALANSA
+    clue: Masă înzăpezită ce alunecă spre vale
+    clue: Masă care nu rămâne statică, ci curge în avalanșă
+    clue: Masă sălbatică de zăpadă, nu de lemn
+  [62/250] [OK] answer: ANALE
+    clue: Registru de scriere
+    clue: Colecție de scriere istorică
+    clue: Volum de scriere
+  [63/250] [OK] answer: MOINA
+    clue: Clipă de timp
+    clue: Interval scurt de timp
+    clue: Durată scurtă de timp
+  [64/250] [OK] answer: ISAC
+    clue: Tabloul cu monede
+    clue: Tabloul în care se ascunde un sac
+    clue: Tabloul cu pânză și buzunar
+  [65/250] [OK] answer: OALE
+    clue: Vase de gătit la foc
+    clue: Vase pentru ciorbă
+    clue: Vase cu mâner gros
+  [66/250] [OK] answer: STAN
+    clue: Interpretă sat în limba otomană
+    clue: Interpretă grup de cetățeni, ca în Pakistan
+    clue: Interpretă Laurel, în comedie
+  [67/250] [OK] answer: ACS
+    clue: Peisaj abreviat
+    clue: Inițialele peisajului
+    clue: Scurt pentru peisaj
+  [68/250] [OK] answer: USAN
+    clue: Statul unit + articolul nehotărât
+    clue: Unirea a două abreviere, una americană
+    clue: Abreviere pentru Uniunea Statelor și articolul masculin
+  [69/250] [OK] answer: ALBU
+    clue: Poetă cu nume de culoare
+    clue: Poetă cu inițiale A.L.
+    clue: Poetă a cărții cu copertă albă
+  [70/250] [OK] answer: CAR
+    clue: Conform cu roțile, dar fără motor
+    clue: În conformitate cu tracţiunea animală
+    clue: Conform, dar nu e bicicletă
+  [71/250] [OK] answer: CRIVAT
+    clue: Albastru de vânt
+    clue: Pigmentul vântului
+    clue: Metalul vântului
+  [72/250] [OK] answer: ALUNECOASA
+    clue: Suprafață alunecoasă
+    clue: Suprafață ce alunecă sub greutate
+    clue: Suprafață fără frecare
+  [73/250] [OK] answer: ZAPADA
+    clue: Precipitație ce nu udă solul
+    clue: Precipitație căzută din înalt, fără bălți
+    clue: Precipitație ce se așterne lin, tot alb
+  [74/250] [OK] answer: RAM
+    clue: Creangă cu coarne
+    clue: Memorie pe creangă
+    clue: Lovitură prin creangă
+  [75/250] [OK] answer: ALUNECOASA
+    clue: Suprafață alunecoasă, nu gheață
+    clue: Alune + coasă = tip de suprafață
+    clue: Suprafață ce alunecă sub pași obosiți
+  [76/250] [OK] answer: MENIUC
+    clue: Nume de familie, ca Stepa
+    clue: În registru, lângă Stepa
+    clue: Patronimic ce însoțește pe Stepa
+  [77/250] [OK] answer: RACITA
+    clue: Perioadă cu temperaturi scăzute
+    clue: Etapă în care se simte răcoarea
+    clue: Fază rece a calendarului
+  [78/250] [OK] answer: ANUAR
+    clue: Publicație ce ține pasul cu anul
+    clue: Publicație ce adună nume și date
+    clue: Publicație cu pagini dedicate fiecărui an
+  [79/250] [OK] answer: NEIOS
+    clue: Acoperit de verde
+    clue: Acoperit, dar proaspăt
+    clue: Acoperit și neîncărcat de experiență
+  [80/250] [OK] answer: MINUS
+    clue: Ambient de cercetare
+    clue: Locul în care trăiește o specie
+    clue: Set de variabile și biblioteci, ambient de programare
+  [81/250] [OK] answer: OROS
+    clue: Pictoriță de peisaje montane
+    clue: Pictoriță cu nuanțe aurii
+    clue: Pictoriță grecească
+  [82/250] [OK] answer: CER
+    clue: Spațiul cer la birou
+    clue: Spațiul cer în picturi de apus
+    clue: Spațiul cer ca răspuns la întrebare
+  [83/250] [OK] answer: RAU
+    clue: Volumul e prost
+    clue: Măsura sonoră, departe de bun
+    clue: Nivel de zgomot neplăcut
+  [84/250] [FAIL] answer: ELEI
+  [85/250] [OK] answer: ZAGARA
+    clue: Blană de iarnă, și nume de sat
+    clue: Blană pentru sărbători, dar și veche denumire a unei pelerine
+    clue: Blană de vânat, dar și element al vestimentației tradiționale
+  [86/250] [OK] answer: MOS
+    clue: Personaj de iarnă cu barbă albă
+    clue: Personaj sărbătos, tatăl satului
+    clue: Personaj din folclor, sinonim pentru bătrân
+  [87/250] [OK] answer: ALIFANTIS
+    clue: Muzician cu nume de insectă
+    clue: Muzician și personaj de basm
+    clue: Muzician, dar și titlu artistic
+  [88/250] [OK] answer: PUC
+    clue: Obiect de la marginea hanorcului
+    clue: Obiect ce adăpostește monede
+    clue: Obiect mic, ascuns în costumul de lucru
+  [89/250] [OK] answer: NOR
+    clue: Masă de adevăruri a funcției logice ce nu dă 1 decât când ambele intrări sunt 0
+    clue: Masă de apă în aer, ce blochează soarele
+    clue: Masă servită la înălțimi, deasupra cerului
+  [90/250] [OK] answer: VIANU
+    clue: Critic de arte, inițial TV
+    clue: Critic de vin, dar nu de must
+    clue: Critic literar și etichetă de vin
+  [91/250] [OK] answer: DEMETRESCU
+    clue: Poemul cu metru ascuns
+    clue: Poemul de metru și -escu
+    clue: Poemul fără rimă, dar cu metru
+  [92/250] [OK] answer: ACE
+    clue: Cristale în mâna câștigătorului
+    clue: Strălucirea cristalină a asului
+    clue: Foaia cu cristale, dar nu cea de hârtie
+  [93/250] [OK] answer: ONO
+    clue: Artistă ce spune de două ori „nu” în engleză
+    clue: Artistă a cărei inițiale sunt Y.O.
+    clue: Artistă și activistă pentru pace
+  [94/250] [OK] answer: MOORE
+    clue: Renumit pentru 007
+    clue: Renumit pentru legea tranzistorilor
+    clue: Renumit ca cofondator al Intel
+  [95/250] [OK] answer: RAICU
+    clue: Poet sălbatic
+    clue: Versuri cu blană
+    clue: Cântec de câine de munte
+  [96/250] [OK] answer: ASUDAT
+    clue: Aburit, în dialectul local
+    clue: Fiert în abur, cu sufix diferit
+    clue: Abur, dar cu „s” la început
+  [97/250] [OK] answer: ORE
+    clue: Unităţi de timp pe ceas
+    clue: Unităţi de lucru în programul zilnic
+    clue: Unităţi în care se împarte ziua de muncă
+  [98/250] [OK] answer: MACEDONSKI
+    clue: Pustie de versuri
+    clue: Pustie macedonă
+    clue: Pustie, dar nu de nisip
+  [99/250] [OK] answer: GRIGORESCU
+    clue: Pictor al peisajului românesc
+    clue: Pictor cu prenume de sărbătoare
+    clue: Pictor cu sufix specific românesc
+  [100/250] [OK] answer: RADU
+    clue: Cântăreață cu prenume masculin
+    clue: Cântăreață ce poartă numele unui domn
+    clue: Cântăreață și domn prin același nume
+  [101/250] [OK] answer: ISPIR
+    clue: Tânără ce te‑ispiră
+    clue: Suflarea tânără
+    clue: Tânără cu glas de inspirație
+  [102/250] [OK] answer: TAMAIOS
+    clue: Varietate cu miros de tămâie
+    clue: Varietate numită după tămâie
+    clue: Varietate aromată, tămâioasă
+  [103/250] [OK] answer: PORUMB
+    clue: Plantă cu urechi de aur
+    clue: Plantă cu fire galbene
+    clue: Plantă ce dă popcorn
+  [104/250] [OK] answer: EREI
+    clue: Eri pe vârfuri de munți
+    clue: Munți de fapte, îndrăzneţi înălțaţi
+    clue: Pe cărări de munţi, erau curajoşi
+  [105/250] [OK] answer: STOL
+    clue: Formaţiune de mobilier
+    clue: Formaţiune stâncoasă
+    clue: Formaţiune pentru servirea mesei
+  [106/250] [OK] answer: DOREN
+    clue: Toamna și dor în
+    clue: Toamnă, dor în
+    clue: Toamnă lăsă dor în
+  [107/250] [OK] answer: PALER
+    clue: Scriitor, dar nu foarte colorat
+    clue: Scriitor de nivel intermediar
+    clue: Scriitor ce se decolorează ușor
+  [108/250] [FAIL] answer: RAS
+  [109/250] [OK] answer: ENESCU
+    clue: Compozitor în eșec
+    clue: Compozitor și corp ceresc
+    clue: Compozitor al unei sărbători pentru violă
+  [110/250] [OK] answer: CRETIA
+    clue: Norii de praf pe tablă
+    clue: Norii de nori peste sit
+    clue: Norii de var deasupra
+  [111/250] [OK] answer: SUR
+    clue: Om cu auz închis
+    clue: Persoană fără auz
+    clue: Om mut, lipsit de auz
+  [112/250] [OK] answer: GRAPE
+    clue: Unelte de cules, nu de tăiat
+    clue: Unelte ale viei, nu ale tâmplarului
+    clue: Unelte de recoltă, nu de sculptat
+  [113/250] [OK] answer: SPIC
+    clue: Inflorescență ascuțită a grâului
+    clue: Vârf de inflorescență, adesea confundat cu țepușă
+    clue: Culmea inflorescenței de iarbă, folosită și ca săgeată improvizată
+  [114/250] [OK] answer: RACORITA
+    clue: Vreme de răcoriță
+    clue: Vreme fără foc
+    clue: Vreme ce nu arde
+  [115/250] [OK] answer: RECOLTE
+    clue: Produsele câmpului
+    clue: Produsele unui calcul
+    clue: Produsele anotimpului
+  [116/250] [OK] answer: GUTUI
+    clue: Rod al unui arbore de toamnă
+    clue: Ceea ce se desprinde dintr-un arbore, dar nu e frunză
+    clue: Produs al unui arbore, cu nume ce seamănă cu „guta”
+  [117/250] [OK] answer: RIMBAUD
+    clue: Poet cu ritm în baude
+    clue: Poet cu RIM și baud
+    clue: Poet al rimei și al vitezei de transmisie
+  [118/250] [OK] answer: ORE
+    clue: Trecerea cronometrată
+    clue: Trecerea ce împarte ziua
+    clue: Trecerea în care numărăm timpul
+  [119/250] [FAIL] answer: SPIN
+  [120/250] [OK] answer: GRASS
+    clue: Înainte, covor verde al naturii
+    clue: Înainte, plantă de fumat legală
+    clue: Înainte, verde ce acoperă terenul
+  [121/250] [OK] answer: CIOCULESCU
+    clue: Poet cu cioc în nume
+    clue: Poet cu sufix de -escu
+    clue: Poet și critic, nu doar versuri
+  [122/250] [OK] answer: URSU
+    clue: Regizor cu nume de mamifer sălbatic
+    clue: Regizor al unei producții cu blăniță
+    clue: Regizor, uneori, urs de scenă
+  [123/250] [OK] answer: CROATIA
+    clue: Țară cu coastă la Adriatică și cu dragon în stema
+    clue: Țară al cărei steag are tricolor roșu‑alb‑albastru și o coroană de șapte petale
+    clue: Țară a cărei capitală, Zagreb, poartă numele unei bătălii medievale
+  [124/250] [OK] answer: PAG
+    clue: Insulă, abreviere în citări
+    clue: Insulă de text, prescurtat
+    clue: Loc izolat, abreviere în carte
+  [125/250] [OK] answer: RAU
+    clue: Râu de ape
+    clue: Apă curgătoare, rău
+    clue: Fără ape, rău
+  [126/250] [OK] answer: CASTELE
+    clue: Clădire cu turnuri
+    clue: Clădire de nisip pentru copii
+    clue: Clădire din șah
+  [127/250] [OK] answer: SISAK
+    clue: Oraș la confluența Sava‑Kupa
+    clue: Oraș unde s‑a înfruntat armata nazistă în 1941
+    clue: Oraș industrial de pe malul Savii
+  [128/250] [OK] answer: CANOTAJ
+    clue: Nume de sport cu barcă și vâsle
+    clue: Nume al disciplinei de remă pe apă
+    clue: Nume de activitate ce implică rularea bărcii
+  [129/250] [OK] answer: ROSII
+    clue: Vinuri de culoare intensă
+    clue: Vinuri ale stângii
+    clue: Mâncăruri ce însoțesc vinuri
+  [130/250] [OK] answer: ODE
+    clue: Cântări de laudă
+    clue: Versuri înălțătoare
+    clue: Strofe lirice de admirație
+  [131/250] [OK] answer: ZAGREB
+    clue: Oraș – viraj de rebeliune
+    clue: Oraș cu „zag” în cale și „reb” la luptă
+    clue: Oraș în care „zag” și „reb” se întâlnesc
+  [132/250] [OK] answer: BADEN
+    clue: Importantă balneo‑germana
+    clue: Importantă de familie
+    clue: Importantă pentru săruri termale
+  [133/250] [OK] answer: AVENE
+    clue: Datorită izvoarelor termale
+    clue: Datorită apei minerale
+    clue: Datorită sănătății pielii
+  [134/250] [OK] answer: AVAR
+    clue: Reprezentant cu mâna strâmtă
+    clue: Reprezentant al strâmtăciunii
+    clue: Reprezentant al zgârceniei
+  [135/250] [OK] answer: CAL
+    clue: Dintre animale, grajdul său
+    clue: Dintre unităţi, ___ măsoară energia
+    clue: Dintre piese de şah, ___ sare
+  [136/250] [OK] answer: LADISLAU
+    clue: Rege al legendelor maghiare
+    clue: Rege fără coroană, dar cu nume de sfânt
+    clue: Rege în istorie, nu în pachetul de cărți
+  [137/250] [OK] answer: CRES
+    clue: Dintre verbele de creștere, eu ...
+    clue: Dintre formele cu sufix -esc, cea ce semnifică dezvoltare
+    clue: Dintre răspunsuri, cel ce înseamnă „îmi cresc”
+  [138/250] [FAIL] answer: FOTBAL
+  [139/250] [OK] answer: RADIC
+    clue: Om cu rădăcini adânci
+    clue: Om sub semnul radicalului
+    clue: Om, dar și rădăcină
+  [140/250] [OK] answer: DRAVA
+    clue: Unul dintre afluenții Dunării
+    clue: Unul dintre frontierele naturale ale Austriei
+    clue: Unul dintre fluviile ce străbat Pannonia
+  [141/250] [OK] answer: SARE
+    clue: Dintre sărituri, una albă
+    clue: Dintre condimente, cea ce nu se topește
+    clue: Dintre acţiuni, una ce sare
+  [142/250] [OK] answer: ZERI
+    clue: Față goală de cifre
+    clue: Cifră ce rămâne când nu se face nimic
+    clue: Număr de pe fața ceasului când nu arată ora
+  [143/250] [OK] answer: TRAKOSCAN
+    clue: Mini‑castel de nisip din Trakoș
+    clue: Castel cu izvor de tracoș
+    clue: Castel de sticlă al pescărușului
+  [144/250] [OK] answer: INS
+    clue: Abrev. statistică pentru individ
+    clue: Nota de subsol la definiția individ
+    clue: Sigla ce însoțește termenul individ în registre
+  [145/250] [OK] answer: TING
+    clue: Cuvânt scurt, sonor, ca al unui clopoțel mic
+    clue: Cuvânt onomatopeic asemănător cu „ding”
+    clue: Cuvânt ce redă ecoul unui metal fin lovit
+  [146/250] [OK] answer: TRAI
+    clue: În viață, nu renunță
+    clue: Ce faci când ești în viață?
+    clue: Starea din viață: ___
+  [147/250] [OK] answer: RATA
+    clue: Dintre rozătoare, femela
+    clue: Dintre valori, proporția
+    clue: Dintre plăți, una lunară
+  [148/250] [OK] answer: SENJ
+    clue: Oraș din senin + J (județ)
+    clue: Oraș format din cuvântul clar și abrevierea județului
+    clue: Oraș, scurt pentru senin și județ
+  [149/250] [OK] answer: NEV
+    clue: Punct pigmentat, tumoare
+    clue: Marcaj solar, tumoare
+    clue: Semn cutanat, tumoare
+  [150/250] [OK] answer: POLO
+    clue: Joc cu cai și minge
+    clue: Joc de modă cu guler scurt
+    clue: Joc de mici cercuri de mentă
+  [151/250] [OK] answer: GUBEC
+    clue: Revoluționar din 1573, nume de familie
+    clue: Revoluționar al poporului, legat de răsăritul Europei
+    clue: Revoluționar cu patru litere, cunoscut din istorie
+  [152/250] [OK] answer: APE
+    clue: Resursă curgătoare
+    clue: Resursă de răcorire
+    clue: Resursă pentru gătit
+  [153/250] [OK] answer: VIN
+    clue: Băutură și formă de „a veni”
+    clue: Băutură în cutie, și cod al mașinii
+    clue: Băutură roșie sau conjugarea lui „a veni” la 1‑a persoană
+  [154/250] [OK] answer: STRUDELE
+    clue: Plăcintă cu foi răsucite
+    clue: Plăcintă încolăcită ca un șurub
+    clue: Plăcintă ce se înfășoară în aluat
+  [155/250] [OK] answer: MOHOR
+    clue: Actriță cu ciocan de lemn
+    clue: Actriță a şantierului
+    clue: Actriță ce loveşte cu ghearele
+  [156/250] [OK] answer: COCEA
+    clue: Actriță, eu cocea
+    clue: Actriță și forma arhaică a verbului 'a coace'
+    clue: Actriță, răspuns la întrebarea 'Ce făcea la cuptor?'
+  [157/250] [OK] answer: ANA
+    clue: Principesă cu dublă „a”
+    clue: Principesă în balerina
+    clue: Principesă, pe scurt, la final
+  [158/250] [OK] answer: UMBRA
+    clue: Lipsă de lumină
+    clue: Lipsă în timpul eclipsei
+    clue: Lipsă pe perete când soarele apune
+  [159/250] [OK] answer: GOGA
+    clue: Cântărață de cuvinte
+    clue: Cântărață veche
+    clue: Cântărață din Moldova
+  [160/250] [OK] answer: ORAR
+  [161/250] [FAIL] answer: IRIS
+  [162/250] [OK] answer: COSTEA
+    clue: Soprană a scheletului
+    clue: Soprană a toracului
+    clue: Soprană, nu vocală, ci osoasă
+  [163/250] [OK] answer: EDIL
+    clue: Consilier în proiecte urbane
+    clue: Consilier al autorităților locale în construcții
+    clue: Consilier pentru dezvoltare imobiliară
+  [164/250] [OK] answer: ARM
+    clue: Nu coapsă, ci membru superior
+    clue: Se poate încărca, dar nu este coapsă
+    clue: Prescurtare de arhitectură de procesoare, nu denumirea coapsei
+  [165/250] [OK] answer: URSA
+    clue: Critic cu blană
+    clue: Critic al cerului nocturn
+    clue: Critic în haina de blană
+  [166/250] [OK] answer: BIO
+    clue: Element de prefix ce sugerează viață
+    clue: Element de etichetă pentru produse organice
+    clue: Element de profil pe rețele sociale
+  [167/250] [OK] answer: MITU
+    clue: Jucătoare de scenă, nume scurt
+    clue: Jucătoare de cărţi, dar nu e damă
+    clue: Jucătoare din România, prenume de patru litere
+  [168/250] [OK] answer: OLTEAN
+    clue: Soprană pe malul Oltului
+    clue: Vocală înaltă din Oltenia
+    clue: Nota înaltă a unui loc cu râu Olt
+  [169/250] [OK] answer: SAIA
+    clue: Mânere învelite în ață
+    clue: Ață de tăiat
+    clue: Fâșă metalică, ca o ață
+  [170/250] [OK] answer: TAIA
+    clue: Secționa – știință și tăiere
+    clue: Secționa în laborator, nu în fabrică
+    clue: Secționa și a despărţi, nu a îmbina
+  [171/250] [OK] answer: GURAN
+    clue: Actriță de gardă
+    clue: Rol de protecție pentru actriță
+    clue: Actriță care veghează scena
+  [172/250] [OK] answer: BOI
+    clue: Animal de tracţiune cu fardă de pământ
+    clue: Băieţi în uniformă de la sat
+    clue: Fardă de câmp, nu de soldaţi
+  [173/250] [OK] answer: ZEANI
+    clue: Renumite ființe ale basmelor
+    clue: Renumită adunare de spirite feminine
+    clue: Renumite creaturi ale folclorului
+  [174/250] [OK] answer: PAUCA
+    clue: Sprijin al gimnastei în sărituri
+    clue: Bară pentru gimnastă, dar și bucată de lemn
+    clue: Echipament al gimnastei ce poate fi și parte a unui șopron
+  [175/250] [OK] answer: MARIN
+    clue: Albastru de mare pentru voce înaltă
+    clue: Nume masculin ce răsună în arii de soprană
+    clue: Culoare de ocean, dar nu pentru pictură, ci pentru un cântec de soprană
+  [176/250] [OK] answer: BOTEZ
+    clue: Inițierea unei narațiuni
+    clue: Ritual cu apă pentru prozatoare
+    clue: Prima ceremonie a autoarei
+  [177/250] [OK] answer: RACILA
+    clue: Canotoare din lemn
+    clue: Canotoare cu fund plat
+    clue: Canotoare de Delta
+  [178/250] [OK] answer: HAGI
+    clue: Actriță cu titlu de pelerin
+    clue: Actriță ce poartă un onor religios
+    clue: Actriță, nu de teatru, ci de credință
+  [179/250] [OK] answer: COTIGA
+    clue: Căruță fără cai
+    clue: Căruță de lemn, dar nu cu roți
+    clue: Căruță de iarnă, dar nu sanie
+  [180/250] [OK] answer: OSET
+    clue: Locuitor din set
+    clue: Din Caucaz, locuitor al unui stat mic
+    clue: Locuitor din zona cu ‘O’ și ‘S’
+  [181/250] [OK] answer: RUG
+    clue: Tulpina de iarbă, ca un covor
+    clue: Tulpina de fân, fără fân
+    clue: Tulpina vegetală, nu verde
+  [182/250] [OK] answer: DUMA
+    clue: Cântăreață a epicului rusesc
+    clue: Cântăreață a adunării legiuitorului
+    clue: Cântăreață a baladelor spre Moscova
+  [183/250] [OK] answer: MACI
+    clue: Actriță cu nume de plantă roșie
+    clue: Nom de scenă pentru floră de câmp
+    clue: Actriță – și semințe roșii
+  [184/250] [OK] answer: INNA
+    clue: Nume de scenă cu dublu N
+    clue: Nume de artist ce începe cu I
+    clue: Nume popular în EDM, scris cu două N
+  [185/250] [OK] answer: OLUT
+    clue: Ce ulcică pe limbă, dar nu e condiment
+    clue: Ce ulcică setea în serile reci
+    clue: Ce ulcică glasul cu spumă
+  [186/250] [OK] answer: OROS
+    clue: Culoarea scrimeră
+    clue: Nuanta scrimeră
+    clue: Strălucire de scrimeră
+  [187/250] [OK] answer: RUSU
+    clue: Cântăreaţă cu nume de naționalitate
+    clue: Cântăreaţă de la piaţa cu măsuri vechi
+    clue: Cântăreaţă – articol hotărât pe un rus
+  [188/250] [OK] answer: CARTAS
+    clue: Jucătoare de noroc în pachet de hârtie
+    clue: Actrițe fără scenă, în mână de gamer
+    clue: Jucătoare de șah în plic, nu pe tablă
+  [189/250] [OK] answer: ALBU
+    clue: Actriță cu nume de nuanță
+    clue: Actriță din spectacolul Alb
+    clue: Actriță ce nu poartă roșu
+  [190/250] [OK] answer: AERARI
+    clue: Răcirea prin suflare
+    clue: Răcirea cu curenţi de aer
+    clue: Răcirea, cu ‘aer’ în interior și ‘i’ la sfârşit
+  [191/250] [OK] answer: AVRAM
+    clue: Patriarh al canotoarelor
+    clue: Nume din cântecul cu canotoare
+    clue: Autor de versuri despre canotoare
+  [192/250] [OK] answer: MARIA
+    clue: Prințesă și rugăciune
+    clue: Nume regal, cuvânt din „Ave ___”
+    clue: Titlu nobil, refren al unui cântec celebru
+  [193/250] [OK] answer: SEPTIMA
+    clue: Interval de șapte note
+    clue: Interval de șapte ani între evenimente
+    clue: Interval de șapte trepte pe scară
+  [194/250] [OK] answer: MIM
+    clue: Actor fără replică
+    clue: Actor al gesturilor
+    clue: Actor pe scenă mută
+  [195/250] [OK] answer: HAPI
+    clue: Unul cu față zâmbitoare online
+    clue: Unul dintre zeităţi, vestit pe Nil
+    clue: Unul din grafica mesajelor, simbol al bucuriei
+  [196/250] [OK] answer: RUHA
+    clue: Violonist fără arcuș, în maghiară
+    clue: Violonist fără coarde, dar cu haine
+    clue: Violonist, dar nu cu sunet, ci cu material
+  [197/250] [OK] answer: NUOR
+    clue: Negarea unui nor
+    clue: Nor, dar în sens logic, nu cel meteorologic
+    clue: Ce apare când „nor” devine „nu OR”
+  [198/250] [OK] answer: ERINII
+    clue: Numele cu dublu i la final, ca în ‘Marii’
+    clue: Numele de familie ce apare în poveștile populare
+    clue: Numele gravat pe o placă de lemn
+  [199/250] [OK] answer: AZEMA
+    clue: Actriță veche, nu modernă
+    clue: Actriță de pe pagină, nu de pe scenă
+    clue: Actriță în sens lingvistic, nu în lumină
+  [200/250] [OK] answer: AGI
+    clue: Ofițeri de informații
+    clue: Ofițeri în spionaj
+    clue: Ofițeri sub acoperire
+  [201/250] [OK] answer: TAB
+    clue: Transportor de informație digitală
+    clue: Transportor de etichete pe dosar
+    clue: Transportor de file în browser
+  [202/250] [OK] answer: SELENA
+    clue: Doilea luminar al nopții
+    clue: Doilea semiconductor cu simbolul Se
+    clue: A doua față a lunii
+  [203/250] [OK] answer: CADA
+    clue: Vas de lut, cu deschidere largă
+    clue: Vas al apelor, dar nu navă
+    clue: Vas de pământ pentru păstrarea lichidului
+  [204/250] [OK] answer: GAS
+    clue: Combustibil în gospodărie
+    clue: Factură de la gospodărie
+    clue: Rețea de distribuție a gospodăriei
+  [205/250] [OK] answer: EPODA
+    clue: Secțiune a teatrului
+    clue: Fragment de piesă în teatrul clasic
+    clue: Diviziune a dramaturgiei din teatrul antic
+  [206/250] [OK] answer: CALE
+    clue: Cuvânt ce precede ferată
+    clue: Traseu – și parte a expresiei ferată ...
+    clue: Drum, și element al sintagmei ferată
+  [207/250] [OK] answer: MARCU
+    clue: Poet și marcă de carte
+    clue: Autor de versuri, cu nume asemănător cu etichetă
+    clue: Poet și reziduu din vinificație
+  [208/250] [OK] answer: GALAN
+    clue: Prozator de la curte, nu de la hârtie
+    clue: Prozator al galopului, nu al cărților
+    clue: Prozator cu grai de gală, nu cu stil de text
+  [209/250] [OK] answer: STERE
+    clue: Volumul unui prozator, nu al sunetului
+    clue: Cantitate de lemn pentru prozator, nu de cuvinte
+    clue: Măsura focului pe care îl scrie un prozator
+  [210/250] [OK] answer: GUGA
+    clue: Nume de scenă al poetului
+    clue: Cuvânt repetat în poezia poetului
+    clue: Alint pentru poetul cu versuri scurte
+  [211/250] [OK] answer: EMPSON
+    clue: Poet al ambiguității
+    clue: Poet cu „em” la început
+    clue: Poet cu „son” la final
+  [212/250] [OK] answer: SINATRA
+  [213/250] [FAIL] answer: MEG
+  [214/250] [OK] answer: UZA
+    clue: Starea de a folosi
+    clue: Mod de folosire
+    clue: Acțiune de a folosi
+  [215/250] [OK] answer: NEAGU
+    clue: Cel ce nu pune rime la pagini
+    clue: Autor de proză cu inițialele N.
+    clue: Numele din clasamentul „prozatori de seamă”
+  [216/250] [OK] answer: PHOEBE
+    clue: Dintre sateliții lui Saturn, una
+    clue: Dintre păsările din familia Muscicapidae, una
+    clue: Dintre personajele din Friends, una
+  [217/250] [OK] answer: PRAG
+    clue: Partea dintre podea și ușă
+    clue: Partea de la care începe orice măsură
+    clue: Partea ce separă interiorul de exterior
+  [218/250] [OK] answer: TARM
+    clue: Zona de turnare a mărfurilor pe apă
+    clue: Zona unde se întâlnește apă cu uscatul
+    clue: Zona de descărcare a navei
+  [219/250] [OK] answer: SCOC
+    clue: Canal de scurgere
+    clue: Canal modest, nu navigabil
+    clue: Canal fără semnal
+  [220/250] [OK] answer: ADUS
+    clue: Aplecat, nu căzut – adus
+    clue: Aplecat pe margine, adus din depărtare
+    clue: Aplecat spre jug, iar eu am adus
+  [221/250] [OK] answer: MIE
+    clue: Număr cu trei zerouri
+    clue: Număr în sistem metric pentru kilometru
+    clue: Număr ce înlocuiește „mult” în expresii
+  [222/250] [OK] answer: EDDA
+    clue: Numele din saga nordică
+    clue: Numele colecției de poeme scandinave
+    clue: Numele ce apare în mitologia vikingă
+  [223/250] [OK] answer: RALEA
+    clue: Sociologul ar numi aceasta reală, nu ipotetică
+    clue: Cuvânt ce pare adjectiv, dar e substantiv fără diacritice
+    clue: Echivalentul lui „reală” când diacriticele lipsesc
+  [224/250] [OK] answer: GEM
+    clue: Fiu prețios
+    clue: Fiu de lumină rar
+    clue: Fiu, când suferă
+  [225/250] [OK] answer: RIGEL
+    clue: Stea albastră din Orion
+    clue: Stea numită și „piciorul stâng” al vânătorului
+    clue: Stea ce dă nume unui telescop de amatori
+  [226/250] [OK] answer: CARP
+    clue: Alege să te plângi, prinde peștele
+    clue: Opt, nu ca cifră, ci ca specie acvatică
+    clue: Crap, 8 nu înseamnă număr ci pește
+  [227/250] [OK] answer: MUNIN
+    clue: Unul dintre culmile mici ale țării
+    clue: Unul cu pantă ascunsă, în relief
+    clue: Unul ce ridică drumul spre înălțimi
+  [228/250] [OK] answer: GALES
+    clue: Actriță cu prenume de furtună
+    clue: Nume de actriță și de vânt puternic
+    clue: Furtună, dar și titlu de actriță
+  [229/250] [OK] answer: AYALA
+    clue: Regizor de film, și sat basc
+    clue: Regizor, dar și nume de familie nobilă din País Vasco
+    clue: Regizor, și denumire a unei comune spaniole
+  [230/250] [OK] answer: MAIA
+    clue: Una dintre cele șapte Pleiade grecești
+    clue: Șapte stele în constelația Taurului
+    clue: Una dintre cele șapte zeițe mitologice
+  [231/250] [OK] answer: ESENIN
+    clue: Poet rus și pește de râu
+    clue: Nume de poet, dar și vietate cu spini în apă
+    clue: Cunoscut ca poet, tot în apele dulci
+  [232/250] [OK] answer: DECEBAL
+    clue: Denumit printr-o întrebare la bal
+    clue: Denumit pe harta Banatului, patru litere
+    clue: Denumit cu inițialele D.C., la început
+  [233/250] [OK] answer: ADAM
+    clue: Criticul căderii din Grădină
+    clue: Critic al primului om
+    clue: Criticul genezei umane
+  [234/250] [OK] answer: PAGAI
+    clue: 
+    clue: 
+    clue: 
+  [235/250] [OK] answer: TOMA
+    clue: Boxer cu prenume de sfânt
+    clue: Boxer și nume de sat
+    clue: Boxer în ring, dar și pe hartă
+  [236/250] [OK] answer: OLA
+    clue: Salut de la un fotbalist
+    clue: Fotbalist, dar cu doar trei litere
+    clue: Strigăt scurt de pe marginea terenului
+  [237/250] [OK] answer: TASSIAN
+    clue: Bariton, de exemplu
+    clue: Bariton, în cor
+    clue: Bariton, tip de voce
+  [238/250] [OK] answer: LOVIN
+    clue: Fotbalist cu dorinţa de a iubi
+    clue: Fotbalist ce loveşte (lovi + n)
+    clue: Fotbalist în joc de cuvinte: lovi și n
+  [239/250] [OK] answer: BENA
+    clue: Fotbalist cu nume de curs de apă montan
+    clue: Fotbalist ce se strecoară ca o benă
+    clue: Fotbalist al echipei cu un șuvoi în nume
+  [240/250] [OK] answer: BLAIER
+    clue: Regizor de evacuare a apei din navă
+    clue: Regizor ce scoate lichid din vas
+    clue: Regizor al instrumentului de pompare a apei
+  [241/250] [OK] answer: RUS
+    clue: Specialist în rușine, fără diacritice
+    clue: Specialist în limba rusă
+    clue: Specialist la frontiera cu steagul roșu
+  [242/250] [OK] answer: ALEASA
+    clue: Selectată din grămadă
+    clue: Selectată la primul pas
+    clue: Selectată, dar nu prin forță
+  [243/250] [OK] answer: ILASCU
+    clue: Politician și pronume la scurt
+    clue: Politician, apoi poruncă de a lăsa
+    clue: Politician, urmat de „lasă” abreviat
+  [244/250] [OK] answer: DAN
+    clue: Rang la karate, cu doi
+    clue: Prenume scurt, cu doi sensuri
+    clue: Da și nu, într-un cuvânt
+  [245/250] [FAIL] answer: VINEA
+  [246/250] [OK] answer: DINU
+    clue: Nume de fotbalist român
+    clue: Prenume al unui portar din Liga 1
+    clue: Cuvânt din catalogul fotbalistilor
+  [247/250] [OK] answer: DAVILA
+    clue: Medic + oraș spaniol
+    clue: Doctor în Avila
+    clue: Abreviere medicală + oraș hispanic
+  [248/250] [OK] answer: BULI
+    clue: Coase și bule
+    clue: Coase în spumă
+    clue: Coase fără fir
+  [249/250] [OK] answer: CAT
+    clue: Cât înalt este etajul?
+    clue: Măsură pentru etaj
+    clue: Cât pe etaj?
+  [250/250] [OK] answer: VALSAN
+    clue: Geograf al unui afluent al Oltului
+    clue: Geograf cu nume de sat din Transilvania
+    clue: Geograf al valului și al sănătății
+Finished 250 answers
+Generated clues for 239/250 answers.
+Evaluating generated clues from /home/radu/storage/git/crosswords/data/results/gen_clues_baseline_gpt-oss_h1.json ...
+Evaluation results: {'num_samples': 250, 'num_scored': 238, 'sbert_mean': 0.6028194820680538, 'sbert_std': 0.06431723547678131}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/gen_clues_baseline_gpt-oss_h1.json ...
+Done.
+FINISHED CPU 617.79 MEM 8103828 MAXMEM 8599740 STALE 81 MAXMEM_RSS 1510288
+<time name="ALL">617840</time>
