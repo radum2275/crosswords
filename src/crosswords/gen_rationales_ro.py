@@ -16,7 +16,6 @@
 import os
 import csv
 import json
-import asyncio
 import argparse
 
 import mellea.stdlib.functional as mfuncs
@@ -38,6 +37,14 @@ from crosswords.backends import (
     build_backend,
     print_models,
     load_json_utf8_relaxed,
+)
+from crosswords.runner import (
+    RateLimiter,
+    throttle_backend,
+    run_throttled,
+    resolve_keys,
+    filter_and_limit,
+    DATASET_TYPE_ALIASES,
 )
 from crosswords.utils import (
     strip_code_fences,
@@ -187,38 +194,6 @@ def load_data(file_name: str) -> Optional[List[Dict[str, Any]]]:
         return None
 
 
-def resolve_keys(data: List[Dict[str, Any]], dataset_type: str) -> Tuple[str, str]:
-    """
-    Work out which field holds the solution and which holds the clue.
-
-    extracted_data.json uses "answer"; baseline-dataset.json uses "solution".
-    The requested --dataset_type decides, but if that key is absent from the
-    data we fall back to whichever of the two is actually present, so a plain
-    {solution, clue} file works regardless of the flag.
-    """
-    preferred = "answer" if dataset_type == "clues" else "solution"
-    sample = data[0] if data else {}
-
-    if preferred in sample:
-        solution_key = preferred
-    elif "solution" in sample:
-        solution_key = "solution"
-    elif "answer" in sample:
-        solution_key = "answer"
-    else:
-        raise KeyError(
-            "Dataset records have neither a 'solution' nor an 'answer' field "
-            f"(found: {sorted(sample.keys())})."
-        )
-
-    if "clue" not in sample:
-        raise KeyError(
-            f"Dataset records have no 'clue' field (found: {sorted(sample.keys())})."
-        )
-
-    return solution_key, "clue"
-
-
 def load_existing(output_filename: str) -> Dict[Tuple[str, str], Dict[str, Any]]:
     """
     Load already-generated records from a previous run, keyed by
@@ -321,9 +296,9 @@ def process_data(
         backend: Backend,
         dataset_type: str,
         num_samples: int = None,
+        min_answer_len: int = 3,
         output_filename: str = "rationales.json",
         batch_size: int = 50,
-        rate_limit: int = 1500,
         resume: bool = False,
 ) -> List[Dict[str, Any]]:
     """
@@ -333,24 +308,25 @@ def process_data(
     :param backend: mellea backend used to call the LLM
     :param dataset_type: "clues" or "baseline" (selects the solution field)
     :param resume: skip pairs that already have a rationale in the output file
+    :param min_answer_len: drop answers shorter than this many characters
     """
 
-    assert dataset_type in ["clues", "baseline"], f"Unknown dataset type: {dataset_type}"
+    if dataset_type not in DATASET_TYPE_ALIASES:
+        raise ValueError(
+            f"Unknown dataset type '{dataset_type}'. Accepted: "
+            f"{', '.join(sorted(DATASET_TYPE_ALIASES))}."
+        )
 
     solution_key, clue_key = resolve_keys(data, dataset_type)
 
     print(f"Using LLM: {backend.model_id}")
     print(f"Dataset type: {dataset_type} (solution field: '{solution_key}')")
-    print(f"Initial number of pairs: {len(data)}")
-
-    # Filter out the very short (<= 2 letter) answers, matching clues_ro.py.
-    data = [item for item in data if len(str(item.get(solution_key, ""))) > 2]
-    print(f"After filtering out short solutions, {len(data)} pairs remain.")
-
-    # Filter first, then truncate, so --num_samples yields exactly that many.
-    if num_samples is not None:
-        data = data[:num_samples]
-        print(f"Limited to {len(data)} pairs (num_samples={num_samples}).")
+    # Drop very short answers, then truncate; filtering first means
+    # --num_samples N yields exactly N items. Pass min_answer_len=1 to keep a
+    # curated sample intact.
+    data = filter_and_limit(
+        data, solution_key, num_samples=num_samples, min_answer_len=min_answer_len
+    )
 
     done = load_existing(output_filename) if resume else {}
     if resume:
@@ -385,29 +361,7 @@ def process_data(
             return_sampling_results=True,
         )
 
-    print(f"Submitting {len(todo)} prompts async (batch_size={batch_size}, rate_limit={rate_limit}/min) ...")
-    sem = asyncio.Semaphore(batch_size)
-    interval = 60.0 / rate_limit
-    ordered = [None] * len(todo)
-
-    async def run_one(i, item):
-        async with sem:
-            try:
-                ordered[i] = (await acall_one(item), item, None)
-            except Exception as e:
-                # Keep one bad item from taking down the whole gather.
-                ordered[i] = (None, item, e)
-
-    async def run_all():
-        tasks = []
-        for i, item in enumerate(todo):
-            if i > 0:
-                await asyncio.sleep(interval)
-            tasks.append(asyncio.create_task(run_one(i, item)))
-        await asyncio.gather(*tasks)
-
-    if todo:
-        asyncio.run(run_all())
+    ordered = run_throttled(todo, acall_one, batch_size=batch_size)
 
     fresh: Dict[Tuple[str, str], Dict[str, Any]] = {}
     num_generated = 0
@@ -481,14 +435,20 @@ if __name__ == '__main__':
     parser.add_argument('--dataset_file', type=str,
                         help='Input JSON file (required unless --list_models)')
     parser.add_argument('--dataset_type', type=str, default="baseline",
-                        choices=["clues", "baseline"],
-                        help="'clues' reads the 'answer' field, 'baseline' reads 'solution'")
+                        choices=["clues", "polycross", "roco",
+                                 "baseline", "themcross", "base"],
+                        help='Which corpus this is. clues/polycross/roco expect an '
+                             '"answer" field; baseline/themcross/base a "solution" '
+                             'field. The actual field is auto-detected either way.')
     parser.add_argument('--num_samples', type=int, default=None)
     parser.add_argument('--output_name', type=str, default="rationales")
     parser.add_argument('--output_dir', type=str, default=".")
     parser.add_argument('--batch_size', type=int, default=50, help='Max concurrent async requests')
     parser.add_argument('--rate_limit', type=int, default=1500, help='Max requests per minute')
     parser.add_argument('--max_tokens', type=int, default=4096)
+    parser.add_argument('--min_answer_len', type=int, default=3,
+                        help='Drop answers shorter than this. Use 1 to keep a curated '
+                             'sample intact.')
     parser.add_argument('--to_csv', action='store_true',
                         help='Also write a CSV with an empty rationale_score column')
     parser.add_argument('--resume', action='store_true',
@@ -496,6 +456,10 @@ if __name__ == '__main__':
     parser.add_argument('--summary_only', action='store_true',
                         help='Skip generation and only re-summarize an existing output file')
 
+    parser.add_argument('--flat_names', action='store_true',
+                        help='Name outputs {output_name}_{model}.json, omitting the '
+                             'dataset segment (use when --output_dir is already '
+                             'per-dataset).')
     parser.add_argument('--list_models', action='store_true',
                         help='List the models available from the config files and exit')
 
@@ -509,7 +473,14 @@ if __name__ == '__main__':
         parser.error("--dataset_file is required (unless --list_models)")
 
     model_slug = args.model_id.replace("/", "-")
-    output_base = f"{args.output_name}_{args.dataset_type}_{model_slug}"
+    # Older callers relied on the dataset name being part of the filename. When
+    # the output directory is already named after the dataset (the user-study
+    # layout), repeating it in the filename is redundant, so --flat_names drops
+    # that segment and leaves the model as the only discriminator.
+    if args.flat_names:
+        output_base = f"{args.output_name}_{model_slug}"
+    else:
+        output_base = f"{args.output_name}_{args.dataset_type}_{model_slug}"
     output_filename = os.path.join(args.output_dir, f"{output_base}.json")
     summary_filename = os.path.join(args.output_dir, f"{output_base}_summary.json")
     csv_filename = os.path.join(args.output_dir, f"{output_base}.csv")
@@ -528,7 +499,11 @@ if __name__ == '__main__':
         os.makedirs(args.output_dir, exist_ok=True)
 
     try:
-        backend = build_backend(args.model_id, max_tokens=args.max_tokens)
+        # Wrap so rejection-sampling retries also count against the rate limit.
+        backend = throttle_backend(
+            build_backend(args.model_id, max_tokens=args.max_tokens),
+            RateLimiter(args.rate_limit, per=60.0),
+        )
     except (RuntimeError, ValueError) as e:
         # Configuration problems (missing credentials, unknown model, RITS not
         # available) are user errors, not bugs: report them without a traceback.
@@ -543,9 +518,9 @@ if __name__ == '__main__':
         backend,
         args.dataset_type,
         num_samples=args.num_samples,
+        min_answer_len=args.min_answer_len,
         output_filename=output_filename,
         batch_size=args.batch_size,
-        rate_limit=args.rate_limit,
         resume=args.resume,
     )
 

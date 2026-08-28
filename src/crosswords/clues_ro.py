@@ -4,7 +4,6 @@
 # Clue and answer pairs are in Romanian
 
 import os
-import asyncio
 import argparse
 import json
 import numpy as np
@@ -15,7 +14,7 @@ from dotenv import load_dotenv
 from typing import Any, Dict, List
 from mellea.backends import Backend
 from mellea.stdlib.context import SimpleContext
-from mellea.stdlib.requirements import req, check, simple_validate
+from mellea.stdlib.requirements import check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
 
 from mellea.core import FancyLogger
@@ -24,7 +23,14 @@ from mellea.core import FancyLogger
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
-from crosswords.backends import build_backend, print_models
+from crosswords.backends import build_backend, print_models, load_json_utf8_relaxed
+from crosswords.runner import (
+    RateLimiter,
+    throttle_backend,
+    run_throttled,
+    resolve_keys,
+    filter_and_limit,
+)
 from crosswords.utils import strip_code_fences, validate_json_code_block, extract_last_square_brackets, get_think_tags
 
 INSTRUCTION_V1 = """
@@ -331,31 +337,6 @@ def load_data(file_name: str) -> List[Dict[str, Any]]:
         print(e)
         return None
     
-import json
-import re
-from typing import Any, Union
-
-_TRAILING_COMMAS_RE = re.compile(r",(\s*[}\]])")
-
-def load_json_utf8_relaxed(path: Union[str, "os.PathLike"]) -> Any:
-    """
-    Load a JSON file containing Unicode (e.g., Romanian diacritics) reliably.
-    Also tolerates common non-standard JSON issue: trailing commas before } or ].
-
-    Example tolerated input:
-      [
-        {"x": 1},
-      ]
-    """
-    # utf-8-sig removes BOM if present, while still handling normal UTF-8
-    with open(path, "r", encoding="utf-8-sig", newline="") as f:
-        text = f.read()
-
-    # Remove trailing commas before closing braces/brackets
-    text = _TRAILING_COMMAS_RE.sub(r"\1", text)
-
-    return json.loads(text)
-
 def eval_results(output_filename: str) -> Dict[str, Any]:
     """
     Evaluate the results from the output file.
@@ -415,44 +396,41 @@ def process_data(
         num_samples: int = None,
         output_filename: str = "results.json",
         batch_size: int = 50,
-        rate_limit: int = 1500,
+        loop_budget: int = 5,
 ) -> List[Dict[str, Any]]:
     """
-    Process the dataset
-    
-    :param data: Description
-    :type data: List[Dict[str, Any]]
-    :param backend: Description
-    :type backend: Backend
+    Run the solving task over the dataset and write the results.
+
+    :param data: list of dicts, each with a clue and an answer/solution field
+    :param backend: mellea backend, already rate-limited by throttle_backend
+    :param version: prompt version v1-v6
+    :param prefix_len: how many leading letters of the answer to reveal (v3/v4)
+    :param dataset_type: which corpus this is; only picks the expected answer
+        field, which resolve_keys verifies against the data
+    :param loop_budget: rejection-sampling attempts per item. Note each attempt
+        is a real LLM call and counts against the rate limit.
     """
 
     print(f"Processing {len(data)} clues...")
     print(f"Using LLM: {backend.model_id}")
     print(f"Prompt version: {version}")
     print(f"Dataset type: {dataset_type}")
-
-    assert dataset_type in ["clues", "baseline"], f"Unknown dataset type: {dataset_type}"
+    limiter = getattr(backend, "_rate_limiter", None)
+    if limiter is not None:
+        print(f"Rate limit: {limiter.rate} LLM calls / {limiter.per:.0f}s "
+              f"(retries included); loop_budget={loop_budget}")
 
     results = []
     references = []
     predictions = []
-    
-    if num_samples is not None:
-        data = data[:num_samples]
 
-    print(f"Initial number of clues: {len(data)}")
-    
-    # Filter out the 2 letter answers
-    if dataset_type == "clues":
-        data = [item for item in data if len(item["answer"]) > 2]
-        answer_key = "answer"
-        clue_key = "clue"
-    elif dataset_type == "baseline":
-        data = [item for item in data if len(item["solution"]) > 2]
-        answer_key = "solution"
-        clue_key = "clue"
+    # Which field holds the answer depends on the corpus ("answer" for
+    # polycross, "solution" for themcross); resolve_keys auto-detects it.
+    answer_key, clue_key = resolve_keys(data, dataset_type)
+    print(f"Answer field: '{answer_key}'")
 
-    print(f"After filtering out short answers, {len(data)} clues remain.")
+    # Filter short answers BEFORE truncating, so --num_samples N yields N items.
+    data = filter_and_limit(data, answer_key, num_samples=num_samples, min_answer_len=3)
 
     async def acall_one(item):
         answer = item[answer_key]
@@ -496,33 +474,20 @@ def process_data(
             requirements=requirements,
             user_variables=user_variables,
             icl_examples=[],
-            strategy=RejectionSamplingStrategy(loop_budget=5),
+            strategy=RejectionSamplingStrategy(loop_budget=loop_budget),
             return_sampling_results=True,
-        ), item
+        )
 
-    print(f"Submitting {len(data)} prompts async (batch_size={batch_size}, rate_limit={rate_limit}/min) ...")
     correct = 0
-    sem = asyncio.Semaphore(batch_size)
-    interval = 60.0 / rate_limit
-    ordered = [None] * len(data)
+    ordered = run_throttled(data, acall_one, batch_size=batch_size)
 
-    async def run_one(i, item):
-        async with sem:
-            ordered[i] = await acall_one(item)
-
-    async def run_all():
-        tasks = []
-        for i, item in enumerate(data):
-            if i > 0:
-                await asyncio.sleep(interval)
-            tasks.append(asyncio.create_task(run_one(i, item)))
-        await asyncio.gather(*tasks)
-
-    asyncio.run(run_all())
-
-    for i, (output, item) in enumerate(ordered):
+    for i, (output, item, error) in enumerate(ordered):
         answer = item[answer_key]
         clue = item[clue_key]
+        if error is not None:
+            print(f"  [{i + 1}/{len(data)}] [ERROR] clue: {clue} "
+                  f"({type(error).__name__}: {error})")
+            continue
         status = "OK" if output.success else "FAIL"
         if output.success:
             if version in ["v1", "v2", "v3"]:
@@ -575,7 +540,11 @@ if __name__ == '__main__':
                              'configs/frontier_models.json, or a raw litellm model id '
                              'containing a "/". Use --list_models to see the options.')
     parser.add_argument('--dataset_file', type=str)
-    parser.add_argument('--dataset_type', type=str, default="clues")
+    parser.add_argument('--dataset_type', type=str, default="clues",
+                        choices=["clues", "polycross", "baseline", "themcross"],
+                        help='Which corpus this is. clues/polycross expect an "answer" '
+                             'field, baseline/themcross a "solution" field; the actual '
+                             'field is auto-detected either way.')
     parser.add_argument('--version', type=str, default="v3")
     parser.add_argument('--prefix_len', type=int, default=0)
     parser.add_argument('--output_name', type=str)
@@ -585,6 +554,9 @@ if __name__ == '__main__':
     parser.add_argument('--rate_limit', type=int, default=1500, help='Max requests per minute')
     parser.add_argument('--eval_only', action='store_true')
     parser.add_argument('--max_tokens', type=int, default=4096)
+    parser.add_argument('--loop_budget', type=int, default=5,
+                        help='Rejection-sampling attempts per clue. Each attempt is a '
+                             'real LLM call and counts against --rate_limit.')
     parser.add_argument('--list_models', action='store_true',
                         help='List the models available from the config files and exit')
 
@@ -606,7 +578,13 @@ if __name__ == '__main__':
 
     if not args.eval_only:
         try:
-            backend = build_backend(args.model_id, max_tokens=args.max_tokens)
+            # Wrap the backend so EVERY LLM call -- including rejection-sampling
+            # retries -- is counted against the rate limit. Throttling only the
+            # submissions would undercount by up to loop_budget per item.
+            backend = throttle_backend(
+                build_backend(args.model_id, max_tokens=args.max_tokens),
+                RateLimiter(args.rate_limit, per=60.0),
+            )
         except (RuntimeError, ValueError) as e:
             # Configuration problems (missing credentials, unknown model, RITS
             # unavailable) are user errors, not bugs: no traceback.
@@ -622,7 +600,7 @@ if __name__ == '__main__':
             num_samples=args.num_samples,
             output_filename=output_filename,
             batch_size=args.batch_size,
-            rate_limit=args.rate_limit,
+            loop_budget=args.loop_budget,
         )
 
     # Evaluate results

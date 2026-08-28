@@ -1,0 +1,14 @@
+[
+  {
+    "name": "qwen3-8b-local",
+    "backend": "vllm",
+    "model_id": "Qwen/Qwen3-8B",
+    "comment": "In-process vLLM. Requires a CUDA GPU plus 'pip install vllm outlines'. Add vLLM engine knobs under model_options, e.g. {\"gpu_memory_utilization\": 0.9, \"max_model_len\": 4096}."
+  },
+  {
+    "name": "granite-4-micro-local",
+    "backend": "vllm",
+    "model_id": "ibm-granite/granite-4.0-micro",
+    "comment": "Smaller local model, useful for smoke-testing a GPU box."
+  }
+]

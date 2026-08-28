@@ -7,7 +7,6 @@
 # candidate clues as output.
 
 import os
-import asyncio
 import argparse
 import json
 
@@ -30,6 +29,7 @@ FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
 from crosswords.backends import build_backend, print_models
+from crosswords.runner import RateLimiter, throttle_backend, run_throttled
 from crosswords.utils import (
     strip_code_fences,
     extract_first_code_block,
@@ -249,7 +249,6 @@ def process_data(
         num_samples: int = None,
         output_filename: str = "gen_clues.json",
         batch_size: int = 50,
-        rate_limit: int = 1500,
 ) -> List[Dict[str, Any]]:
     """
     Generate candidate clues for the answers in the dataset.
@@ -320,37 +319,23 @@ def process_data(
             icl_examples=[],
             strategy=RejectionSamplingStrategy(loop_budget=5),
             return_sampling_results=True,
-        ), item
+        )
 
-    print(f"Submitting {len(data)} prompts async (batch_size={batch_size}, rate_limit={rate_limit}/min) ...")
-    sem = asyncio.Semaphore(batch_size)
-    interval = 60.0 / rate_limit
-    ordered = [None] * len(data)
-
-    async def run_one(i, item):
-        async with sem:
-            ordered[i] = await acall_one(item)
-
-    async def run_all():
-        tasks = []
-        for i, item in enumerate(data):
-            if i > 0:
-                await asyncio.sleep(interval)
-            tasks.append(asyncio.create_task(run_one(i, item)))
-        await asyncio.gather(*tasks)
-
-    asyncio.run(run_all())
+    ordered = run_throttled(data, acall_one, batch_size=batch_size)
 
     results = []
     num_generated = 0
-    for i, (output, item) in enumerate(ordered):
+    for i, (output, item, error) in enumerate(ordered):
         answer = item[answer_key]
         source_clue = item.get(clue_key, "")
-        status = "OK" if output.success else "FAIL"
+        if error is not None:
+            print(f"  [{i + 1}/{len(data)}] [ERROR] answer: {answer} "
+                  f"({type(error).__name__}: {error})")
+        status = "OK" if (error is None and output.success) else "FAIL"
 
         clues = []
-        rationale = get_think_tags(str(output)) if output.success else ""
-        if output.success:
+        rationale = get_think_tags(str(output)) if status == "OK" else ""
+        if status == "OK":
             try:
                 # The model emits <think>...</think> reasoning before the
                 # fenced JSON block; parse_clues_response handles that.
@@ -492,7 +477,11 @@ if __name__ == '__main__':
         os.makedirs(args.output_dir, exist_ok=True)
 
     try:
-        backend = build_backend(args.model_id, max_tokens=args.max_tokens)
+        # Wrap so rejection-sampling retries also count against the rate limit.
+        backend = throttle_backend(
+            build_backend(args.model_id, max_tokens=args.max_tokens),
+            RateLimiter(args.rate_limit, per=60.0),
+        )
     except (RuntimeError, ValueError) as e:
         # Configuration problems (missing credentials, unknown model, RITS
         # unavailable) are user errors, not bugs: no traceback.
@@ -508,7 +497,6 @@ if __name__ == '__main__':
         num_samples=args.num_samples,
         output_filename=output_filename,
         batch_size=args.batch_size,
-        rate_limit=args.rate_limit,
     )
 
     # Score the generated clues against the ground-truth clues.

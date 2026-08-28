@@ -13,6 +13,7 @@
 import os
 import re
 import json
+import importlib.util
 
 from pathlib import Path
 from typing import Any, Dict, Tuple, Union
@@ -33,9 +34,20 @@ except ImportError:
 # https://github.com/BerriAI/litellm/issues/13251
 os.environ.setdefault("DISABLE_AIOHTTP_TRANSPORT", "True")
 
+def _has_vllm() -> bool:
+    """
+    True if the `vllm` package is importable.
+
+    Checked via find_spec rather than a real import: importing vllm is slow and
+    allocates GPU resources, and we only need to know whether it is present.
+    """
+    return importlib.util.find_spec("vllm") is not None
+
+
 CONFIG_DIR = Path(__file__).resolve().parents[2] / "configs"
 RITS_CONFIG = CONFIG_DIR / "rits_models.json"
 FRONTIER_CONFIG = CONFIG_DIR / "frontier_models.json"
+LOCAL_CONFIG = CONFIG_DIR / "local_models.json"
 
 _TRAILING_COMMAS_RE = re.compile(r",(\s*[}\]])")
 
@@ -86,14 +98,23 @@ def load_model_config(path: Union[str, "os.PathLike"]) -> Dict[str, Dict[str, An
     return models
 
 
-def available_models() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]]]:
-    """Return the (rits, frontier) model config dicts."""
-    return load_model_config(RITS_CONFIG), load_model_config(FRONTIER_CONFIG)
+ModelConfigs = Tuple[
+    Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]]
+]
+
+
+def available_models() -> ModelConfigs:
+    """Return the (rits, frontier, local) model config dicts."""
+    return (
+        load_model_config(RITS_CONFIG),
+        load_model_config(FRONTIER_CONFIG),
+        load_model_config(LOCAL_CONFIG),
+    )
 
 
 def print_models() -> None:
     """Print the configured models. Used by every script's --list_models."""
-    rits_models, frontier_models = available_models()
+    rits_models, frontier_models, local_models = available_models()
 
     print(f"RITS models ({RITS_CONFIG}):")
     if rits_models:
@@ -110,6 +131,14 @@ def print_models() -> None:
     else:
         print("  (none configured)")
 
+    print(f"\nLocal models via vLLM ({LOCAL_CONFIG}):")
+    if local_models:
+        for name, record in local_models.items():
+            flag = "" if _has_vllm() else "   [vllm not installed]"
+            print(f"  {name:24s} {record['model_id']}{flag}")
+    else:
+        print("  (none configured)")
+
 
 def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
     """
@@ -121,7 +150,7 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
     gateway can be used without touching config.
     """
 
-    rits_models, frontier_models = available_models()
+    rits_models, frontier_models, local_models = available_models()
     model_options: Dict[Any, Any] = {ModelOption.MAX_NEW_TOKENS: max_tokens}
 
     # --- RITS path -----------------------------------------------------------
@@ -152,13 +181,47 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
             model_options=model_options,
         )
 
+    # --- local vLLM path -----------------------------------------------------
+    if model_id in local_models:
+        record = local_models[model_id]
+        # Mellea's LocalVLLMBackend does not support vLLM V1; it must be set
+        # before vllm is imported.
+        os.environ.setdefault("VLLM_USE_V1", "0")
+        try:
+            from mellea.backends.vllm import LocalVLLMBackend
+        except ImportError as e:
+            raise RuntimeError(
+                f"--model_id '{model_id}' is a local vLLM model, but Mellea's vLLM "
+                f"backend could not be imported: {e}. It needs both 'vllm' and "
+                "'outlines' ('pip install vllm outlines'). Note LocalVLLMBackend "
+                "loads model weights in-process and requires a CUDA GPU, so it is "
+                "not usable on a machine without one."
+            )
+        # Extra per-model vLLM knobs (e.g. gpu_memory_utilization) come from the
+        # config record so they can be tuned without editing code.
+        model_options.update(record.get("model_options") or {})
+        try:
+            return LocalVLLMBackend(record["model_id"], model_options=model_options)
+        except Exception as e:
+            # vLLM loads weights here, so this is where a machine without a
+            # usable GPU fails. Surface it as a configuration error rather than
+            # a bare traceback from deep inside the engine.
+            raise RuntimeError(
+                f"Could not start the local vLLM engine for '{model_id}' "
+                f"({record['model_id']}): {type(e).__name__}: {e}\n"
+                "LocalVLLMBackend loads model weights in-process and needs a CUDA "
+                "GPU with enough free memory. Tune the engine via 'model_options' "
+                f"in {LOCAL_CONFIG} (e.g. gpu_memory_utilization, max_model_len), "
+                "or use a RITS/frontier model instead."
+            )
+
     # --- litellm gateway path ------------------------------------------------
     if model_id in frontier_models:
         litellm_model = frontier_models[model_id]["model_id"]
     elif "/" in model_id:
         litellm_model = model_id
     else:
-        known = sorted(rits_models) + sorted(frontier_models)
+        known = sorted(rits_models) + sorted(frontier_models) + sorted(local_models)
         raise ValueError(
             f"Unknown --model_id '{model_id}'. Known models: "
             f"{', '.join(known) if known else '(no config files found)'}. "
