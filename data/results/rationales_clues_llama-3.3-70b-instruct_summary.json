@@ -1,0 +1,11 @@
+{
+    "model_id": "llama-3.3-70b-instruct",
+    "num_samples": 3,
+    "num_generated": 3,
+    "num_failed": 0,
+    "avg_rationale_len": 363.67,
+    "wordplay_types": {
+        "polisemie": 2,
+        "joc de cuvinte": 1
+    }
+}

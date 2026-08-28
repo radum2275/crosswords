@@ -1,0 +1,1002 @@
+[
+    {
+        "clue": "Omul... de zăpadă",
+        "solution": "NEA",
+        "rationale": "La prima vedere definiția trimite la figura modelată din zăpadă de copii, deci la un „om de zăpadă” propriu-zis. În realitate, autorul se folosește de omonimie: „nea” este atât apelativul popular pentru un bărbat (nea Ion, variantă a lui „nene”), adică „omul”, cât și denumirea regională/poetică a zăpezii. Punctele de suspensie separă cele două indicii, ambele conducând la același cuvânt: omul = nea, zăpada = nea.",
+        "surface_reading": "Figura antropomorfă modelată din zăpadă iarna, omul de zăpadă tradițional.",
+        "intended_sense": "Cuvântul „nea” în dublă lectură: apelativ popular pentru un om (nea Gheorghe) și termen regional pentru zăpadă.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Finalul războiului",
+        "solution": "TRATAT",
+        "rationale": "La prima citire, „finalul războiului” pare să ceară un moment sau o stare: pacea, victoria, capitularea, armistițiul. Autorul mută însă accentul de la eveniment la actul care îl consfințește: un război se termină oficial prin semnarea unui tratat de pace, document care marchează juridic încetarea ostilităților. Astfel, „finalul” nu este un interval de timp, ci piesa scrisă care pune punct conflictului, iar cuvântul „tratat” își activează sensul de convenție internațională (nu pe cel de participiu al verbului „a trata” sau pe cel de lucrare științifică amplă).",
+        "surface_reading": "Momentul sau starea în care se sfârșește un război: pacea, victoria, capitularea, încetarea luptelor.",
+        "intended_sense": "Documentul diplomatic — tratatul de pace — prin semnarea căruia războiul se încheie în mod oficial.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Piesă de valoare... pentru cântăreţi",
+        "solution": "LIRA",
+        "rationale": "La suprafață, definiția pare să ceară o compoziție muzicală valoroasă din repertoriul interpreților. În realitate, „piesă de valoare” este formula numismatică pentru monedă, iar lira este monedă (italiană, turcească, sterlină); completarea „pentru cântăreți” activează omonimul, lira fiind instrumentul cu coarde al aezilor și poeților-cântăreți din Antichitate. Astfel, cele două sensuri ale aceluiași cuvânt se suprapun: monedă de valoare și instrument al cântăreților.",
+        "surface_reading": "O piesă muzicală de mare valoare, o arie sau o compoziție de succes din repertoriul unui cântăreț.",
+        "intended_sense": "Lira ca monedă (piesă = monedă), cuvânt care denumește totodată instrumentul muzical cu coarde folosit de cântăreții antici.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Un tip de groază",
+        "solution": "TERORIST",
+        "rationale": "La prima vedere, „un tip de groază” pare a desemna o varietate, o categorie sau un gen (ca în „film de groază”), deci un fel de frică. Autorul folosește însă „tip” în sensul familiar de individ, persoană, iar determinantul „de groază” arată ce provoacă acest individ: teroare. Cum teroarea este chiar groaza, tipul care o răspândește este teroristul.",
+        "surface_reading": "O categorie, o varietate sau un gen al groazei (de pildă, un tip de film ori de frică).",
+        "intended_sense": "Un individ care provoacă groază, adică teroare — teroristul.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Sitarii care nu se vânează",
+        "solution": "CIURARI",
+        "rationale": "„Sitar” denumește atât o pasăre de baltă căutată de vânători, cât și meșteșugarul care confecționează site. Precizarea „care nu se vânează” elimină tocmai pasărea și lasă în joc doar sensul de meseriaș, iar acesta are ca echivalent pe „ciurar”, cel care face ciururi (meșteșugul tradițional al sitarilor-ciurari). Astfel, sitarii care nu se vânează sunt ciurarii.",
+        "surface_reading": "Păsări de baltă din specia sitarului care ar fi ocolite de vânători sau protejate de lege.",
+        "intended_sense": "Meșteșugarii numiți sitari, adică cei care împletesc site și ciururi, sinonimi cu ciurarii.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Unitate pentru capacitate cilindrică",
+        "solution": "RULOU",
+        "rationale": "La prima vedere, „capacitate cilindrică” trimite la cilindreea unui motor, deci la centimetri cubi sau litri. Autorul folosește însă „unitate” în sensul de unitate de ambalare și de vânzare, iar „capacitate cilindrică” în sens literal: ceva care cuprinde material înfășurat în formă de cilindru. Hârtia, tapetul, pânza sau folia se socotesc și se vând la rulou, care este astfel o unitate cu formă și capacitate cilindrică.",
+        "surface_reading": "Unitatea de măsură a cilindreei unui motor (centimetru cub, litru).",
+        "intended_sense": "Unitate de ambalare și de vânzare a materialelor înfășurate, având formă cilindrică: ruloul.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Bucla in circuit",
+        "solution": "ARC",
+        "rationale": "La prima citire, „bucla în circuit” duce gândul la o buclă electrică sau la un „loop” dintr-un circuit electronic ori de program. Autorul folosește însă „circuit” în sensul de traseu (de curse auto, ciclism, atletism), iar „buclă” în sensul de porțiune curbată a acestui traseu. O astfel de curbură se numește geometric arc, deci bucla desenată de circuit este un arc de cerc.",
+        "surface_reading": "O buclă electrică sau informatică existentă într-un circuit electronic ori într-un program.",
+        "intended_sense": "Porțiunea curbată, curba unui traseu de curse, care are forma unui arc de cerc.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Coborât de la munte",
+        "solution": "PLAI",
+        "rationale": "La prima vedere, „coborât de la munte” pare să descrie o ființă – un cioban, o oaie, un urs – care a părăsit zona înaltă. În realitate, „coborât” se referă la relief: plaiul este porțiunea de teren aflată mai jos, la poalele muntelui, coasta care coboară dinspre creastă spre vale. Astfel, plaiul este chiar „coborâșul” muntelui, partea lui așezată mai jos, nu cineva venit de acolo.",
+        "surface_reading": "O persoană sau un animal care a venit din zona montană spre locuri mai joase.",
+        "intended_sense": "Formă de relief situată mai jos decât muntele, coasta sau regiunea de la poalele lui, adică plaiul.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Ajutoare în caz de nevoie",
+        "solution": "FILANTROPI",
+        "rationale": "La prima citire, „ajutoare” pare să însemne bunuri, alimente sau sume de bani distribuite în situații de necesitate, adică ajutoare sociale ori umanitare. Autorul folosește însă celălalt sens al cuvântului „ajutor”: acela de persoană care ajută, sprijinitor. Cei care, prin definiție, sar în sprijinul semenilor aflați în nevoie, oferind bani și bunuri din generozitate, sunt filantropii, iar pluralul neutru „ajutoare” în loc de „ajutori” este exact capcana care deviază gândul spre obiecte.",
+        "surface_reading": "Bunuri, bani sau ajutoare sociale și umanitare acordate în situații de necesitate.",
+        "intended_sense": "Persoane care acordă sprijin celor aflați în nevoie, adică binefăcătorii, filantropii.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Manifestare consacrată de datul peste cap",
+        "solution": "TUMBA",
+        "rationale": "La prima vedere, „manifestare consacrată” pare să indice un eveniment devenit tradiție, iar „a da peste cap” pare folosit figurat, cu sensul de a răsturna sau a strica ceva. În realitate, „manifestare” este luată în sens de manifestare fizică, gest, mișcare a corpului, iar „datul peste cap” este descrierea literală a rostogolirii acrobatice. Mișcarea consacrată tocmai prin acest gest de răsucire peste cap este tumba.",
+        "surface_reading": "Un eveniment public, festiv, devenit tradiție, legat de ideea figurată de a răsturna sau a da totul peste cap.",
+        "intended_sense": "O mișcare corporală, un gest acrobatic definit exact prin rostogolirea peste cap, adică tumba.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Întâlniri de natură manufacturieră",
+        "solution": "NADE",
+        "rationale": "La suprafață, „întâlniri” sugerează reuniuni sau ședințe ale oamenilor dintr-o fabrică ori dintr-o manufactură. Sensul real se referă însă la locurile în care se întâlnesc materialele: în croitorie și în meșteșugurile lucrate de mână, nada este bucata adăugată pentru a lungi o pânză, un fir sau o piesă, adică punctul de îmbinare rezultat din a nădi. Astfel, „întâlnirile” din munca manuală sunt chiar nadele, iar precizarea „de natură manufacturieră” fixează domeniul lucrului de mână, nu al adunărilor.",
+        "surface_reading": "Adunări, ședințe sau reuniuni ale lucrătorilor dintr-o manufactură sau fabrică.",
+        "intended_sense": "Locurile de îmbinare a două bucăți de material în lucrul manual, adăugăturile cu care se lungește ceva, adică nadele.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Aflat în curs de cercetare",
+        "solution": "INTERESANT",
+        "rationale": "La prima vedere definiția cere un cuvânt care descrie stadiul procedural al unui dosar sau al unui studiu neîncheiat, de tipul „anchetat” ori „în lucru”. Autorul inversează însă relația: se cercetează numai ceea ce prezintă interes, așa că un subiect ajuns în curs de cercetare este, prin chiar acest fapt, interesant. „Interesant” înseamnă tocmai „care trezește interesul, care merită studiat”, iar în limbajul anchetelor o persoană sau un caz „interesant” este exact cel luat în cercetare.",
+        "surface_reading": "Un dosar, un caz sau un studiu care se află în stadiul de anchetă ori de investigare, deci neterminat.",
+        "intended_sense": "Ceva care prezintă interes, care merită să fie studiat și de aceea ajunge obiect al cercetării — adică interesant.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A lua în primire",
+        "solution": "CAPATA",
+        "rationale": "Expresia „a lua în primire” este cunoscută mai ales în sensul figurat de a-l lua pe cineva la rost, a-l certa sau a-l bate, ceea ce trimite gândul spre verbe de agresiune. Autorul folosește însă locuțiunea în sensul ei literal, administrativ: a intra în posesia a ceva, a-l primi efectiv. Astfel, cel care ia în primire un bun îl capătă, iar CĂPĂTA devine sinonimul contextual exact al definiției.",
+        "surface_reading": "A-l lua pe cineva la rost, a-l certa sau a-l bate, conform sensului figurat al expresiei „a lua în primire”.",
+        "intended_sense": "A intra în posesia unui lucru, a-l primi efectiv, adică a-l căpăta.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "O mișcare neabătută",
+        "solution": "RECTILINIE",
+        "rationale": "La prima vedere, „neabătută” se citește în sens moral — ferm, statornic, care nu șovăie — iar „mișcare” pare a fi un curent de idei sau o acțiune hotărâtă. Autorul folosește însă sensul propriu al verbului „a se abate”: a devia din drum, a părăsi direcția. O mișcare care nu deviază nicio clipă din direcție este, în limbajul fizicii, o mișcare rectilinie, adică desfășurată pe o linie dreaptă.",
+        "surface_reading": "Un curent, o acțiune sau o atitudine fermă, hotărâtă, care nu se abate de la principii ori de la scopul propus.",
+        "intended_sense": "Deplasare a unui corp care nu deviază din direcție, adică se face după o linie dreaptă — mișcare rectilinie.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Spurcată la gură",
+        "solution": "SUDALMA",
+        "rationale": "La prima citire, „spurcată la gură” pare o caracterizare a unei persoane (o femeie care vorbește urât, care înjură), fiind o expresie consacrată pentru cineva obscen în limbaj. Autorul mută însă referentul adjectivului de la vorbitor la vorbă: ceea ce este cu adevărat „spurcat”, adică necurat, murdar, este chiar cuvântul rostit. Iar „la gură” indică locul unde se află și de unde iese acea vorbă necurată — astfel, vorba spurcată care stă mereu la gura cuiva este sudalma, adică înjurătura.",
+        "surface_reading": "O femeie cu limbaj obscen, care înjură și vorbește vulgar.",
+        "intended_sense": "Vorba necurată, murdară, care se rostește cu gura, adică înjurătura însăși.",
+        "wordplay_type": "sens figurat",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Floare cu parfum deosebit",
+        "solution": "LAVANDA",
+        "rationale": "Definiția este în esență descriptivă și trimite la o plantă a cărei trăsătură principală este mirosul: lavanda este cultivată chiar pentru uleiul ei esențial, folosit în parfumerie, cosmetice și produse aromatice. Cuvântul „deosebit” funcționează în ambele sensuri: atât „excepțional, plăcut”, cât și „care se deosebește”, adică inconfundabil — iar parfumul lavandei este exact de acest tip, imediat recunoscibil. Dificultatea vine doar din faptul că mai multe flori parfumate ar putea concura (trandafir, iasomie, liliac), dar lavanda este cea identificată prin excelență cu parfumul.",
+        "surface_reading": "Definiția este directă: se cere numele unei flori remarcabile prin mirosul ei, dar sugerează inițial oricare dintre florile clasic parfumate.",
+        "intended_sense": "Planta emblematică pentru parfumul său inconfundabil, folosită ca sursă de esență în parfumerie: lavanda.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Superioară față de palton",
+        "solution": "STOFA",
+        "rationale": "Definiția pare să ceară numele unei haine mai bune sau mai elegante decât paltonul, deci un alt articol de îmbrăcăminte. În realitate, comparația nu se face între două haine, ci între haină și materialul din care este croită: stofa este „superioară” paltonului atât prin sintagma consacrată „stofă superioară” (de calitate superioară), cât și prin poziția sa în ierarhia materie primă–produs finit, căci paltonul provine din stofă, nu invers. Se resimte și nuanța figurată a expresiei „a avea stofă”, adică a avea calitate și valoare.",
+        "surface_reading": "O piesă vestimentară mai scumpă, mai elegantă sau mai bună decât un palton.",
+        "intended_sense": "Materialul textil din care se croiește paltonul, calificat drept de calitate superioară și aflat, ca materie primă, deasupra produsului finit.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Rezervă pentru avarie",
+        "solution": "DEFECTARE",
+        "rationale": "La prima citire, definiția pare tehnică: ceva ținut deoparte, o piesă sau un echipament de schimb pregătit pentru momentul unei avarii. În realitate, „rezervă” trebuie înțeleasă ca înlocuitor, substitut — un cuvânt de rezervă care poate ține locul altuia în frază. Cuvântul care îl poate înlocui pe „avarie” este „defectare”, sinonimul său, iar astfel definiția cere pur și simplu echivalentul lexical al termenului dat.",
+        "surface_reading": "O piesă, un dispozitiv sau un stoc păstrat deoparte pentru a fi folosit în caz de avarie.",
+        "intended_sense": "Un cuvânt de rezervă, adică un sinonim care poate înlocui termenul „avarie”: defectare.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Deplasări în care toţi cred",
+        "solution": "PELERINAJE",
+        "rationale": "La prima citire, definiția pare să vorbească despre călătorii credibile, în care toată lumea are încredere. Sensul intenționat exploatează însă cealaltă valoare a verbului „a crede”: aceea de a avea credință religioasă. Pelerinajele sunt deplasări spre locuri sfinte la care participă numai credincioși, deci deplasări în care „toți cred” — adică toți participanții sunt oameni ai credinței.",
+        "surface_reading": "Călătorii sigure, credibile, în care toată lumea are încredere.",
+        "intended_sense": "Călătorii cu scop religios, la care participă exclusiv persoane credincioase, „a crede” însemnând aici a avea credință.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Dialoguri fără fir",
+        "solution": "TRANCANELI",
+        "rationale": "La prima vedere, „fără fir” trimite la tehnologia wireless, deci la convorbiri purtate prin radio sau telefonie mobilă. Autorul folosește însă celălalt sens al lui „fir”: firul logic, șirul coerent al ideilor. Dialogurile lipsite de fir logic sunt vorbe goale, fără noimă, adică trăncăneli.",
+        "surface_reading": "Convorbiri purtate prin telefonie mobilă sau radio, fără cablu de legătură.",
+        "intended_sense": "Discuții lipsite de fir logic, de coerență și de conținut, adică palavre, vorbărie goală.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Aflat în opoziţie cu puterea",
+        "solution": "ATON",
+        "rationale": "La prima citire, definiția pare politică: cineva care se opune puterii de guvernământ, adică un opozant. În realitate, „putere” trebuie citită în sens fonetic, ca forță sau intensitate de pronunțare, adică accent: silaba tonică este cea rostită cu putere, iar cea lipsită de accent se numește atonă. Astfel, „aflat în opoziție cu puterea” înseamnă situat în opoziție cu accentul, deci aton, termen care se opune prin definiție lui „tonic”.",
+        "surface_reading": "Un adversar politic, cineva care se află în opoziție față de puterea de guvernământ.",
+        "intended_sense": "Element fonetic lipsit de accent, opus silabei tonice, pronunțate cu forță (putere) mai mare.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A uda salata verde",
+        "solution": "OTETI",
+        "rationale": "La prima vedere definiția pare o operațiune de grădinărit: udarea cu apă a salatei verzi din strat, pentru ca planta să nu se ofilească. Sensul intenționat mută însă salata din grădină în farfurie: aici „a uda” înseamnă a stropi cu un lichid de asezonare, iar lichidul tipic al salatei verzi este oțetul. Prin urmare, a o uda cu oțet echivalează cu a o oțeti, de unde soluția OTETI.",
+        "surface_reading": "A stropi cu apă salata verde cultivată în grădină, ca lucrare de îngrijire a plantei.",
+        "intended_sense": "A stropi cu oțet salata verde pregătită pentru masă, adică a o oțeti.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Om ieșit din baie",
+        "solution": "CURAT",
+        "rationale": "Definiția pare să ceară numele sau starea unei persoane surprinse în momentul ieșirii din baie (ud, aburit, învelit în prosop), sau chiar sensul consacrat al sintagmei „om curat”, adică om cinstit și integru. Autorul mizează însă pe sensul propriu, igienic, al adjectivului: cel care a terminat baia este, prin definiție, curat. Astfel, calificativul folosit de obicei figurat pentru caracter este readus la înțelesul concret de spălat, nemurdar.",
+        "surface_reading": "O persoană descrisă prin starea fizică de după baie (udă, aburită) sau, prin expresia „om curat”, un om cinstit și integru moral.",
+        "intended_sense": "Sensul propriu, igienic, al adjectivului: omul care a ieșit din baie este spălat, deci curat.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Val-vârtej",
+        "solution": "SORB",
+        "rationale": "La prima vedere, „val-vârtej” este locuțiunea adverbială care descrie o mișcare precipitată, în mare grabă („a intrat val-vârtej”), deci pare să ceară un adverb sau o expresie a vitezei. Autorul abandonează însă sensul figurat al locuțiunii și o citește literal, ca descriere a apei: valuri care se rotesc într-o învolburare. Un asemenea vârtej de apă, care trage și înghite la fund, se numește sorb (bulboană, vâltoare), de unde soluția.",
+        "surface_reading": "Locuțiunea adverbială „val-vârtej”, cu sensul de foarte repede, în mare grabă, năvalnic.",
+        "intended_sense": "Citirea literală a compusului: o învolburare de valuri, adică vârtejul de apă care soarbe totul spre adânc — sorbul.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Posedat... cu calm",
+        "solution": "STAPANIT",
+        "rationale": "Definiția pune față în față două sensuri ale aceluiași participiu: „posedat” înseamnă stăpânit de o forță străină, de demoni sau de o obsesie, deci aflat sub controlul altcuiva. Adăugirea „cu calm” schimbă însă perspectiva: cel care se stăpânește este calm, cumpătat, cu emoțiile ținute în frâu. Punctele de suspensie semnalează exact acest salt, iar cuvântul care acoperă simultan ambele lecturi este STĂPÂNIT.",
+        "surface_reading": "Cineva aflat în stăpânirea unei forțe exterioare, posedat de demoni sau de o obsesie, deci tocmai lipsit de control asupra sa.",
+        "intended_sense": "Adjectivul „stăpânit” în sensul de calm, cumpătat, care își controlează pornirile — omonim cu participiul care înseamnă „posedat”.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Merge ca melcul",
+        "solution": "ABIA",
+        "rationale": "La prima citire definiția pare să ceară un cuvânt care descrie viteza mică — „încet”, „lent”, „agale” — sau chiar o comparație pitorească. Sensul intenționat este însă adverbul care exprimă gradul minim al deplasării: melcul se târăște atât de greu încât despre el se spune că „abia merge”, abia înaintează. Astfel comparația „ca melcul” este echivalată contextual cu adverbul ABIA, care marchează o acțiune realizată cu mare greutate și aproape imperceptibil.",
+        "surface_reading": "Se caută un cuvânt care numește mersul lent, felul de a se deplasa încet, sau un termen legat de melc ca animal.",
+        "intended_sense": "Adverbul care indică gradul minim al mișcării, cel din formularea „abia merge” — cu mare greutate, aproape deloc, exact ca melcul.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Vin cu gheață (sg.)",
+        "solution": "IARNA",
+        "rationale": "La prima vedere „vin” pare substantivul care denumește băutura, iar definiția ar descrie un vin servit cu cuburi de gheață. În realitate „vin” este forma verbului „a veni” la persoana a III-a plural: cele care vin (aduc) cu ele gheața sunt iernile, iar mențiunea „(sg.)” impune trecerea la singular, deci IARNA. Anotimpul rece este prin definiție cel care sosește însoțit de îngheț și gheață.",
+        "surface_reading": "Băutura alcoolică numită vin, răcită cu cuburi de gheață.",
+        "intended_sense": "Forma verbală „vin” (de la a veni): anotimpurile care sosesc aducând gheață, redate la singular ca iarna.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Zi mare de sărbătorit pentru fiecare",
+        "solution": "ONOMASTICA",
+        "rationale": "Definiția pare să indice o sărbătoare colectivă, marcată simultan de toată lumea, precum o zi națională sau religioasă. În realitate, „pentru fiecare” trebuie citit distributiv: fiecare om are, individual, propria zi de sărbătoare legată de numele purtat. Această zi personală, a sfântului al cărui nume îl purtăm, este onomastica, iar „zi mare” capătă sensul de zi importantă în plan personal, nu de mare sărbătoare publică.",
+        "surface_reading": "O sărbătoare importantă, comună tuturor, pe care o marchează întreaga colectivitate în același timp.",
+        "intended_sense": "Ziua de sărbătoare proprie fiecărei persoane, cea a numelui pe care îl poartă, adică onomastica.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Avansul motivat de de(s)prinderi",
+        "solution": "ELAN",
+        "rationale": "Paranteza din „de(s)prinderi” ascunde cheia: la suprafață citim „deprinderi”, adică obiceiuri și abilități care ar explica un avantaj câștigat, dar sensul intenționat este „desprinderi”, momentul ridicării de la sol în probele de sărituri. Acolo, „avansul” nu e un avantaj, ci înaintarea, cursa de accelerare pe care săritorul o parcurge înainte de a se desprinde, numită tocmai elan. Elanul este deci alergarea motivată de nevoia desprinderii, fiind în același timp și avânt, impuls.",
+        "surface_reading": "Un progres sau un avantaj obținut datorită deprinderilor, adică a obișnuințelor și priceperilor dobândite.",
+        "intended_sense": "Alergarea de apropiere (înaintarea) executată de un atlet înainte de desprinderea de la sol, la săritura în lungime, în înălțime sau cu prăjina, adică elanul.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Codaşi în... lungul nasului",
+        "solution": "MOPSI",
+        "rationale": "La suprafață, „lungul nasului” activează expresia „a merge după lungul nasului”, adică a te lua orbește după capul tău, iar „codași” pare să desemneze oameni rămași în urmă. Autorul citește însă sintagma literal, ca pe un criteriu de clasament: lungimea nasului. Mopșii, câini cu fața turtită și nasul cârn, se află pe ultimele locuri într-un astfel de clasament, deci sunt „codași” la lungul nasului.",
+        "surface_reading": "Persoane rămase în urmă, care se conduc după capul lor, mergând „după lungul nasului”, fără să asculte sfaturi.",
+        "intended_sense": "Ultimii clasați dacă se măsoară lungimea nasului, adică mopșii, rasă de câini cu nasul turtit și foarte scurt.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Par cu tragere de inimă",
+        "solution": "OISTE",
+        "rationale": "La suprafață, definiția pare o caracterizare morală („par”, de la a părea, cineva plin de entuziasm, care face ceva cu tragere de inimă). În realitate, „par” este substantiv, adică prăjină de lemn, iar „tragere” trimite la tracțiune: oiștea este parul carului la care se înjugă animalele pentru a trage. Sensul se închide perfect prin terminologia căruței, unde oiștea se fixează la piesa numită chiar „inima carului”, deci este un par cu tragere, prins de inimă.",
+        "surface_reading": "Expresia idiomatică „cu tragere de inimă” (cu plăcere, cu dăruire), cu „par” citit ca verb: cineva pare entuziast, dedicat.",
+        "intended_sense": "Par (bară de lemn) folosit la tracțiune și fixat de inima carului, adică oiștea căruței.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Tratate de ortopedie",
+        "solution": "OASE",
+        "rationale": "La prima vedere, „tratate” pare substantiv, iar sintagma trimite la volume științifice dedicate ortopediei. Sensul intenționat folosește însă „tratate” ca participiu-adjectiv al verbului „a trata”, la feminin plural: ceea ce este tratat de ortopedie. Fiind specialitatea medicală care se ocupă cu afecțiunile aparatului locomotor, ortopedia tratează în primul rând oasele, deci acestea sunt „tratatele” cerute de definiție.",
+        "surface_reading": "Lucrări, volume sau manuale științifice care au ca subiect ortopedia.",
+        "intended_sense": "Structurile anatomice îngrijite și vindecate de medicina ortopedică, adică oasele.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "El e cel cu banii",
+        "solution": "LEU",
+        "rationale": "La prima citire, „cel cu banii” pare o persoană — bogatul, sponsorul sau casierul care ține punga. Sensul intenționat exploatează însă cealaltă valoare a cuvântului „bani”: subdiviziunea monetară a leului, care se împarte în 100 de bani. Astfel, „el” nu e un om, ci moneda națională, singura care „vine cu banii” ca fracțiuni ale sale.",
+        "surface_reading": "Persoana care are avere sau care deține și administrează banii, finanțatorul.",
+        "intended_sense": "Leul, moneda românească, este unitatea care se subîmparte în bani (1 leu = 100 de bani).",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Câştigător în alegeri",
+        "solution": "MIRE",
+        "rationale": "La prima vedere definiția trimite la politică: cel care iese învingător dintr-un scrutin electoral. Sensul intenționat mută însă „alegerile” în plan sentimental: mireasa (sau familia ei) face o alegere între pretendenți, iar cel care câștigă mâna și inima ei, „alesul”, devine mirele. Astfel, câștigătorul acestor „alegeri” nu este un candidat politic, ci bărbatul care ajunge la altar.",
+        "surface_reading": "Candidatul politic care obține cele mai multe voturi într-un scrutin electoral.",
+        "intended_sense": "Cel preferat dintre pretendenți, „alesul” miresei, adică mirele.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A face veșnica pomenire",
+        "solution": "IMORTALIZA",
+        "rationale": "La suprafață, „a face veșnica pomenire” trimite la formula liturgică rostită la slujbele pentru cei adormiți, deci la un act religios de parastas. Autorul citește însă expresia literal, pe componente: a face ca cineva să fie pomenit, adică amintit, în veci. Cine este ținut veșnic în amintire devine nemuritor prin memorie, iar verbul care exprimă exact acest lucru este „a imortaliza” (a eterniza prin artă, fotografie sau faptă).",
+        "surface_reading": "A oficia slujba religioasă de pomenire a morților, a face un parastas cu formula „veșnica pomenire”.",
+        "intended_sense": "A face ca cineva sau ceva să fie amintit pentru totdeauna, a-l trece în nemurire, adică a imortaliza.",
+        "wordplay_type": "sens figurat",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Unitate comercială deschisă",
+        "solution": "RAION",
+        "rationale": "La prima citire, „unitate comercială deschisă” pare a fi un magazin sau o prăvălie aflată în program de funcționare. În realitate, „unitate” trimite la o subdiviziune, un compartiment din interiorul unui magazin, iar acesta se numește raion. Raionul este exact tipul de unitate comercială „deschisă”: un spațiu fără uși și pereți proprii, liber accesibil clientului, care se și „deschide” prin inaugurare („s-a deschis un raion de electrocasnice”).",
+        "surface_reading": "Un magazin, chioșc sau prăvălie care este deschisă, adică se află în orele de program.",
+        "intended_sense": "Secția, compartimentul dintr-un magazin, spațiu comercial delimitat doar convențional, deci deschis și accesibil, care se inaugurează ca unitate distinctă.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Rezultate neașteptate la o întreprindere",
+        "solution": "ERORI",
+        "rationale": "La prima vedere, „întreprindere” pare a fi firma, iar „rezultate neașteptate” ar fi cifre surprinzătoare din bilanț sau performanțe economice ieșite din calcule. Sensul intenționat mută însă cuvântul spre celălalt înțeles: întreprinderea ca acțiune, demers, lucru început de cineva. Într-un astfel de demers, rezultatele care nu au fost urmărite și nici prevăzute sunt exact greșelile, adică erorile — ele apar fără să fie dorite sau așteptate de cel care acționează.",
+        "surface_reading": "Cifre sau performanțe surprinzătoare obținute de o societate comercială, o firmă (profit, pierderi, indicatori economici).",
+        "intended_sense": "Consecințele nedorite și neprevăzute ale unei acțiuni întreprinse, adică greșelile care se produc pe parcursul unui demers.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A se apuca de ceva",
+        "solution": "INTREPRINDE",
+        "rationale": "La prima vedere „a se apuca de ceva” sugerează gestul fizic de a prinde cu mâna, de a se agăța de un obiect pentru sprijin, ceea ce ar trimite la verbe ca a se prinde sau a se ține. Autorul folosește însă sensul figurat al expresiei, cel de a începe o treabă, o acțiune, o lucrare, ca în „s-a apucat de muncă”. În acest sens, echivalentul exact este a întreprinde, adică a demara, a porni o acțiune, de unde forma de indicativ ÎNTREPRINDE.",
+        "surface_reading": "A prinde cu mâna, a se agăța fizic de un obiect pentru a se sprijini.",
+        "intended_sense": "A începe o acțiune sau o activitate, sens în care „a se apuca de ceva” este echivalent cu „a întreprinde”.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Fier de călcat întrebuințat în mare grabă",
+        "solution": "ACCELERATOR",
+        "rationale": "La suprafață, sintagma „fier de călcat” trimite la aparatul electrocasnic folosit pentru netezirea hainelor, iar „în mare grabă” la o călcare superficială, în viteză. Autorul descompune însă expresia fixă și exploatează celălalt sens al verbului „a călca”: a apăsa cu piciorul. Pedala de accelerație este piesa metalică pe care șoferul o „calcă”, iar ea este folosită la maximum tocmai când se grăbește; astfel, „fierul de călcat” al grabei este acceleratorul.",
+        "surface_reading": "Aparatul electrocasnic de netezit haine, folosit în fugă, superficial.",
+        "intended_sense": "Pedala metalică pe care șoferul apasă (o calcă) cu piciorul atunci când vrea să meargă mai repede.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Mare om de stat",
+        "solution": "GALIGAN",
+        "rationale": "La prima vedere sintagma „om de stat” trimite la un conducător politic, iar „mare” la importanța lui istorică. Autorul folosește însă celălalt sens al cuvântului „stat”, cel popular, de statură, înălțime a corpului (a fi de un stat cu cineva). Astfel, un „mare om de stat” devine un om mare de statură, adică un galigan – un individ foarte înalt și deșirat.",
+        "surface_reading": "O personalitate politică remarcabilă, un conducător de seamă al unui stat.",
+        "intended_sense": "Un om foarte înalt, mare de statură, adică un lungan, un galigan.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Tânără evidențiată la strungărie",
+        "solution": "OITA",
+        "rationale": "La suprafață, definiția pare să descrie o ucenică remarcată într-un atelier de strungărie, adică în prelucrarea metalelor la strung. Sensul intenționat pornește însă de la „strungă” din vocabularul pastoral: locul îngust prin care trec oile la muls și unde ele sunt numărate, deci trecute în evidență. „Tânără” nu se referă la o fată, ci la o femelă tânără din specia ovinelor, adică o oiță, care este „evidențiată” la numărătoarea de la strungă.",
+        "surface_reading": "O fată tânără care se distinge, care se remarcă lucrând în atelierul de strungărie, la strung.",
+        "intended_sense": "Oaia tânără (oița) numărată, trecută în evidență la strungă, locul de muls al oilor din stână.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Roșii tratate cu prafuri",
+        "solution": "ERITEME",
+        "rationale": "La prima vedere, definiția pare să vorbească despre tomate stropite cu pesticide sub formă de praf, o imagine tipică din grădinărit. Sensul intenționat mută însă „roșii” de la legume la porțiuni de piele înroșite, adică eriteme, iar „prafurile” devin pudrele medicinale (talc, pudre dermatologice) cu care se tratează aceste iritații. Astfel, „roșiile tratate cu prafuri” sunt zonele de roșeață cutanată peste care se aplică pudre calmante.",
+        "surface_reading": "Tomate stropite sau pudrate cu substanțe chimice, cu pesticide sub formă de praf.",
+        "intended_sense": "Pete de roșeață pe piele, adică eriteme, asupra cărora se aplică pudre medicinale.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "E pe aproape",
+        "solution": "CIRCA",
+        "rationale": "La prima vedere definiția pare să descrie poziția cuiva aflat în vecinătate, prin preajmă. Sensul intenționat exploatează însă cealaltă valoare a lui „aproape”, cea de apreciere numerică: a spune „pe aproape” înseamnă a da o cifră aproximativă, nu exactă. Iar cuvântul care exprimă tocmai această aproximare este „circa”, sinonim cu „aproximativ, cam”.",
+        "surface_reading": "Cineva sau ceva se află în apropiere, prin preajmă, la mică distanță.",
+        "intended_sense": "Indicație de valoare aproximativă, „cam, aproximativ”, redată prin adverbul circa.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Apariţie după multe închinări",
+        "solution": "BETIE",
+        "rationale": "La prima vedere, „închinări” trimite la rugăciuni și plecăciuni, iar „apariție” la o viziune sau o minune obținută după multă credință. Autorul folosește însă celălalt sens al verbului „a închina”: a ridica paharul în cinstea cuiva, a bea un toast. După multe pahare închinate, ceea ce „apare” inevitabil este beția, adică starea de ebrietate instalată treptat.",
+        "surface_reading": "O arătare sau o minune care se ivește după multe rugăciuni și plecăciuni evlavioase.",
+        "intended_sense": "Starea care se instalează după numeroase toasturi, adică după ce ai închinat multe pahare.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Băţ pentru partitura de privighetori",
+        "solution": "LES",
+        "rationale": "La prima citire, „privighetori” pare să însemne păsările cântătoare, iar „partitura” cântecul lor, astfel încât „bățul” ar fi bagheta dirijorului sau ramura pe care se așază păsările. În realitate, „privighetori” sunt cei care priveghează un mort, iar „partitura” este, figurat, programul, rolul acelei veghe nocturne. Personajul central al acestei „partituri” este mortul, iar el este numit „băț” pentru rigiditatea cadaverică, corpul rămas țeapăn ca un băț: leșul.",
+        "surface_reading": "O vergea sau baghetă legată de cântecul (partitura) privighetorilor, păsările cântătoare.",
+        "intended_sense": "Corpul înțepenit, rigid ca un băț, în jurul căruia se desfășoară priveghiul ținut de privighetori, adică de cei care veghează mortul.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Haine de gală",
+        "solution": "MAIEURI",
+        "rationale": "La prima citire, „gală” trimite la un eveniment mondan solemn, deci la ținute elegante de tip frac sau smoking, iar maieul este exact opusul unei haine de ceremonie. Sensul intenționat exploatează însă celălalt înțeles al cuvântului „gală”: reuniunea sportivă (gală de box, de lupte, de haltere), la care protagoniștii urcă în ring îmbrăcați în maieuri. Astfel, maieurile sunt chiar „hainele” purtate în cadrul unei gale, doar că al unei gale sportive, nu al unei recepții festive.",
+        "surface_reading": "Ținute elegante de ceremonie, purtate la spectacole și recepții festive (frac, smoking, rochie de seară).",
+        "intended_sense": "Îmbrăcămintea sportivilor care evoluează într-o gală de box sau de lupte, adică maieurile.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Un om luat de sus",
+        "solution": "ITAN",
+        "rationale": "La prima vedere definiția pare să descrie o persoană tratată cu superioritate sau ridicată de la pământ, dar soluția nu e un cuvânt obișnuit, ci un cuvânt trunchiat. „Un om” trimite la TITAN, denumire dată unui om uriaș, puternic, iar „luat de sus” indică operația de a-i lua litera de sus, adică prima literă, în cazul unei definiții aranjate vertical în grilă. Astfel, din TITAN, prin scoaterea lui T de sus, rămâne ITAN.",
+        "surface_reading": "Un om privit cu aroganță, tratat de sus, sau un om ridicat, luat pe sus.",
+        "intended_sense": "Cuvântul TITAN (om uriaș, puternic) din care se ia litera de sus, prima literă, obținându-se ITAN.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Acționează cu întăriri în port la aplicații",
+        "solution": "APRET",
+        "rationale": "Definiția mimează un limbaj militar: forțe care primesc întăriri într-un port maritim, în timpul unor aplicații (exerciții). În realitate, „port” înseamnă îmbrăcăminte, costum, „întărire” este rigidizarea materialului, iar „aplicații” se referă la operațiile de aplicare pe țesătură și la ornamentele aplicate. Substanța care întărește țesăturile din care se fac hainele, fiind aplicată pe ele, este apretul, iar el „acționează” chimic asupra fibrelor.",
+        "surface_reading": "Trupe care intervin cu întăriri într-un port maritim, în cadrul unor exerciții militare.",
+        "intended_sense": "Substanța (scrobeala, cleiul) care dă rigiditate țesăturilor folosite la îmbrăcăminte, întărindu-le acolo unde este aplicată.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Roată fără spițe",
+        "solution": "CERC",
+        "rationale": "La prima citire pare descrisă o roată stricată, căreia îi lipsesc spițele, sau o roată plină de tip special. În realitate, autorul descrie roata redusă la conturul ei: dacă îi înlături spițele și butucul, rămâne doar linia circulară, adică cercul. Analogia este întărită de faptul că cercul metalic rostogolit de copii se comporta chiar ca o roată fără spițe.",
+        "surface_reading": "O roată defectă sau un tip de roată care nu are spițe, deci un obiect tehnic incomplet.",
+        "intended_sense": "Figura geometrică rămasă din roată când se ignoră spițele și butucul, adică simpla linie circulară — cercul.",
+        "wordplay_type": "metaforă",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Ofertă în exclusivitate",
+        "solution": "DOAR",
+        "rationale": "La prima vedere definiția pare limbaj publicitar, sugerând un produs sau o promoție disponibilă exclusiv într-un anumit loc, deci un substantiv din sfera comerțului. În realitate, autorul cere cuvântul care exprimă chiar ideea de exclusivitate, adverbul restrictiv „doar”, sinonim cu „numai” („ofertă valabilă doar azi”, „doar aici”). Ca bonus, în DOAR se ascunde DAR, adică tocmai „oferta”, cuprinsă în cuvântul exclusivității, ceea ce dă definiției un dublu strat.",
+        "surface_reading": "O propunere comercială, un produs pus în vânzare exclusiv într-un singur loc sau pentru o singură categorie de clienți.",
+        "intended_sense": "Adverbul restrictiv care înseamnă „numai”, adică modul de a exprima în limbă exclusivitatea; în plus, cuvântul conține „dar” = ofertă.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A executa o suspendare în rândurile galeriei.",
+        "solution": "AGATA",
+        "rationale": "La suprafață, „suspendare” pare sancțiunea sportivă, iar „galeria” grupul zgomotos de suporteri, deci s-ar sugera excluderea cuiva dintre fani. În realitate, „suspendare” are sensul concret de atârnare a unui obiect, iar „galerie” este bara cu inele pe care se pun perdelele (sau galeria pe care se atârnă tablouri). A executa o suspendare pe rândurile galeriei înseamnă deci a agăța perdeaua ori tabloul, de unde soluția AGĂȚA.",
+        "surface_reading": "Aplicarea unei sancțiuni de suspendare unui suporter din rândurile galeriei unei echipe.",
+        "intended_sense": "A atârna un obiect (perdea, tablou) de rândurile de inele ale galeriei, adică a agăța.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Domeniul religiei catolice (pl.)",
+        "solution": "ABATII",
+        "rationale": "La prima citire, „domeniul religiei catolice” pare să indice sfera de preocupare sau ramura de cunoaștere a catolicismului, deci ceva de tipul teologiei sau dogmaticii. Autorul folosește însă „domeniu” în sensul concret de proprietate funciară, moșie: abațiile erau, în Evul Mediu, mari domenii ale Bisericii catolice, conduse de un abate. Indicația (pl.) confirmă că se cere forma de plural, abații, adică aceste proprietăți mănăstirești catolice.",
+        "surface_reading": "Sfera de activitate, ramura sau aria de cunoaștere proprie religiei catolice (teologie, dogmă, cult).",
+        "intended_sense": "Proprietățile funciare, moșiile stăpânite de Biserica catolică, adică mănăstirile conduse de abați — abațiile.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Construcție convexă",
+        "solution": "ARCATA",
+        "rationale": "La prima vedere „construcție convexă” pare o noțiune de geometrie sau de optică (corp convex, lentilă convexă), deci ceva abstract, matematic. Autorul folosește însă „construcție” în sens arhitectural, iar „convex” în sensul său concret de bombat, curbat în afară: o zidărie care se curbează astfel este arcată, adică boltită, ridicată în formă de arc (arcadă). Astfel, sinonimia contextuală convex = arcuit/arcat duce direct la soluție.",
+        "surface_reading": "O figură sau un corp geometric convex, respectiv o construcție matematică din domeniul geometriei ori al opticii.",
+        "intended_sense": "O construcție arhitecturală curbată, boltită, realizată în formă de arc — deci arcată (arcadă).",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Acorduri lirice dedicate unirii",
+        "solution": "ORATII",
+        "rationale": "Definiția te trimite spre cântece patriotice închinate Unirii istorice, de tipul „Hora Unirii”, pentru că „acorduri” sugerează muzică, iar „unirea” evocă evenimentul național. Sensul intenționat mută însă „unirea” la unirea a doi tineri prin căsătorie, adică nunta, iar „acorduri lirice” devine metaforă pentru texte versificate, armonioase, rostite ceremonial. Creațiile populare în versuri închinate nunții sunt exact orațiile, discursurile rimate ale vornicului la cununie.",
+        "surface_reading": "Cântece sau imnuri patriotice compuse în cinstea Unirii naționale.",
+        "intended_sense": "Creații populare în versuri rostite la nuntă, adică la unirea a doi tineri prin căsătorie: orațiile de nuntă.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Stat la soare pe nisip",
+        "solution": "EMIRAT",
+        "rationale": "La prima citire, „stat” pare participiul verbului „a sta”, deci imaginea unei persoane întinse la plajă, la bronzat pe nisip. Autorul folosește însă „stat” ca substantiv, în sens politic: o țară situată într-o zonă deșertică, cu climă torinsorită și întinderi de nisip. Un asemenea stat din Golf, arab și deșertic, este un emirat.",
+        "surface_reading": "Faptul de a sta întins la soare pe plajă, la bronzat.",
+        "intended_sense": "Un stat (formă de organizare politică) aflat în deșert, într-o regiune însorită și cu nisip, adică un emirat arab.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": " Metalurgistul Cu... gir în februarie",
+        "solution": "FAUR",
+        "rationale": "Definiția pare să vorbească despre o entitate industrială sau sportivă legată de Cugir („Metalurgistul Cugir”), respectiv despre un lucrător în cupru, simbolul Cu fiind pus în față ca momeală. În realitate, „metalurgistul” este citit în sens vechi și popular: faurul, adică fierarul, meșterul care lucrează metalul. Iar „girul în februarie” trimite la faptul că exact același cuvânt, Faur (Făurar), este denumirea populară, atestată de tradiție, a lunii februarie. Cele două sensuri omonime ale lui FAUR se suprapun perfect, iar „Cu... gir” funcționează doar ca ecran de fum ortografic.",
+        "surface_reading": "Un metalurgist care lucrează cuprul sau o referire la Metalurgistul Cugir, localitatea și clubul cu tradiție industrială, într-o lună a anului.",
+        "intended_sense": "Faur înseamnă fierar, meșter metalurgist, și în același timp este numele popular „girat” de tradiție pentru luna februarie.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Oameni cruzi",
+        "solution": "ZBIRI",
+        "rationale": "Definiția pare să ceară un sinonim generic pentru „răi”, „bruți”, ori poate împinge spre celălalt sens al lui „crud”, acela de necopt, neexperimentat. Sensul folosit de autor este însă cruzimea ca brutalitate practicată efectiv asupra altora, iar termenul consacrat pentru astfel de oameni este „zbiri” – slujbași fără milă, temniceri sau bătăuși care persecută și schingiuiesc. Pluralul definiției se potrivește exact cu forma soluției.",
+        "surface_reading": "Un simplu sinonim general pentru oameni răi sau, în altă direcție, pentru ceva „crud” în sensul de necopt, verde, neformat.",
+        "intended_sense": "Oameni de o cruzime profesionalizată, executanți brutali în slujba unei puteri, adică zbiri.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Luxul vechilor moșieri",
+        "solution": "OPAIT",
+        "rationale": "La suprafață, definiția pare să ceară un simbol al bogăției boierești: trăsuri, bijuterii, mobilier scump. În realitate, autorul se joacă cu latinescul „lux, lucis” = lumină, astfel că „luxul” devine sursa de iluminat de care dispuneau moșierii de altădată. Iar aceasta era opaițul, lampa rudimentară cu ulei sau seu, adică exact opusul fastului sugerat de citirea evidentă.",
+        "surface_reading": "Un obiect de mare preț, semn al bogăției și fastului cu care se împăunau moșierii de odinioară.",
+        "intended_sense": "„Lux” în sensul latinesc de lumină: mijlocul de iluminat folosit în vremurile vechi, opaițul.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Slalom special",
+        "solution": "OCOL",
+        "rationale": "La prima vedere definiția pare să ceară un termen tehnic din schiul alpin, unde „slalom special” este numele unei probe oficiale de concurs. Sensul intenționat pornește însă de la conținutul gestului: a face slalom înseamnă a ocoli succesiv porțile sau obstacolele, iar rezultatul acestei mișcări este un ocol. Cuvântul „special” semnalează totodată că se cere sensul mai puțin obișnuit al lui OCOL, cel de traseu ocolit, de evitare a unui obstacol, nu cel de îngrăditură pentru vite.",
+        "surface_reading": "Denumirea unei probe din schiul alpin, cu porți dese și traseu scurt.",
+        "intended_sense": "Mișcarea de ocolire a obstacolelor, adică drumul ocolit pe care îl descrie cel care face slalom.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Entitate fără pereche",
+        "solution": "UNICAT",
+        "rationale": "La prima vedere, „fără pereche” trimite la ideea de singurătate afectivă (o ființă neînsoțită, un celibatar) sau chiar la un număr impar, adică nepereche. Autorul folosește însă expresia „fără pereche” în sensul ei figurat de „fără seamăn, care nu are un al doilea exemplar identic”, iar „entitate” este luat neutru, ca lucru care există. Ceea ce există într-un singur exemplar, neavând un dublet cu care să facă pereche, este exact un unicat.",
+        "surface_reading": "O ființă singură, neînsoțită, lipsită de partener (sau un număr impar, nepereche).",
+        "intended_sense": "Un lucru care există într-un singur exemplar, care nu are seamăn ori duplicat, deci un unicat.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Formă de plată",
+        "solution": "LISA",
+        "rationale": "La suprafață, definiția pare să ceară o modalitate de achitare a unei sume (numerar, card, rate), pornind de la substantivul „plată”. În realitate, „plată” este aici forma feminină a adjectivului „plat”, iar „formă” trimite la aspectul unei suprafețe: o suprafață plată, netedă, fără reliefuri sau ornamente, este lisă. Soluția LISA funcționează deci ca sinonim al adjectivului „plată”, nu ca tip de plată bănească.",
+        "surface_reading": "Modalitate de achitare a unei sume de bani: numerar, card, virament, rate.",
+        "intended_sense": "Aspectul unei suprafețe plate, netede, fără asperități sau ornamente, care se numește „lisă”.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Stâlp fixat într-o gospodărie",
+        "solution": "SOT",
+        "rationale": "La suprafață, definiția pare să descrie un element de construcție: un par sau un stâlp de lemn înfipt și bătut în pământ în curtea unei gospodării. Sensul intenționat exploatează însă expresia figurată „stâlpul casei”, prin care se numește bărbatul care susține familia, adică soțul. „Fixat” nu înseamnă aici înfipt în pământ, ci statornicit, așezat definitiv într-o gospodărie prin căsătorie, astfel încât stâlpul fixat în gospodărie este soțul.",
+        "surface_reading": "Un par sau un stâlp de lemn înfipt în pământ în curtea ori la poarta unei gospodării.",
+        "intended_sense": "„Stâlpul casei”, adică bărbatul care susține familia, statornicit într-o gospodărie prin căsătorie: soțul.",
+        "wordplay_type": "metaforă",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A lansa o ofertă fără finalizare",
+        "solution": "AMAGI",
+        "rationale": "La prima vedere, definiția pare să descrie un act comercial: o propunere lansată pe piață care nu ajunge să se concretizeze într-o tranzacție. În realitate, „oferta” este aici o promisiune atrăgătoare făcută cuiva, iar „fără finalizare” arată că ea nu este niciodată onorată. A propune ceva ispititor pe care nu îl dai înseamnă a momi cu speranțe deșarte, adică a amăgi.",
+        "surface_reading": "A face o propunere comercială, o licitație sau o ofertă de afaceri care nu se încheie cu un contract.",
+        "intended_sense": "A ademeni pe cineva cu o promisiune ispititoare pe care nu o îndeplinești, a-l înșela cu speranțe.",
+        "wordplay_type": "sens figurat",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Se dă la fund şi e greu de prins",
+        "solution": "CALCAN",
+        "rationale": "La prima citire, definiția pare să descrie un infractor sau un fugar: „a se da la fund” este expresia familiară pentru a se ascunde, iar „greu de prins” sugerează urmărirea de către autorități. Autorul folosește însă sensul literal al expresiei: calcanul este un pește plat care trăiește chiar pe fundul mării, unde se îngroapă în nămol și se camuflează perfect. Din acest motiv este greu de prins, „prins” având aici sensul concret de capturat prin pescuit.",
+        "surface_reading": "Un om care se ascunde de urmăritori, un fugar pe care poliția nu reușește să îl captureze.",
+        "intended_sense": "Pește plat care stă pe fundul mării, camuflat în sediment, ceea ce îl face dificil de pescuit.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Exemplare păstrate în insectar pe timp nelimitat",
+        "solution": "ACE",
+        "rationale": "La prima vedere, „exemplarele” dintr-un insectar par a fi insectele colecționate, conservate pentru studiu. Autorul mută însă sensul de la specimene biologice la obiectele prezente efectiv în cutie: acele entomologice cu care sunt fixate insectele. Fiind din metal, acestea nu se degradează, nu se sfărâmă și nu sunt atacate de paraziți sau mucegai, deci ele sunt singurele „exemplare” care se păstrează realmente pe timp nelimitat.",
+        "surface_reading": "Insecte rare, conservate și expuse într-o colecție entomologică pentru totdeauna.",
+        "intended_sense": "Acele metalice cu care insectele sunt prinse în insectar, piese care rezistă indefinit, spre deosebire de insectele propriu-zise.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Reper pentru săgeți trase cu arcul",
+        "solution": "ORA",
+        "rationale": "La suprafață, definiția trimite la tirul cu arcul, unde reperul ar fi ținta spre care se trag săgețile. În realitate, „arcul” este resortul unui mecanism de ceas, iar „săgețile” sunt acele indicatoare, care sunt „trase”, adică acționate, de acest arc. Reperul pe care îl arată aceste săgeți pe cadran este ora.",
+        "surface_reading": "Ținta sau punctul de ochire folosit de un arcaș care trage cu arcul.",
+        "intended_sense": "Indicația dată de acele („săgețile”) unui ceas cu arc, adică ora marcată pe cadran.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Omul stăpânirii",
+        "solution": "ROB",
+        "rationale": "La prima vedere, „stăpânirea” pare a desemna autoritatea, puterea politică, iar „omul stăpânirii” ar fi un slujbaș, un agent al guvernării. Autorul folosește însă celălalt sens al cuvântului: stăpânirea ca act de a stăpâni pe cineva, ca posesiune. Omul aflat în stăpânirea altuia, cel care îi aparține unui stăpân, este robul, iar genitivul se citește ca apartenență, nu ca subordonare instituțională.",
+        "surface_reading": "Un slujbaș sau un reprezentant al autorităților, om al puterii politice.",
+        "intended_sense": "Omul care se află în stăpânirea (proprietatea) cuiva, adică sclavul unui stăpân.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Program pregătit pentru acordarea revanșei",
+        "solution": "RETUR",
+        "rationale": "La prima vedere, „program pregătit” sugerează o aplicație informatică sau o emisiune concepută special pentru a da cuiva satisfacție. În realitate, „program” trebuie citit în sens sportiv, ca programare a meciurilor din calendarul competițional, iar „revanșa” este chiar meciul-revanșă disputat în a doua parte a campionatului. Partea de campionat în care echipele se reîntâlnesc, cu gazdele inversate, se numește retur, deci programul destinat revanșelor este cel de retur.",
+        "surface_reading": "Un program informatic sau un plan de acțiune întocmit pentru a-i oferi cuiva ocazia de a se răzbuna.",
+        "intended_sense": "Programarea meciurilor din a doua jumătate a campionatului, când se joacă partidele-revanșă, adică returul.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Servicii executate într-o navă",
+        "solution": "RUGI",
+        "rationale": "La prima vedere „navă” trimite la o ambarcațiune, iar „servicii” la lucrări tehnice sau de bord executate de echipaj. Autorul folosește însă „navă” în sens arhitectural — nava bisericii, spațiul central al edificiului de cult — iar „servicii” în sensul de servicii religioase, slujbe. Ceea ce se săvârșește, se rostește și se înalță acolo sunt rugile, adică rugăciunile credincioșilor.",
+        "surface_reading": "Lucrări, întreținere sau atribuții îndeplinite la bordul unui vapor.",
+        "intended_sense": "Rugăciunile rostite în nava (naosul) unei biserici, în cadrul serviciului religios.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Dă şi ea o bere",
+        "solution": "GALGAIALA",
+        "rationale": "La prima citire pare că cineva face cinste, oferind o bere, băutura alcoolică. În realitate, „bere” este aici infinitivul lung al verbului „a bea”, adică faptul de a bea, sorbitura. Gâlgâiala, zgomotul înghițiturilor mari de lichid, este tocmai expresia sonoră a unui asemenea act, deci „dă și ea o bere” – trădează, semnalează faptul că se bea.",
+        "surface_reading": "Cineva face cinste, oferă o halbă de bere ca băutură.",
+        "intended_sense": "„Bere” ca substantiv verbal de la „a bea”: gâlgâiala indică/echivalează cu actul de a bea pe nerăsuflate.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Faptul zilei (pl.)",
+        "solution": "EVENIMENTE",
+        "rationale": "Prima citire trimite la expresia consacrată „în faptul zilei”, adică momentul ivirii luminii, zorii, ceea ce îndreaptă gândul spre răsărit sau auroră. Autorul folosește însă celălalt sens al lui „fapt”: întâmplare, lucru care s-a petrecut, iar faptele unei zile sunt tocmai evenimentele ei. Indicația (pl.) confirmă că se cere forma de plural, deci EVENIMENTE, întâmplările petrecute în cursul zilei.",
+        "surface_reading": "„În faptul zilei”, adică momentul în care se ivește ziua, zorii, revărsatul luminii.",
+        "intended_sense": "Faptele, întâmplările petrecute într-o zi, adică evenimentele acesteia (la plural).",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Intrat în pâine",
+        "solution": "TAIS",
+        "rationale": "La prima vedere, definiția folosește expresia idiomatică „a intra în pâine”, care înseamnă a obține o slujbă, a fi angajat, deci ne face să căutăm un cuvânt legat de angajare. Autorul întoarce însă expresia la sensul strict literal: ceea ce intră efectiv în pâine este tăișul cuțitului, atunci când se taie o felie. Astfel, „intrat în pâine” descrie partea ascuțită a lamei care pătrunde în miez, adică TĂIȘUL.",
+        "surface_reading": "Cineva care s-a angajat, care și-a găsit un post, conform expresiei „a intra în pâine”.",
+        "intended_sense": "Partea ascuțită a cuțitului care pătrunde concret în pâine atunci când aceasta este tăiată.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Casă mică și sărăcăcioasă",
+        "solution": "COLIBA",
+        "rationale": "Definiția funcționează ca o descriere de dicționar: coliba este exact o construcție de locuit de dimensiuni reduse, ridicată din materiale simple (lemn, stuf, paie, pământ), asociată tradițional cu sărăcia. Cele două atribute din enunț, „mică” și „sărăcăcioasă”, acoperă împreună tocmai trăsăturile definitorii ale colibei, deosebind-o de o casă propriu-zisă. Singura dificultate reală este de vocabular, alegerea termenului potrivit dintre sinonimele apropiate (bordei, cocioabă, căsuță), pe baza numărului de litere.",
+        "surface_reading": "Definiția este directă, fără sens ascuns: descrie pur și simplu o locuință modestă, de mici dimensiuni.",
+        "intended_sense": "Adăpost rudimentar de locuit, făcut din materiale ieftine, considerat prin excelență locuința celui sărac, adică coliba.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Adunare tovărăşească",
+        "solution": "ANTURAJ",
+        "rationale": "Cuvântul „adunare” duce gândul spre un eveniment — o ședință, o întrunire de tovarăși, cu iz de limbaj politic. Autorul îl folosește însă în sensul de rezultat al adunării: un ansamblu, un grup de persoane strânse laolaltă. Grupul de tovarăși, de prieteni și apropiați care înconjoară constant pe cineva se numește anturaj, „tovărășească” indicând tocmai caracterul amical, de camaraderie, al acestui cerc.",
+        "surface_reading": "O ședință sau o întrunire oficială a tovarășilor, în sensul de reuniune organizată.",
+        "intended_sense": "Grupul de prieteni, camarazi și apropiați care se adună în jurul unei persoane, adică anturajul ei.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Traseu stabilit pentru deplasarea unui extraterestru",
+        "solution": "ORBITA",
+        "rationale": "Definiția te împinge să te gândești la o ființă venită din spațiu, deci la un itinerar al unei nave sau al unui alien. În realitate, „extraterestru” funcționează aici ca denumire pentru un corp din afara Pământului (planetă, satelit, asteroid), iar traseul fix pe care acesta se deplasează, determinat de legile mecanicii cerești, este orbita. „Stabilit” subliniază tocmai caracterul predeterminat al traiectoriei unui astru, nu al unui plan de călătorie.",
+        "surface_reading": "Itinerarul prestabilit al unei ființe venite din spațiu sau al farfuriei ei zburătoare.",
+        "intended_sense": "Traiectoria fixă pe care se mișcă un corp ceresc, adică un corp extraterestru, în jurul unui alt astru.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Idealul unei societăţi comuniste (2 cuv.)",
+        "solution": "OMULNOU",
+        "rationale": "La prima citire, „idealul unei societăți comuniste” pare să ceară o stare social-economică: societatea fără clase, egalitatea deplină, abolirea proprietății private. Autorul folosește însă „ideal” în sensul de model, prototip la care se aspiră, iar în limbajul propagandistic comunist acest model era chiar „omul nou” — tipul uman conștient, devotat și modelat ideologic, pe care regimul pretindea că îl formează. Astfel, idealul nu este o ordine socială, ci o făptură umană remodelată.",
+        "surface_reading": "O stare socială utopică urmărită de comunism: egalitate absolută, societate fără clase, bunăstare pentru toți.",
+        "intended_sense": "„Ideal” ca model uman de urmat, adică sintagma consacrată a propagandei comuniste pentru individul remodelat ideologic: omul nou.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Proiecte de lucrări făcute cu meşteşug",
+        "solution": "TERTIPURI",
+        "rationale": "La prima citire definiția pare să descrie documentații tehnice, planuri de construcții realizate cu pricepere profesională. Sensul intenționat mută însă fiecare termen în registrul figurat: „proiecte” devin planuri și socoteli puse la cale, „lucrări” devin „lucrături”, adică intrigi urzite pe ascuns împotriva cuiva, iar „cu meșteșug” își recuperează sensul vechi de dibăcie amestecată cu șiretenie. Planurile de lucrături ticluite cu asemenea abilitate viclenită sunt exact tertipurile.",
+        "surface_reading": "Documentații și planuri de lucrări de construcții întocmite cu iscusință tehnică de un specialist.",
+        "intended_sense": "Planuri de „lucrături”, adică de intrigi și manevre puse la cale cu șiretenie și dibăcie, deci șiretlicuri.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Colective scenice",
+        "solution": "CORURI",
+        "rationale": "„Colective” duce gândul spre trupe sau ansambluri de actori, adică spre echipe teatrale în sens administrativ. Autorul folosește însă „colectiv” în sensul de grup de interpreți care cântă împreună, iar formația vocală care evoluează pe scenă este corul — un veritabil personaj colectiv, încă din tragedia antică. Astfel, „colective scenice” devine sinonimul contextual al pluralului „coruri”.",
+        "surface_reading": "Trupe de teatru, ansambluri sau echipe artistice privite ca unități organizatorice.",
+        "intended_sense": "Grupuri de cântăreți care interpretează împreună pe scenă, adică formațiile corale.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Atacant care repetă faza",
+        "solution": "RECIDIVIST",
+        "rationale": "La suprafață, „atacant” și „fază” sunt termeni din limbajul fotbalistic, sugerând un jucător ofensiv care reia aceeași acțiune de joc. Sensul intenționat mută însă „atacant” în registrul juridic-penal: cel care comite un atac, o agresiune sau un jaf, iar „faza” devine, în limbaj familiar, fapta, isprava comisă. Infractorul care repetă fapta, adică o săvârșește din nou după condamnare, este prin definiție un recidivist.",
+        "surface_reading": "Un jucător de atac care reia sau repetă aceeași fază de joc pe teren.",
+        "intended_sense": "Agresorul, infractorul care comite din nou aceeași faptă, adică recidivează.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Temă pentru cercetare",
+        "solution": "TAINA",
+        "rationale": "La prima citire, definiția pare să ceară un subiect de studiu științific sau o problemă dată spre documentare. Autorul mută însă sensul „cercetării” de la munca academică la investigația care urmărește descoperirea a ceva ascuns, iar obiectul firesc al unei asemenea investigații este taina. Astfel, taina este tocmai „tema” care cere să fie cercetată, adică dezlegată și dată în vileag.",
+        "surface_reading": "Un subiect de studiu științific, o problemă propusă pentru documentare sau lucrare de cercetare.",
+        "intended_sense": "Secretul, misterul care trebuie investigat și dezvăluit, adică ceea ce se cercetează pentru a fi descoperit.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Prime de producție acordate anticipat",
+        "solution": "STIMULENTE",
+        "rationale": "La prima vedere definiția pare să vorbească despre bani plătiți în avans, un fel de aconto din primele de producție. În realitate, cuvântul „anticipat” funcționează ca indiciu semantic pentru alegerea sinonimului corect: prima dată după realizarea planului este o recompensă, în timp ce suma acordată sau promisă înainte, pentru a impulsiona munca, se numește stimulent. Stimulentul, prin definiție, precede și provoacă efortul, deci primele acordate anticipat sunt exact stimulente.",
+        "surface_reading": "Sume de bani din prime plătite în avans angajaților, un fel de aconto sau avans la salariu.",
+        "intended_sense": "Recompense materiale date înainte de obținerea rezultatului, cu scopul de a impulsiona producția, adică stimulente.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Un deliciu pentru cei mici",
+        "solution": "MUSTAR",
+        "rationale": "La prima citire, „cei mici” pare să-i desemneze pe copii, iar „deliciu” trimite la o dulciuță, ceea ce exclude muștarul, un condiment iute. Sensul intenționat folosește însă substantivul „mici” în accepțiunea culinară de mititei, preparatul românesc de la grătar. Iar deliciul care însoțește obligatoriu micii, cel fără care nu se servesc, este chiar muștarul.",
+        "surface_reading": "O bunătate dulce, o gustare pe placul copiilor.",
+        "intended_sense": "Condimentul nelipsit de lângă mici (mititei), adică muștarul, care le dă gustul deosebit.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Victorii obținute în opoziție",
+        "solution": "INFRANGERI",
+        "rationale": "La prima vedere, definiția pare o notă politică: partidele din opoziție care reușesc să câștige, deci victorii ale opoziției. În realitate, „în opoziție” este o indicație de sens contrar, antonimic: termenul „victorii” trebuie citit invers, prin opusul său. Victoriile privite din partea cealaltă a baricadei, adică în opoziție, sunt tocmai înfrângeri, fiecare victorie a unuia fiind înfrângerea celuilalt.",
+        "surface_reading": "Succese electorale sau reușite obținute de partidele aflate în opoziție politică.",
+        "intended_sense": "Cuvântul „victorii” luat în sens opus (antonim): ceea ce pentru o tabără e victorie, pentru cea opusă e înfrângere.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Teren cu acces limitat",
+        "solution": "AREAL",
+        "rationale": "La suprafață, definiția evocă o zonă păzită, interzisă publicului prin reguli sau bariere administrative. În realitate, „acces limitat” trebuie citit ca „intrare mărginită de limite naturale”: arealul este suprafața delimitată în care o specie de plante sau animale se poate răspândi și trăi, iar dincolo de granițele lui (climat, relief, bariere geografice) accesul îi este practic închis. Astfel, arealul este chiar terenul definit prin limitele sale de pătrundere.",
+        "surface_reading": "O suprafață păzită sau interzisă, în care intrarea este restricționată prin reguli, garduri ori permise speciale.",
+        "intended_sense": "Suprafața de răspândire a unei specii, delimitată de bariere naturale peste care aceasta nu poate trece.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "O degradare morală deprimantă",
+        "solution": "UMILINTA",
+        "rationale": "La prima vedere, „degradare morală” trimite la decăderea caracterului, la corupere etică sau viciu, adică la o vină a celui care se degradează. Sensul intenționat citește însă „degradare” literal, ca scoatere din grad, coborâre de rang, iar „moral” ca demnitate și stare sufletească: umilința este exact coborârea cuiva de pe treapta demnității sale. „Deprimantă” întărește ideea de apăsare în jos, fiindcă umilința îl doboară moral pe cel supus ei, ceea ce se regăsește chiar în etimologia cuvântului (lat. humilis = jos).",
+        "surface_reading": "Decăderea caracterului cuiva, alunecarea în imoralitate sau viciu, care produce tristețe.",
+        "intended_sense": "Coborârea demnității unei persoane, înjosirea ei, resimțită ca o apăsare a moralului.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Mijloace de separaţie",
+        "solution": "USI",
+        "rationale": "La prima vedere, „separație” duce gândul la domeniul juridic (separație de bunuri, de corp) sau la procedee tehnice de separare a substanțelor, deci la instrumente abstracte ori de laborator. Autorul folosește însă sensul concret, spațial: ceea ce desparte o încăpere de alta, adică ușile, care sunt exact „mijloacele” prin care spațiile sunt separate. Pluralul „mijloace” impune și pluralul soluției, uși.",
+        "surface_reading": "Instrumente juridice sau procedee tehnice prin care se realizează o separare (separație de bunuri, metode de separare a substanțelor).",
+        "intended_sense": "Elemente constructive care despart fizic încăperile unei clădiri, adică ușile.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Intrarea în opoziţie",
+        "solution": "IESIRE",
+        "rationale": "La prima vedere definiția pare o formulare politică: momentul în care un partid trece de la putere în opoziție. Autorul folosește însă expresia „în opoziție” în sens lingvistic, de relație de antonimie: cuvântul pus în opoziție cu „intrare” este „ieșire”. Sensul se susține și logic, fiindcă a intra în opoziție echivalează cu a ieși de la guvernare.",
+        "surface_reading": "Trecerea unui partid sau a unei persoane din poziția de putere în tabăra opoziției politice.",
+        "intended_sense": "Termenul opus, antonimul lui „intrare”, adică „ieșire”.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Sprijinit cu fereală",
+        "solution": "APARAT",
+        "rationale": "Citită la prima vedere, definiția pare să descrie o persoană susținută pe ascuns, cu protecții obținute discret, sau chiar obiectul „aparat” (dispozitiv), din cauza lipsei diacriticelor. În realitate, soluția se citește APĂRAT: „sprijinit” are sensul de ocrotit, susținut, iar „cu fereală” trimite la verbul a feri, sinonim cu a apăra. Cine este ferit și ocrotit de un pericol este, prin urmare, apărat, participiul cerut de definiție.",
+        "surface_reading": "Cineva susținut pe ascuns, protejat prin intervenții discrete, sau chiar un „aparat”, adică un dispozitiv tehnic.",
+        "intended_sense": "APĂRAT, adică ocrotit, ferit de pericol – „sprijinit” = susținut/ocrotit, iar „cu fereală” = ferit, deci apărat.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "O brumă de bun gust",
+        "solution": "ZAHARPUDRA",
+        "rationale": "La prima citire, „de bun gust” trimite la rafinament estetic, iar „brumă” la o ceață fină sau o nuanță discretă, deci la ceva elegant și subtil. Autorul folosește însă „brumă” metaforic, pentru stratul alb, fin și pufos care se așază peste prăjituri atunci când se cerne zahăr pudră, iar „bun gust” este luat la propriu: ceva dulce, gustos. Astfel, pudra albă care „înceţoşează” suprafața cozonacului sau a gogoșilor este chiar zahărul pudră.",
+        "surface_reading": "O ceață fină, o nuanță discretă care denotă eleganță și rafinament estetic.",
+        "intended_sense": "Stratul fin de pulbere albă, ca o brumă, presărat peste dulciuri, cu gust dulce, adică zahărul pudră.",
+        "wordplay_type": "metaforă",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Liderul unui grup",
+        "solution": "UNU",
+        "rationale": "La prima vedere definiția cere numele sau funcția celui care conduce o formație, o echipă ori o grupare de oameni. Sensul intenționat exploatează însă expresia consacrată „numărul unu”, prin care se desemnează tocmai cel care conduce, cel de pe primul loc. Dacă grupul este privit ca un șir de cifre sau de numere, cel care stă în frunte și le conduce pe toate este unu, deci liderul grupului este chiar UNU.",
+        "surface_reading": "Persoana care conduce o echipă, o trupă sau o grupare, adică șeful, conducătorul.",
+        "intended_sense": "Primul, cel din frunte, „numărul unu” al unui grup (inclusiv al unui grup de cifre), adică UNU.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Un ajutor pentru cei ce au de tras la bloc",
+        "solution": "TEU",
+        "rationale": "La prima citire, definiția pare să vorbească despre oamenii care „trag din greu” la un bloc de locuințe și care ar avea nevoie de un sprijin. În realitate, „a trage” este folosit în sensul tehnic de a trasa linii, iar „blocul” este blocul de desen, planșa desenatorului. Ajutorul acestora este teul, rigla în formă de T cu care se trag linii drepte și paralele pe planșetă.",
+        "surface_reading": "Un sprijin dat celor care muncesc din greu (trag din greu) la un bloc de locuințe.",
+        "intended_sense": "Instrumentul de desen tehnic cu care se trasează linii pe blocul (planșa) de desen, adică teul.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Dispoziţii scrise",
+        "solution": "TOANE",
+        "rationale": "La prima vedere, „dispoziții scrise” pare o formulă administrativă: ordine, instrucțiuni sau decrete emise în scris de o autoritate. Autorul folosește însă celălalt sens al lui „dispoziție” — starea sufletească, cheful de moment — care, la plural și cu nuanță de capriciu, dă TOANE. Cuvântul „scrise” este elementul de camuflaj: el împinge gândul spre hârtii oficiale, deși aici sugerează dispoziții parcă hărăzite, înscrise în firea cuiva („așa i-a fost scris”).",
+        "surface_reading": "Ordine, circulare sau instrucțiuni oficiale emise în formă scrisă de un superior ori de o instituție.",
+        "intended_sense": "Stările sufletești schimbătoare, capriciile cuiva, adică toanele, „dispozițiile” înțelese ca chefuri de moment.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Barcă cu motorul pe stînga",
+        "solution": "ATAS",
+        "rationale": "La suprafață, definiția pare să descrie o ambarcațiune al cărei motor ar fi fixat în partea din stânga. În realitate, „motor” este folosit în sensul popular de motocicletă, iar „barcă” este numele familiar dat atașului, coșul lateral în formă de luntre montat lângă motocicletă. Cum atașul se prinde în partea dreaptă (la circulația pe dreapta), motocicleta, adică „motorul”, se află la stânga acestei „bărci”, ceea ce descrie exact atașul.",
+        "surface_reading": "O ambarcațiune cu motorul montat pe partea din stânga (babord).",
+        "intended_sense": "Atașul motocicletei, numit popular „barcă”, montat în dreapta, astfel încât motocicleta („motorul”) îi rămâne pe stânga.",
+        "wordplay_type": "metaforă",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A se prezenta la locul stabilit",
+        "solution": "IVI",
+        "rationale": "La prima vedere, definiția pare să descrie respectarea unei convocări sau a unei întâlniri, adică faptul de a fi punctual acolo unde ai fost chemat. Sensul intenționat exploatează însă celălalt înțeles al verbului „a se prezenta”: a se arăta, a se face văzut, a apărea în câmpul vizual. Cine apare în locul unde era așteptat se ivește, astfel că „a se prezenta” devine sinonim contextual cu „a se ivi”.",
+        "surface_reading": "A veni punctual la o întâlnire sau la o convocare oficială, la locul indicat.",
+        "intended_sense": "A apărea, a se arăta, a se face văzut într-un anumit loc — adică a se ivi.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Specificul mișcărilor în aer liber",
+        "solution": "EOLIAN",
+        "rationale": "La prima vedere sintagma „în aer liber” pare o localizare a unor exerciții fizice, deci s-ar cere un termen din sfera sportului. Autorul reașază însă grupul de cuvinte: nu mișcări făcute în aer liber, ci mișcările aerului liber, adică deplasările masei de aer, care nu sunt altceva decât vântul. Ceea ce este specific vântului se numește eolian (energie eoliană, relief eolian), de la Eol, stăpânul vânturilor.",
+        "surface_reading": "Caracteristica activităților fizice, sportive sau de recreere practicate afară, în natură.",
+        "intended_sense": "Adjectivul care caracterizează deplasările masei de aer, adică vântul: eolian.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Fixat decisiv înaintea petrecerii de fapt",
+        "solution": "PRESTABILIT",
+        "rationale": "La prima citire, „petrecerea” pare o serbare, un chef, iar definiția ar descrie ceva hotărât înainte de o petrecere. Sensul real folosește însă „petrecere” ca substantiv al verbului „a se petrece” = a se întâmpla, a avea loc, astfel că „înaintea petrecerii de fapt” înseamnă înainte ca faptul să se producă, adică prefixul „pre-”. „Fixat decisiv” dă sinonimul „stabilit” (hotărât, decis), iar combinația celor două componente conduce la PRESTABILIT.",
+        "surface_reading": "Ceva aranjat sau hotărât ferm înainte de o petrecere, de o sărbătoare.",
+        "intended_sense": "Stabilit, hotărât dinainte de momentul în care faptul se petrece efectiv, adică pre-stabilit.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Evidențiați în fața popilor",
+        "solution": "ASI",
+        "rationale": "La suprafață, „popii” par a fi preoții, iar cei „evidențiați în fața” lor ar fi niște enoriași remarcați la biserică. În limbajul jocului de cărți însă, „popă” este numele popular al regelui, iar cartea care îl întrece în valoare este asul. Astfel, așii sunt cei care se evidențiază, adică stau înaintea popilor în ierarhia cărților, „în fața” având sensul de superior, mai mare ca valoare.",
+        "surface_reading": "Persoane care se fac remarcate în prezența preoților, la biserică.",
+        "intended_sense": "Cărțile de joc care depășesc în valoare popii (regii), adică așii.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Legată de o întâmplare adevărată",
+        "solution": "ALEATOARE",
+        "rationale": "La suprafață, definiția pare formula clasică folosită pentru povești sau filme „inspirate dintr-o întâmplare adevărată”, deci ceva bazat pe fapte reale. Sensul intenționat exploatează însă celălalt înțeles al cuvântului „întâmplare”: hazardul, norocul, ceea ce se produce neprevăzut, ca în expresia „la întâmplare”. Ceea ce este legat de hazard, adică depinde de întâmplare, se numește aleator, iar acordul feminin cerut de „legată” dă forma ALEATOARE; adjectivul „adevărată” accentuează că e vorba de un hazard veritabil, pur.",
+        "surface_reading": "Ceva bazat pe fapte reale, o poveste inspirată dintr-un eveniment petrecut cu adevărat.",
+        "intended_sense": "Care depinde de întâmplare în sensul de hazard, de neprevăzut, deci aleatoare.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Intrare în alertă",
+        "solution": "PULSARE",
+        "rationale": "La suprafață, definiția pare să descrie declanșarea unei stări oficiale de alarmă, cu semnale și proceduri de urgență. Sensul intenționat este însă fiziologic: intrarea organismului în starea de alarmă se traduce prin bătaia accelerată a inimii, adică prin pulsare. Ajută și dubla valoare a lui „alert”, care înseamnă și „vioi, rapid” — un puls alert —, astfel încât intrarea în acest ritm este chiar pulsarea, substantiv verbal ca și „intrare”.",
+        "surface_reading": "Declanșarea unei stări de alarmă, trecerea unei instituții sau a unei zone în regim de urgență.",
+        "intended_sense": "Reacția organismului care intră în stare de alarmă: bătaia accelerată, alertă, a inimii, adică pulsarea.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Niște crize traversate cu mari emoții",
+        "solution": "ISTERICALE",
+        "rationale": "Definiția pare să vorbească despre crize economice, politice sau existențiale prin care se trece cu multă tensiune și trăire. Sensul intenționat exploatează însă celălalt înțeles al cuvântului „criză”: criza nervoasă, accesul de isterie, adică istericalele, care sunt prin definiție crize însoțite de emoții debordante, plâns și țipete. „Traversate cu mari emoții” descrie tocmai felul în care se desfășoară un astfel de acces, iar forma de plural „niște crize” corespunde substantivului istericale, folosit doar la plural (ba chiar sugerează și lectura ISTERI+CALE, adică drumul, traversarea).",
+        "surface_reading": "Perioade dificile — crize economice, politice sau personale — prin care cineva trece cu mare încordare sufletească.",
+        "intended_sense": "Crizele de nervi, accesele de isterie manifestate prin emoții violente, plâns și țipete, adică istericalele.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    }
+]

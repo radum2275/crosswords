@@ -1,0 +1,15 @@
+{
+    "model_id": "claude-opus-5",
+    "num_samples": 100,
+    "num_generated": 100,
+    "num_failed": 0,
+    "avg_rationale_len": 460.81,
+    "wordplay_types": {
+        "cunoștințe generale": 75,
+        "sinonimie contextuală": 14,
+        "polisemie": 6,
+        "omonimie": 2,
+        "metaforă": 2,
+        "sens figurat": 1
+    }
+}

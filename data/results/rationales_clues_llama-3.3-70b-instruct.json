@@ -1,0 +1,32 @@
+[
+    {
+        "clue": "Şters din datoria personalului de serviciu",
+        "solution": "pRAF",
+        "rationale": "Definiția sugerează la prima vedere ceva eliminat dintr-o obligație formală a angajaților, dar sensul real vizează obiectul concret al muncii de curățenie: personalul de serviciu are datoria de a șterge praful. Ceea ce este „șters” în cadrul acestei datorii este deci chiar praful, iar „șters” are aici sensul de îndepărtat prin ștergere.",
+        "surface_reading": "Ceva anulat sau eliminat dintr-o obligație formală a angajaților.",
+        "intended_sense": "Ceea ce personalul de curățenie îndepărtează efectiv de pe suprafețe ca parte a atribuțiilor sale.",
+        "wordplay_type": "polisemie",
+        "think": "Pentru a explica de ce soluția dată, \"PRAF\", este răspunsul corect pentru definiția \"Şters din datoria personalului de serviciu\", trebuie să analizăm cu atenție sensurile posibile ale definiției și să identificăm mecanismul prin care se ajunge la soluție. \nLa prima vedere, definiția pare să se refere la ceva care este eliminat sau anulat dintr-o obligație formală a angajaților. Cu toate acestea, sensul real al definiției este legat de obiectul concret al muncii de curățenie, și anume praful. \nPersonalul de serviciu are datoria de a șterge praful, astfel încât ceea ce este \"șters\" în cadrul acestei datorii este chiar praful. Aici, \"șters\" are sensul de îndepărtat prin ștergere, nu de anulat sau eliminat dintr-o listă de sarcini. \nPrin urmare, soluția \"PRAF\" este corectă pentru că reprezintă direct obiectul acțiunii de ștergere în contextul datoriei personalului de serviciu.",
+        "status": "OK"
+    },
+    {
+        "clue": "Înlocuire la adăpostul întunericului",
+        "solution": "IaTAC",
+        "rationale": "Definiția pare să descrie o acțiune care are loc în secret sau într-un mediu obscur, dar soluția 'IaTAC' sugerează o interpretare strategică sau tactică, unde 'înlocuire' se referă la o schimbare sau o substituție, iar 'la adăpostul întunericului' sugerează un context în care această schimbare are loc. 'IaTAC' ar putea fi văzut ca o combinație de cuvinte care se referă la o mișcare sau o acțiune strategică.",
+        "surface_reading": "O acțiune care are loc în secret sau într-un mediu obscur.",
+        "intended_sense": "O mișcare sau o acțiune strategică, unde 'înlocuire' se referă la o schimbare sau o substituție, iar 'la adăpostul întunericului' sugerează un context în care această schimbare are loc.",
+        "wordplay_type": "joc de cuvinte",
+        "think": "Pentru a înțelege corect definiția și soluția, trebuie să analizez cu atenție fiecare cuvânt și să iau în considerare sensurile posibile. Definiția \"Înlocuire la adăpostul întunericului\" pare la prima vedere a se referi la o acțiune care are loc în secret sau într-un mediu obscur. Cu toate acestea, soluția \"IaTAC\" sugerează o interpretare diferită.\nO posibilă interpretare a definiției ar fi aceea că \"înlocuire\" se referă la o schimbare sau o substituție, iar \"la adăpostul întunericului\" ar sugera un context în care această schimbare are loc. În acest caz, \"IaTAC\" ar putea fi văzut ca o combinație de cuvinte care se referă la o mișcare sau o acțiune strategică, unde \"ia\" și \"tac\" ar putea fi interpretate ca indicații de mișcare sau poziționare.\nO altă posibilitate ar fi ca \"înlocuire\" să se refere la o înlocuire a unei poziții sau a unei mișcări, iar \"la adăpostul întunericului\" să sugereze o situație în care această înlocuire are loc fără a fi observată. În acest context, \"IaTAC\" ar putea fi văzut ca o indicație de mișcare sau de poziționare, unde \"ia\" ar însemna \"ia poziția\" sau \"înlocuiește\", iar \"tac\" ar fi un cuvânt care completează sensul, sugerând o mișcare strategică.\nÎn orice caz, soluția \"IaTAC\" pare să se bazeze pe o interpretare strategică sau tactică a definiției, unde \"înlocuire\" și \"adăpostul întunericului\" sunt folosite pentru a descrie o mișcare sau o acțiune specifică.",
+        "status": "OK"
+    },
+    {
+        "clue": "Mişcarea de eliberare",
+        "solution": "SMuCIRE",
+        "rationale": "Definiția pare să se refere la un concept politic sau social, dar soluția „SMUCIRE” sugerează o mișcare fizică de eliberare, cum ar fi smucirea unui obiect pentru a-l elibera dintr-o poziție fixă. Aici, „mişcarea de eliberare” se referă la actul de a smuci sau de a trage puternic pentru a elibera ceva, și nu la un context politic sau social.",
+        "surface_reading": "Un concept politic sau social care implică lupta pentru libertate sau independență.",
+        "intended_sense": "O mișcare fizică de eliberare, cum ar fi smucirea unui obiect pentru a-l elibera dintr-o poziție fixă.",
+        "wordplay_type": "polisemie",
+        "think": "Pentru a înțelege de ce \"SMUCIRE\" este soluția corectă pentru definiția \"Mişcarea de eliberare\", trebuie să analizăm sensurile posibile ale definiției și să vedem care dintre ele conduce la soluția dată. La prima vedere, definiția pare să se refere la un concept politic sau social, cum ar fi o mișcare de eliberare națională sau o mișcare pentru drepturi civile. Însă, soluția \"SMUCIRE\" sugerează o interpretare diferită, una care implică o mișcare fizică de eliberare, și nu neapărat una politică sau socială.",
+        "status": "OK"
+    }
+]

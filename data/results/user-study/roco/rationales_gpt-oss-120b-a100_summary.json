@@ -1,0 +1,17 @@
+{
+    "model_id": "gpt-oss-120b-a100",
+    "num_samples": 100,
+    "num_generated": 100,
+    "num_failed": 0,
+    "avg_rationale_len": 304.06,
+    "wordplay_types": {
+        "polisemie": 34,
+        "sens figurat": 20,
+        "cunoștințe generale": 17,
+        "joc de cuvinte": 17,
+        "sinonimie contextuală": 6,
+        "metaforă": 4,
+        "omonimie": 1,
+        "sinonimă contextuală": 1
+    }
+}
