@@ -1,0 +1,10 @@
+{
+    "model_id": "claude-opus-4-8",
+    "num_samples": 3,
+    "num_generated": 3,
+    "num_failed": 0,
+    "avg_rationale_len": 374.0,
+    "wordplay_types": {
+        "cunoștințe generale": 3
+    }
+}

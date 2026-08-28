@@ -1,0 +1,32 @@
+[
+    {
+        "clue": "Plantă erbacee perenă din familia liliaceelor, cu frunze crescute dintr-un bulb, cu flori roz, albe, violete sau albastre",
+        "solution": "ZAMBILA",
+        "rationale": "Definiția este directă și enciclopedică, descriind caracteristicile botanice ale unei plante: erbacee, perenă, din familia liliaceelor, cu frunze care cresc dintr-un bulb și cu flori în nuanțe de roz, alb, violet sau albastru. Toate aceste trăsături corespund exact zambilei (Hyacinthus), o plantă bulboasă cunoscută pentru florile sale parfumate și colorate. Nu există niciun sens ascuns sau înșelător, ci doar recunoașterea plantei după descriere.",
+        "surface_reading": "Definiția este directă, o descriere botanică fără ambiguități.",
+        "intended_sense": "Descrierea corespunde caracteristicilor zambilei, plantă bulboasă din familia liliaceelor cu flori multicolore.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Pictor român, născut în Valea Arinilor, județul Bacău, la 28 mai 1897, autorul tabloului „Flori de primăvară” (Nicu)",
+        "solution": "ENEA",
+        "rationale": "Definiția este de tip enciclopedic și oferă toate datele necesare identificării: un pictor român pe nume Nicu, născut în Valea Arinilor, județul Bacău, la 28 mai 1897, autor al tabloului „Flori de primăvară”. Indiciul „(Nicu)” precizează prenumele, astfel încât soluția cerută este numele de familie, Enea. Este vorba despre pictorul Nicu Enea.",
+        "surface_reading": "Definiția este directă, de natură biografică, fără ambiguitate: cere numele de familie al unui pictor român identificat prin prenume și date biografice precise.",
+        "intended_sense": "Numele de familie al pictorului român Nicu Enea, indicat prin datele biografice și prenumele din paranteză.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "„Primăvara cosmică” este volumul de poezii, cu care a debutat în anul 1962, acest scriitor și traducător bucureștean (Ion)",
+        "solution": "ACSAN",
+        "rationale": "Definiția este de tip enciclopedic și cere numele de familie al unui scriitor și traducător bucureștean pe nume Ion, care a debutat în 1962 cu volumul de poezii „Primăvara cosmică”. Este vorba despre Ion Acsan, cunoscut în special ca traducător. Soluția rezultă din simpla identificare a autorului indicat prin datele biografice.",
+        "surface_reading": "Definiția este directă, oferind indicii biografice precise (prenume, oraș, an de debut, titlul volumului) pentru identificarea unei persoane reale.",
+        "intended_sense": "Numele de familie al scriitorului și traducătorului Ion Acsan, autorul volumului de debut „Primăvara cosmică” din 1962.",
+        "wordplay_type": "cunoștințe generale",
+        "think": "",
+        "status": "OK"
+    }
+]
