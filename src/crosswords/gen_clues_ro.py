@@ -19,18 +19,17 @@ from bert_score import BERTScorer
 from dotenv import load_dotenv
 from typing import Any, Dict, List
 from mellea.backends import Backend
-from mellea.backends import ModelOption
 from mellea.stdlib.context import SimpleContext
 from mellea.stdlib.requirements import check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
 
-from mellea_ibm.rits import RITSBackend, RITS
 from mellea.core import FancyLogger
 
 # Disable Mellea logging
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
+from crosswords.backends import build_backend, print_models
 from crosswords.utils import (
     strip_code_fences,
     extract_first_code_block,
@@ -451,8 +450,12 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_id', type=str, default="gpt-oss")
-    parser.add_argument('--dataset_file', type=str, required=True)
+    parser.add_argument('--model_id', type=str, default="gpt-oss-120b-a100",
+                        help='A model name from configs/rits_models.json or '
+                             'configs/frontier_models.json, or a raw litellm model id '
+                             'containing a "/". Use --list_models to see the options.')
+    parser.add_argument('--dataset_file', type=str,
+                        help='Input JSON file (required unless --list_models)')
     parser.add_argument('--dataset_type', type=str, default="clues")
     parser.add_argument('--num_samples', type=int, default=None)
     parser.add_argument('--num_candidates', type=int, default=3)
@@ -464,8 +467,18 @@ if __name__ == '__main__':
     parser.add_argument('--rate_limit', type=int, default=1500, help='Max requests per minute')
     parser.add_argument('--eval_only', action='store_true',
                         help='Skip generation and only score an existing output file')
+    parser.add_argument('--max_tokens', type=int, default=4096)
+    parser.add_argument('--list_models', action='store_true',
+                        help='List the models available from the config files and exit')
 
     args = parser.parse_args()
+
+    if args.list_models:
+        print_models()
+        raise SystemExit(0)
+
+    if not args.dataset_file:
+        parser.error("--dataset_file is required (unless --list_models)")
 
     output_filename = f"{args.output_name}_{args.dataset_type}_{args.model_id}_h{args.num_hints}.json"
     output_filename = os.path.join(args.output_dir, output_filename)
@@ -475,29 +488,15 @@ if __name__ == '__main__':
         print("Done.")
         raise SystemExit(0)
 
-    # Create a Mellea RITS backend
-    if args.model_id == "llama":
-        backend = RITSBackend(
-            RITS.LLAMA_3_3_70B_INSTRUCT,
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "granite":
-        backend = RITSBackend(
-            RITS.GRANITE_4_H_SMALL,
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "mistral":
-        backend = RITSBackend(
-            RITS.MISTRAL_LARGE_3_675B_2512,
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    elif args.model_id == "gpt-oss":
-        backend = RITSBackend(
-            RITS.GPT_OSS_120B,
-            model_options={ModelOption.MAX_NEW_TOKENS: 4096}
-        )
-    else:
-        raise ValueError(f"Unknown LLM backend.")
+    if args.output_dir and not os.path.isdir(args.output_dir):
+        os.makedirs(args.output_dir, exist_ok=True)
+
+    try:
+        backend = build_backend(args.model_id, max_tokens=args.max_tokens)
+    except (RuntimeError, ValueError) as e:
+        # Configuration problems (missing credentials, unknown model, RITS
+        # unavailable) are user errors, not bugs: no traceback.
+        raise SystemExit(f"Configuration error: {e}")
 
     data = load_data(args.dataset_file)
     process_data(

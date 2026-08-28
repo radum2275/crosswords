@@ -58,6 +58,35 @@ LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library an
 
 `load_dotenv()` is called at import, so credentials/config are expected via a `.env` file (not committed).
 
+### Model configs (`configs/`)
+
+All three generation scripts (`clues_ro.py`, `gen_clues_ro.py`, `gen_rationales_ro.py`) source their
+models from JSON config files instead of hardcoded tables, so models can be added or retired by editing
+config rather than code. The shared factory lives in **`src/crosswords/backends.py`**
+(`build_backend`, `print_models`, `available_models`) — scripts import it rather than constructing
+backends themselves. Both config files hold a list of `{"name", "model_id", "backend", ...}` records;
+`name` is what you pass to `--model_id`, and every script supports `--list_models` and `--max_tokens`.
+
+- `configs/rits_models.json` — RITS models. Each record needs an explicit `base_url` (the bare
+  endpoint; `RITSBackend` appends `/v1` itself). Needs `RITS_API_KEY` in `.env`.
+- `configs/frontier_models.json` — models on the IBM litellm gateway. `model_id` is prefixed
+  `openai/` so litellm uses the OpenAI-compatible route the gateway exposes. Needs
+  `ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` in `.env`.
+
+A `--model_id` containing a `/` that matches neither config is passed through verbatim as a raw
+litellm model id. A missing config file is not fatal — that family is just unavailable.
+
+`backends.py` is the only place that touches `mellea_ibm`, and the import is guarded, so the litellm
+path works even where RITS is unavailable. The old hardcoded `RITS.*` enum aliases (`llama`, `granite`,
+`mistral`, `gpt-oss`) are gone; note that `RITS.GPT_OSS_120B` and `RITS.MISTRAL_LARGE_3_675B_2512` now
+return **HTTP 404** (retired deployments), which is why the config points at live endpoints instead —
+`gpt-oss-120b-a100` replaces the dead gpt-oss. All five models in `configs/rits_models.json` were
+verified working. The reasoning models (`deepseek-v3.2`, `granite-4-2-30b`, `qwen-3-6-35b`) emit a
+separate `reasoning` field and need a generous `--max_tokens`.
+
+Because `--model_id` values changed, output filenames change too (e.g. `clues_llama_v3_2.json` becomes
+`clues_llama-3.3-70b-instruct_v3_2.json`); older committed result files keep their original names.
+
 ## Evaluation
 
 `eval_results()` runs automatically after generation (and standalone with `--eval_only`). It computes exact-match accuracy (case-insensitive) and BERTScore F1 (`bert-base-uncased`, CPU) between `answer` and `prediction`, then **appends a summary dict as the final element of the output JSON array**. Be aware: result files therefore end with a stats object, not a clue record — downstream readers must handle this.
