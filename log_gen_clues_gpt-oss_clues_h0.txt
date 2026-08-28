@@ -1,0 +1,1017 @@
+Generating clues for 30819 answers...
+Using LLM: openai/gpt-oss-120b
+Dataset type: clues
+Candidates per answer: 3
+Hint words from ground-truth clue: 0
+Initial number of answers: 30819
+After filtering out short answers, 26117 answers remain.
+Limited to 250 answers (num_samples=250).
+Submitting 250 prompts async (batch_size=50, rate_limit=1500/min) ...
+  [1/250] [OK] answer: pRAF
+    clue: Zăpadă uscată a deșertului
+    clue: Resturi fine ale unui foc
+    clue: Pulbere folosită la machiaj
+  [2/250] [OK] answer: IaTAC
+    clue: Sat din Câmpia Transilvaniei
+    clue: Nume de familie întâlnit în Ardeal
+    clue: Vechi epitet pentru răufăcător
+  [3/250] [OK] answer: SMuCIRE
+    clue: Sunetul unui geam care cedează
+    clue: Ruptură în relație
+    clue: Despicare sub forță
+  [4/250] [OK] answer: lOAZA
+    clue: Curs de apă cu nume de refugiu
+    clue: Loc de odihnă în pustiu, dar și denumire de râu
+    clue: Destinație de „pauză” pentru turiștii deșertului
+  [5/250] [OK] answer: BIcI
+    clue: Transport cu două roți și pedale
+    clue: Mijloc de sport fără motor
+    clue: Cadru metalic ce se învârte pe șosea
+  [6/250] [OK] answer: UNIT
+    clue: Componentă singulară a unui ansamblu
+    clue: Formare militară de mică amploare
+    clue: Baza sistemului metric
+  [7/250] [OK] answer: LIRE
+    clue: Suflă prin coarde și prin buzunare
+    clue: Veche monedă cu sunet de harpă
+    clue: Cântă în portofel, nu în orchestră
+  [8/250] [OK] answer: oRDIN
+    clue: Regulă monastică
+    clue: Instrucţiune oficială
+    clue: Rang onorific
+  [9/250] [OK] answer: PAjI
+    clue: Straturi aurii pe câmp, dar nu‑se topesc
+    clue: Ce se adună la fânar, fără să fie fire de metal
+    clue: În iarnă devine așternut pentru animale
+  [10/250] [OK] answer: TANTOS
+    clue: Fără grabă, cu migală
+    clue: Pas cu pas, fără fugă
+    clue: Lent, dar precis
+  [11/250] [OK] answer: ORAL
+    clue: Examen fără hârtie
+    clue: Mestecă cuvintele
+    clue: Legat de cavitatea bucală
+  [12/250] [OK] answer: aIA
+    clue: Articol + comandă de a lua
+    clue: Pronume de distanță, feminin
+    clue: Cea de la capătul din stânga
+  [13/250] [OK] answer: FIERT
+    clue: Stadiul apei când începe să dea bule
+    clue: Furie intensă, ca la foc
+    clue: Mod de gătire prin abur
+  [14/250] [OK] answer: EDIcT
+    clue: Ordin regal
+    clue: Anunț pe stâlp
+    clue: Cuvânt de autoritate
+  [15/250] [OK] answer: ACUT
+    clue: Unghi sub 90°
+    clue: Durere bruscă și intensă
+    clue: Semn diacritic ridicat
+  [16/250] [OK] answer: ASEDIa
+    clue: Blocaj în jurul unei cetăţi
+    clue: Stare de tensiune în timp de luptă
+    clue: Măsură adoptată de un imperiu pentru a închide un oraş
+  [17/250] [OK] answer: pISTOL
+    clue: Păstrător al scânteilor
+    clue: Dispozitiv de pulverizare rapidă
+    clue: Mâna ce nu ține creionul
+  [18/250] [OK] answer: TUFA
+    clue: Băț de aprins focul
+    clue: Instrument de lovire, fără metal
+    clue: Ramură uscată, gata de șemineu
+  [19/250] [OK] answer: RaMA
+    clue: Cadrul legal
+    clue: Structura bicicletei
+    clue: Bordura tabloului
+  [20/250] [OK] answer: INAMIC
+    clue: Ascuns în cuvântul latin pentru prieten
+    clue: Rival la pactul de neagresiune
+    clue: Etichetă pe frontul imaginar
+  [21/250] [OK] answer: ATu
+    clue: Comandă pentru șoferi, dar și organ de reglementare
+    clue: Semn de pe traseul orașului
+    clue: Cuvânt de trei litere, înscris pe bilete
+  [22/250] [OK] answer: BRUN
+    clue: Ton de pământ
+    clue: Culoare de vânătoare
+    clue: Nume francez pentru cafea
+  [23/250] [OK] answer: FAClIE
+    clue: Câștig fără efort
+    clue: Mijloc de a trece cu ușurință
+    clue: Avantaj în trafic
+  [24/250] [OK] answer: TORT
+    clue: Deliciu cu straturi și cremă
+    clue: Fapt juridic neîncadrat, dar răsplătit cu daune
+    clue: Termen francez pentru „prăjitură”
+  [25/250] [OK] answer: CIOc
+    clue: Lovitură cu capul
+    clue: Unealtă fără mâner pentru ciocnirile mici
+    clue: Vârful ascuțit al păsării
+  [26/250] [OK] answer: PORT
+    clue: Interfață pentru cablu
+    clue: Număr de acces în internet
+    clue: Băutură îmbătrânită în butoaie
+  [27/250] [OK] answer: RAIoASA
+    clue: Strălucire fără foc
+    clue: Sat de lângă râu, cu nume luminos
+    clue: Zâmbet ce împrăștie raze
+  [28/250] [OK] answer: CREZ
+    clue: Mărturie scurtă
+    clue: Spun din sine
+    clue: Motto religios
+  [29/250] [OK] answer: LES
+    clue: Articol hotărât francez, la plural
+    clue: Titlu al celebrului roman de Victor Hugo
+    clue: Prescurtare pentru sistemul de iluminat exterior
+  [30/250] [OK] answer: AUDIo
+    clue: Înregistrare fără imagine
+    clue: Canal fără televiziune
+    clue: Ce se aude, nu se vede
+  [31/250] [OK] answer: PAS
+    clue: Trecere prin munte
+    clue: Mijloc de a muta mingea
+    clue: Mișcare de dans
+  [32/250] [OK] answer: RaID
+    clue: Atac surpriză
+    clue: Aranjament de discuri
+    clue: Misiune de poliție
+  [33/250] [OK] answer: ASASINI
+    clue: Urechiuțe lungi, dar cu două „as” în plus
+    clue: Misiune nocturnă, fără să lase urmă
+    clue: Profesioniști ai tăierii discrete
+  [34/250] [OK] answer: IcI
+    clue: Cuvânt cu „c” prins între două „I”
+    clue: „Aici” în franceză, încadrat de două inițiale
+    clue: Între două ramuri de metal, singurul segment metalic
+  [35/250] [OK] answer: TACUT
+    clue: Instrucțiune muzicală: nu cânta
+    clue: Ecoul disperat în deșert
+    clue: Statuia fără glas
+  [36/250] [OK] answer: CEATa
+    clue: Întâlnire în ceață
+    clue: Câtă de oameni?
+    clue: Masa de călători
+  [37/250] [OK] answer: UMERAS
+    clue: Sat cu puține locuitori
+    clue: Punct de oprire al drumeților
+    clue: Nume de familie întâlnit în Banat
+  [38/250] [OK] answer: BEC
+    clue: Strălucește în priză
+    clue: Parte a unui proiector
+    clue: Arde fără flacără
+  [39/250] [OK] answer: POLAR
+    clue: Capetele magnetului
+    clue: Moleculă cu sarcină asimetrică
+    clue: Reprezentare în cerc a poziției
+  [40/250] [OK] answer: FOTO
+    clue: Captură de lumină
+    clue: Prefix al energiei
+    clue: Album în miniatură
+  [41/250] [OK] answer: ERA
+    clue: Starea de a fi, exprimată în trecut
+    clue: Perioadă istorică marcată de mari descoperiri
+    clue: Râul care curge prin județul Maramureș
+  [42/250] [OK] answer: CIOBAN
+    clue: Vigil al turmei în întuneric
+    clue: Căpitan al oii fără navă
+    clue: Ghizdă al câmpului cu coarne ascunse
+  [43/250] [OK] answer: RABDARI
+    clue: Unelte de săpat în curte, nu de vopsit
+    clue: Instrumente lungi cu mâner pentru adânciri
+    clue: Palete regionale, nu de pictură
+  [44/250] [OK] answer: CLOR
+    clue: Dezinfectantul bazinului
+    clue: Elementul cu un electron în plus
+    clue: Gazul galben, cu miros înțepător, din piscine
+  [45/250] [OK] answer: ARSA
+    clue: Semn lăsat de foc
+    clue: Stare după o zi la soare
+    clue: Rezultat al unei pâini uitate în cuptor
+  [46/250] [OK] answer: REA
+    clue: Personaj negativ al poveștilor
+    clue: Oppusă bunei, cu trei litere
+    clue: Re și A, două note dintr-o gamă
+  [47/250] [OK] answer: IERI
+    clue: Cuvânt din triada temporală „ieri, azi, mâine”
+    clue: Abreviere folosită uneori în agenda sportivă pentru „întâlnire de antrenament”
+    clue: Titlu scurt al unei reviste de cronici ale trecutului
+  [48/250] [OK] answer: TRANSA
+    clue: Livrare în zona umbră
+    clue: Bătălie de lucru
+    clue: Fâșă în serie de comenzi
+  [49/250] [OK] answer: REN
+    clue: Filtru natural
+    clue: Organ de filtrare
+    clue: Piesa din sistemul excretor
+  [50/250] [OK] answer: ATLET
+    clue: Mortal, cu litere amestecate
+    clue: Fără „i” în atelier
+    clue: Două L, o singură T, şi un A
+  [51/250] [OK] answer: RID
+    clue: Scos de pe listă, abrev.
+    clue: Orășel din Azerbaydzhan
+    clue: Cuvânt englezesc ce înseamnă eliminare
+  [52/250] [OK] answer: ROTARI
+    clue: Schimbări de poziție ale piesei pe tabla de șah
+    clue: Mișcări circulare ale corpului în balet
+    clue: Secvențe de imagini pe un disc în care totul se învârte
+  [53/250] [OK] answer: ITARI
+    clue: Gard alb de margine
+    clue: Umbra plantelor din zonele uscate
+    clue: Fitoplan folosit la delimitarea șanțurilor
+  [54/250] [OK] answer: CROM
+    clue: Metal din grupul 6
+    clue: Component al oțelului inoxidabil
+    clue: Strălucire de mașină, nu aur
+  [55/250] [OK] answer: UPERCUTURI
+    clue: Lovituri în sus
+    clue: Tăieturi de la înălțime
+    clue: Mișcări de box cu pumnul ridicat
+  [56/250] [OK] answer: MORAL
+    clue: Starea de spirit a echipei
+    clue: Învățătură dintr-o poveste
+    clue: Criteriu de conduită
+  [57/250] [OK] answer: ROIT
+    clue: Măsură veche de lână
+    clue: Măsură de greutate arhaică
+    clue: Unitate de masă medievală
+  [58/250] [OK] answer: ELABORA
+    clue: Creează prin rafinare
+    clue: Procesează informații
+    clue: Detaliere prin muncă
+  [59/250] [OK] answer: DRENA
+    clue: Actriță cu prenume scurt
+    clue: Comandă de evacuare a lichidului
+    clue: Tehnică de prevenire a acumulării apei
+  [60/250] [OK] answer: ARCA
+    clue: Mijloc de salvare în potop
+    clue: Cutie cu seif în biserică
+    clue: Vas al lui Noe
+  [61/250] [OK] answer: ASTRI
+    clue: Flori de primăvară și corpuri cerești
+    clue: Semnale strălucitoare pentru navigatorii nocturni
+    clue: Design în tapiserii și în constelații
+  [62/250] [OK] answer: IRA
+    clue: Foc interior fără scânteieri
+    clue: Cuvânt în trei litere dintr-un acronym rebel
+    clue: Prenume scriptural, de trei litere
+  [63/250] [OK] answer: ALO
+    clue: Ecoul ce dă startul conversației
+    clue: Cuvânt rostit când sună soneria
+    clue: Salut la firul de aur
+  [64/250] [OK] answer: FOIRI
+    clue: Ramuri și birouri
+    clue: Plăci din pădure, pagini în tipar
+    clue: Verde în natură, alb în școală
+  [65/250] [OK] answer: ETC
+    clue: Semn al unei serii neîncheiate
+    clue: Abreviere întâlnită în texte
+    clue: Inițialele unui domeniu tehnic
+  [66/250] [OK] answer: BOB
+    clue: Nume palindromic
+    clue: Unitate de schimb din trecut
+    clue: Tunsoare scurtă, la modă în anii ’20
+  [67/250] [OK] answer: SERTAR
+    clue: Compartiment de hârtie în birou
+    clue: Căsuță sub blat pentru rechizite
+    clue: Spațiu ascuns în dulap pentru bani
+  [68/250] [OK] answer: ETALARE
+    clue: Aranjament pentru vitrine
+    clue: Mod de a se lăuda în public
+    clue: Prescurtare latină întâlnită în bibliografii
+  [69/250] [OK] answer: CONT
+    clue: Înregistrare pe internet
+    clue: Sumă totală a încasărilor
+    clue: Povestea relatată
+  [70/250] [OK] answer: INTIM
+    clue: Confidențial, nu public
+    clue: Atmosferă de lumânări și șoapte
+    clue: Legătură apropiată, fără protocol
+  [71/250] [OK] answer: APOCALIPSA
+    clue: Ultima parte a profeției lui Ioan
+    clue: Film cu final de catastrofă totală
+    clue: Stare de panică când totul se rupe
+  [72/250] [OK] answer: FUMAT
+    clue: Miros de tutun
+    clue: Fir de fum, la trecut
+    clue: Carne de la grătar, fără foc
+  [73/250] [OK] answer: MIOP
+    clue: Focalizare pe cel apropiat
+    clue: Obiectiv pentru prim‑plan
+    clue: Perspectivă limitată la scurtă distanță
+  [74/250] [OK] answer: UTA
+    clue: În interiorul cuvântului „caută”
+    clue: Caută, excluzând primele două litere
+    clue: „Uita” fără „i”
+  [75/250] [OK] answer: ATENTA
+    clue: Semnal de prudență
+    clue: Femeie meticuloasă
+    clue: Instrucţiune din manualul de siguranță
+  [76/250] [OK] answer: RETICENT
+    clue: Păstrând tăcerea
+    clue: Stăpân al ascunsului
+    clue: Nu‑și dezvăluie gândurile
+  [77/250] [OK] answer: MANSETA
+    clue: Sat din județul Vrancea
+    clue: Curs de apă din Carpații Orientali
+    clue: Denominație locală a unei formaţiuni tradiţionale
+  [78/250] [OK] answer: SIVE
+    clue: Bandă subțire de lemn
+    clue: Fâșie metalică fină
+    clue: Dungă delicată de pe un țesătură
+  [79/250] [OK] answer: TINUT
+    clue: Parte a hărții fără orașe
+    clue: Păstrat în tăcere de generații
+    clue: Teritoriu ce se întinde dincolo de hotare
+  [80/250] [OK] answer: ARGAT
+    clue: Fără coajă
+    clue: Curățat prin îndepărtare de înveliș
+    clue: Pregătit pentru gătit prin decojire
+  [81/250] [OK] answer: NINSI
+    clue: Zăpadă fină în miniatură
+    clue: Stil de dans ce nu se mișcă
+    clue: Cuvânt cu două silabe și două „i” la capete
+  [82/250] [OK] answer: ARCA
+    clue: Salvat de potop
+    clue: Cufăr sacru al israeliților
+    clue: Cutie cu comori în basme
+  [83/250] [OK] answer: IRITA
+    clue: Supărare oculară
+    clue: Roșeață la iris
+    clue: Stare provocată de lumină și zgomot
+  [84/250] [OK] answer: IDEE
+    clue: Scânteia unui proiect
+    clue: Telefon HTC cu nume de gând
+    clue: Concept din reclame
+  [85/250] [OK] answer: VESTE
+    clue: Se poartă la frig și se difuzează în stații
+    clue: Îți aduc căldură și informații
+    clue: În magazin le găsești și în ziar le citești
+  [86/250] [OK] answer: AFURISENII
+    clue: Nasul în sus
+    clue: Se consideră superioare
+    clue: Mândri, dar fără fund
+  [87/250] [OK] answer: PUTERI
+    clue: Măsura electrică a unui motor
+    clue: Facultăți ale unui stat
+    clue: Exponentele unui număr
+  [88/250] [OK] answer: IAD
+    clue: Eternă stație de încălzire
+    clue: Zonă de arsură fără apă
+    clue: Destinație evitată de credincioși
+  [89/250] [OK] answer: OMAT
+    clue: Fulg fin ca praful
+    clue: Sat cu același nume ca o pulbere ușoară
+    clue: Râu de munte cu apele măcinate
+  [90/250] [OK] answer: VAN
+    clue: Nume de familie al pictorului de floarea‑soarelui
+    clue: Transport cu ușă laterală, des folosit la mutări
+    clue: Tip de vehicul închiriat pentru grupuri mici
+  [91/250] [OK] answer: IMERSIE
+    clue: Plonjare fără costumul de scafandru
+    clue: Stare de implicare totală
+    clue: Termen de fizică și de lectură
+  [92/250] [OK] answer: ATACA
+    clue: Mută agresivă în deschidere
+    clue: Intrare forțată pe linie
+    clue: Se aruncă asupra provocării
+  [93/250] [OK] answer: GIR
+    clue: Nu stă pe loc
+    clue: Răspunsul la ce face ceasul
+    clue: Acțiunea roții
+  [94/250] [OK] answer: TENTA
+    clue: Acoperire mobilă
+    clue: Test sub cer
+    clue: Pânză de libertate
+  [95/250] [OK] answer: IMENSITATE
+    clue: Măsura de necalculat
+    clue: Spațiu fără hotare
+    clue: Extindere ce nu cunoaște margini
+  [96/250] [OK] answer: PINTEN
+    clue: Măsură veche a greutăţii, nu a lungimii
+    clue: Nume de familie al unui antrenor de fotbal
+    clue: Încărcătură mare, dar nu se numără în kilograme
+  [97/250] [OK] answer: RAS
+    clue: Ecoul unei glume bune
+    clue: Semn de relaxare în grup
+    clue: Sunetul ce răspunde unui banc
+  [98/250] [OK] answer: SOT
+    clue: Cel cu care se împarte totul
+    clue: Lângă el, cuvântul „soție” capătă sens
+    clue: Un partener de viață, nu de joc
+  [99/250] [OK] answer: TURC
+    clue: Cafea neagră fără spumă
+    clue: Negustor de covoare în piață
+    clue: Stăpân al haremului
+  [100/250] [OK] answer: APARATOARE
+    clue: Uscătoare cu motor, nu cu aer condiționat
+    clue: Mecanisme anti‑umiditate
+    clue: Dispozitive ce alungă apa
+  [101/250] [OK] answer: BIRUIT
+    clue: Ce nu uită berea
+    clue: Căzut în luptă
+    clue: Stăpân al adversarului
+  [102/250] [OK] answer: ALBA
+    clue: Zori de dragoste medievală
+    clue: Oraș cu fortăreață romană
+    clue: Nume de culoare clară
+  [103/250] [OK] answer: COLAC
+    clue: Rotundă de la brutărie
+    clue: Inel de salvare pe navă
+    clue: Cerc de cauciuc la bord
+  [104/250] [OK] answer: STIUT
+    clue: Fără mască de necunoscut
+    clue: Despre care nu poţi să negi
+    clue: Cine are informaţie în trecut
+  [105/250] [OK] answer: ADOLESCENTA
+    clue: Fată în pragul maturității
+    clue: Etapă de dezvoltare în corp și în viață
+    clue: Protagonistă a unui roman de tip coming‑age
+  [106/250] [OK] answer: OSPATARITE
+    clue: Șiroaie de lumină
+    clue: Zăpadă fină pe creste
+    clue: Steluțe pe pânza nopții
+  [107/250] [OK] answer: ACE
+    clue: În zbor și în joc
+    clue: Titlu pentru un aviator de elită
+    clue: Cea mai bună carte a pachetului
+  [108/250] [OK] answer: ACUZE
+    clue: Îi aruncă vina pe altul
+    clue: Se spune în sala de judecată
+    clue: Formă verbală ce încarcă pe cineva cu vină
+  [109/250] [OK] answer: LASA
+    clue: Curent de apă din Hunedoara
+    clue: Dă voie, nu opri
+    clue: Sat transilvănean, nu un sinonim de abandon
+  [110/250] [OK] answer: ARAMII
+    clue: Poporul vorbitor al limbii lui Iisus
+    clue: Cei săraci, în limbaj biblic
+    clue: Locuitorii regiunii semitice dispărute
+  [111/250] [OK] answer: CLADIRE
+    clue: Plan cu niveluri
+    clue: Structură cu etaje
+    clue: Fundament pentru idei
+  [112/250] [OK] answer: APA
+    clue: Curent invizibil
+    clue: Substanță ce umple conductele orașului
+    clue: Abrev. a asociației pentru protecția animalelor
+  [113/250] [OK] answer: EROU
+    clue: Cel ce luptă cu cuvinte în povești
+    clue: Model de curaj în basme
+    clue: Semn de glorie pe medalie
+  [114/250] [OK] answer: ARGILA
+    clue: Material de modelare cu mâna
+    clue: Ingredient în mască facială absorbantă
+    clue: Pământ ce se întărește la uscat
+  [115/250] [OK] answer: ARI
+    clue: Prenume evreiesc ce înseamnă „leu”
+    clue: Cod IATA al unui oraș chilian
+    clue: Abreviere a unei asociații românești de credit
+  [116/250] [OK] answer: CLIN
+    clue: Pantă ușoară
+    clue: Abrev. medicală
+    clue: Înclinare a drumului
+  [117/250] [OK] answer: EMIRAT
+    clue: Titlu aristocratic și teritoriu
+    clue: Stat cu sufix -at în Orientul Mijlociu
+    clue: Regiune condusă de un conducător arab
+  [118/250] [OK] answer: BCATOALCA
+    clue: Ignoranță forțată
+    clue: Stupăciune sub constrângere
+    clue: Lipsă de înțelepciune impusă
+  [119/250] [OK] answer: IODISCA
+    clue: Sare cu protecție anti‑gușă
+    clue: Praf alb de bucătărie ce conține I
+    clue: Condiment de masă cu un element vital
+  [120/250] [OK] answer: PAL
+    clue: Standard TV analogic european
+    clue: Camarad de pe stradă
+    clue: Abrev. engleză pentru nuanță deschisă
+  [121/250] [OK] answer: RLO
+    clue: Ziar digital, trei inițiale
+    clue: Cod de aeroport puțin cunoscut
+    clue: Abreviere folosită pe site‑uri de știri
+  [122/250] [OK] answer: PESCARI
+    clue: Așteaptă la marginea apei
+    clue: Își înfășoară plasa în jurul jocului
+    clue: Își caută prada în liniște
+  [123/250] [OK] answer: UALTA
+    clue: U + alta
+    clue: Litera ce precede 'alta'
+    clue: Altă cu 'U' la început
+  [124/250] [OK] answer: ICESTA
+    clue: Pronume demonstrativ feminin arhaic
+    clue: Forma veche a lui „aceasta”
+    clue: Înglobează „este” în pronume vechi
+  [125/250] [OK] answer: AZI
+    clue: Când: răspuns fără semnul întrebării
+    clue: Programul zilnic, nu al săptămânii
+    clue: Data ce cere doar ziua, nu anul
+  [126/250] [OK] answer: ACADELE
+    clue: Recompensă dulce pentru răbdare
+    clue: Zahăr în formă de gheață
+    clue: Se sparge, apoi te încântă
+  [127/250] [OK] answer: SCORURI
+    clue: Cifrele pe care le urmărește fanii
+    clue: Rezultatele perechii de tabla
+    clue: Totalurile din tabelul de performanță
+  [128/250] [OK] answer: ATERIZARE
+    clue: Cădere silențioasă din înălțime
+    clue: Capătul pistei
+    clue: Finalul unei misiuni orbitale
+  [129/250] [OK] answer: LIN
+    clue: Stare fără agitație
+    clue: Suprafață netedă
+    clue: Abreviere geometrică în graficul X‑Y
+  [130/250] [OK] answer: TEMERAR
+    clue: Zbor fără verificare a câmpului
+    clue: Teme + rar
+    clue: Pe sârmă fără plasă
+  [131/250] [OK] answer: BUTIE
+    clue: Scânteie de pădure
+    clue: Bec improvizat
+    clue: Rămas după fumat
+  [132/250] [OK] answer: ORA
+    clue: Rugăciune matinală
+    clue: Unitate școlară de timp
+    clue: Semnal al ceasului la amiază
+  [133/250] [OK] answer: ATAC
+    clue: Mijloc de transport în București
+    clue: Lovitură ofensivă în fotbal
+    clue: Criză subită a inimii
+  [134/250] [OK] answer: BIRUIT
+    clue: Bere și uitare
+    clue: Câștigat prin cedare
+    clue: Căzut sub greutatea unui obstacol
+  [135/250] [OK] answer: COLABORARI
+    clue: Proiecte cu semnătură comună
+    clue: Muncă ce aduce credite pentru toți
+    clue: Împreună la scenă sau în laborator
+  [136/250] [OK] answer: IDOL
+    clue: Coloană de cult într-un altar
+    clue: Vedetă imprimată pe poster
+    clue: Statuie de bronz a unui erou
+  [137/250] [OK] answer: ROMAN
+    clue: Pagini de aventură
+    clue: Cetățean al legendarului imperiu
+    clue: Moștenire din piatră și hârtie
+  [138/250] [OK] answer: MATURA
+    clue: Stadiu de coacere al fructului
+    clue: Când pomul nu mai are verde în ramuri
+    clue: Câștig din recoltă, dar și nivel de dezvoltare
+  [139/250] [OK] answer: EST
+    clue: Răsărit pe busolă
+    clue: Fusul orar standard al coastei de est
+    clue: Cuvântul de legătură, fără ultima literă
+  [140/250] [OK] answer: NESAT
+    clue: Poftă neîmplinită
+    clue: Spațiu fără așezare rurală
+    clue: Negarea prezenței unui sat
+  [141/250] [OK] answer: LARGA
+    clue: Măsură muzicală lentă
+    clue: Spațiu fără restricții laterale
+    clue: Generozitate la porție
+  [142/250] [OK] answer: NEON
+    clue: Lumină de reclamă pe stradă
+    clue: Gaz inert cu lumini colorate
+    clue: Termen de modă pentru nuanță fluorescentă
+  [143/250] [OK] answer: OALA
+    clue: Încurcătură la foc
+    clue: Cupa fără mâner
+    clue: Vas de gătit metalic
+  [144/250] [OK] answer: ARS
+    clue: Râu din Transilvania
+    clue: Starea unui lemn după foc
+    clue: Cuvânt latin pentru „artă”
+  [145/250] [OK] answer: TIP
+    clue: Mica parte de la capăt
+    clue: Mica recunoștință la masă
+    clue: Gen, ca în „tip de mesaj”
+  [146/250] [OK] answer: APELA
+    clue: Chemare fără răspuns
+    clue: Recurs la judecată
+    clue: Apelează la trucuri
+  [147/250] [OK] answer: USOR
+    clue: Nu prea greu
+    clue: Facil de rezolvat
+    clue: Ton blând
+  [148/250] [OK] answer: TRATA
+    clue: Cotă de contribuție impusă suzeranului
+    clue: Abordare serioasă a unei teme
+    clue: Remediu aplicat unei boli
+  [149/250] [OK] answer: ROTATIE
+    clue: Schimb de gardă în echipă
+    clue: Mijlocul unui carusel
+    clue: Ciclul de antrenamente la bancă
+  [150/250] [OK] answer: INERT
+    clue: Fără reacție chimică
+    clue: Lipsit de impuls
+    clue: Stă pe loc
+  [151/250] [OK] answer: STEA
+    clue: Lumină din întuneric
+    clue: Semn de pe trofeu
+    clue: Animal cu cinci brațe la fundul mării
+  [152/250] [OK] answer: CIMILITURI
+    clue: Vârfuri măsurate în lichid
+    clue: Microb cu potențial de viață
+    clue: Punct de plecare al genealogiei
+  [153/250] [OK] answer: ODATA
+    clue: Pe o singură întâmplare
+    clue: Însoțit de altceva
+    clue: Făcut odată, nu mereu
+  [154/250] [OK] answer: ISON
+    clue: Nota de bază a imnului ortodox
+    clue: Egal, fără variații
+    clue: Fundament sonor al corului bizantin
+  [155/250] [OK] answer: LOT
+    clue: Destin tras la sorţi
+    clue: Suprafață delimitată pentru construcții
+    clue: Cantitate mare, dar omogenă
+  [156/250] [OK] answer: ROPOTE
+    clue: Zgomot de mulțime în șoaptă
+    clue: Veste fără temei
+    clue: Ecoul unei furtuni îndepărtate
+  [157/250] [OK] answer: ALUNGA
+    clue: Fugă fără oprire
+    clue: Înlătură pe nedorit
+    clue: Curge pe pantă
+  [158/250] [OK] answer: RAR
+    clue: Registrul Auto Român
+    clue: Mai puțin des decât o eclipsă totală
+    clue: Obiect de colecție, de multe ori căutat
+  [159/250] [OK] answer: REALA
+    clue: Componentă a lui z
+    clue: Fără prefăcătorie
+    clue: Ce nu e virtuală
+  [160/250] [OK] answer: ORAS
+    clue: Locul unde se adună luminile nocturne
+    clue: Poziție pe hartă ce nu e sat
+    clue: Destinație a autobuzelor de rute urbane
+  [161/250] [OK] answer: APTI
+    clue: În acord cu substantivul
+    clue: Cei ce trec examenul
+    clue: Potriviri de echipă
+  [162/250] [OK] answer: ERES
+    clue: Formă de a fi, la persoana a doua, în limba vecină
+    clue: Patru litere consecutive din cuvântul „ferestre”
+    clue: Litera de început a cuvântului „ecran” urmată de prescurtarea pentru resurse
+  [163/250] [OK] answer: AMETEALA
+    clue: Când capul nu‑și găsește axa
+    clue: Cădere bruscă după o rotire rapidă
+    clue: Confuzie totală a unui turist fără busolă
+  [164/250] [OK] answer: RAS
+    clue: Răspuns la banc
+    clue: Ecoul unei farse
+    clue: Semnal în timpul glumei
+  [165/250] [OK] answer: ORATIE
+    clue: Rugăciune înălțată la cer
+    clue: Adresă solemnă în fața mulțimii
+    clue: Cuvinte de laudă rostite la ceremonie
+  [166/250] [OK] answer: INTENS
+    clue: Ardere de dor
+    clue: Luminozitate maximă
+    clue: Antrenament fără repaus
+  [167/250] [OK] answer: APA
+    clue: Stil de citare
+    clue: Lichid fără gust
+    clue: Stropi din cer
+  [168/250] [OK] answer: TRECUT
+    clue: Ce nu mai are loc în prezent
+    clue: Forma de participiu a verbului de traversat
+    clue: Stadiul după ce s-a terminat ceva
+  [169/250] [OK] answer: PAS
+    clue: Fază dintr‑o coregrafie
+    clue: Transfer cu mingea
+    clue: Mărimea unui drum
+  [170/250] [OK] answer: RETORICA
+    clue: Arta de a vorbi fără să muște
+    clue: Materie la bacalaureat cu fraze înflorite
+    clue: Întrebări care nu cer răspuns
+  [171/250] [OK] answer: ULITA
+    clue: Cale ascunsă, fără semn
+    clue: Între ziduri, trecere de pe jos
+    clue: Stradă mică, număr rareori atribuit
+  [172/250] [OK] answer: ARTA
+    clue: Măiestrie în expresie
+    clue: Mijloc de a scăpa de plictiseală
+    clue: Se spune că e de la sine
+  [173/250] [OK] answer: PIC
+    clue: Un suflu de lichid
+    clue: Abreviere de imagine în chat
+    clue: Sunet ce imită căderea unei picături
+  [174/250] [OK] answer: RASTEL
+    clue: Cârlig de lemn din stâlpul secarului
+    clue: Fâșă groasă ce ține capul de sus în vânt
+    clue: Termen de argou pentru încurcătură greu de descurcat
+  [175/250] [OK] answer: CER
+    clue: Stare de solicitare
+    clue: Albastru fără suport
+    clue: Mereu sus, niciodată închis
+  [176/250] [OK] answer: ERA
+    clue: Imperfectul lui „a fi”
+    clue: Diviziune geologică
+    clue: Marca timpului unei civilizații
+  [177/250] [OK] answer: VAR
+    clue: Albul de pe cărămidă
+    clue: Râu francez
+    clue: Eu var când acoper
+  [178/250] [OK] answer: MARET
+    clue: Mare + T
+    clue: Nume de familie franțuzesc
+    clue: Mare cu un final
+  [179/250] [OK] answer: PARAVAN
+    clue: Barieră mobilă în baie
+    clue: Ecran ornamental fără tehnologie
+    clue: Separă două încăperi fără a fi perete
+  [180/250] [OK] answer: ATU
+    clue: Al tău, în scriere
+    clue: Org. de reglementare turistică
+    clue: Abreviere citită ca un singur cuvânt
+  [181/250] [OK] answer: COBE
+    clue: Tuburi fără cap
+    clue: Recipient de laborator
+    clue: Obiecte metalice cilindrice
+  [182/250] [OK] answer: NERVI
+    clue: Căi de transmitere a senzaţiilor
+    clue: Stare de iritabilitate
+    clue: Curajul de a cere ceva
+  [183/250] [OK] answer: AFIRMATIVE
+    clue: Semnal radio de acord
+    clue: Mod gramatical care confirmă
+    clue: Răspuns de tipul „da” în discuție
+  [184/250] [OK] answer: TRUPA
+    clue: Miez și regiment
+    clue: Formație pe scenă sau pe front
+    clue: Structură solidă, grup militar
+  [185/250] [OK] answer: PICA
+    clue: Măsură tipografică
+    clue: Tulburare de alimentație rară
+    clue: Ciobitură pe lemn
+  [186/250] [OK] answer: RELICVA
+    clue: Ecoul unei ere
+    clue: Restul după experiment
+    clue: Ce rămâne când se curăță
+  [187/250] [OK] answer: ETIC
+    clue: Judecată morală
+    clue: Perspectivă antropologică opusă celui intern
+    clue: Regulă nescrisă, dar acceptată
+  [188/250] [OK] answer: ARABI
+    clue: Popor din deșertul Arabian
+    clue: Tipuri de cafea cu origine orientală
+    clue: Nume de familie întâlnit în România
+  [189/250] [OK] answer: COT
+    clue: Nivel de susținere al brațului
+    clue: Colțul plecat al unei rame
+    clue: Punctul de schimbare al unui traseu
+  [190/250] [OK] answer: CRATER
+    clue: Urme de explozie
+    clue: Fundul unui munte uscat
+    clue: Marcă adâncită de un meteor
+  [191/250] [OK] answer: URARE
+    clue: Cuvânt la creștetul tortului
+    clue: Speranță exprimată în glas
+    clue: Însuflețire de felicitare
+  [192/250] [OK] answer: ARMA
+    clue: Mijloc de atac și de apărare
+    clue: Unealtă cu potențial letal
+    clue: Instrument al războiului sau al negocierii
+  [193/250] [OK] answer: CAS
+    clue: Abrev. pentru instituție ce gestionează pensii
+    clue: În franceză, locuință
+    clue: Sistem de calcul simbolic, folosit în matematică
+  [194/250] [OK] answer: ANTET
+    clue: Poziție de sus
+    clue: Prin el începe oficial o scrisoare
+    clue: Linie cu datele expeditorului
+  [195/250] [OK] answer: PARTER
+    clue: Nivelul de la intrare
+    clue: Etaj fără scară
+    clue: Spațiu pentru primul pas
+  [196/250] [OK] answer: GRI
+    clue: Nuanța dintre alb și negru
+    clue: Abreviere a unui standard de sustenabilitate
+    clue: Stare de incertitudine, fără claritate
+  [197/250] [OK] answer: TEREN
+    clue: Spațiu pentru antrenamente
+    clue: Încărcătură sub picioare
+    clue: Zonă de desfășurare a unei conflicte
+  [198/250] [OK] answer: SPALATORIE
+    clue: Unde detergentul își ia startul cu hainele
+    clue: Eco‑stop al mașinii cu tambur
+    clue: Tranșă de apă în care murdăria se dizolvă
+  [199/250] [OK] answer: INDICATOARE
+    clue: Luminile ce spun să virezi
+    clue: Semnele ce ghidează traficul
+    clue: Marcaje pe tabelul de scor
+  [200/250] [OK] answer: NOD
+    clue: Punct de întâlnire în grafuri
+    clue: Gest de aprobare fără voce
+    clue: Înlănțuire de fire ce nu se desface
+  [201/250] [OK] answer: AER
+    clue: Elementul ce aprinde focul
+    clue: Curs invizibil al norilor
+    clue: Mediul în care se înalță planorul
+  [202/250] [OK] answer: GEM
+    clue: Sunetul unei dureri mărunte
+    clue: Fructul care se învelește în sirop
+    clue: Micul ecou al unui suspin
+  [203/250] [OK] answer: INDUS
+    clue: Curs de apă din Asia
+    clue: Făcut să creadă
+    clue: Provocat în laborator
+  [204/250] [OK] answer: SOC
+    clue: Lovitură bruscă
+    clue: Formă scurtă pentru „societate”
+    clue: Stare de tensiune electrică
+  [205/250] [OK] answer: CUB
+    clue: Micuțul sălbatic al pădurii
+    clue: Formă cu șase fețe egale
+    clue: Joc de construcție cu blocuri
+  [206/250] [OK] answer: RONDEL
+    clue: Etapa unui concurs
+    clue: Dans în cerc
+    clue: Scut mic, rotund
+  [207/250] [OK] answer: LOVI
+    clue: Instrucţiune dintr-un antrenament de luptă
+    clue: Elementul lipsă al infinitivului „a lovi”
+    clue: Nume de familie întâlnit în regiunea Moldovei
+  [208/250] [OK] answer: UDA
+    clue: Comandă pentru grădină
+    clue: Sat din Maramureș
+    clue: Stare umedă a pământului
+  [209/250] [OK] answer: RUG
+    clue: Suprafață pe care se apleacă genunchii credincioșilor
+    clue: Obiect din lână pentru podea
+    clue: Teren scurt de iarbă, preferat de unii sportivi
+  [210/250] [OK] answer: TIV
+    clue: Temelie de dispută
+    clue: Sprijin sub o teză
+    clue: Cuvânt de trei litere, element de susținere
+  [211/250] [OK] answer: MAPA
+    clue: Încăpere pentru acte
+    clue: Se poartă la școală
+    clue: Acoperă hârtie, nu carte
+  [212/250] [OK] answer: POMENI
+    clue: Cuvânt rostit în timpul slujbei funerare
+    clue: Amintire exprimată oral
+    clue: Repetă numele în discurs
+  [213/250] [OK] answer: SUB
+    clue: Sandwich de tip rapid
+    clue: Mijloc de scufundare militară
+    clue: Prefix ce înseamnă „sub_”
+  [214/250] [OK] answer: GAZ
+    clue: Esență de energie
+    clue: Se rupe sub presiune
+    clue: Se simte în stomac
+  [215/250] [OK] answer: RESOU
+    clue: Re‑sou, vechea monedă franceză refăcută
+    clue: Re‑sou, mică sumă reluată
+    clue: Re‑sou, „re” la început + „sou” de un ban
+  [216/250] [OK] answer: TOP
+    clue: Lista campionilor
+    clue: Piratul ce se învârte singur
+    clue: Partea superioară a unui outfit
+  [217/250] [OK] answer: BIS
+    clue: Chemare la un cântec suplimentar
+    clue: Semn de repetiție în muzică
+    clue: Prefix latin ce înseamnă „de două ori”
+  [218/250] [OK] answer: PUT
+    clue: Sub pământ, dar nu tunel
+    clue: Fântână fără suprafață
+    clue: Acțiune de a lăsa pe un loc
+  [219/250] [OK] answer: EXTREMITATE
+    clue: Margini ale hărții
+    clue: Brațul unui manipulateur
+    clue: Vârfurile ramurilor în toamnă
+  [220/250] [OK] answer: INSTRUMENTE
+    clue: Mijloace pentru a modela sunetul
+    clue: Documente și unelte de lucru
+    clue: Echipamente pentru măsurare și performanță
+  [221/250] [OK] answer: NOR
+    clue: Poartă logică cu ieșire 0 în absența semnalelor
+    clue: Vapori ce umplu albastrul zilei
+    clue: Conjuncție engleză folosită după negație
+  [222/250] [OK] answer: ODA
+    clue: Sală de laudă
+    clue: Vers de celebrare
+    clue: Spațiu pentru festivități
+  [223/250] [OK] answer: BOX
+    clue: Incintă de lemn pe scena teatrală
+    clue: Compartiment pentru echipamente audio
+    clue: Locul de ședere VIP la meci
+  [224/250] [OK] answer: SNAPS
+    clue: Poze efemere din rețea
+    clue: Gust cu ghimbir în cutie
+    clue: Sunete de degete la petrecere
+  [225/250] [OK] answer: IOD
+    clue: IO + D, satelit și notă
+    clue: Halogen cu simbol de o singură literă
+    clue: Agent antiseptic în tinctură, lângă alcool
+  [226/250] [OK] answer: AUR
+    clue: Culoarea răsăritului
+    clue: Premiul olimpic
+    clue: Metalul mitului care nu ruginește
+  [227/250] [OK] answer: CANCER
+    clue: Crab zodiacal
+    clue: Semn de apă, dar și boală
+    clue: Cuvânt cu dublu sens: animal și afecţiune
+  [228/250] [OK] answer: BEBE
+    clue: Nume de scenă al unei artiste pop românești
+    clue: Alint pentru micuțul din familie
+    clue: Cuvânt întâlnit adesea în titluri de melodii de dragoste
+  [229/250] [OK] answer: AED
+    clue: Bătălie contra stop‑cardiac
+    clue: Semnal de urgență în spital
+    clue: Cod medical de trei litere
+  [230/250] [OK] answer: LUP
+    clue: Vocea nopții la lună plină
+    clue: Urmăritor al mielului
+    clue: Blană de lup, dinți ascuțiți
+  [231/250] [OK] answer: SIM
+    clue: Abreviere din telecomunicații
+    clue: Program de modelare
+    clue: Chip cu identitate de abonat
+  [232/250] [OK] answer: TRUC
+    clue: Manevră de magician
+    clue: Metodă ingenioasă de rezolvare
+    clue: Înșelăciune tacticată în sport
+  [233/250] [OK] answer: GOGOSI
+    clue: Rotunde și glazurate, nu roți
+    clue: Dulci de la cofetărie, nu artificii
+    clue: Forme pufoase de aluat, nu bucle
+  [234/250] [OK] answer: SUL
+    clue: Sudul, fără „d”
+    clue: Finalul unui adjectiv precum frumos, când devine substantiv
+    clue: Parte a articolului ce se adaugă la cuvintele cu terminație în s
+  [235/250] [OK] answer: MAU
+    clue: Miau, dar cu o literă în minus
+    clue: Etichetă dulce
+    clue: Nume de familie cu sunet felin
+  [236/250] [OK] answer: BOTEZ
+    clue: Ritual cu apă
+    clue: Dăruiește-i un nume
+    clue: Numele unei nave la lansare
+  [237/250] [OK] answer: REN
+    clue: Filtru vital
+    clue: Cauză a durerii lombare
+    clue: Cuvânt din expresia „a‑și rupe ___”
+  [238/250] [OK] answer: VIN
+    clue: Se adună la petrecere
+    clue: Număr de șasiu
+    clue: Proaspăt din vie
+  [239/250] [OK] answer: SUT
+    clue: Lovitură rapidă
+    clue: Minge în poartă
+    clue: Tactică de atac
+  [240/250] [OK] answer: EMOTIVITATE
+    clue: Stil muzical, notă și sufix al calității
+    clue: Emoție în mișcare, cu ritm accelerat
+    clue: Când emo‑ti‑vite se contopesc într-un singur cuvânt
+  [241/250] [OK] answer: FRAMANTARI
+    clue: Bătăi fără clopote
+    clue: Agitație în aluat
+    clue: Gânduri înfășurate
+  [242/250] [OK] answer: REVENIRE
+    clue: Reîntoarcere la start
+    clue: Recidivă în terapia cronică
+    clue: Reînnoirea prezenței pe scenă
+  [243/250] [OK] answer: IRIS
+    clue: Arc de culori în mitologie
+    clue: Reglaj de lumină al obiectivului foto
+    clue: Floare cu coroniță ce poartă numele unei zeițe a curcubeului
+  [244/250] [OK] answer: UROLOG
+    clue: Jurnal al curentului intern
+    clue: Specialist în căi de scurgere
+    clue: Consultant al micilor râuri corporale
+  [245/250] [OK] answer: DUNAREAN
+    clue: Locuitor al unei ape mari
+    clue: Cine are sânge de pește și de câmpie
+    clue: Denumit după un râu ce străbate zece țări
+  [246/250] [OK] answer: VANZARI
+    clue: Sat din Buzău
+    clue: Reduceri la etichetă
+    clue: Cifră de afaceri zilnică
+  [247/250] [OK] answer: LOBATE
+    clue: Lovitură înaltă, cu traiectorie largă
+    clue: Frunză cu margini adânc încise
+    clue: Structură cerebrală segmentată
+  [248/250] [OK] answer: VAR
+    clue: Material alb în construcții
+    clue: Cuvânt cheie în JavaScript
+    clue: Departament francez de coastă
+  [249/250] [OK] answer: OSAN
+    clue: Oraș cu bază aeriană lângă Seul
+    clue: Un an al scheletului
+    clue: Dopă de lemn pentru sticlă
+  [250/250] [OK] answer: REALA
+    clue: Număr fără parte imaginară
+    clue: Ce nu e doar în minte
+    clue: Adevărată, nu doar în aparență
+Finished 250 answers
+Generated clues for 250/250 answers.
+Evaluating generated clues from /home/radu/storage/git/crosswords/data/results/gen_clues_clues_gpt-oss_h0.json ...
+Evaluation results: {'num_samples': 250, 'num_scored': 250, 'sbert_mean': 0.5528094941377639, 'sbert_std': 0.06237413158317026}
+Saving evaluation results to /home/radu/storage/git/crosswords/data/results/gen_clues_clues_gpt-oss_h0.json ...
+Done.
+FINISHED CPU 378.05 MEM 7215320 MAXMEM 7669444 STALE 84 MAXMEM_RSS 1136740
+<time name="ALL">378100</time>

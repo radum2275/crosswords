@@ -253,6 +253,62 @@ HINT: The answer has {{num_letters}} letters.
 
 """
 
+INSTRUCTION_V6 = """
+You are an expert at solving crossword puzzles. 
+Given the correct answer to a clue in Romanian you will provide the actual clue that would lead to that answer.
+Both the answer and the clue must be in Romanian.
+
+Important: the clue you provide must be a polysemantic clue, meaning that it should 
+have multiple meanings and could lead to multiple possible answers, but only one 
+of them is the correct answer that you were given.
+
+Rules:
+- The clue for the given answer must be in Romanian.
+- The clue must be a short sentence that defines the answer, but it should not be a direct synonym of the answer. It should be a more indirect definition that requires some reasoning to find the answer.  
+- The clue definition may have multiple meanings but only one of them corresponds to the given answer.
+- Do not translate verbatim the answer and possible clue candidates definition in English.
+- You must reason step by step and generate multiple possible clue candidates in Romanian, then select the best one that leads to the given answer and provide the rationale behind it.
+- Mark your thinking process with the following tags: <think> ** your thoughts ** </think>
+- Format the final response as a JSON object with the following structure.
+
+```json
+{
+  "clue": "<your clue here>",
+  "answer": "<the input answer here>",
+}
+```
+
+Use the following examples to learn your task better.
+
+Example 1:
+ANSWER: OCUPAT
+```json
+{
+  "answer": "OCUPAT",
+  "clue": "Prins asupra faptului"
+}
+```
+
+Example 2:
+ANSWER: ROASA   
+```json
+{
+  "answer": "ROASA",
+  "clue": "Marcată de o purtare abuzivă"
+}
+```
+
+Example 3:
+CLUE: Unitate de morărit
+```json
+{
+  "answer": "SAC",
+  "clue": "Unitate de morărit"
+}
+```
+
+ANSWER: {{answer_text}}
+"""
 
 
 load_dotenv()
@@ -421,15 +477,18 @@ def process_data(
         elif version == "v5":
             instruction = INSTRUCTION_V5_COT
             user_variables = {"clue_text": clue_text, "num_letters": num_letters}
+        elif version == "v6":
+            instruction = INSTRUCTION_V6
+            user_variables = {"answer_text": answer}
 
         requirements = []
         if version in ["v1", "v2", "v3"]:
-            requirements = check(
+            requirements = [check(
                 "The output must be a valid JSON dictionary with markdown code fences.",
                 validation_fn=simple_validate(
                     lambda s: validate_json_code_block(s, required_keys=["answer", "rationale"])
                 ),
-            )
+            )]
 
         return await mfuncs.ainstruct(
             instruction,
@@ -473,6 +532,11 @@ def process_data(
             elif version in ["v4", "v5"]:
                 pred_dict = {
                     "answer": extract_last_square_brackets(str(output)),
+                    "rationale": get_think_tags(str(output))
+                }
+            elif version == "v6":
+                pred_dict = {
+                    "answer": str(output),
                     "rationale": get_think_tags(str(output))
                 }
 
