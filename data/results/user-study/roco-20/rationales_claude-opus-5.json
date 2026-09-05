@@ -1,0 +1,202 @@
+[
+    {
+        "clue": "Diagnosticat cu hipertensiune",
+        "solution": "NERVOS",
+        "rationale": "La suprafață, definiția pare o fișă medicală: cineva la care s-a constatat tensiune arterială peste normal. Sensul intenționat exploatează însă polisemia cuvântului „tensiune”, care înseamnă și încordare psihică, iar prefixul „hiper-” indică un exces al acesteia; omul cu tensiune interioară în surplus este nervos. „Diagnosticat” e folosit glumeț, în sensul de „caracterizat prin”, transformând o stare temperamentală într-un aparent verdict clinic.",
+        "surface_reading": "Un pacient la care medicul a constatat valori mari ale tensiunii arteriale.",
+        "intended_sense": "Cineva cu un exces de tensiune nervoasă, de încordare psihică, adică o persoană nervoasă.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Depăşit cu puţin",
+        "solution": "NEAM",
+        "rationale": "La prima citire, definiția pare să descrie un concurent întrecut la mustață, cu o diferență mică. În realitate, „depășit” trebuie luat în sensul de „învechit, ieșit din uzul literar”, iar „cu puțin” trimite la expresia „câtuși de puțin, nici puțin”. Echivalentul popular și învechit al acestei expresii, folosit în construcții negative, este chiar „neam”: „nu-mi place neam”, „nu mai e neam de om” = nicidecum, deloc.",
+        "surface_reading": "Cineva sau ceva întrecut la limită, cu o diferență foarte mică, într-o competiție.",
+        "intended_sense": "Cuvânt popular, învechit (deci „depășit”) care exprimă ideea de „câtuși de puțin, deloc, nicidecum” în propoziții negative.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Vin ca niște nesimțiti",
+        "solution": "STRECURATI",
+        "rationale": "La prima vedere, „nesimțiți” pare a fi calificativul moral de obraznici, bădărani care sosesc nepoftiți, iar „vin” pare verbul a veni. Sensul intenționat descompune însă adjectivul în litera lui: „nesimțiți” = care nu sunt simțiți, neobservați, iar cei care ajung fără să fie simțiți vin strecurându-se, adică sunt strecurați. Ambiguitatea este întărită de faptul că „vin” poate fi citit și ca substantiv, iar vinul se strecoară (se filtrează), ceea ce trimite tot spre aceeași soluție.",
+        "surface_reading": "Niște persoane obraznice, lipsite de bun-simț, care sosesc nepoftite.",
+        "intended_sense": "Cei care intră pe furiș, fără a fi simțiți sau observați, adică strecurați (cu aluzie și la vinul strecurat).",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Fundație la bloc",
+        "solution": "UNIUNE",
+        "rationale": "La prima citire, „fundație la bloc” trimite la temelia de beton a unei clădiri de locuințe. Autorul folosește însă „bloc” în sens politic — grupare, alianță de state sau de partide —, iar „fundație” în sensul de temelie, de element constitutiv pe care se sprijină acea grupare. Ceea ce stă la baza unui bloc politic este chiar uniunea membrilor, actul de unire devenit structură (de tipul Uniunii Europene, socotită un bloc).",
+        "surface_reading": "Temelia de beton pe care se ridică un bloc de locuințe, elementul de construcție de la subsol.",
+        "intended_sense": "Baza pe care se constituie un bloc politic, adică unirea, asocierea statelor sau a partidelor într-o uniune.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A se manifesta cu durere",
+        "solution": "URLA",
+        "rationale": "Definiția sugerează la prima vedere o exteriorizare discretă a suferinței sufletești: a se plânge, a se lamenta, a suspina. Sensul intenționat exploatează însă valoarea sonoră a verbului „a se manifesta” — a se exprima zgomotos, a striga, ca într-o manifestare vocală violentă. Forma extremă a acestei manifestări provocate de suferință este urletul: cel lovit de o durere puternică urlă, iar „cu durere” arată cauza și intensitatea strigătului.",
+        "surface_reading": "A-și arăta suferința sufletească prin lamentări, plânset sau vorbe de jale.",
+        "intended_sense": "A scoate strigăte puternice, prelungi, provocate de o durere intensă, adică a urla de durere.",
+        "wordplay_type": "sinonimie contextuală",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Rapoarte de activitate",
+        "solution": "ORARE",
+        "rationale": "La prima citire, „rapoarte de activitate” trimite la actele oficiale, dările de seamă pe care instituțiile le întocmesc despre munca depusă. Sensul intenționat exploatează celălalt înțeles al lui „raport”: acela de relație, de raportare a ceva la altceva — aici, raportarea activităților la unitățile de timp, la ore. Tabelele care stabilesc această relație între activități și ore sunt exact orarele, iar pluralul definiției se potrivește formei ORARE.",
+        "surface_reading": "Documentele scrise, dările de seamă prin care se prezintă oficial activitatea desfășurată într-o perioadă.",
+        "intended_sense": "Raportarea activităților la ore, adică tabelele care distribuie activitățile pe intervale orare: orarele.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Au diverse funcții în sistemul de sănătate",
+        "solution": "ORGANE",
+        "rationale": "La prima citire, „funcții în sistemul de sănătate” trimite la posturi și demnități din administrația sanitară, deci la persoane sau instituții. Soluția exploatează însă dublul sens al cuvântului „organ”: nu organ administrativ, ci organ anatomic, iar „funcție” devine funcție fiziologică. Inima, plămânii, rinichii sau ficatul au fiecare funcții diferite în ansamblul organismului, adică în „sistemul” care menține sănătatea.",
+        "surface_reading": "Persoane sau instituții care ocupă diverse posturi și atribuții în administrația sistemului sanitar.",
+        "intended_sense": "Organele corpului omenesc, fiecare având o funcție fiziologică distinctă în menținerea sănătății organismului.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "A se prezenta la muncă după secretare",
+        "solution": "ASUDA",
+        "rationale": "Cuvântul „secretare” nu este aici pluralul lui „secretară”, ci infinitivul lung al verbului „a secreta”, adică procesul prin care glandele produc o substanță. În urma secretării glandelor sudoripare, în timpul efortului fizic, apare sudoarea, deci cel care muncește asudă. Expresia „a se prezenta la muncă” se citește ca „a se arăta, a se manifesta în timpul muncii”, nu ca „a veni la serviciu”.",
+        "surface_reading": "Un angajat care ajunge la birou mai târziu decât secretarele, adică vine la serviciu după ele.",
+        "intended_sense": "A transpira: ca urmare a secretării glandelor sudoripare, în timpul efortului fizic apare sudoarea.",
+        "wordplay_type": "omonimie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Plecat cu orele",
+        "solution": "ELEV",
+        "rationale": "La prima vedere, „cu orele” pare locuțiune adverbială care exprimă durata: cineva lipsit de acasă ore în șir, adică plecat de mult timp. Sensul intenționat exploatează celălalt înțeles al lui „oră”, acela de lecție din orar: cel care pleacă de acasă tocmai pentru orele sale este elevul. Astfel, „plecat cu orele” se citește ca „plecat la ore”, adică la cursuri, ceea ce îl definește pe elev.",
+        "surface_reading": "Persoană absentă, care lipsește de acasă timp îndelungat, ore întregi.",
+        "intended_sense": "Cel care pleacă de acasă pentru orele de curs, adică școlarul care își are programul făcut din ore de școală.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Se bate pentru un loc fruntaș",
+        "solution": "CALDECURSE",
+        "rationale": "La suprafață, definiția pare să descrie un om ambițios, un competitor care se luptă pentru o poziție de conducere sau un post de frunte. Sensul intenționat mută scena la hipodrom: cel care „se bate” pentru primul loc este calul de curse, iar verbul are aici și o a doua valoare — animalul este chiar bătut cu cravașa de jocheu ca să ajungă în frunte. „Loc fruntaș” devine astfel primul loc la potou, în clasamentul cursei.",
+        "surface_reading": "O persoană ambițioasă care se luptă pentru o poziție de frunte, pentru un post de conducere sau pentru supremație într-un domeniu.",
+        "intended_sense": "Animalul care concurează (și este biciuit) pentru a sosi primul la finalul unei curse de galop, adică un cal de curse.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Delegat oficial al partidelor",
+        "solution": "NUN",
+        "rationale": "La prima vedere „partidele” trimite la formațiuni politice, deci la un emisar sau reprezentant trimis de ele. Sensul intenționat pornește însă de la cuvântul „partidă”, care în limba română denumește și o căsătorie, o alianță matrimonială („o partidă bună”). Delegatul oficial care asistă și garantează o astfel de partidă, în fața bisericii și a comunității, este nunul, personajul învestit ceremonial la cununie.",
+        "surface_reading": "Un reprezentant sau emisar trimis în mod oficial de formațiunile politice.",
+        "intended_sense": "Persoana învestită oficial să reprezinte și să garanteze o partidă, adică o căsătorie: nunul de la cununie.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Trasee interne pentru traficul urban",
+        "solution": "STRAZI",
+        "rationale": "La prima vedere, „trasee interne” pare să indice rute dintr-o rețea proprie a unei instituții sau circuite interioare de transport, ceea ce duce gândul spre linii, curse sau coridoare. Sensul real al lui „interne” este însă geografic: din interiorul orașului, din intravilan, în opoziție cu drumurile interurbane care leagă localitățile între ele. Căile de circulație din interiorul unei localități, pe care se desfășoară traficul urban, sunt exact străzile.",
+        "surface_reading": "Rute dintr-o rețea închisă, proprie unei instituții sau companii de transport (curse interne, circuite interioare).",
+        "intended_sense": "Căile de circulație situate în interiorul orașului, opuse drumurilor interurbane, adică străzile.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Îngălbenit la față",
+        "solution": "AURIT",
+        "rationale": "La prima citire, definiția pare să descrie un om gălbejit la obraz, palid din cauza bolii sau a fricii. Sensul intenționat schimbă însă „față” din obraz în suprafața exterioară, partea din față a unui obiect (fața unei monede, a unei foi, a unei bijuterii), iar „îngălbenit” devine „făcut galben prin acoperire cu aur”. Un obiect poleit cu aur doar pe partea vizibilă este deci îngălbenit la față, adică aurit.",
+        "surface_reading": "Persoană cu tenul galben, gălbejită la obraz din cauza bolii sau a emoției.",
+        "intended_sense": "Obiect acoperit cu un strat de aur pe suprafața din față, deci devenit galben-strălucitor: aurit.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Un atac îngrozitor",
+        "solution": "SPERIETURA",
+        "rationale": "La prima vedere, „atac” trimite la o agresiune militară sau fizică, iar „îngrozitor” pare un simplu superlativ care arată cât de cumplit este acel asalt. Sensul intenționat folosește însă „atac” ca acces, criză instalată brusc (atac de panică, atac de nervi), iar „îngrozitor” în sensul propriu de „care îngrozește, care produce groază”. Rezultatul este un acces subit de groază, adică o sperietură.",
+        "surface_reading": "O agresiune violentă, un asalt cumplit, deosebit de crud.",
+        "intended_sense": "Un acces brusc care produce groază, adică spaima instalată dintr-odată: sperietura.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Operă dramatică",
+        "solution": "PIESA",
+        "rationale": "La prima vedere, „operă dramatică” pare să trimită la muzică, la o operă de gen serios, tragic, jucată pe scena liricii. Sensul intenționat este însă cel de bază al cuvântului „operă” — lucrare, creație — iar „dramatică” indică genul dramatic, adică textul scris pentru a fi jucat în teatru. O astfel de lucrare se numește piesă (de teatru), soluție cu atât mai ambiguă cât „piesă” are și alte sensuri curente (piesă de mașină, de șah, piesă muzicală).",
+        "surface_reading": "O compoziție muzicală de gen liric, o operă cu subiect tragic, jucată la teatrul de operă.",
+        "intended_sense": "Lucrare literară aparținând genului dramatic, scrisă pentru a fi reprezentată pe scenă, adică o piesă de teatru.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Imobil în proprietate privată",
+        "solution": "NEMISCATOR",
+        "rationale": "Citirea evidentă face din „imobil” un substantiv — o clădire aflată în posesia unui particular. Autorul folosește însă „imobil” ca adjectiv, cu sensul de „care nu se mișcă”, al cărui sinonim (folosit chiar în limbajul juridic mai vechi, unde bunurile imobile erau numite „bunuri nemișcătoare”) este NEMIȘCĂTOR. Totodată, „proprietate privată” poate fi recitit ca „însușire lipsită (privată) de ceva”, adică lipsită de mișcare, ceea ce confirmă soluția.",
+        "surface_reading": "O clădire, un apartament sau un teren care aparține unei persoane particulare, nu statului.",
+        "intended_sense": "Adjectivul „imobil” = care nu se mișcă, deci nemișcător; totodată bun „nemișcător”, termenul vechi pentru bun imobil, cu o însușire privată de mișcare.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Remarcată în detaliu dintr-o pânză",
+        "solution": "ATA",
+        "rationale": "La prima vedere, „pânză” trimite la tabloul pictat, iar definiția pare să ceară un element de compoziție observat la o privire atentă asupra picturii. Sensul intenționat mută însă „pânza” la țesătură, al cărei detaliu constitutiv minim este firul, adică ața. Un capăt de ață se remarcă imediat când iese sau se trage dintr-o pânză, astfel încât ața este exact detaliul care se observă într-o astfel de pânză.",
+        "surface_reading": "Un amănunt observat la examinarea atentă a unui tablou pictat pe pânză.",
+        "intended_sense": "Firul de ață, elementul de detaliu din care este alcătuită o pânză-țesătură și care se remarcă atunci când iese din ea.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Nobil de marcă plin de decoraţii",
+        "solution": "AUR",
+        "rationale": "La prima vedere definiția pare să descrie un aristocrat de rang mare, cu pieptul acoperit de medalii. În realitate, „nobil” se referă la categoria metalelor nobile, iar „de marcă” trimite la marcarea obligatorie a aurului (titlul, poansonul de garanție). „Plin de decorații” exprimă faptul că aurul este metalul din care se confecționează ordinele și medaliile și, totodată, materialul preferat pentru ornamentări și poleiri.",
+        "surface_reading": "Un aristocrat cu titlu ilustru, având pieptul acoperit de medalii și ordine.",
+        "intended_sense": "Metalul nobil marcat prin titlu, din care se fac decorațiile și care este folosit din belșug în ornamentări.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Cântece dintr-un recital cu dedicație",
+        "solution": "OSANALE",
+        "rationale": "La suprafață, definiția evocă un concert de muzică ușoară în care interpretul anunță piese dedicate unor persoane din public. Sensul intenționat pornește însă de la ideea de „dedicație” ca închinare, omagiu adus cuiva: cântecele care se închină, care slăvesc pe cineva sunt osanalele, cântările de slavă (de la exclamația liturgică „Osana!”). Astfel, un „recital cu dedicație” devine o înșiruire de laude aduse cuiva, iar piesele lui sunt osanale, adesea cu nuanța ironică de lingușeală excesivă.",
+        "surface_reading": "Piesele muzicale interpretate într-un spectacol în care artistul dedică melodii unor persoane din public.",
+        "intended_sense": "Cântări de slavă și laude închinate cuiva, adică osanale ridicate în onoarea unei persoane.",
+        "wordplay_type": "sens figurat",
+        "think": "",
+        "status": "OK"
+    },
+    {
+        "clue": "Strange bani albi",
+        "solution": "FISC",
+        "rationale": "La suprafață, definiția activează expresia „strânge bani albi pentru zile negre”, care sugerează un om econom, o pușculiță sau o persoană chibzuită. În realitate, „a strânge bani” trebuie citit ca a colecta, a încasa sume de la alții, iar cel care face asta instituțional este fiscul, prin impozite și taxe. Iar precizarea „albi” funcționează prin opoziție cu „banii negri”: fiscul poate încasa doar veniturile legale, declarate, la vedere, cei „negri” scăpând impozitării.",
+        "surface_reading": "Cineva care economisește, care pune bani deoparte, conform zicalei „bani albi pentru zile negre”.",
+        "intended_sense": "Instituția care colectează sumele provenite din activități legale, declarate (bani „albi”), adică organul de impozitare.",
+        "wordplay_type": "polisemie",
+        "think": "",
+        "status": "OK"
+    }
+]
