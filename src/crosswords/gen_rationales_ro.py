@@ -6,9 +6,20 @@
 # nothing is being predicted here: the answer is given and the output is the
 # explanation.
 #
-# Published crossword clues are deliberately polysemantic -- the obvious
-# reading is usually wrong -- so the prompt asks the model to separate the
-# misleading surface reading from the sense the author actually intended.
+# There are two prompts, chosen from --dataset_type (see select_prompt):
+#
+#   polycross/roco  -- published crossword clues are deliberately polysemantic,
+#                      the obvious reading is usually wrong, so the prompt asks
+#                      the model to separate the misleading surface reading from
+#                      the sense the author actually intended.
+#   themcross/base  -- thematic clues are direct lexical or encyclopedic
+#                      definitions with no hidden sense. Asking for a misleading
+#                      reading here makes the model invent one, so this prompt
+#                      asks only for a short 2-4 sentence explanation of the
+#                      clue -> solution link, with no encyclopedic padding.
+#
+# Records keep the same fields for both, so the two datasets stay row-comparable;
+# a base run simply leaves surface_reading/intended_sense/wordplay_type empty.
 #
 # Works with both RITS models and the frontier models served by the IBM
 # litellm gateway (ANTHROPIC_BASE_URL / ANTHROPIC_AUTH_TOKEN in .env).
@@ -145,7 +156,87 @@ SOLUȚIE: {{solution_text}}
 """
 
 
-# The JSON keys the model must return.
+INSTRUCTION_RATIONALE_BASE = """
+Ești un expert în explicarea definițiilor tematice de la cuvinte încrucișate în
+limba română. Primești o DEFINIȚIE și SOLUȚIA corectă a acesteia. Sarcina ta
+este să explici, scurt și la obiect, de ce soluția dată este răspunsul corect.
+
+Important: definițiile din acest set sunt DIRECTE. Ele nu sunt polisemantice și
+nu ascund niciun sens secundar. Sunt definiții lexicale obișnuite sau descrieri
+tematice și enciclopedice, iar sensul evident al definiției este chiar sensul
+corect. Explicația ta trebuie doar să arate legătura dintre definiție și
+soluție, nu să caute un înțeles ascuns.
+
+Reguli:
+- SOLUȚIA primită este corectă prin definiție. Nu o contesta, nu propune alt
+  răspuns și nu spune că definiția ar fi greșită: sarcina ta este să o explici.
+- Toate câmpurile trebuie scrise în ROMÂNĂ, cu diacritice corecte.
+- Nu traduce definiția sau soluția în engleză.
+- "rationale": 2-4 propoziții SCURTE. Aceasta este o limită strictă.
+- NU inventa ambiguități. Nu scrie că definiția „pare la prima vedere” altceva,
+  nu descrie o citire înșelătoare și nu specula ce l-ar putea induce în eroare
+  pe rezolvitor. Definiția este directă; spune direct de ce se potrivește.
+- NU adăuga detalii enciclopedice suplimentare: fără date biografice, ani,
+  premii, liste de opere, rezumate sau amănunte geografice care nu sunt necesare
+  pentru a explica legătura dintre definiție și soluție. Nu repeta informațiile
+  deja prezente în definiție.
+- Explică strict legătura definiție -> soluție și oprește-te.
+- Gândește pas cu pas înainte de a răspunde și marchează raționamentul cu
+  următoarele etichete: <think> ** gândurile tale ** </think>
+- După raționament, scrie răspunsul final ca un obiect JSON într-un bloc de cod
+  markdown, exact cu următoarea structură:
+
+```json
+{
+  "solution": "<soluția primită>",
+  "rationale": "<explicația în 2-4 propoziții scurte>"
+}
+```
+
+Folosește exemplele următoare pentru a înțelege mai bine sarcina și lungimea
+așteptată.
+
+Exemplul 1:
+DEFINIȚIE: Vas de lemn cu doage, folosit la păstrarea vinului
+SOLUȚIE: BUTOI
+```json
+{
+  "solution": "BUTOI",
+  "rationale": "Definiția descrie un recipient tradițional din doage de lemn strânse în cercuri. Vasul folosit pentru păstrarea și învechirea vinului este butoiul. Soluția este chiar termenul care denumește acest obiect."
+}
+```
+
+Exemplul 2:
+DEFINIȚIE: Dramaturg norvegian, autorul piesei „Casa cu păpuși” (Henrik)
+SOLUȚIE: IBSEN
+```json
+{
+  "solution": "IBSEN",
+  "rationale": "Definiția cere numele de familie al dramaturgului al cărui prenume este dat între paranteze: Henrik. Piesa „Casa cu păpuși” a fost scrisă de Henrik Ibsen, deci numele căutat este IBSEN."
+}
+```
+
+Exemplul 3:
+DEFINIȚIE: Care are loc o dată la doi ani
+SOLUȚIE: BIENAL
+```json
+{
+  "solution": "BIENAL",
+  "rationale": "Definiția dă sensul unui adjectiv care arată o repetare la fiecare doi ani. Termenul care exprimă exact acest interval este bienal. Soluția este deci adjectivul cerut de definiție."
+}
+```
+
+DEFINIȚIE: {{clue_text}}
+SOLUȚIE: {{solution_text}}
+"""
+
+
+# The JSON keys the model must return, per prompt.
+#
+# The polysemantic prompt asks for the misleading reading, the intended sense and
+# a wordplay label; the direct (base) prompt asks only for the explanation, since
+# a direct clue has no hidden sense to report and requiring those fields makes the
+# model invent one.
 REQUIRED_KEYS = [
     "solution",
     "rationale",
@@ -153,6 +244,38 @@ REQUIRED_KEYS = [
     "intended_sense",
     "wordplay_type",
 ]
+
+REQUIRED_KEYS_BASE = [
+    "solution",
+    "rationale",
+]
+
+# Content fields copied out of the parsed JSON into the output record, per prompt.
+# The record itself always carries all of them, so the two datasets stay
+# row-comparable; a base run simply leaves the three polysemy fields empty.
+CONTENT_KEYS = ["rationale", "surface_reading", "intended_sense", "wordplay_type"]
+CONTENT_KEYS_BASE = ["rationale"]
+
+
+def select_prompt(dataset_type: str) -> Tuple[str, List[str], List[str]]:
+    """
+    Pick the prompt for a dataset, returning
+    (instruction, required_keys, content_keys).
+
+    The choice follows the corpus, not a separate flag: the roco/polycross
+    clues are deliberately polysemantic, while the base/themcross clues are
+    direct thematic definitions with no hidden sense. DATASET_TYPE_ALIASES
+    already collapses the accepted --dataset_type spellings onto the canonical
+    answer field ("answer" vs "solution"), so route on that.
+    """
+    if dataset_type not in DATASET_TYPE_ALIASES:
+        raise ValueError(
+            f"Unknown dataset type '{dataset_type}'. Accepted: "
+            f"{', '.join(sorted(DATASET_TYPE_ALIASES))}."
+        )
+    if DATASET_TYPE_ALIASES[dataset_type] == "answer":
+        return INSTRUCTION_RATIONALE, REQUIRED_KEYS, CONTENT_KEYS
+    return INSTRUCTION_RATIONALE_BASE, REQUIRED_KEYS_BASE, CONTENT_KEYS_BASE
 
 
 def parse_rationale_response(text: str) -> Dict[str, Any]:
@@ -280,8 +403,13 @@ def summarize(
         "num_generated": len(generated),
         "num_failed": len(results) - len(generated),
         "avg_rationale_len": round(avg_len, 2),
-        "wordplay_types": dict(sorted(histogram.items(), key=lambda kv: -kv[1])),
     }
+    # Only the polysemantic prompt produces a wordplay label; on a base run the
+    # field is always empty, so report the histogram only when there is one.
+    if histogram:
+        summary["wordplay_types"] = dict(
+            sorted(histogram.items(), key=lambda kv: -kv[1])
+        )
 
     with open(summary_filename, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=4, ensure_ascii=False)
@@ -311,16 +439,15 @@ def process_data(
     :param min_answer_len: drop answers shorter than this many characters
     """
 
-    if dataset_type not in DATASET_TYPE_ALIASES:
-        raise ValueError(
-            f"Unknown dataset type '{dataset_type}'. Accepted: "
-            f"{', '.join(sorted(DATASET_TYPE_ALIASES))}."
-        )
+    # Validates dataset_type and picks the prompt for this corpus.
+    instruction, required_keys, content_keys = select_prompt(dataset_type)
+    prompt_kind = "polysemantic" if len(required_keys) > 2 else "direct"
 
     solution_key, clue_key = resolve_keys(data, dataset_type)
 
     print(f"Using LLM: {backend.model_id}")
     print(f"Dataset type: {dataset_type} (solution field: '{solution_key}')")
+    print(f"Prompt: {prompt_kind} (fields: {', '.join(required_keys)})")
     # Drop very short answers, then truncate; filtering first means
     # --num_samples N yields exactly N items. Pass min_answer_len=1 to keep a
     # curated sample intact.
@@ -346,12 +473,12 @@ def process_data(
         requirements = [check(
             "The output must contain a valid JSON code block with the required keys.",
             validation_fn=simple_validate(
-                lambda s: validate_rationale_response(s, required_keys=REQUIRED_KEYS)
+                lambda s: validate_rationale_response(s, required_keys=required_keys)
             ),
         )]
 
         return await mfuncs.ainstruct(
-            INSTRUCTION_RATIONALE,
+            instruction,
             context=SimpleContext(),
             backend=backend,
             requirements=requirements,
@@ -388,7 +515,7 @@ def process_data(
             record["think"] = get_think_tags(text)
             try:
                 parsed = parse_rationale_response(text)
-                for key in ("rationale", "surface_reading", "intended_sense", "wordplay_type"):
+                for key in content_keys:
                     value = parsed.get(key, "")
                     record[key] = value if isinstance(value, str) else str(value)
                 record["status"] = "OK" if record["rationale"].strip() else "PARSE-FAIL"

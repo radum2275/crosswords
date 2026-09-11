@@ -169,6 +169,29 @@ directory already names the dataset), and `--min_answer_len 1` keeps a curated s
 default of 3 would silently drop 1-2 letter answers. Both output files for a dataset are row-aligned on
 the same clues, so annotators can compare the two models item by item.
 
+### Two prompts, selected by `--dataset_type`
+
+The two samples need different prompts, and `select_prompt()` picks one from `--dataset_type` — there is
+no separate flag, so the commands above already choose correctly:
+
+- `clues`/`polycross`/`roco` → `INSTRUCTION_RATIONALE`. The roco clues are deliberately polysemantic, so
+  the model must also return `surface_reading` (the misleading reading), `intended_sense` and
+  `wordplay_type`.
+- `baseline`/`themcross`/`base` → `INSTRUCTION_RATIONALE_BASE`. The base clues are **direct** thematic
+  and encyclopedic definitions with no hidden sense, so this prompt returns only `{solution, rationale}`,
+  caps the rationale at **2-4 short sentences**, and forbids both inventing a misleading reading and
+  adding encyclopedic detail beyond the clue → solution link.
+
+Records keep the same seven fields either way, so the two datasets stay row-comparable for annotators; a
+base run simply leaves `surface_reading`/`intended_sense`/`wordplay_type` as `""`. Consequently the
+`wordplay_types` histogram is **omitted** from a base run's `_summary.json` (it would always be empty)
+and present for roco.
+
+Why this split: run under the polysemantic prompt, the base dataset produced fabricated ambiguity
+(ISAC — *"poate duce gândul spre numele biblic Isaac"*) and encyclopedic padding, with 25/100 items
+given a real wordplay label. The direct prompt cut the average rationale from 461 to 221 chars for
+`claude-opus-5` and from 294 to 189 for `gpt-oss-120b-a100`.
+
 ## Post-processing & manual annotation
 
 - `json2csv.py <file.json>` → `<file>_output.csv`. Emits fixed columns `rationale_score, match, clue, answer, prediction, rationale` and computes `match` itself (case-insensitive answer==prediction). `rationale_score` is filled in **manually** (0–5 scale).
