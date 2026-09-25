@@ -1,0 +1,57 @@
+\begin{tabular}{llrrrr}
+\toprule
+Items & Model & $k{=}1$ & $k{=}2$ & $k{=}3$ & $k{=}4$ \\
+\midrule
+\multicolumn{6}{l}{\textbf{PolyCross}} \\
+\multicolumn{2}{l}{\textit{$|a| \le k$ (answer fully revealed)}} & \textcolor{gray}{0\%} & \textcolor{gray}{0\%} & \textcolor{gray}{21\%} & \textcolor{gray}{44\%} \\
+ & Granite-4.0-small & -- & -- & 59.2 & 57.4 \\
+ & Llama-3.3-70B & -- & -- & 63.9 & 73.5 \\
+ & gpt-oss-120B & -- & -- & 99.7 & 99.5 \\
+ & Claude Opus 4.8 & -- & -- & 99.1 & 98.9 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|-k \in \{1,2\}$}} & \textcolor{gray}{21\%} & \textcolor{gray}{44\%} & \textcolor{gray}{45\%} & \textcolor{gray}{35\%} \\
+ & Granite-4.0-small & 9.9 & 17.9 & 28.3 & 35.3 \\
+ & Llama-3.3-70B & 17.4 & 34.2 & 47.1 & 56.9 \\
+ & gpt-oss-120B & 33.1 & 50.5 & 60.1 & 65.8 \\
+ & Claude Opus 4.8 & 41.6 & 62.8 & 80.5 & 88.1 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|-k \ge 3$}} & \textcolor{gray}{79\%} & \textcolor{gray}{56\%} & \textcolor{gray}{34\%} & \textcolor{gray}{21\%} \\
+ & Granite-4.0-small & 3.8 & 7.0 & 10.2 & 15.0 \\
+ & Llama-3.3-70B & 10.9 & 17.7 & 25.5 & 35.5 \\
+ & gpt-oss-120B & 20.3 & 31.1 & 39.1 & 46.1 \\
+ & Claude Opus 4.8 & 24.9 & 41.3 & 55.2 & 52.9 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|>k$ (informative)}} & \textcolor{gray}{100\%} & \textcolor{gray}{100\%} & \textcolor{gray}{79\%} & \textcolor{gray}{56\%} \\
+ & Granite-4.0-small & 5.1 & 11.8 & 20.4 & 27.8 \\
+ & Llama-3.3-70B & 12.3 & 25.0 & 37.7 & 49.0 \\
+ & gpt-oss-120B & 23.0 & 39.7 & 51.0 & 58.5 \\
+ & Claude Opus 4.8 & 28.4 & 50.7 & 69.5 & 75.1 \\
+\addlinespace
+\midrule
+\multicolumn{6}{l}{\textbf{ThemCross}} \\
+\multicolumn{2}{l}{\textit{$|a| \le k$ (answer fully revealed)}} & \textcolor{gray}{0\%} & \textcolor{gray}{0\%} & \textcolor{gray}{19\%} & \textcolor{gray}{45\%} \\
+ & Granite-4.0-small & -- & -- & 66.2 & 69.4 \\
+ & Llama-3.3-70B & -- & -- & 85.2 & 86.4 \\
+ & gpt-oss-120B & -- & -- & 99.1 & 99.0 \\
+ & Claude Opus 4.8 & -- & -- & 97.2 & 98.8 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|-k \in \{1,2\}$}} & \textcolor{gray}{19\%} & \textcolor{gray}{45\%} & \textcolor{gray}{48\%} & \textcolor{gray}{40\%} \\
+ & Granite-4.0-small & 30.1 & 32.4 & 37.6 & 47.9 \\
+ & Llama-3.3-70B & 56.5 & 62.2 & 62.7 & 69.1 \\
+ & gpt-oss-120B & 63.4 & 68.6 & 74.5 & 80.6 \\
+ & Claude Opus 4.8 & 88.4 & 92.2 & 92.6 & 94.3 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|-k \ge 3$}} & \textcolor{gray}{81\%} & \textcolor{gray}{55\%} & \textcolor{gray}{33\%} & \textcolor{gray}{15\%} \\
+ & Granite-4.0-small & 17.8 & 23.0 & 29.8 & 27.3 \\
+ & Llama-3.3-70B & 43.7 & 45.0 & 53.3 & 52.8 \\
+ & gpt-oss-120B & 55.4 & 60.9 & 69.9 & 72.2 \\
+ & Claude Opus 4.8 & 81.8 & 85.2 & 90.5 & 88.6 \\
+\addlinespace
+\multicolumn{2}{l}{\textit{$|a|>k$ (informative)}} & \textcolor{gray}{100\%} & \textcolor{gray}{100\%} & \textcolor{gray}{81\%} & \textcolor{gray}{55\%} \\
+ & Granite-4.0-small & 20.1 & 27.2 & 34.4 & 42.2 \\
+ & Llama-3.3-70B & 46.1 & 52.7 & 58.9 & 64.6 \\
+ & gpt-oss-120B & 56.9 & 64.4 & 72.6 & 78.3 \\
+ & Claude Opus 4.8 & 83.0 & 88.3 & 91.7 & 92.8 \\
+\addlinespace
+\bottomrule
+\end{tabular}

@@ -1,0 +1,89 @@
+dataset,model,version,k,missing,length,prefix,near_miss,other_word,n
+polycross,Claude Opus 4.8,v1,0,0,0,0,33,2811,3000
+polycross,Claude Opus 4.8,v2,0,0,394,0,33,2313,3000
+polycross,Claude Opus 4.8,v3,1,0,241,8,170,1728,3000
+polycross,Claude Opus 4.8,v3,2,0,176,8,179,1115,3000
+polycross,Claude Opus 4.8,v3,3,0,173,15,95,443,3000
+polycross,Claude Opus 4.8,v3,4,0,198,8,55,172,3000
+polycross,Claude Opus 4.8,v4,1,0,219,12,177,1704,3000
+polycross,Claude Opus 4.8,v4,2,0,187,7,185,1100,3000
+polycross,Claude Opus 4.8,v4,3,0,176,12,108,426,3000
+polycross,Claude Opus 4.8,v4,4,0,170,6,59,183,3000
+polycross,Claude Opus 4.8,v5,0,0,534,0,41,2160,3000
+polycross,Granite-4.0-small,v1,0,22,0,0,10,2951,3000
+polycross,Granite-4.0-small,v2,0,11,1581,0,19,1356,3000
+polycross,Granite-4.0-small,v3,1,9,1084,4,168,1582,3000
+polycross,Granite-4.0-small,v3,2,6,1011,70,174,1385,3000
+polycross,Granite-4.0-small,v3,3,7,1022,140,191,780,3000
+polycross,Granite-4.0-small,v3,4,9,931,225,106,504,3000
+polycross,Granite-4.0-small,v4,1,446,1516,127,85,722,3000
+polycross,Granite-4.0-small,v4,2,516,1271,173,103,727,3000
+polycross,Granite-4.0-small,v4,3,400,1231,250,79,430,3000
+polycross,Granite-4.0-small,v4,4,417,1059,267,43,232,3000
+polycross,Granite-4.0-small,v5,0,617,1462,0,13,886,3000
+polycross,Llama-3.3-70B,v1,0,1,0,0,14,2909,3000
+polycross,Llama-3.3-70B,v2,0,1,993,0,32,1852,3000
+polycross,Llama-3.3-70B,v3,1,0,639,16,216,1761,3000
+polycross,Llama-3.3-70B,v3,2,0,567,63,211,1410,3000
+polycross,Llama-3.3-70B,v3,3,1,643,104,209,744,3000
+polycross,Llama-3.3-70B,v3,4,4,556,129,121,396,3000
+polycross,Llama-3.3-70B,v4,1,66,927,21,194,1368,3000
+polycross,Llama-3.3-70B,v4,2,89,762,91,206,1090,3000
+polycross,Llama-3.3-70B,v4,3,30,675,151,184,554,3000
+polycross,Llama-3.3-70B,v4,4,23,602,211,102,298,3000
+polycross,Llama-3.3-70B,v5,0,55,733,0,34,2040,3000
+polycross,gpt-oss-120B,v1,0,0,0,0,20,2865,3000
+polycross,gpt-oss-120B,v2,0,3,101,0,39,2620,3000
+polycross,gpt-oss-120B,v3,1,0,96,13,204,1996,3000
+polycross,gpt-oss-120B,v3,2,0,70,39,234,1467,3000
+polycross,gpt-oss-120B,v3,3,0,59,30,204,866,3000
+polycross,gpt-oss-120B,v3,4,0,44,41,130,487,3000
+polycross,gpt-oss-120B,v4,1,209,88,12,202,1785,3000
+polycross,gpt-oss-120B,v4,2,231,59,38,167,1304,3000
+polycross,gpt-oss-120B,v4,3,90,51,35,183,754,3000
+polycross,gpt-oss-120B,v4,4,50,42,57,122,441,3000
+polycross,gpt-oss-120B,v5,0,131,101,0,43,2486,3000
+themcross,Claude Opus 4.8,v1,0,0,0,0,30,440,1148
+themcross,Claude Opus 4.8,v2,0,0,70,0,32,299,1148
+themcross,Claude Opus 4.8,v3,1,0,23,2,36,134,1148
+themcross,Claude Opus 4.8,v3,2,0,19,4,26,85,1148
+themcross,Claude Opus 4.8,v3,3,0,14,3,14,52,1148
+themcross,Claude Opus 4.8,v3,4,0,16,3,12,21,1148
+themcross,Claude Opus 4.8,v4,1,0,31,1,29,134,1148
+themcross,Claude Opus 4.8,v4,2,0,16,2,27,89,1148
+themcross,Claude Opus 4.8,v4,3,0,20,1,15,39,1148
+themcross,Claude Opus 4.8,v4,4,0,23,2,9,16,1148
+themcross,Claude Opus 4.8,v5,0,0,39,0,29,236,1148
+themcross,Granite-4.0-small,v1,0,1,0,0,43,976,1148
+themcross,Granite-4.0-small,v2,0,3,580,0,29,380,1148
+themcross,Granite-4.0-small,v3,1,2,464,1,88,362,1148
+themcross,Granite-4.0-small,v3,2,3,391,25,80,337,1148
+themcross,Granite-4.0-small,v3,3,0,371,34,60,219,1148
+themcross,Granite-4.0-small,v3,4,3,307,49,43,122,1148
+themcross,Granite-4.0-small,v4,1,440,412,14,27,124,1148
+themcross,Granite-4.0-small,v4,2,301,424,64,38,144,1148
+themcross,Granite-4.0-small,v4,3,434,357,56,12,67,1148
+themcross,Granite-4.0-small,v4,4,324,354,68,9,47,1148
+themcross,Granite-4.0-small,v5,0,319,489,0,9,219,1148
+themcross,Llama-3.3-70B,v1,0,0,0,0,50,743,1148
+themcross,Llama-3.3-70B,v2,0,0,230,0,59,455,1148
+themcross,Llama-3.3-70B,v3,1,0,124,4,97,394,1148
+themcross,Llama-3.3-70B,v3,2,0,96,24,84,339,1148
+themcross,Llama-3.3-70B,v3,3,1,104,18,62,230,1148
+themcross,Llama-3.3-70B,v3,4,1,106,42,41,105,1148
+themcross,Llama-3.3-70B,v4,1,7,246,7,79,257,1148
+themcross,Llama-3.3-70B,v4,2,18,239,14,71,194,1148
+themcross,Llama-3.3-70B,v4,3,3,209,33,49,122,1148
+themcross,Llama-3.3-70B,v4,4,5,163,52,24,57,1148
+themcross,Llama-3.3-70B,v5,0,19,177,0,40,460,1148
+themcross,gpt-oss-120B,v1,0,0,0,0,35,709,1148
+themcross,gpt-oss-120B,v2,0,0,35,0,39,539,1148
+themcross,gpt-oss-120B,v3,1,0,33,3,60,399,1148
+themcross,gpt-oss-120B,v3,2,0,20,6,77,306,1148
+themcross,gpt-oss-120B,v3,3,0,17,10,49,181,1148
+themcross,gpt-oss-120B,v3,4,0,13,6,26,98,1148
+themcross,gpt-oss-120B,v4,1,24,20,3,65,360,1148
+themcross,gpt-oss-120B,v4,2,11,17,9,71,287,1148
+themcross,gpt-oss-120B,v4,3,7,21,12,46,184,1148
+themcross,gpt-oss-120B,v4,4,0,10,4,27,95,1148
+themcross,gpt-oss-120B,v5,0,10,34,0,36,521,1148
