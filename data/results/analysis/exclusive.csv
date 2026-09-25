@@ -1,23 +1,13 @@
-dataset,version,k,Granite-4.0-small,Llama-3.3-70B,gpt-oss-120B,Claude Opus 4.8
-polycross,v1,0,7,21,56,91
-polycross,v2,0,9,29,127,138
-polycross,v3,1,20,51,218,348
-polycross,v3,2,15,60,213,456
-polycross,v3,3,14,40,102,395
-polycross,v3,4,10,30,68,238
-polycross,v4,1,10,70,211,353
-polycross,v4,2,15,72,228,467
-polycross,v4,3,9,33,122,409
-polycross,v4,4,6,20,81,265
-polycross,v5,0,6,41,115,144
-themcross,v1,0,5,11,26,219
-themcross,v2,0,4,11,38,196
-themcross,v3,1,2,6,16,232
-themcross,v3,2,3,5,12,199
-themcross,v3,3,0,6,6,120
-themcross,v3,4,0,6,10,65
-themcross,v4,1,1,6,13,209
-themcross,v4,2,0,2,13,176
-themcross,v4,3,1,10,6,136
-themcross,v4,4,0,4,6,60
-themcross,v5,0,2,8,19,252
+dataset,version,k,Granite-4.0-small,Llama-3.3-70B,gpt-oss-120B,Claude Opus 4.8,LLMic-v2-3B
+polycross,v1,0,7,21,54,91,5
+polycross,v2,0,9,29,127,138,1
+polycross,v3,1,19,51,215,341,13
+polycross,v3,2,15,58,205,445,10
+polycross,v3,3,14,39,97,389,5
+polycross,v3,4,10,30,66,235,1
+themcross,v1,0,5,11,25,215,3
+themcross,v2,0,4,11,36,196,1
+themcross,v3,1,2,6,16,228,2
+themcross,v3,2,3,5,12,193,1
+themcross,v3,3,0,6,6,119,1
+themcross,v3,4,0,6,9,63,1

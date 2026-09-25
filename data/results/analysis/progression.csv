@@ -1,9 +1,11 @@
 dataset,model,n,never,non_monotone,first_k0,first_k1,first_k2,first_k3,first_k4
 polycross,Claude Opus 4.8,3000,319,257,260,621,730,740,330
 polycross,Granite-4.0-small,3000,1516,368,33,135,253,573,490
+polycross,LLMic-v2-3B,3000,1613,165,3,43,115,620,606
 polycross,Llama-3.3-70B,3000,1016,327,122,261,446,641,514
 polycross,gpt-oss-120B,3000,587,268,237,479,557,680,460
 themcross,Claude Opus 4.8,1148,28,71,747,219,78,43,33
 themcross,Granite-4.0-small,1148,415,235,156,114,127,168,168
+themcross,LLMic-v2-3B,1148,545,140,42,61,88,196,216
 themcross,Llama-3.3-70B,1148,177,244,404,176,125,135,131
 themcross,gpt-oss-120B,1148,103,143,535,169,98,137,106

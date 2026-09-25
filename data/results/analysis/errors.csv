@@ -21,6 +21,12 @@ polycross,Granite-4.0-small,v4,2,516,1271,173,103,727,3000
 polycross,Granite-4.0-small,v4,3,400,1231,250,79,430,3000
 polycross,Granite-4.0-small,v4,4,417,1059,267,43,232,3000
 polycross,Granite-4.0-small,v5,0,617,1462,0,13,886,3000
+polycross,LLMic-v2-3B,v1,0,1,0,0,5,2983,3000
+polycross,LLMic-v2-3B,v2,0,2,2495,0,3,497,3000
+polycross,LLMic-v2-3B,v3,1,0,2449,2,58,447,3000
+polycross,LLMic-v2-3B,v3,2,0,2380,4,82,416,3000
+polycross,LLMic-v2-3B,v3,3,0,2158,16,23,118,3000
+polycross,LLMic-v2-3B,v3,4,0,1638,16,7,32,3000
 polycross,Llama-3.3-70B,v1,0,1,0,0,14,2909,3000
 polycross,Llama-3.3-70B,v2,0,1,993,0,32,1852,3000
 polycross,Llama-3.3-70B,v3,1,0,639,16,216,1761,3000
@@ -65,6 +71,12 @@ themcross,Granite-4.0-small,v4,2,301,424,64,38,144,1148
 themcross,Granite-4.0-small,v4,3,434,357,56,12,67,1148
 themcross,Granite-4.0-small,v4,4,324,354,68,9,47,1148
 themcross,Granite-4.0-small,v5,0,319,489,0,9,219,1148
+themcross,LLMic-v2-3B,v1,0,1,0,0,18,1075,1148
+themcross,LLMic-v2-3B,v2,0,3,926,0,10,167,1148
+themcross,LLMic-v2-3B,v3,1,1,868,1,26,167,1148
+themcross,LLMic-v2-3B,v3,2,0,823,6,26,156,1148
+themcross,LLMic-v2-3B,v3,3,0,754,13,16,59,1148
+themcross,LLMic-v2-3B,v3,4,0,563,17,4,21,1148
 themcross,Llama-3.3-70B,v1,0,0,0,0,50,743,1148
 themcross,Llama-3.3-70B,v2,0,0,230,0,59,455,1148
 themcross,Llama-3.3-70B,v3,1,0,124,4,97,394,1148

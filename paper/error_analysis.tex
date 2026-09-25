@@ -16,7 +16,7 @@ What the Hints Actually Buy}
 
 \author{Supplementary analysis for PolyCross / ThemCross}
 
-\newif\ifllmic\llmicfalse
+\newif\ifllmic\llmictrue
 \newcommand{\poly}{\textsc{PolyCross}}
 \newcommand{\them}{\textsc{ThemCross}}
 \newcommand{\tabsize}{\small\setlength{\tabcolsep}{3.2pt}}
@@ -27,7 +27,8 @@ What the Hints Actually Buy}
 \begin{abstract}
 We re-examine the solving results of four LLMs (Granite-4.0-small, Llama-3.3-70B, gpt-oss-120B and
 Claude Opus 4.8) on \poly{} (polysemantic clues) and \them{} (straight thematic clues) under seven
-hinting regimes. We (i)~rescore every model on the same 3000 \poly{} items that Claude was
+hinting regimes, together with the Romanian base model LLMic-v2-3B under the five regimes a base
+model can be prompted for. We (i)~rescore every model on the same 3000 \poly{} items that Claude was
 evaluated on, (ii)~replace case-insensitive exact match with a diacritic-insensitive match, and
 (iii)~decompose accuracy by how much of the answer the hint gives away. Three findings change how
 the headline numbers should be read. First, strict matching penalised the open models by up to
@@ -37,7 +38,8 @@ the hint; restricted to items where letters remain hidden, \poly{} accuracy drop
 for the stronger models, and on answers with three or more hidden letters it stays near 50\%.
 Third, weaker models lose a large share of items simply by ignoring the hint, whereas the stronger
 models' residual errors are hint-compliant words with the wrong meaning --- the failure mode the
-benchmark is designed to expose.
+benchmark is designed to expose. The Romanian base model is weakest on both counts: it rarely
+respects the length hint, and where letters remain hidden it solves about 5\% of \poly{} items.
 \end{abstract}
 
 % --------------------------------------------------------------------------
@@ -67,6 +69,9 @@ follow the JSON instruction prompts above. We evaluate it with few-shot \emph{co
 carry the same three worked examples and the same hint wording as v1--v3, ending in
 ``R\u{a}spuns:''; the answer is its greedy continuation up to the first newline. v4 and v5 rely on
 following instructions and have no base-model analogue, so they are omitted (``--'' in the tables).
+The prompts must be tokenized with the model's own \texttt{tokenizer.json}: the default
+\texttt{transformers}~5 tokenizer class drops its newline pre-tokenizer, and with it the model
+produces no usable answers (0.0\% on \poly{} v1).
 \fi
 
 \paragraph{Diacritic-insensitive scoring.} Gold answers are written without diacritics
@@ -80,7 +85,7 @@ throughout; Table~\ref{tab:strict} in the appendix gives the strict numbers.
 \centering\tabsize
 \caption{Accuracy (\%, diacritic-insensitive) on the common item sets. Best per column in bold.
 Len = length hint; Tr.\ = translate (v5). 95\% bootstrap intervals are at most $\pm1.8$ points on
-\poly{} and $\pm2.9$ on \them{}.}
+\poly{} and $\pm3.0$ on \them{}.}
 \label{tab:accuracy}
 \input{tables/accuracy.tex}
 \end{table}
@@ -115,6 +120,10 @@ $|a|\le 4$, so the hint \emph{is} the answer. Claude Opus 4.8 and gpt-oss-120B s
 these, as expected. Granite-4.0-small and Llama-3.3-70B do not: they return the given string on only
 57--69\% and 64--86\% of these items respectively, typically by producing a longer word that starts
 with the hint. This is a hint-following failure, not a reasoning one.
+\ifllmic LLMic-v2-3B copies the hint on 87\% ($k{=}3$) and 94\% ($k{=}4$) of these \poly{} items,
+more often than Granite or Llama, and they account for almost all of its accuracy: its 43.6\% at
+$k{=}4$, which puts it above Granite-4.0-small, falls to 4.2\% on the remaining items, the lowest of
+all models.\fi
 
 \paragraph{Informative-hint accuracy.} Restricted to items with $|a|>k$, \poly{} accuracy at $k{=}4$
 is 75.1\% for Claude Opus 4.8 (vs.\ 85.6\% overall) and 58.5\% for gpt-oss-120B (vs.\ 76.6\%). With
@@ -189,7 +198,11 @@ level.}
 \paragraph{Hint violations dominate for the weaker models.} Granite-4.0-small gives an answer of the
 wrong length on 31--53\% of \poly{} items at every hint level, and Llama-3.3-70B on 19--33\%.
 Among answered items, gpt-oss-120B and Claude Opus 4.8 respect both the length and the prefix
-92--99\% of the time (Table~\ref{tab:compliance} in the appendix). An exception is Claude Opus 4.8 at
+92--99\% of the time (Table~\ref{tab:compliance} in the appendix).
+\ifllmic LLMic-v2-3B keeps the given prefix on 91--100\% of items but the given length on only
+17--45\% on \poly{} (19--51\% on \them{}): the few-shot completion conveys the letters, but the base
+model does not treat the stated length as a constraint. Wrong length is therefore its dominant error
+at every hint level.\fi An exception is Claude Opus 4.8 at
 v2 on \poly{}, which violates the length on 13.1\% of items, more than gpt-oss-120B (3.4\%): without
 letters to anchor it, it sometimes prefers a semantically apt word of the wrong length.
 
@@ -206,10 +219,11 @@ the crossword convention that licenses them.
 \section{Difficulty across models and hint levels}
 \label{sec:difficulty}
 
-\paragraph{Agreement.} Figure~\ref{fig:agreement} counts how many of the four models solve each
-item. Without prefix hints, 91.5\% (v1) and 85.1\% (v2) of \poly{} items are solved by no model at
-all, versus 36.2\% and 28.7\% on \them{}. Items solved by exactly one model are overwhelmingly
-Claude's: at v3 $k{=}2$ it solves 456 \poly{} items that no other model does, against 213 for
+\paragraph{Agreement.} Figure~\ref{fig:agreement} counts how many of the models solve each
+item, over the conditions every model was run on (v1--v3\ifllmic; five models including
+LLMic-v2-3B\fi). Without prefix hints, 91.3\% (v1) and 85.1\% (v2) of \poly{} items are solved by no
+model at all, versus 36.0\% and 28.6\% on \them{}. Items solved by exactly one model are overwhelmingly
+Claude's: at v3 $k{=}2$ it solves 445 \poly{} items that no other model does, against 205 for
 gpt-oss-120B. Claude Opus 4.8 beats gpt-oss-120B significantly (exact McNemar, $p<0.01$) in every
 \poly{} condition with a prefix hint and in every \them{} condition, but not at v2 or v5 on \poly{}
 ($p=0.22$, $0.16$), where both are below 9\%.
@@ -217,7 +231,7 @@ gpt-oss-120B. Claude Opus 4.8 beats gpt-oss-120B significantly (exact McNemar, $
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\linewidth]{figures/agreement.pdf}
-\caption{Share of items solved by 0--4 of the models, per hint level.}
+\caption{Share of items solved by none, some or all of the models, per hint level (v1--v3).}
 \label{fig:agreement}
 \end{figure}
 
@@ -225,7 +239,7 @@ gpt-oss-120B. Claude Opus 4.8 beats gpt-oss-120B significantly (exact McNemar, $
 (Table~\ref{tab:progression}), most \them{} items that Claude Opus 4.8 solves are solved with the
 length hint alone (67\% of the items it ever solves), whereas on \poly{} they are spread across $k{=}1$--3. The ladder is not
 monotone: 8.6\% of \poly{} items are solved by Claude at some $k$ and missed again at a larger $k$,
-and 9--12\% for the other models (6--21\% across models on \them{}). Part of the gain from one hint level to the next is therefore
+and 5--12\% for the other models (6--21\% across models on \them{}). Part of the gain from one hint level to the next is therefore
 sampling variance rather than information, which argues for reporting intervals
 (Table~\ref{tab:accuracy} caption) and paired tests rather than point differences.
 
@@ -288,7 +302,9 @@ rather than read absolute values). Len.\ ok: answer has the given length.}
       gap is 54--65 points for Claude and 31--40 for gpt-oss-120B.
 \item \textbf{Weaker models fail on form, stronger ones on meaning.} Hint violations explain much of the
       gap between Granite/Llama and the rest; the remaining errors of the strongest models are
-      well-formed words with the wrong sense.
+      well-formed words with the wrong sense.\ifllmic{} The Romanian base model LLMic-v2-3B has the
+      lowest informative-hint accuracy of all models in every condition, mainly because it ignores
+      the length hint.\fi
 \end{enumerate}
 
 \clearpage

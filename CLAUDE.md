@@ -219,8 +219,23 @@ MODEL_PATH=/path/to/LLMic_v2 ./run_llmic.sh          # pre-downloaded weights
   checkpointed every `--save_every` batches.
 - Ollama does **not** work for LLMic: `ollama create` from the safetensors succeeds but mis-tokenizes
   (unrelated English output for every prompt), because of the model's custom GPT-NeoX-style tokenizer.
-- In `paper/error_analysis.tex`, flip `\llmicfalse` to `\llmictrue` once the results are in, to include
-  the paragraph describing the base-model protocol.
+- **transformers 5 mis-tokenizes LLMic via `AutoTokenizer`**: it rebuilds `GPTNeoXTokenizer` from class
+  defaults and drops the custom `\n`-splitting pre-tokenizer in `tokenizer.json`, so every newline in the
+  few-shot prompt becomes the wrong token and the model emits garbage (0% accuracy). The config record sets
+  `"tokenizer_from_file": true`, which makes the solver load `tokenizer.json` verbatim via
+  `PreTrainedTokenizerFast`. The batching self-check does **not** catch this (batched and single are
+  equally wrong) — sanity-check the first predictions of any new base model.
+- bert-score calls `build_inputs_with_special_tokens` for empty predictions, which transformers 5 removed;
+  `eval_results` shims it back (`[CLS] ids [SEP]`), so scores match bert-score under transformers 4.
+- **On the CCC cluster (LSF)**: env `/u/radu/envs/crosswords` (Python 3.12, torch 2.8.0+cu128, `pip
+  install -e .` plus litellm, scipy, matplotlib, seaborn). Pre-download weights on the login node (the job
+  runs with `HF_HUB_OFFLINE=1`), then submit `run_llmic_lsf.sh`, which wraps `run_llmic.sh`:
+  `bsub -G grp_big_job_lease -q normal -gpu "num=1" -n 8 -R "rusage[mem=64GB]" -J llmic -o
+  data/results/logs_llmic-v2/lsf_%J.out ./run_llmic_lsf.sh`. The full 12-run sweep takes ~45 min on one
+  H100; re-submitting resumes. There is no system TeX; `/u/radu/envs/tex/bin/tectonic -X compile
+  error_analysis.tex` builds the paper.
+- The LLMic results are in and `paper/error_analysis.tex` has `\llmictrue`; the agreement analysis
+  (figure and text) now covers five models over v1-v3 only.
 
 ## Error analysis (`src/crosswords/analysis/`, `paper/`)
 

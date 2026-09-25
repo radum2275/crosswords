@@ -23,7 +23,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, PreTrainedTokenizerFast
 
 from crosswords.analysis.rescore import normalize
 from crosswords.backends import CONFIG_DIR, load_json_utf8_relaxed, load_model_config
@@ -76,7 +76,12 @@ class BaseModelSolver:
         self.max_new_tokens = max_new_tokens
         self.max_context = int(record.get("max_context", 2048))
 
-        self.tokenizer = AutoTokenizer.from_pretrained(source)
+        # transformers 5 rebuilds some tokenizers from their class defaults and
+        # drops the pre-tokenizer in tokenizer.json. For LLMic_v2 that turns every
+        # "\n" into the wrong token, and the model then emits garbage; the
+        # config record opts into loading tokenizer.json verbatim.
+        tokenizer_cls = PreTrainedTokenizerFast if record.get("tokenizer_from_file") else AutoTokenizer
+        self.tokenizer = tokenizer_cls.from_pretrained(source)
         # Batched generation must pad on the left so every prompt ends at the
         # same position; truncate (if ever needed) from the left for the same reason.
         self.tokenizer.padding_side = "left"
@@ -199,6 +204,12 @@ def eval_results(path: str, bertscore: bool = True) -> Dict[str, Any]:
     if bertscore:
         from bert_score import BERTScorer
         scorer = BERTScorer(model_type="bert-base-uncased", device="cpu")
+        # bert-score encodes an empty prediction via build_inputs_with_special_tokens,
+        # which transformers 5 removed; restore its BERT behaviour ([CLS] ids [SEP]).
+        tok = scorer._tokenizer
+        if not hasattr(tok, "build_inputs_with_special_tokens"):
+            tok.build_inputs_with_special_tokens = (
+                lambda ids: [tok.cls_token_id] + list(ids) + [tok.sep_token_id])
         _, _, f1 = scorer.score(preds, refs)
         summary["sbert_mean"] = float(f1.mean())
         summary["sbert_std"] = float(f1.std(unbiased=False))
