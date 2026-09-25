@@ -1,0 +1,11 @@
+[
+  {
+    "name": "llmic-v2",
+    "model_id": "faur-ai/LLMic_v2",
+    "backend": "hf",
+    "eos_token_id": 1,
+    "pad_token_id": 0,
+    "max_context": 2048,
+    "comment": "Romanian-English 3B *base* model (Llama architecture), no chat template. Run with solve_base_ro.py (few-shot completion prompts), not clues_ro.py. config.json on the Hub says eos_token_id=2, which is <|unk|>; the real end-of-text token is id 1."
+  }
+]

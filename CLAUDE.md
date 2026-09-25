@@ -192,6 +192,59 @@ Why this split: run under the polysemantic prompt, the base dataset produced fab
 given a real wordplay label. The direct prompt cut the average rationale from 461 to 221 chars for
 `claude-opus-5` and from 294 to 189 for `gpt-oss-120b-a100`.
 
+## Base models via transformers (`solve_base_ro.py`)
+
+For **base** (non-instruction-tuned) models such as `faur-ai/LLMic_v2` (3B, Romanian-English, no chat
+template). `clues_ro.py` cannot run these: every Mellea backend applies a chat template and the prompts
+ask for JSON. `solve_base_ro.py` instead uses few-shot completion prompts (`prompts_base.py`: the same
+OCUPAT/ROASA/SAC examples and hint wording as v1-v3, ending in `Răspuns:`), greedy decoding up to the
+first newline, and writes the **same output format and filenames** as `clues_ro.py`
+(`clues_llmic-v2_v3_2.json`, `baseline_llmic-v2_v1_0.json`), so `rescore.py` picks the results up.
+
+```bash
+./run_llmic.sh [model=llmic-v2] [batch=64]      # all 12 runs: {polycross 3000, themcross 1148} x {v1, v2, v3 k=1..4}
+NUM_SAMPLES=50 OUT=/tmp/llmic_smoke ./run_llmic.sh   # smoke test
+MODEL_PATH=/path/to/LLMic_v2 ./run_llmic.sh          # pre-downloaded weights
+```
+
+- Models live in `configs/hf_models.json` (separate from `local_models.json`, which is the Mellea/vLLM
+  chat path). Only v1/v2/v3 exist for base models; v4 (CoT) and v5 (translate) are not defined.
+- **LLMic tokenizer quirks**, handled via the config record: the Hub `config.json` says
+  `eos_token_id=2`, which is `<|unk|>`; the real end-of-text is id 1. The tokenizer has
+  `add_eos_token=True`, so prompts are encoded with `add_special_tokens=False`.
+- **SDPA attention on Apple MPS breaks left-padded batches** (padded rows emit EOS at once); the solver
+  uses eager attention on MPS and SDPA elsewhere. Every run starts with a batched-vs-single self-check
+  that aborts if padded generation looks broken (an occasional differing answer is normal in fp16).
+- `--resume` skips items already in the output file (the runner always passes it); results are
+  checkpointed every `--save_every` batches.
+- Ollama does **not** work for LLMic: `ollama create` from the safetensors succeeds but mis-tokenizes
+  (unrelated English output for every prompt), because of the model's custom GPT-NeoX-style tokenizer.
+- In `paper/error_analysis.tex`, flip `\llmicfalse` to `\llmictrue` once the results are in, to include
+  the paragraph describing the base-model protocol.
+
+## Error analysis (`src/crosswords/analysis/`, `paper/`)
+
+Three steps, run in order from the repo root (each reads the previous step's output):
+
+```bash
+PYTHONPATH=src python -m crosswords.analysis.rescore          # -> data/results/analysis/{predictions,runs}.csv
+PYTHONPATH=src python -m crosswords.analysis.error_analysis   # -> data/results/analysis/*.csv, paper/tables/*.tex
+PYTHONPATH=src python -m crosswords.analysis.plots            # -> paper/figures/*.pdf
+cd paper && latexmk -pdf error_analysis.tex                   # ICLR 2026 style files are vendored in paper/
+```
+
+- **Common item sets.** Every model is scored on `polycross_sample3000.json` and on `themcross_data.json`
+  (answers >= 3 letters, 1148 items). The old granite/llama/gpt-oss polycross runs cover the full ~26k
+  corpus and are aligned to the sample by (clue, uppercased answer); items missing from a run count as
+  wrong. Claude files (`{polycross,themcross}_v*_[k*_]claude_opus48.json`) are **Claude Opus 4.8**, a
+  dict whose `predictions` list is position-aligned with the dataset.
+- **Metric.** `rescore.normalize` (NFD, drop combining marks, uppercase, letters only) is the main,
+  diacritic-insensitive metric; `correct_strict` keeps the original case-insensitive exact match.
+- Llama polycross v3 k=4 never existed on the full corpus; it was run on the sample as
+  `clues_sample3000_llama-3.3-70b-instruct_v3_4.json` and wired in via `EXTRA_RUNS` in `rescore.py`.
+- The "crossword vocabulary" used for candidate counts and OOV rates is the union of answers in both
+  full corpora (~11.9k types), not a Romanian dictionary.
+
 ## Post-processing & manual annotation
 
 - `json2csv.py <file.json>` → `<file>_output.csv`. Emits fixed columns `rationale_score, match, clue, answer, prediction, rationale` and computes `match` itself (case-insensitive answer==prediction). `rationale_score` is filled in **manually** (0–5 scale).
