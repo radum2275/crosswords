@@ -401,29 +401,33 @@ def write_continuity_tex(runs: pd.DataFrame, acc: pd.DataFrame, path: str) -> No
 
 
 def write_strata_tex(st: pd.DataFrame, path: str) -> None:
-    """v3 accuracy split by how many letters the hint leaves unknown."""
+    """v3 accuracy split by how many letters the hint leaves unknown, datasets side by side."""
     v3 = st[st["version"] == "v3"]
     n_items = {"polycross": 3000, "themcross": 1148}
-    lines = [r"\begin{tabular}{llrrrr}", r"\toprule",
-             r"Items & Model & $k{=}1$ & $k{=}2$ & $k{=}3$ & $k{=}4$ \\", r"\midrule"]
-    for ds in DATASETS:
-        lines.append(rf"\multicolumn{{6}}{{l}}{{\textbf{{{DATASET_LABEL[ds]}}}}} \\")
-        for s_ in STRATA + ["informative"]:
-            label = STRATUM_LABEL.get(s_, r"$|a|>k$ (informative)")
-            shares = []
-            for k in range(1, 5):
+    ks = range(1, 5)
+    head = " & ".join(rf"$k{{=}}{k}$" for k in ks)
+    lines = [r"\begin{tabular}{ll" + "rrrr" * len(DATASETS) + "}", r"\toprule",
+             " & & " + " & ".join(rf"\multicolumn{{4}}{{c}}{{{DATASET_LABEL[ds]}}}" for ds in DATASETS) + r" \\",
+             "".join(rf"\cmidrule(lr){{{3 + 4 * i}-{6 + 4 * i}}}" for i in range(len(DATASETS))),
+             "Items & Model & " + " & ".join([head] * len(DATASETS)) + r" \\", r"\midrule"]
+    strata = STRATA + ["informative"]
+    for s_ in strata:
+        label = STRATUM_LABEL.get(s_, r"$|a|>k$ (informative)")
+        shares = []
+        for ds in DATASETS:
+            for k in ks:
                 n = v3[(v3["dataset"] == ds) & (v3["stratum"] == s_) & (v3["k"] == k)]["n"]
                 shares.append(r"\textcolor{gray}{" + (pct(n.iloc[0] / n_items[ds], 0) if len(n) else "0") + r"\%}")
-            lines.append(rf"\multicolumn{{2}}{{l}}{{\textit{{{label}}}}} & " + " & ".join(shares) + r" \\")
-            for m in MODEL_ORDER:
-                cells = []
-                for k in range(1, 5):
+        lines.append(rf"\multicolumn{{2}}{{l}}{{\textit{{{label}}}}} & " + " & ".join(shares) + r" \\")
+        for m in MODEL_ORDER:
+            cells = []
+            for ds in DATASETS:
+                for k in ks:
                     x = v3[(v3["dataset"] == ds) & (v3["model"] == m) & (v3["stratum"] == s_) & (v3["k"] == k)]
                     cells.append(pct(x["acc"].iloc[0]) if len(x) else "--")
-                lines.append(f" & {m} & " + " & ".join(cells) + r" \\")
+            lines.append(f" & {m} & " + " & ".join(cells) + r" \\")
+        if s_ != strata[-1]:
             lines.append(r"\addlinespace")
-        if ds != DATASETS[-1]:
-            lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(path, "w").write("\n".join(lines) + "\n")
 

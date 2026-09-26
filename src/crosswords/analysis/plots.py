@@ -73,7 +73,7 @@ def label_line_ends(ax, ends: dict, x: float, min_gap: float = 0.055) -> None:
 
 def fig_ladder(acc: pd.DataFrame, out: str) -> None:
     """Accuracy along the hint ladder, no-diacritic (solid) vs strict (faint)."""
-    fig, axes = plt.subplots(1, 2, figsize=(TEXT_W, 2.1), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(TEXT_W, 2.4), sharey=True)
     xs = np.arange(len(LADDER))
     for ax, ds in zip(axes, DATASETS):
         ends = {}
@@ -97,8 +97,11 @@ def fig_ladder(acc: pd.DataFrame, out: str) -> None:
     handles, labels = axes[0].get_legend_handles_labels()
     handles.append(plt.Line2D([], [], color=INK_2, lw=0.8, ls=(0, (2, 2))))
     labels.append("strict (diacritics count)")
-    fig.legend(handles, labels, loc="upper center", ncol=len(handles), frameon=False,
-               bbox_to_anchor=(0.5, 1.1), fontsize=6.5 if len(handles) > 5 else 7)
+    # Legend in two rows so it is no wider than the figure; a wider legend makes
+    # bbox="tight" grow the canvas and the panels shrink on the page.
+    fig.legend(handles, labels, loc="upper center", ncol=(len(handles) + 1) // 2, frameon=False,
+               bbox_to_anchor=(0.5, 1.0), columnspacing=1.2, handlelength=2.0)
+    fig.tight_layout(rect=(0, 0, 1, 0.84), w_pad=1.0)
     fig.savefig(out)
     plt.close(fig)
 
@@ -137,7 +140,7 @@ def fig_strata(st: pd.DataFrame, acc: pd.DataFrame, out: str) -> None:
 def fig_candidates(cand: pd.DataFrame, out: str) -> None:
     """v3 accuracy (pooled over k) against how many lexicon words fit the hint."""
     order = ["1", "2-3", "4-10", "11-30", "31-100", ">100"]
-    fig, axes = plt.subplots(1, 2, figsize=(TEXT_W, 2.0), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(TEXT_W, 2.4), sharey=True)
     for ax, ds in zip(axes, DATASETS):
         d = cand[cand.dataset == ds]
         ends = {}
@@ -148,11 +151,12 @@ def fig_candidates(cand: pd.DataFrame, out: str) -> None:
                     label=m, markeredgecolor="white", markeredgewidth=0.5)
             ends[m] = g.values[-1]
         label_line_ends(ax, ends, len(order) - 1)
-        ax.set_xticks(range(len(order)), order)
+        ax.set_xticks(range(len(order)), order, rotation=35, ha="right", rotation_mode="anchor")
         ax.set_title(DATASET_LABEL[ds])
         pct_axis(ax)
     axes[0].set_ylabel("Accuracy (v3, $k$=1-4 pooled,\nanswer not fully revealed)")
-    fig.supxlabel("Crossword words fitting the length + prefix hint", fontsize=8, y=-0.02)
+    fig.supxlabel("Crossword words fitting the length + prefix hint", fontsize=8)
+    fig.tight_layout(w_pad=1.0)
     fig.savefig(out)
     plt.close(fig)
 
@@ -203,7 +207,7 @@ def fig_errors(err: pd.DataFrame, acc: pd.DataFrame, out: str) -> None:
     conds = LADDER[1:]  # v1 has no hint to violate
     cats = ["correct"] + ERROR_TYPES
     labels = {"correct": "Correct", **ERROR_LABEL}
-    fig, axes = plt.subplots(2, len(MODEL_ORDER), figsize=(TEXT_W, 3.2), sharey=True, sharex=True)
+    fig, axes = plt.subplots(2, len(MODEL_ORDER), figsize=(TEXT_W, 3.6), sharey=True, sharex=True)
     for i, ds in enumerate(DATASETS):
         for j, m in enumerate(MODEL_ORDER):
             ax = axes[i, j]
@@ -233,8 +237,9 @@ def fig_errors(err: pd.DataFrame, acc: pd.DataFrame, out: str) -> None:
                 ax.set_title(m.replace("-small", ""), fontsize=7.5)
         axes[i, 0].set_ylabel(f"{DATASET_LABEL[ds]}\nshare of items")
     handles, labs = axes[0, 0].get_legend_handles_labels()
-    fig.legend(handles, labs, loc="upper center", ncol=6, frameon=False, bbox_to_anchor=(0.5, 1.03))
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    # Three columns keep the legend within the figure width (see fig_ladder).
+    fig.legend(handles, labs, loc="upper center", ncol=3, frameon=False, bbox_to_anchor=(0.5, 1.0))
+    fig.tight_layout(rect=(0, 0, 1, 0.9))
     fig.savefig(out)
     plt.close(fig)
 
