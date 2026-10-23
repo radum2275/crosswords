@@ -9,7 +9,7 @@
 import argparse
 import json
 import os
-from typing import Any, Dict, List
+from typing import Any
 
 import mellea.stdlib.functional as mfuncs
 import numpy as np
@@ -26,11 +26,11 @@ FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
 from crosswords.backends import build_backend, print_models
-from crosswords.runner import RateLimiter, throttle_backend, run_throttled
+from crosswords.runner import RateLimiter, run_throttled, throttle_backend
 from crosswords.utils import (
-    strip_code_fences,
     extract_first_code_block,
     get_think_tags,
+    strip_code_fences,
 )
 
 INSTRUCTION_GEN = """
@@ -202,7 +202,7 @@ def get_sbert(reference: str, prediction: str, scorer) -> float:
     return F1.cpu().detach().numpy().tolist()[0]
 
 
-def parse_clues_response(text: str) -> Dict[str, Any]:
+def parse_clues_response(text: str) -> dict[str, Any]:
     """
     Parse an LLM response into a JSON dict, tolerating a <think>...</think>
     preamble before the fenced JSON block. Raises on failure.
@@ -213,7 +213,7 @@ def parse_clues_response(text: str) -> Dict[str, Any]:
     return json.loads(cleaned)
 
 
-def validate_clues_response(text: str, required_keys: List[str]) -> bool:
+def validate_clues_response(text: str, required_keys: list[str]) -> bool:
     """
     Validation for the rejection sampler. Unlike validate_json_code_block, this
     extracts the fenced block from anywhere in the response, so a valid answer
@@ -226,7 +226,7 @@ def validate_clues_response(text: str, required_keys: List[str]) -> bool:
     return isinstance(data, dict) and all(k in data for k in required_keys)
 
 
-def load_data(file_name: str) -> List[Dict[str, Any]]:
+def load_data(file_name: str) -> list[dict[str, Any]]:
     """Load the dataset."""
     try:
         with open(file_name, "r") as f:
@@ -238,7 +238,7 @@ def load_data(file_name: str) -> List[Dict[str, Any]]:
 
 
 def process_data(
-        data: List[Dict[str, Any]],
+        data: list[dict[str, Any]],
         backend: Backend,
         dataset_type: str,
         num_candidates: int,
@@ -246,7 +246,7 @@ def process_data(
         num_samples: int = None,
         output_filename: str = "gen_clues.json",
         batch_size: int = 50,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Generate candidate clues for the answers in the dataset.
 
@@ -368,7 +368,7 @@ def process_data(
     return results
 
 
-def eval_results(output_filename: str) -> Dict[str, Any]:
+def eval_results(output_filename: str) -> dict[str, Any]:
     """
     Score the generated clues against the ground-truth (source) clue using
     BERTScore F1. For each answer with at least one generated clue, the best
