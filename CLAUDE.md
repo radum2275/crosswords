@@ -54,7 +54,7 @@ Output parsing depends on the version: `v1`–`v3` parse a JSON code block (`str
 
 ## Backend
 
-LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library and IBM's internal `mellea_ibm.rits` (RITS) backend — **`mellea_ibm` is not on PyPI and not in `pyproject.toml`; it is an IBM-internal package.** Requests use `RejectionSamplingStrategy(loop_budget=5)` with per-version validation requirements. Generation is async via `mfuncs.ainstruct`, throttled by a semaphore + sleep interval. Expect RITS to be unavailable outside IBM infrastructure.
+LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library and IBM's internal `mellea_ibm.rits` (RITS) backend — **`mellea_ibm` is an IBM-internal package, not on PyPI.** `pyproject.toml` installs it from `git+ssh://git@github.ibm.com/generative-computing/mellea-ibm.git`, pinned to a commit because the repo has no tags. That needs `[tool.hatch.metadata] allow-direct-references = true` and an SSH key registered on github.ibm.com, so `pip install -e .` fails without IBM GitHub access. Requests use `RejectionSamplingStrategy(loop_budget=5)` with per-version validation requirements. Generation is async via `mfuncs.ainstruct`, throttled by a semaphore + sleep interval. Expect RITS to be unavailable outside IBM infrastructure.
 
 `load_dotenv()` is called at import, so credentials/config are expected via a `.env` file (not committed).
 
@@ -70,7 +70,9 @@ backends themselves. Both config files hold a list of `{"name", "model_id", "bac
 - `configs/rits_models.json` — RITS models. Each record needs an explicit `base_url` (the bare
   endpoint; `RITSBackend` appends `/v1` itself). Needs `RITS_API_KEY` in `.env`.
 - `configs/local_models.json` — local models run **in-process** via Mellea's `LocalVLLMBackend`
-  (`"backend": "vllm"`). Needs `pip install vllm outlines` **and a CUDA GPU** — the weights are loaded
+  (`"backend": "vllm"`). **Mellea 0.8.0 (the pinned version) removed `LocalVLLMBackend`**, so this path
+  currently errors out with a clear message; it only works with an older Mellea. When it did work it
+  needed `pip install vllm outlines` **and a CUDA GPU** — the weights are loaded
   inside the script, so this cannot run on a machine without one. Per-model vLLM engine knobs go under
   `model_options` (e.g. `gpu_memory_utilization`, `max_model_len`). `VLLM_USE_V1=0` is set automatically
   because the Mellea backend does not support vLLM V1.
@@ -82,7 +84,13 @@ A `--model_id` containing a `/` that matches neither config is passed through ve
 litellm model id. A missing config file is not fatal — that family is just unavailable.
 
 `backends.py` is the only place that touches `mellea_ibm`, and the import is guarded, so the litellm
-path works even where RITS is unavailable. The old hardcoded `RITS.*` enum aliases (`llama`, `granite`,
+path works even where RITS is unavailable. Since mellea 0.8.0 LiteLLM is an optional extra:
+`pyproject.toml` depends on `mellea[litellm]`, and a bare `pip install mellea` makes every script fail
+at import with `requires extra dependencies ... mellea[litellm]`.
+
+In 0.8.0 `Backend.generate_from_context` is a `@final` base-class wrapper around each backend's
+`_generate_from_context`. `throttle_backend` still patches the public method on the instance, which is
+what the sampler and `ainstruct` call, so retries are still rate-limited. The old hardcoded `RITS.*` enum aliases (`llama`, `granite`,
 `mistral`, `gpt-oss`) are gone; note that `RITS.GPT_OSS_120B` and `RITS.MISTRAL_LARGE_3_675B_2512` now
 return **HTTP 404** (retired deployments), which is why the config points at live endpoints instead —
 `gpt-oss-120b-a100` replaces the dead gpt-oss. All five models in `configs/rits_models.json` were

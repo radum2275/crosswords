@@ -3,35 +3,39 @@
 
 # Clue and answer pairs are in Romanian
 
-import os
 import argparse
 import json
-import numpy as np
-import mellea.stdlib.functional as mfuncs
+import os
+from typing import Any
 
+import mellea.stdlib.functional as mfuncs
+import numpy as np
 from bert_score import BERTScorer
 from dotenv import load_dotenv
-from typing import Any, Dict, List
 from mellea.backends import Backend
+from mellea.core import FancyLogger
 from mellea.stdlib.context import SimpleContext
 from mellea.stdlib.requirements import check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
-
-from mellea.core import FancyLogger
 
 # Disable Mellea logging
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 
 # Local imports
-from crosswords.backends import build_backend, print_models, load_json_utf8_relaxed
+from crosswords.backends import build_backend, load_json_utf8_relaxed, print_models
 from crosswords.runner import (
     RateLimiter,
-    throttle_backend,
-    run_throttled,
-    resolve_keys,
     filter_and_limit,
+    resolve_keys,
+    run_throttled,
+    throttle_backend,
 )
-from crosswords.utils import strip_code_fences, validate_json_code_block, extract_last_square_brackets, get_think_tags
+from crosswords.utils import (
+    extract_last_square_brackets,
+    get_think_tags,
+    strip_code_fences,
+    validate_json_code_block,
+)
 
 INSTRUCTION_V1 = """
 You are an expert at solving crossword puzzles. Given a clue in Romanian (i.e., a short definition) you will provide the answer to that clue.
@@ -323,7 +327,7 @@ def get_sbert(reference: str, prediction: str, scorer) -> float:
     sbert = F1.cpu().detach().numpy().tolist()[0]
     return sbert
 
-def load_data(file_name: str) -> List[Dict[str, Any]]:
+def load_data(file_name: str) -> list[dict[str, Any]]:
     """
     Load the dataset
     
@@ -333,11 +337,11 @@ def load_data(file_name: str) -> List[Dict[str, Any]]:
         with open(file_name, "r") as f:
             data = json.load(f)
         return data
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(e)
         return None
     
-def eval_results(output_filename: str) -> Dict[str, Any]:
+def eval_results(output_filename: str) -> dict[str, Any]:
     """
     Evaluate the results from the output file.
     """
@@ -349,7 +353,7 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
     references = []
     predictions = []
     for item_dict in results:
-        assert "answer" in item_dict.keys() and "prediction" in item_dict.keys(), "Each result dictionary must have 'answer' and 'prediction' keys."  
+        assert "answer" in item_dict and "prediction" in item_dict, "Each result dictionary must have 'answer' and 'prediction' keys."  
         answer = item_dict["answer"]
         prediction = item_dict["prediction"]
         if prediction is None:
@@ -388,16 +392,16 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
     return eval_results
 
 def process_data(
-        data: List[Dict[str, Any]],
+        data: list[dict[str, Any]],
         backend: Backend,
         version: str,
         prefix_len: int,
         dataset_type: str,
-        num_samples: int = None,
+        num_samples: int | None = None,
         output_filename: str = "results.json",
         batch_size: int = 50,
         loop_budget: int = 5,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Run the solving task over the dataset and write the results.
 

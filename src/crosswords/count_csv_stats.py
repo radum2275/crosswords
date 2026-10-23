@@ -1,6 +1,7 @@
 import csv
 import sys
 
+
 def count_matches_and_rational_score(csv_file):
     match_true_count = 0
     rational_score_5_count = 0

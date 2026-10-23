@@ -19,7 +19,7 @@ import argparse
 import json
 import os
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import numpy as np
 import torch
@@ -37,7 +37,7 @@ HF_CONFIG = CONFIG_DIR / "hf_models.json"
 # Model
 # --------------------------------------------------------------------------
 
-def resolve_model(model_id: str) -> Dict[str, Any]:
+def resolve_model(model_id: str) -> dict[str, Any]:
     """The config record for a --model_id, or a bare record for a raw HF id / local path."""
     models = load_model_config(HF_CONFIG)
     if model_id in models:
@@ -69,7 +69,7 @@ def pick_dtype(device: str, requested: str) -> torch.dtype:
 class BaseModelSolver:
     """Batched greedy completion with a causal LM."""
 
-    def __init__(self, record: Dict[str, Any], model_path: Optional[str], device: str,
+    def __init__(self, record: dict[str, Any], model_path: str | None, device: str,
                  dtype: torch.dtype, max_new_tokens: int, attn_implementation: str = "auto"):
         source = model_path or record["model_id"]
         self.device = device
@@ -104,7 +104,7 @@ class BaseModelSolver:
         self.model.eval()
 
     @torch.inference_mode()
-    def _generate(self, prompts: List[str]) -> List[str]:
+    def _generate(self, prompts: list[str]) -> list[str]:
         # add_special_tokens=False: the LLMic tokenizer has add_eos_token=True,
         # which would otherwise append <|endoftext|> to the end of each prompt.
         enc = self.tokenizer(prompts, add_special_tokens=False, padding=True, truncation=True,
@@ -122,7 +122,7 @@ class BaseModelSolver:
         new = out[:, enc["input_ids"].shape[1]:]
         return self.tokenizer.batch_decode(new, skip_special_tokens=True)
 
-    def generate(self, prompts: List[str]) -> List[str]:
+    def generate(self, prompts: list[str]) -> list[str]:
         """Generate for a batch; on out-of-memory fall back to one prompt at a time."""
         try:
             return self._generate(prompts)
@@ -132,7 +132,7 @@ class BaseModelSolver:
             torch.cuda.empty_cache()
             return [self._generate([p])[0] for p in prompts]
 
-    def check_batching(self, prompts: List[str]) -> None:
+    def check_batching(self, prompts: list[str]) -> None:
         """Fail fast if batched (padded) generation is broken.
 
         Guards against backend bugs in padded attention (e.g. SDPA on MPS), which
@@ -161,25 +161,25 @@ class BaseModelSolver:
 # Results
 # --------------------------------------------------------------------------
 
-def item_key(clue: str, answer: str) -> Tuple[str, str]:
+def item_key(clue: str, answer: str) -> tuple[str, str]:
     return clue.strip(), answer.strip().upper()
 
 
-def load_records(path: str) -> List[Dict[str, Any]]:
+def load_records(path: str) -> list[dict[str, Any]]:
     """Records from an output file, without the trailing summary dict."""
     if not os.path.exists(path):
         return []
     return [r for r in load_json_utf8_relaxed(path) if isinstance(r, dict) and "clue" in r]
 
 
-def write_results(records: List[Dict[str, Any]], path: str) -> None:
+def write_results(records: list[dict[str, Any]], path: str) -> None:
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(records, f, indent=4, ensure_ascii=False)
     os.replace(tmp, path)
 
 
-def eval_results(path: str, bertscore: bool = True) -> Dict[str, Any]:
+def eval_results(path: str, bertscore: bool = True) -> dict[str, Any]:
     """Score an output file and append the summary as its final element.
 
     Same summary keys as clues_ro.py, plus the diacritic-insensitive accuracy
@@ -192,7 +192,7 @@ def eval_results(path: str, bertscore: bool = True) -> Dict[str, Any]:
 
     exact = [float(a.strip().lower() == p.strip().lower()) for a, p in zip(refs, preds)]
     nodiac = [float(normalize(a) == normalize(p)) for a, p in zip(refs, preds)]
-    summary: Dict[str, Any] = {
+    summary: dict[str, Any] = {
         "num_samples": len(records),
         "exact_matches": float(np.sum(exact)),
         "accuracy": float(np.mean(exact)),
@@ -223,15 +223,15 @@ def eval_results(path: str, bertscore: bool = True) -> Dict[str, Any]:
 # Main loop
 # --------------------------------------------------------------------------
 
-def process_data(data: List[Dict[str, Any]], solver: BaseModelSolver, version: str,
+def process_data(data: list[dict[str, Any]], solver: BaseModelSolver, version: str,
                  prefix_len: int, dataset_type: str, output_filename: str,
-                 num_samples: Optional[int], batch_size: int, save_every: int,
-                 resume: bool, min_answer_len: int) -> List[Dict[str, Any]]:
+                 num_samples: int | None, batch_size: int, save_every: int,
+                 resume: bool, min_answer_len: int) -> list[dict[str, Any]]:
     answer_key, clue_key = resolve_keys(data, dataset_type)
     print(f"Answer field: '{answer_key}'")
     data = filter_and_limit(data, answer_key, num_samples=num_samples, min_answer_len=min_answer_len)
 
-    done: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    done: dict[tuple[str, str], dict[str, Any]] = {}
     if resume:
         for r in load_records(output_filename):
             done.setdefault(item_key(r["clue"], r["answer"]), r)
@@ -251,9 +251,9 @@ def process_data(data: List[Dict[str, Any]], solver: BaseModelSolver, version: s
         probe = todo[:3] + todo[-3:] if len(todo) >= 6 else todo
         solver.check_batching([prompts[i] for i in probe])
 
-    fresh: Dict[int, Dict[str, Any]] = {}
+    fresh: dict[int, dict[str, Any]] = {}
 
-    def assemble() -> List[Dict[str, Any]]:
+    def assemble() -> list[dict[str, Any]]:
         out = []
         for i, it in enumerate(data):
             key = item_key(it[clue_key], it[answer_key])

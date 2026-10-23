@@ -10,14 +10,13 @@
 # defined: v1 (clue only), v2 (+ length) and v3 (+ length and first k letters).
 # v4 (chain-of-thought) and v5 (reason in English) have no base-model analogue.
 
-from typing import List, Tuple
 
 BASE_VERSIONS = ("v1", "v2", "v3")
 
 HEADER = "Rebus: pentru fiecare definiție, scrie cuvântul pe care îl definește."
 
 # (clue, answer) -- the same examples as INSTRUCTION_V1..V3 in clues_ro.py.
-EXAMPLES: List[Tuple[str, str]] = [
+EXAMPLES: list[tuple[str, str]] = [
     ("Prins asupra faptului", "OCUPAT"),
     ("Marcată de o purtare abuzivă", "ROASA"),
     ("Unitate de morărit", "SAC"),

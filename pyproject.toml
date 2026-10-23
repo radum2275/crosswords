@@ -20,7 +20,10 @@ classifiers = [
 ]
 
 dependencies = [
-    "mellea (==0.8.0)",
+    "mellea[litellm] (==0.8.0)",
+    # IBM-internal RITS backend; not on PyPI. Installs over SSH, so it needs a key
+    # registered on github.ibm.com. The repo has no tags, so pin a commit.
+    "mellea_ibm @ git+ssh://git@github.ibm.com/generative-computing/mellea-ibm.git@bdd2da7772fd7dbc90ab41fe3d491b880eed8aae",
     "python-dotenv (>=1.2.2)",
     "pyyaml (>=6.0.0)",
     "torch (==2.8.0)",
@@ -34,8 +37,18 @@ dev = ["pytest", "ruff", "mypy", "build", "twine"]
 [project.urls]
 Source = "https://github.com/radum2275/crosswords"
 
+# Required for the git+ssh reference to mellea_ibm above.
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/crosswords"]
 
 [tool.hatch.build.targets.sdist]
 exclude = ["docs/", "data/", "lib/", "tests/"]
+
+[tool.ruff]
+target-version = "py311"
+# One-off dataset-generation scripts. Several are Python 2 and their runners
+# invoke them with python2.7, so Python 3 lint fixes would break them.
+extend-exclude = ["src/gen-clue-sol-datasets"]

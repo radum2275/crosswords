@@ -19,7 +19,7 @@ import argparse
 import os
 import re
 import unicodedata
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 import pandas as pd
 
@@ -56,7 +56,7 @@ CLAUDE_RE = re.compile(r"^(polycross|themcross)_(v\d)(?:_k(\d))?_claude_opus48\.
 DATASET_ALIAS = {"clues": "polycross", "baseline": "themcross"}
 
 
-def normalize(s: Optional[str]) -> str:
+def normalize(s: str | None) -> str:
     """Uppercase, strip diacritics (ă->A, ș/ş->S, ...) and keep letters only."""
     if not s:
         return ""
@@ -65,16 +65,16 @@ def normalize(s: Optional[str]) -> str:
     return re.sub(r"[^A-Z]", "", s.upper())
 
 
-def strict_match(answer: str, prediction: Optional[str]) -> bool:
+def strict_match(answer: str, prediction: str | None) -> bool:
     """The original metric: case-insensitive exact match after strip."""
     return (prediction or "").strip().lower() == answer.strip().lower()
 
 
-def item_key(clue: str, answer: str) -> Tuple[str, str]:
+def item_key(clue: str, answer: str) -> tuple[str, str]:
     return clue.strip(), answer.strip().upper()
 
 
-def load_items() -> Dict[str, pd.DataFrame]:
+def load_items() -> dict[str, pd.DataFrame]:
     """The common item sets, one row per item with a stable item_id."""
     poly = load_json_utf8_relaxed(POLYCROSS_SAMPLE)
     them = [r for r in load_json_utf8_relaxed(THEMCROSS_DATA) if len(r["solution"]) >= 3]
@@ -96,14 +96,14 @@ def load_items() -> Dict[str, pd.DataFrame]:
     return items
 
 
-def records_of(path: str) -> List[Dict[str, Any]]:
+def records_of(path: str) -> list[dict[str, Any]]:
     data = load_json_utf8_relaxed(path)
     if isinstance(data, dict):
         return data["predictions"]
     return [r for r in data if isinstance(r, dict) and "clue" in r]
 
 
-def discover_runs(results_dir: str = RESULTS_DIR) -> List[Dict[str, Any]]:
+def discover_runs(results_dir: str = RESULTS_DIR) -> list[dict[str, Any]]:
     runs = []
     wanted = set(CONDITIONS)
     for name in sorted(os.listdir(results_dir)):
@@ -118,17 +118,17 @@ def discover_runs(results_dir: str = RESULTS_DIR) -> List[Dict[str, Any]]:
             ds, model, v, k = m[1], "claude", m[2], int(m[3] or 0)
             fmt = "claude"
         if (v, k) in wanted:
-            runs.append(dict(dataset=ds, model=model, version=v, k=k, fmt=fmt,
-                             path=os.path.join(results_dir, name)))
+            runs.append({"dataset": ds, "model": model, "version": v, "k": k, "fmt": fmt,
+                             "path": os.path.join(results_dir, name)})
     for (ds, model, v, k), name in EXTRA_RUNS.items():
         path = os.path.join(results_dir, name)
         if os.path.exists(path):
             runs = [r for r in runs if (r["dataset"], r["model"], r["version"], r["k"]) != (ds, model, v, k)]
-            runs.append(dict(dataset=ds, model=model, version=v, k=k, fmt="old", path=path))
+            runs.append({"dataset": ds, "model": model, "version": v, "k": k, "fmt": "old", "path": path})
     return runs
 
 
-def align(run: Dict[str, Any], items: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[str, Any]]:
+def align(run: dict[str, Any], items: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, Any]]:
     """Predictions for every item of the common set (None where missing)."""
     recs = records_of(run["path"])
     if run["fmt"] == "claude":
@@ -139,7 +139,7 @@ def align(run: Dict[str, Any], items: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[
         rats = [None] * len(recs)
         found = len(recs)
     else:
-        by_key: Dict[Tuple[str, str], Dict[str, Any]] = {}
+        by_key: dict[tuple[str, str], dict[str, Any]] = {}
         for r in recs:
             by_key.setdefault(item_key(r["clue"], r["answer"]), r)
         hits = [by_key.get(item_key(c, a)) for c, a in zip(items["clue"], items["answer"])]
@@ -159,10 +159,10 @@ def align(run: Dict[str, Any], items: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[
     df["correct_strict"] = [strict_match(a, p) for a, p in zip(df["answer"], df["prediction"])]
     df["correct"] = df["pred_norm"] == df["answer_norm"]
 
-    info = dict(dataset=run["dataset"], model=MODELS[run["model"]], version=run["version"],
-                k=run["k"], file=os.path.basename(run["path"]), n_in_file=len(recs),
-                n_items=len(items), n_found=found,
-                acc_strict=df["correct_strict"].mean(), acc=df["correct"].mean())
+    info = {"dataset": run["dataset"], "model": MODELS[run["model"]], "version": run["version"],
+                "k": run["k"], "file": os.path.basename(run["path"]), "n_in_file": len(recs),
+                "n_items": len(items), "n_found": found,
+                "acc_strict": df["correct_strict"].mean(), "acc": df["correct"].mean()}
     # For continuity with the paper: the old polycross runs scored on everything
     # they contain (the full ~26k corpus), with the file's own denominator.
     if run["fmt"] == "old" and run["dataset"] == "polycross" and len(recs) > len(items):

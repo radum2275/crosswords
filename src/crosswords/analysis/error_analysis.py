@@ -11,15 +11,18 @@
 import argparse
 import itertools
 import os
-from collections import Counter, defaultdict
-from typing import Dict, List, Set
+from collections import Counter
 
 import numpy as np
 import pandas as pd
 from scipy.stats import binomtest
 
 from crosswords.analysis.rescore import (
-    CONDITIONS, MODEL_ORDER, POLYCROSS_FULL, THEMCROSS_DATA, normalize,
+    CONDITIONS,
+    MODEL_ORDER,
+    POLYCROSS_FULL,
+    THEMCROSS_DATA,
+    normalize,
 )
 from crosswords.backends import load_json_utf8_relaxed
 
@@ -53,18 +56,18 @@ def cond_label(v: str, k: int) -> str:
 # Item-level features
 # --------------------------------------------------------------------------
 
-def build_lexicon() -> Set[str]:
+def build_lexicon() -> set[str]:
     """Every answer from both full corpora -- a proxy for the crossword vocabulary."""
     words = {normalize(r["answer"]) for r in load_json_utf8_relaxed(POLYCROSS_FULL)}
     words |= {normalize(r["solution"]) for r in load_json_utf8_relaxed(THEMCROSS_DATA)}
     return {w for w in words if w}
 
 
-def candidate_counts(lexicon: Set[str]) -> Dict[tuple, int]:
+def candidate_counts(lexicon: set[str]) -> dict[tuple, int]:
     """(length, prefix) -> number of lexicon words fitting that hint."""
     counts: Counter = Counter()
     for w in lexicon:
-        for k in range(0, 5):
+        for k in range(5):
             if len(w) >= k:
                 counts[(len(w), w[:k])] += 1
     return counts
@@ -106,7 +109,7 @@ def stratum(length: int, k: int) -> str:
     return "missing_1_2" if gap <= 2 else "missing_3plus"
 
 
-def add_features(df: pd.DataFrame, cand: Dict[tuple, int], lexicon: Set[str]) -> pd.DataFrame:
+def add_features(df: pd.DataFrame, cand: dict[tuple, int], lexicon: set[str]) -> pd.DataFrame:
     df = df.copy()
     df["pred_norm"] = df["pred_norm"].fillna("")
     df["stratum"] = [stratum(n, k) for n, k in zip(df["length"], df["k"])]
@@ -152,11 +155,11 @@ def accuracy_table(df: pd.DataFrame) -> pd.DataFrame:
     for (ds, m, v, k), g in df.groupby(["dataset", "model", "version", "k"]):
         c = g["correct"].to_numpy()
         lo, hi = boot_ci(c.astype(float), rng)
-        rows.append(dict(dataset=ds, model=m, version=v, k=k, n=len(g),
-                         acc=c.mean(), ci_lo=lo, ci_hi=hi,
-                         acc_strict=g["correct_strict"].mean(),
-                         diacritic_only=int(g["diacritic_only"].sum()),
-                         missing=int(g["missing"].sum())))
+        rows.append({"dataset": ds, "model": m, "version": v, "k": k, "n": len(g),
+                         "acc": c.mean(), "ci_lo": lo, "ci_hi": hi,
+                         "acc_strict": g["correct_strict"].mean(),
+                         "diacritic_only": int(g["diacritic_only"].sum()),
+                         "missing": int(g["missing"].sum())})
     return pd.DataFrame(rows)
 
 
@@ -164,7 +167,7 @@ def strata_table(df: pd.DataFrame) -> pd.DataFrame:
     h = df[df["version"].isin(["v3", "v4"])]
     rows = []
     for (ds, m, v, k, s), g in h.groupby(["dataset", "model", "version", "k", "stratum"]):
-        rows.append(dict(dataset=ds, model=m, version=v, k=k, stratum=s, n=len(g), acc=g["correct"].mean()))
+        rows.append({"dataset": ds, "model": m, "version": v, "k": k, "stratum": s, "n": len(g), "acc": g["correct"].mean()})
     out = pd.DataFrame(rows)
     # Informative-hint accuracy: only items where the hint leaves letters unknown.
     info = (h[h["stratum"] != "revealed"].groupby(["dataset", "model", "version", "k"])["correct"]
@@ -189,8 +192,8 @@ def compliance_table(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for (ds, m, v, k), g in h.groupby(["dataset", "model", "version", "k"]):
         answered = g[g["pred_norm"] != ""]
-        row = dict(dataset=ds, model=m, version=v, k=k, n=len(g), answered=len(answered),
-                   len_ok=answered["len_ok"].mean() if len(answered) else np.nan)
+        row = {"dataset": ds, "model": m, "version": v, "k": k, "n": len(g), "answered": len(answered),
+                   "len_ok": answered["len_ok"].mean() if len(answered) else np.nan}
         if v in ("v3", "v4"):
             row["prefix_ok"] = answered["prefix_ok"].mean()
             row["both_ok"] = (answered["len_ok"] & answered["prefix_ok"]).mean()
@@ -220,8 +223,8 @@ def progression_table(df: pd.DataFrame) -> pd.DataFrame:
         first = np.where(arr.any(axis=1), arr.argmax(axis=1), -1)
         # Lost later: solved at some k, wrong at a larger k.
         lost = np.array([any(r[i] and not r[j] for i in range(5) for j in range(i + 1, 5)) for r in arr])
-        row = dict(dataset=ds, model=m, n=len(piv), never=int((first == -1).sum()),
-                   non_monotone=int(lost.sum()))
+        row = {"dataset": ds, "model": m, "n": len(piv), "never": int((first == -1).sum()),
+                   "non_monotone": int(lost.sum())}
         for k in range(5):
             row[f"first_k{k}"] = int((first == k).sum())
         rows.append(row)
@@ -255,8 +258,8 @@ def pairwise_tests(df: pd.DataFrame) -> pd.DataFrame:
         for a, b in itertools.combinations([m for m in MODEL_ORDER if m in piv.columns], 2):
             ca, cb = piv[a].astype(bool).to_numpy(), piv[b].astype(bool).to_numpy()
             b_only, a_only, p = mcnemar(ca, cb)
-            rows.append(dict(dataset=ds, version=v, k=k, model_a=a, model_b=b,
-                             acc_a=ca.mean(), acc_b=cb.mean(), a_only=a_only, b_only=b_only, p=p))
+            rows.append({"dataset": ds, "version": v, "k": k, "model_a": a, "model_b": b,
+                             "acc_a": ca.mean(), "acc_b": cb.mean(), "a_only": a_only, "b_only": b_only, "p": p})
     return pd.DataFrame(rows)
 
 
@@ -268,10 +271,10 @@ def cot_table(df: pd.DataFrame) -> pd.DataFrame:
         if set(piv.columns) != {"v3", "v4"}:
             continue
         v3, v4 = piv["v3"].astype(bool).to_numpy(), piv["v4"].astype(bool).to_numpy()
-        _, v4_only_rev, p = mcnemar(v4, v3)
-        rows.append(dict(dataset=ds, model=m, k=k, acc_v3=v3.mean(), acc_v4=v4.mean(),
-                         delta=v4.mean() - v3.mean(), v4_only=int((v4 & ~v3).sum()),
-                         v3_only=int((v3 & ~v4).sum()), p=p))
+        _, _v4_only_rev, p = mcnemar(v4, v3)
+        rows.append({"dataset": ds, "model": m, "k": k, "acc_v3": v3.mean(), "acc_v4": v4.mean(),
+                         "delta": v4.mean() - v3.mean(), "v4_only": int((v4 & ~v3).sum()),
+                         "v3_only": int((v3 & ~v4).sum()), "p": p})
     return pd.DataFrame(rows)
 
 
@@ -290,11 +293,11 @@ def translation_table(df: pd.DataFrame) -> pd.DataFrame:
             continue
         g2, g5 = g[g["version"] == "v2"], g[g["version"] == "v5"]
         a2, a5 = g2[g2["pred_norm"] != ""], g5[g5["pred_norm"] != ""]
-        rows.append(dict(dataset=ds, model=m, acc_v2=piv["v2"].mean(), acc_v5=piv["v5"].mean(),
-                         empty_v2=(g2["pred_norm"] == "").mean(), empty_v5=(g5["pred_norm"] == "").mean(),
-                         oov_v2=(~a2["pred_in_lexicon"]).mean(), oov_v5=(~a5["pred_in_lexicon"]).mean(),
-                         len_ok_v2=a2["len_ok"].mean(), len_ok_v5=a5["len_ok"].mean(),
-                         diacritic_only=int(g5["diacritic_only"].sum())))
+        rows.append({"dataset": ds, "model": m, "acc_v2": piv["v2"].mean(), "acc_v5": piv["v5"].mean(),
+                         "empty_v2": (g2["pred_norm"] == "").mean(), "empty_v5": (g5["pred_norm"] == "").mean(),
+                         "oov_v2": (~a2["pred_in_lexicon"]).mean(), "oov_v5": (~a5["pred_in_lexicon"]).mean(),
+                         "len_ok_v2": a2["len_ok"].mean(), "len_ok_v5": a5["len_ok"].mean(),
+                         "diacritic_only": int(g5["diacritic_only"].sum())})
     return pd.DataFrame(rows)
 
 
@@ -342,8 +345,8 @@ def write_accuracy_tex(acc: pd.DataFrame, path: str, value: str = "acc", bold: b
     head = " & ".join([r"\multicolumn{1}{c}{No}", r"\multicolumn{1}{c}{Len}"]
                       + [f"$k{{=}}{k}$" for k in range(1, 5)] * 2 + [r"\multicolumn{1}{c}{Tr.}"])
     lines = [r"\begin{tabular}{l" + "r" * len(conds) + "}", r"\toprule",
-             r" & \multicolumn{2}{c}{} & \multicolumn{4}{c}{v3: length + prefix} & "
-             r"\multicolumn{4}{c}{v4: v3 + CoT} & v5 \\",
+             (r" & \multicolumn{2}{c}{} & \multicolumn{4}{c}{v3: length + prefix} & "
+              r"\multicolumn{4}{c}{v4: v3 + CoT} & v5 \\"),
              r"\cmidrule(lr){4-7}\cmidrule(lr){8-11}",
              "Model & " + head + r" \\", r"\midrule"]
     for ds in DATASETS:
@@ -364,7 +367,8 @@ def write_accuracy_tex(acc: pd.DataFrame, path: str, value: str = "acc", bold: b
         if ds != DATASETS[-1]:
             lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_delta_tex(acc: pd.DataFrame, path: str) -> None:
@@ -397,7 +401,8 @@ def write_continuity_tex(runs: pd.DataFrame, acc: pd.DataFrame, path: str) -> No
         if i < len(groups) - 1:
             lines.append(r"\addlinespace")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_strata_tex(st: pd.DataFrame, path: str) -> None:
@@ -429,7 +434,8 @@ def write_strata_tex(st: pd.DataFrame, path: str) -> None:
         if s_ != strata[-1]:
             lines.append(r"\addlinespace")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_cot_tex(cot: pd.DataFrame, path: str) -> None:
@@ -450,13 +456,14 @@ def write_cot_tex(cot: pd.DataFrame, path: str) -> None:
         if ds != DATASETS[-1]:
             lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_translation_tex(tr: pd.DataFrame, path: str) -> None:
     lines = [r"\begin{tabular}{llrrrrrrrr}", r"\toprule",
-             r" & & \multicolumn{2}{c}{Acc.} & \multicolumn{2}{c}{No ans.} & "
-             r"\multicolumn{2}{c}{OOV} & \multicolumn{2}{c}{Len.\ ok} \\",
+             (r" & & \multicolumn{2}{c}{Acc.} & \multicolumn{2}{c}{No ans.} & "
+              r"\multicolumn{2}{c}{OOV} & \multicolumn{2}{c}{Len.\ ok} \\"),
              r"\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}",
              r"Dataset & Model & v2 & v5 & v2 & v5 & v2 & v5 & v2 & v5 \\", r"\midrule"]
     for ds in DATASETS:
@@ -471,7 +478,8 @@ def write_translation_tex(tr: pd.DataFrame, path: str) -> None:
         if ds != DATASETS[-1]:
             lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_progression_tex(pr: pd.DataFrame, path: str) -> None:
@@ -491,7 +499,8 @@ def write_progression_tex(pr: pd.DataFrame, path: str) -> None:
         if ds != DATASETS[-1]:
             lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_compliance_tex(co: pd.DataFrame, path: str) -> None:
@@ -508,7 +517,8 @@ def write_compliance_tex(co: pd.DataFrame, path: str) -> None:
         if ds != DATASETS[-1]:
             lines.append(r"\midrule")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def write_examples_tex(ex: pd.DataFrame, path: str) -> None:
@@ -524,7 +534,8 @@ def write_examples_tex(ex: pd.DataFrame, path: str) -> None:
                          f"{tex_escape(str(r.prediction).upper())} & {r.model} \\\\")
         lines.append(r"\addlinespace")
     lines += [r"\bottomrule", r"\end{tabular}"]
-    open(path, "w").write("\n".join(lines) + "\n")
+    with open(path, "w") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 # --------------------------------------------------------------------------

@@ -10,13 +10,19 @@ import argparse
 import os
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap
 
-from crosswords.analysis.error_analysis import DATASETS, DATASET_LABEL, ERROR_LABEL, ERROR_TYPES
+from crosswords.analysis.error_analysis import (
+    DATASET_LABEL,
+    DATASETS,
+    ERROR_LABEL,
+    ERROR_TYPES,
+)
 from crosswords.analysis.rescore import MODEL_ORDER
 
 # Categorical slots 1-5 in fixed order (validated: adjacent CVD dE >= 9.1). Colors

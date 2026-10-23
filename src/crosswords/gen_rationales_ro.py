@@ -24,21 +24,19 @@
 # Works with both RITS models and the frontier models served by the IBM
 # litellm gateway (ANTHROPIC_BASE_URL / ANTHROPIC_AUTH_TOKEN in .env).
 
-import os
+import argparse
 import csv
 import json
-import argparse
+import os
+from typing import Any
 
 import mellea.stdlib.functional as mfuncs
-
 from dotenv import load_dotenv
-from typing import Any, Dict, List, Optional, Tuple
 from mellea.backends import Backend
+from mellea.core import FancyLogger
 from mellea.stdlib.context import SimpleContext
 from mellea.stdlib.requirements import check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
-
-from mellea.core import FancyLogger
 
 # Disable Mellea logging
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
@@ -46,21 +44,21 @@ FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
 # Local imports
 from crosswords.backends import (
     build_backend,
-    print_models,
     load_json_utf8_relaxed,
+    print_models,
 )
 from crosswords.runner import (
-    RateLimiter,
-    throttle_backend,
-    run_throttled,
-    resolve_keys,
-    filter_and_limit,
     DATASET_TYPE_ALIASES,
+    RateLimiter,
+    filter_and_limit,
+    resolve_keys,
+    run_throttled,
+    throttle_backend,
 )
 from crosswords.utils import (
-    strip_code_fences,
     extract_first_code_block,
     get_think_tags,
+    strip_code_fences,
 )
 
 load_dotenv()
@@ -257,7 +255,7 @@ CONTENT_KEYS = ["rationale", "surface_reading", "intended_sense", "wordplay_type
 CONTENT_KEYS_BASE = ["rationale"]
 
 
-def select_prompt(dataset_type: str) -> Tuple[str, List[str], List[str]]:
+def select_prompt(dataset_type: str) -> tuple[str, list[str], list[str]]:
     """
     Pick the prompt for a dataset, returning
     (instruction, required_keys, content_keys).
@@ -278,7 +276,7 @@ def select_prompt(dataset_type: str) -> Tuple[str, List[str], List[str]]:
     return INSTRUCTION_RATIONALE_BASE, REQUIRED_KEYS_BASE, CONTENT_KEYS_BASE
 
 
-def parse_rationale_response(text: str) -> Dict[str, Any]:
+def parse_rationale_response(text: str) -> dict[str, Any]:
     """
     Parse an LLM response into a JSON dict, tolerating a <think>...</think>
     preamble before the fenced JSON block. Raises on failure.
@@ -289,7 +287,7 @@ def parse_rationale_response(text: str) -> Dict[str, Any]:
     return json.loads(cleaned)
 
 
-def validate_rationale_response(text: str, required_keys: List[str]) -> bool:
+def validate_rationale_response(text: str, required_keys: list[str]) -> bool:
     """
     Validation for the rejection sampler. Extracts the fenced block from
     anywhere in the response, so a valid answer preceded by <think> reasoning
@@ -308,16 +306,16 @@ def validate_rationale_response(text: str, required_keys: List[str]) -> bool:
     return True
 
 
-def load_data(file_name: str) -> Optional[List[Dict[str, Any]]]:
+def load_data(file_name: str) -> list[dict[str, Any]] | None:
     """Load the dataset."""
     try:
         return load_json_utf8_relaxed(file_name)
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(f"Failed to load {file_name}: {e}")
         return None
 
 
-def load_existing(output_filename: str) -> Dict[Tuple[str, str], Dict[str, Any]]:
+def load_existing(output_filename: str) -> dict[tuple[str, str], dict[str, Any]]:
     """
     Load already-generated records from a previous run, keyed by
     (clue, solution), keeping only those that actually have a rationale.
@@ -327,7 +325,7 @@ def load_existing(output_filename: str) -> Dict[Tuple[str, str], Dict[str, Any]]
         return {}
     try:
         previous = load_json_utf8_relaxed(output_filename)
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(f"Could not read existing output {output_filename}: {e}")
         return {}
     if not isinstance(previous, list):
@@ -343,13 +341,13 @@ def load_existing(output_filename: str) -> Dict[Tuple[str, str], Dict[str, Any]]
     return done
 
 
-def write_results(results: List[Dict[str, Any]], output_filename: str) -> None:
+def write_results(results: list[dict[str, Any]], output_filename: str) -> None:
     """Write results as UTF-8 JSON, keeping Romanian diacritics literal."""
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
 
 
-def write_csv(results: List[Dict[str, Any]], csv_filename: str) -> None:
+def write_csv(results: list[dict[str, Any]], csv_filename: str) -> None:
     """
     Emit a companion CSV for manual annotation. The rationale_score column is
     left empty, to be filled in by hand on a 0-5 scale (matching json2csv.py
@@ -376,10 +374,10 @@ def write_csv(results: List[Dict[str, Any]], csv_filename: str) -> None:
 
 
 def summarize(
-    results: List[Dict[str, Any]],
+    results: list[dict[str, Any]],
     model_id: str,
     summary_filename: str,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Write a run summary to a SIDECAR file rather than appending it into the
     results array. The other scripts append their summary as the final element,
@@ -389,7 +387,7 @@ def summarize(
     rationales = [str(r.get("rationale", "")) for r in results]
     generated = [r for r in rationales if r.strip()]
 
-    histogram: Dict[str, int] = {}
+    histogram: dict[str, int] = {}
     for item in results:
         wordplay = str(item.get("wordplay_type", "")).strip().lower()
         if wordplay:
@@ -420,15 +418,15 @@ def summarize(
 
 
 def process_data(
-        data: List[Dict[str, Any]],
+        data: list[dict[str, Any]],
         backend: Backend,
         dataset_type: str,
-        num_samples: int = None,
+        num_samples: int | None = None,
         min_answer_len: int = 3,
         output_filename: str = "rationales.json",
         batch_size: int = 50,
         resume: bool = False,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Generate a rationale for every (clue, solution) pair in the dataset.
 
@@ -490,7 +488,7 @@ def process_data(
 
     ordered = run_throttled(todo, acall_one, batch_size=batch_size)
 
-    fresh: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    fresh: dict[tuple[str, str], dict[str, Any]] = {}
     num_generated = 0
     for i, (output, item, error) in enumerate(ordered):
         clue = item[clue_key]

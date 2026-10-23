@@ -1,6 +1,7 @@
-import json
 import csv
+import json
 import sys
+
 
 def json_to_csv(json_file, csv_file):
     """

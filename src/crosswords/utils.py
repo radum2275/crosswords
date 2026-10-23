@@ -1,16 +1,16 @@
-import yaml
 import json
+import os
+import random
+import re
+from pathlib import Path
+from typing import Any
+
 import numpy as np
 import requests
-import tqdm
-import os
-import re
-import random
 import torch
+import tqdm
 import transformers
-
-from typing import Any, Dict, List, Union
-from pathlib import Path
+import yaml
 
 
 class dotdict(dict):
@@ -22,13 +22,14 @@ class dotdict(dict):
 # GPU related utils    
 def get_freer_gpu():
     os.system('nvidia-smi -q -d Memory |grep -A6 GPU|grep Free >tmp_smi')
-    memory_available = [int(x.split()[2])+5*i for i, x in enumerate(open('tmp_smi', 'r').readlines())]
+    with open('tmp_smi', 'r') as f:
+        memory_available = [int(x.split()[2])+5*i for i, x in enumerate(f.readlines())]
     os.remove("tmp_smi")
     return np.argmax(memory_available)
 
 def select_freer_gpu():
     freer_gpu = str(get_freer_gpu())
-    print("Will use GPU: %s" % (freer_gpu))
+    print(f"Will use GPU: {freer_gpu}")
     os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
     os.environ["CUDA_VISIBLE_DEVICES"] = ""+freer_gpu
     return freer_gpu
@@ -42,7 +43,7 @@ def set_seed(seed: int):
     transformers.set_seed(seed)
 
 # String manipulation utils
-def join_segments(*args: Union[str, List[str]], separator: str = '\n\n\n') -> str:
+def join_segments(*args: str | list[str], separator: str = '\n\n\n') -> str:
     """Joins an unspecified number of strings using the separator."""
     all_segments = []
 
@@ -68,9 +69,8 @@ def punctuation_only_inside_quotes(text):
 
     # check each comma and semicolon
     for i, char in enumerate(text):
-        if char in [",", ";"]:
-            if not is_inside_quotes(i):
-                return False  # found punctuation outside quotes
+        if char in [",", ";"] and not is_inside_quotes(i):
+            return False  # found punctuation outside quotes
     return True
 
 
@@ -168,7 +168,7 @@ def save_response_content(response, destination):
             if chunk: # filter out keep-alive new chunks
                 f.write(chunk)
 
-def get_models_config() -> Dict[str, Any]:
+def get_models_config() -> dict[str, Any]:
     """
     Return the models config from configs/models.yaml.
     """
@@ -211,7 +211,7 @@ def strip_code_fences(s: str) -> str:
     return s
 
 
-def validate_json_code_block(input_string: str, required_keys: List[str] = None) -> bool:
+def validate_json_code_block(input_string: str, required_keys: list[str] | None = None) -> bool:
     """
     Checks if the input string is a valid JSON dictionary.
 

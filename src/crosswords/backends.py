@@ -10,16 +10,14 @@
 # "name" is what a script's --model_id takes; a name containing a "/" that
 # matches neither config is passed through verbatim as a raw litellm model id.
 
+import importlib.util
+import json
 import os
 import re
-import json
-import importlib.util
-
 from pathlib import Path
-from typing import Any, Dict, Tuple, Union
+from typing import Any, Union
 
-from mellea.backends import Backend
-from mellea.backends import ModelOption
+from mellea.backends import Backend, ModelOption
 from mellea.backends.litellm import LiteLLMBackend
 
 # RITS lives in mellea_ibm, an IBM-internal package that is not on PyPI. Guard
@@ -33,6 +31,12 @@ except ImportError:
 # Known litellm/aiohttp interaction; see
 # https://github.com/BerriAI/litellm/issues/13251
 os.environ.setdefault("DISABLE_AIOHTTP_TRANSPORT", "True")
+
+# Mellea dropped its in-process vLLM backend (mellea.backends.vllm) in 0.8.0, so
+# the local path only works with an older Mellea. Checked via find_spec so the
+# --list_models flag does not have to import anything.
+_HAS_MELLEA_VLLM = importlib.util.find_spec("mellea.backends.vllm") is not None
+
 
 def _has_vllm() -> bool:
     """
@@ -68,7 +72,7 @@ def load_json_utf8_relaxed(path: Union[str, "os.PathLike"]) -> Any:
     return json.loads(text)
 
 
-def load_model_config(path: Union[str, "os.PathLike"]) -> Dict[str, Dict[str, Any]]:
+def load_model_config(path: Union[str, "os.PathLike"]) -> dict[str, dict[str, Any]]:
     """
     Load a model config file into a {name: record} dict.
 
@@ -79,16 +83,16 @@ def load_model_config(path: Union[str, "os.PathLike"]) -> Dict[str, Dict[str, An
         return {}
     try:
         records = load_json_utf8_relaxed(path)
-    except Exception as e:
+    except (OSError, ValueError) as e:
         raise RuntimeError(f"Could not parse model config {path}: {e}")
 
     if not isinstance(records, list):
-        raise RuntimeError(f"Model config {path} must contain a JSON list.")
+        raise RuntimeError(f"Model config {path} must contain a JSON list.")  # noqa: TRY004 -- callers catch RuntimeError
 
-    models: Dict[str, Dict[str, Any]] = {}
+    models: dict[str, dict[str, Any]] = {}
     for record in records:
         if not isinstance(record, dict):
-            raise RuntimeError(f"Model config {path} has a non-object entry.")
+            raise RuntimeError(f"Model config {path} has a non-object entry.")  # noqa: TRY004 -- callers catch RuntimeError
         for field in ("name", "model_id"):
             if not str(record.get(field, "")).strip():
                 raise RuntimeError(
@@ -98,8 +102,8 @@ def load_model_config(path: Union[str, "os.PathLike"]) -> Dict[str, Dict[str, An
     return models
 
 
-ModelConfigs = Tuple[
-    Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]]
+ModelConfigs = tuple[
+    dict[str, dict[str, Any]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]
 ]
 
 
@@ -134,7 +138,10 @@ def print_models() -> None:
     print(f"\nLocal models via vLLM ({LOCAL_CONFIG}):")
     if local_models:
         for name, record in local_models.items():
-            flag = "" if _has_vllm() else "   [vllm not installed]"
+            if not _HAS_MELLEA_VLLM:
+                flag = "   [not supported by this mellea version]"
+            else:
+                flag = "" if _has_vllm() else "   [vllm not installed]"
             print(f"  {name:24s} {record['model_id']}{flag}")
     else:
         print("  (none configured)")
@@ -151,7 +158,7 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
     """
 
     rits_models, frontier_models, local_models = available_models()
-    model_options: Dict[Any, Any] = {ModelOption.MAX_NEW_TOKENS: max_tokens}
+    model_options: dict[Any, Any] = {ModelOption.MAX_NEW_TOKENS: max_tokens}
 
     # --- RITS path -----------------------------------------------------------
     if model_id in rits_models:
@@ -184,6 +191,14 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
     # --- local vLLM path -----------------------------------------------------
     if model_id in local_models:
         record = local_models[model_id]
+        if not _HAS_MELLEA_VLLM:
+            raise RuntimeError(
+                f"--model_id '{model_id}' is a local vLLM model, but the installed "
+                "Mellea has no in-process vLLM backend (LocalVLLMBackend was removed "
+                "in mellea 0.8.0). Serve the model with 'vllm serve' and reach it "
+                "through an OpenAI-compatible route instead, or use a RITS/frontier "
+                "model."
+            )
         # Mellea's LocalVLLMBackend does not support vLLM V1; it must be set
         # before vllm is imported.
         os.environ.setdefault("VLLM_USE_V1", "0")
@@ -202,7 +217,7 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
         model_options.update(record.get("model_options") or {})
         try:
             return LocalVLLMBackend(record["model_id"], model_options=model_options)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 -- vLLM fails in many ways; rewrapped below
             # vLLM loads weights here, so this is where a machine without a
             # usable GPU fails. Surface it as a configuration error rather than
             # a bare traceback from deep inside the engine.
@@ -242,10 +257,11 @@ def build_backend(model_id: str, max_tokens: int = 4096) -> Backend:
             "key. Add it to your .env file."
         )
 
-    # NOTE: api_base/api_key must be passed via model_options, NOT via the
-    # base_url constructor argument -- LiteLLMBackend stores base_url but never
-    # forwards it to the completion call. Mellea logs a warning that it "may
-    # drop" these two keys; that is a false positive, litellm does receive them.
+    # NOTE: api_base/api_key are passed via model_options. Older Mellea stored
+    # the base_url constructor argument but never forwarded it; 0.8.0 does, and
+    # an api_base in model_options still takes precedence, so this works on both.
+    # Mellea logs a warning that it "may drop" these two keys; that is a false
+    # positive, litellm does receive them.
     model_options["api_base"] = base_url.rstrip("/")
     model_options["api_key"] = api_key
 

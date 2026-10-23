@@ -232,7 +232,7 @@ def load_data(file_name: str) -> list[dict[str, Any]]:
         with open(file_name, "r") as f:
             data = json.load(f)
         return data
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(e)
         return None
 
@@ -243,7 +243,7 @@ def process_data(
         dataset_type: str,
         num_candidates: int,
         num_hints: int = 0,
-        num_samples: int = None,
+        num_samples: int | None = None,
         output_filename: str = "gen_clues.json",
         batch_size: int = 50,
 ) -> list[dict[str, Any]]:
