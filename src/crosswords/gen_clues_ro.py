@@ -6,23 +6,20 @@
 # solving task in clues_ro.py: here the answer is the input and we produce
 # candidate clues as output.
 
-import os
 import argparse
 import json
-
-import numpy as np
-import mellea.stdlib.functional as mfuncs
-
-from bert_score import BERTScorer
-
-from dotenv import load_dotenv
+import os
 from typing import Any, Dict, List
+
+import mellea.stdlib.functional as mfuncs
+import numpy as np
+from bert_score import BERTScorer
+from dotenv import load_dotenv
 from mellea.backends import Backend
+from mellea.core import FancyLogger
 from mellea.stdlib.context import SimpleContext
 from mellea.stdlib.requirements import check, simple_validate
 from mellea.stdlib.sampling import RejectionSamplingStrategy
-
-from mellea.core import FancyLogger
 
 # Disable Mellea logging
 FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
