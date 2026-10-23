@@ -1,0 +1,49 @@
+dataset,model,error_type,clue,answer,prediction
+polycross,Claude Opus 4.8,length,Iarba verde unde se iese cu grupul,PASCATOARE,PAJISTELE
+polycross,Claude Opus 4.8,length,Dă semne că se face rău,AVERTIZARE,AVERTIZEA
+polycross,Claude Opus 4.8,length,Disimularea unui om cu pretenții exagerate,INFUMURARE,INFATUARE
+polycross,Claude Opus 4.8,near_miss,Ultima rezervă de materie cenuşie,URNA,URMA
+polycross,Claude Opus 4.8,near_miss,Rezultatul adunării,ATOT,ATOM
+polycross,Claude Opus 4.8,near_miss,Animal... pentru tăiat de ocazie,LAMA,LADA
+polycross,Claude Opus 4.8,other_word,A avansa de la echipa mare,TRIA,TREC
+polycross,Claude Opus 4.8,other_word,Active pe perioada alegerilor,SITE,SIGL
+polycross,Claude Opus 4.8,other_word,Oglindiți în lumina adevărului,REALI,REDAT
+polycross,Claude Opus 4.8,prefix,Substratul unui adevăr... pus la îndoială,VINCUSIFON,VERIDICITA
+polycross,Claude Opus 4.8,prefix,Precedent pentru noi,NEO,NOU
+polycross,Claude Opus 4.8,prefix,Odoare iubite de părinți (sing.),ORAR,ODOR
+polycross,gpt-oss-120B,length,Tensiunea instalată pentru senzori de vibraţii,NELINISTE,NECESITA
+polycross,gpt-oss-120B,length,Instalat din start printre favoriți,ATU,ATOP
+polycross,gpt-oss-120B,length,Atac la persoană,MISTOCARIE,MISOGENIE
+polycross,gpt-oss-120B,near_miss,Implicată într-o afacere în pierdere,DATA,DANA
+polycross,gpt-oss-120B,near_miss,Impun măsuri restrictive pentru limitarea debordărilor,LIMITATIVI,LIMITATIVE
+polycross,gpt-oss-120B,near_miss,O fată care stă la tușă,VARA,VACA
+polycross,gpt-oss-120B,other_word,Pornire cu violenţă,ARTAG,ARUNC
+polycross,gpt-oss-120B,other_word,Ataşat naval,VAS,VAL
+polycross,gpt-oss-120B,other_word,Nimb prețios pentru sanctitatea iubirii (3 cuv.),INELDEAUR,IN INIMA TA
+polycross,gpt-oss-120B,prefix,Pune bazele înălţării,CTITOR,CIMENT
+polycross,gpt-oss-120B,prefix,Rezultatul adunării,NOIAN,NUMAR
+polycross,gpt-oss-120B,prefix,Concept generic de acțiune în scădere,IEFTINIRE,DIMINUARE
+themcross,Claude Opus 4.8,length,"Poet bănățean de o mare sensibilitate, autorul volumului de versuri „Iarna pră ogaș” (Petre)",TALIANU,TALPES
+themcross,Claude Opus 4.8,length,Lemn de care trag pescarii la năvod,HADARAG,HAITAS
+themcross,Claude Opus 4.8,length,"În albumul „Mai lângă Tine” acest cântăreț român ne prezintă și o adaptare la „Psalmul 4” prin cuvintele împăratului David: „Eu mă culc, mă culc și adorm în pace/ Căci numai Tu Doamne îmi dai/ Tu-mi dai liniște deplină/ Doamne în locuința mea” (Dan)",DARABAN,DANESE
+themcross,Claude Opus 4.8,near_miss,Năvod mare fixat cu ancore și piloți (pl.),TALIANE,TALIENE
+themcross,Claude Opus 4.8,near_miss,"Rebusist născut în Turnu Măgurele, participant activ în cadrul grupului „Turris”. A fost un creator de definiții expresie și elaborate, reunite în careuri individuale sau de grup (Eduard)",ANCA,ANDA
+themcross,Claude Opus 4.8,near_miss,Ermetic,ETANSI,ETANSA
+themcross,Claude Opus 4.8,other_word,"Scriitor care a ocupat funcţii dregătoreşti în Ţara Românească, este autorul lucrării „Începuturile teatrului românesc” antologie, prefațată de T. Avramescu în 1963 (Constantin)",FACA,FANU
+themcross,Claude Opus 4.8,other_word,Unul fără minte (fig.),CASCAT,CAPIAT
+themcross,Claude Opus 4.8,other_word,"Rebusist născut în Dolj și decedat în Craiova. A abordat enigmistica și careul de definiții, acordând atenție și compunerii. A fost membru al cercului craiovean „Feroviarul” și s-a remarcat cu lucrarea antologică Glosar de definiții rebusiste, care a antrenat o bună parte a „feroviarilor” (Carol)",PETER,PETCU
+themcross,Claude Opus 4.8,prefix,"Încercatul lup de mare, cârmaciul corabiei în care Enea și troienii au rătăcit pe întinderi de ape vreme de 7 ani, reușind să scape cu bine din vârtejul furtunilor stârnite de supușii lui Eol, zeul vânturilor, și să ancoreze la țărmul italian, așa cum povestește Vergiliu în „Eneida”",PELINUR,PALINUR
+themcross,Claude Opus 4.8,prefix,"Unul dintre cei mai prolifici și cunoscuți actori englezi, a jucat alături de Ginger Rogers în filmul „Copilașul domnișoarei mamă fără soț” (David; 1910-1983)",NIVEN,ILTEU
+themcross,Claude Opus 4.8,prefix,Minciog,MEREDEU,MINCIOG
+themcross,gpt-oss-120B,length,"Pictoriță bucureșteancă, autoarea lucrării „Flori și fructe” (Florica)",ORAVITAN,ORASANU
+themcross,gpt-oss-120B,length,"Numele mai multor specii de plante din familia palmierilor, cu tulpina scurtă și groasă, ale căror frunze au nervuri foarte rezistente (pl.)",RAFII,RAPHIA
+themcross,gpt-oss-120B,length,Dă inimii ghes,PACEMAKER,PASIUNEA
+themcross,gpt-oss-120B,near_miss,Locuitordin Osetia (Caucaz),OSET,OSEN
+themcross,gpt-oss-120B,near_miss,"Valoros autor originar din Sibiu, de profesie inginer constructor. Debutează cu enigmistică, apoi adună la activ peste 270 de careuri. Este un bun crucișolog, fiind multiplu campion județean la concursurile naționale de compunere. Realizează careuri cu densitate tematică 100%, dar compune și careuri tematice și de definiții. Se remarcă cu surpriza Un careu de nota zero!, realizată 200%, un careu tip piatră de încercare (Ion)",RADU,RADI
+themcross,gpt-oss-120B,near_miss,Element de compunere însemnând „agricol”,AGRO,AGRI
+themcross,gpt-oss-120B,other_word,Muncitori feroviari,ACARI,ACCES
+themcross,gpt-oss-120B,other_word,Piscuri,TARII,TAISE
+themcross,gpt-oss-120B,other_word,"Altă denumire a Arhipelagului Galapagos, situat în Oceanul Pacific, la 1 000 km de țărmurile Ecuadorului, considerat un adevărat miracol al naturii, recunoscut ca un habitat al multor specii de animale pe cale de dispariție, supranumit „Laboratorul lui Darwin” sau „Arca lui Noe”",COLON,COCOS
+themcross,gpt-oss-120B,prefix,Curelușă de meșină,IRA,FIR
+themcross,gpt-oss-120B,prefix,"Prevestire, semn bun",OGUR,OMEN
+themcross,gpt-oss-120B,prefix,Acoperit cu multă zăpadă,NEIOS,NINSA

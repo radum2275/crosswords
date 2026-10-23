@@ -1,0 +1,57 @@
+host: p2-r17-n3.bluevela.rmf.ibm.com  job: 1915251
+NVIDIA H100 80GB HBM3, 81559 MiB
+torch 2.8.0+cu128 cuda True
+[2026-09-25 14:17:41] clues v1 k=0 -> data/results/logs_llmic-v2/clues_v1_0.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 9.0, 'accuracy': 0.003, 'accuracy_nodiac': 0.0036666666666666666, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 6.563666666666666, 'sbert_mean': 0.47343313694000244, 'sbert_std': 0.08783549070358276}
+[2026-09-25 14:21:30] clues v2 k=0 -> data/results/logs_llmic-v2/clues_v2_0.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 3.0, 'accuracy': 0.001, 'accuracy_nodiac': 0.001, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 5.622333333333334, 'sbert_mean': 0.47477611899375916, 'sbert_std': 0.08822548389434814}
+[2026-09-25 14:24:16] clues v3 k=1 -> data/results/logs_llmic-v2/clues_v3_1.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 37.0, 'accuracy': 0.012333333333333333, 'accuracy_nodiac': 0.014666666666666666, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 4.909, 'sbert_mean': 0.5099456906318665, 'sbert_std': 0.11214815080165863}
+[2026-09-25 14:27:00] clues v3 k=2 -> data/results/logs_llmic-v2/clues_v3_2.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 105.0, 'accuracy': 0.035, 'accuracy_nodiac': 0.03933333333333333, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 5.039, 'sbert_mean': 0.5535404682159424, 'sbert_std': 0.14308060705661774}
+[2026-09-25 14:29:37] clues v3 k=3 -> data/results/logs_llmic-v2/clues_v3_3.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 664.0, 'accuracy': 0.22133333333333333, 'accuracy_nodiac': 0.22833333333333333, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 3.8846666666666665, 'sbert_mean': 0.6783197522163391, 'sbert_std': 0.2053728699684143}
+[2026-09-25 14:32:24] clues v3 k=4 -> data/results/logs_llmic-v2/clues_v3_4.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 1270.0, 'accuracy': 0.42333333333333334, 'accuracy_nodiac': 0.43566666666666665, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 3.937333333333333, 'sbert_mean': 0.7941186428070068, 'sbert_std': 0.20363932847976685}
+[2026-09-25 14:35:35] baseline v1 k=0 -> data/results/logs_llmic-v2/baseline_v1_0.log
+  FAILED, see data/results/logs_llmic-v2/baseline_v1_0.log:
+  File "/u/radu/envs/crosswords/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 1293, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: BertTokenizer has no attribute build_inputs_with_special_tokens
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@p2-r17-n3>
+Subject: Job 1915251: <llmic> in cluster <BLUEVELA_LSF> Exited
+
+Job <llmic> was submitted from host <login5> by user <radu> in cluster <BLUEVELA_LSF> at Fri Sep 25 14:17:34 2026
+Job was executed on host(s) <8*p2-r17-n3>, in queue <normal>, as user <radu> in cluster <BLUEVELA_LSF> at Fri Sep 25 14:17:35 2026
+</u/radu> was used as the home directory.
+</u/radu/git/crosswords> was used as the working directory.
+Started at Fri Sep 25 14:17:35 2026
+Terminated at Fri Sep 25 14:36:29 2026
+Results reported at Fri Sep 25 14:36:29 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./run_llmic_lsf.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   37751.17 sec.
+    Max Memory :                                 6419 MB
+    Average Memory :                             2344.62 MB
+    Total Requested Memory :                     65536.00 MB
+    Delta Memory :                               59117.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                456
+    Run time :                                   1134 sec.
+    Turnaround time :                            1135 sec.
+
+The output (if any) is above this job summary.
+

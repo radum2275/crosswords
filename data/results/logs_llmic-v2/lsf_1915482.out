@@ -1,0 +1,66 @@
+host: p5-r19-n3.bluevela.rmf.ibm.com  job: 1915482
+NVIDIA H100 80GB HBM3, 81559 MiB
+torch 2.8.0+cu128 cuda True
+[2026-09-25 14:40:07] clues v1 k=0 -> data/results/logs_llmic-v2/clues_v1_0.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 9.0, 'accuracy': 0.003, 'accuracy_nodiac': 0.0036666666666666666, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 6.563666666666666, 'sbert_mean': 0.47343313694000244, 'sbert_std': 0.08783549070358276}
+[2026-09-25 14:43:55] clues v2 k=0 -> data/results/logs_llmic-v2/clues_v2_0.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 3.0, 'accuracy': 0.001, 'accuracy_nodiac': 0.001, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 5.622333333333334, 'sbert_mean': 0.47477611899375916, 'sbert_std': 0.08822548389434814}
+[2026-09-25 14:48:15] clues v3 k=1 -> data/results/logs_llmic-v2/clues_v3_1.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 37.0, 'accuracy': 0.012333333333333333, 'accuracy_nodiac': 0.014666666666666666, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 4.909, 'sbert_mean': 0.5099456906318665, 'sbert_std': 0.11214815080165863}
+[2026-09-25 14:52:09] clues v3 k=2 -> data/results/logs_llmic-v2/clues_v3_2.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 105.0, 'accuracy': 0.035, 'accuracy_nodiac': 0.03933333333333333, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 5.039, 'sbert_mean': 0.5535404682159424, 'sbert_std': 0.14308060705661774}
+[2026-09-25 14:58:06] clues v3 k=3 -> data/results/logs_llmic-v2/clues_v3_3.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 664.0, 'accuracy': 0.22133333333333333, 'accuracy_nodiac': 0.22833333333333333, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 3.8846666666666665, 'sbert_mean': 0.6783197522163391, 'sbert_std': 0.2053728699684143}
+[2026-09-25 15:03:04] clues v3 k=4 -> data/results/logs_llmic-v2/clues_v3_4.log
+Evaluation results: {'num_samples': 3000, 'exact_matches': 1270.0, 'accuracy': 0.42333333333333334, 'accuracy_nodiac': 0.43566666666666665, 'empty_predictions': 0, 'avg_answer_length': 5.242, 'avg_prediction_length': 3.937333333333333, 'sbert_mean': 0.7941186428070068, 'sbert_std': 0.20363932847976685}
+[2026-09-25 15:07:50] baseline v1 k=0 -> data/results/logs_llmic-v2/baseline_v1_0.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 47.0, 'accuracy': 0.040940766550522645, 'accuracy_nodiac': 0.047038327526132406, 'empty_predictions': 1, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 9.424216027874564, 'sbert_mean': 0.49033331871032715, 'sbert_std': 0.1560307890176773}
+[2026-09-25 15:10:48] baseline v2 k=0 -> data/results/logs_llmic-v2/baseline_v2_0.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 36.0, 'accuracy': 0.0313588850174216, 'accuracy_nodiac': 0.036585365853658534, 'empty_predictions': 0, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 6.065331010452962, 'sbert_mean': 0.500927209854126, 'sbert_std': 0.1403026133775711}
+[2026-09-25 15:13:57] baseline v3 k=1 -> data/results/logs_llmic-v2/baseline_v3_1.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 74.0, 'accuracy': 0.06445993031358885, 'accuracy_nodiac': 0.0740418118466899, 'empty_predictions': 0, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 5.2229965156794425, 'sbert_mean': 0.5314810872077942, 'sbert_std': 0.16714459657669067}
+[2026-09-25 15:17:22] baseline v3 k=2 -> data/results/logs_llmic-v2/baseline_v3_2.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 121.0, 'accuracy': 0.10540069686411149, 'accuracy_nodiac': 0.11933797909407666, 'empty_predictions': 0, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 5.17595818815331, 'sbert_mean': 0.5826379656791687, 'sbert_std': 0.19027411937713623}
+[2026-09-25 15:20:38] baseline v3 k=3 -> data/results/logs_llmic-v2/baseline_v3_3.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 290.0, 'accuracy': 0.25261324041811845, 'accuracy_nodiac': 0.2665505226480836, 'empty_predictions': 0, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 4.587108013937282, 'sbert_mean': 0.6833750605583191, 'sbert_std': 0.21831756830215454}
+[2026-09-25 15:23:48] baseline v3 k=4 -> data/results/logs_llmic-v2/baseline_v3_4.log
+Evaluation results: {'num_samples': 1148, 'exact_matches': 528.0, 'accuracy': 0.45993031358885017, 'accuracy_nodiac': 0.4729965156794425, 'empty_predictions': 0, 'avg_answer_length': 4.9939024390243905, 'avg_prediction_length': 4.2491289198606275, 'sbert_mean': 0.7972696423530579, 'sbert_std': 0.21356314420700073}
+All runs finished. Rescore with: PYTHONPATH=src python -m crosswords.analysis.rescore
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@p5-r19-n3>
+Subject: Job 1915482: <llmic> in cluster <BLUEVELA_LSF> Done
+
+Job <llmic> was submitted from host <login5> by user <radu> in cluster <BLUEVELA_LSF> at Fri Sep 25 14:39:59 2026
+Job was executed on host(s) <1*p5-r19-n3>, in queue <normal>, as user <radu> in cluster <BLUEVELA_LSF> at Fri Sep 25 14:39:59 2026
+                            <7*p6-r04-n2>
+</u/radu> was used as the home directory.
+</u/radu/git/crosswords> was used as the working directory.
+Started at Fri Sep 25 14:39:59 2026
+Terminated at Fri Sep 25 15:27:04 2026
+Results reported at Fri Sep 25 15:27:04 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./run_llmic_lsf.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   66769.75 sec.
+    Max Memory :                                 6413 MB
+    Average Memory :                             1934.22 MB
+    Total Requested Memory :                     131072.00 MB
+    Delta Memory :                               124659.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                456
+    Run time :                                   2832 sec.
+    Turnaround time :                            2825 sec.
+
+The output (if any) is above this job summary.
+

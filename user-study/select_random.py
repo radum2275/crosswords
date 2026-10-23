@@ -4,7 +4,7 @@ import argparse
 import json
 import random
 import sys
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 COMMON_ANSWER_KEYS = ("answer", "solution", "solution_text", "answer_text", "sol")
 SOLS_TO_SKIP = {"DETA", "COD", "SIE","TASTE", "NIMB", "ADI"}
@@ -12,7 +12,7 @@ PUZZLES_TO_SKIP = {"/home/adi/workspace/rebus/careuri-definitii/js/fantezie-geog
                    "/home/adi/workspace/rebus/careuri-definitii-4/js/fluturas-combus1.js",}
 
 
-def load_json(path: str) -> List[Dict[str, Any]]:
+def load_json(path: str) -> list[dict[str, Any]]:
     try:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -31,7 +31,7 @@ def load_json(path: str) -> List[Dict[str, Any]]:
         return items
 
 
-def get_answer_field(record: Dict[str, Any], preferred: Optional[str]) -> Optional[str]:
+def get_answer_field(record: dict[str, Any], preferred: str | None) -> str | None:
     if preferred and preferred in record:
         val = record.get(preferred)
     else:
@@ -44,14 +44,14 @@ def get_answer_field(record: Dict[str, Any], preferred: Optional[str]) -> Option
         # join lists of tokens if present
         try:
             return "".join(val)
-        except Exception:
+        except TypeError:
             return None
     if val is None:
         return None
     return str(val)
 
 
-def filter_records(data: List[Dict[str, Any]], answer_field: Optional[str]) -> List[Dict[str, Any]]:
+def filter_records(data: list[dict[str, Any]], answer_field: str | None) -> list[dict[str, Any]]:
     out = []
     for rec in data:
         ans = get_answer_field(rec, answer_field)

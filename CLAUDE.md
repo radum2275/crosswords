@@ -54,7 +54,7 @@ Output parsing depends on the version: `v1`–`v3` parse a JSON code block (`str
 
 ## Backend
 
-LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library and IBM's internal `mellea_ibm.rits` (RITS) backend — **`mellea_ibm` is not on PyPI and not in `pyproject.toml`; it is an IBM-internal package.** Requests use `RejectionSamplingStrategy(loop_budget=5)` with per-version validation requirements. Generation is async via `mfuncs.ainstruct`, throttled by a semaphore + sleep interval. Expect RITS to be unavailable outside IBM infrastructure.
+LLM calls go through the [`mellea`](https://pypi.org/project/mellea/) library and IBM's internal `mellea_ibm.rits` (RITS) backend — **`mellea_ibm` is an IBM-internal package, not on PyPI.** `pyproject.toml` installs it from `git+ssh://git@github.ibm.com/generative-computing/mellea-ibm.git`, pinned to a commit because the repo has no tags. That needs `[tool.hatch.metadata] allow-direct-references = true` and an SSH key registered on github.ibm.com, so `pip install -e .` fails without IBM GitHub access. Requests use `RejectionSamplingStrategy(loop_budget=5)` with per-version validation requirements. Generation is async via `mfuncs.ainstruct`, throttled by a semaphore + sleep interval. Expect RITS to be unavailable outside IBM infrastructure.
 
 `load_dotenv()` is called at import, so credentials/config are expected via a `.env` file (not committed).
 
@@ -70,19 +70,28 @@ backends themselves. Both config files hold a list of `{"name", "model_id", "bac
 - `configs/rits_models.json` — RITS models. Each record needs an explicit `base_url` (the bare
   endpoint; `RITSBackend` appends `/v1` itself). Needs `RITS_API_KEY` in `.env`.
 - `configs/local_models.json` — local models run **in-process** via Mellea's `LocalVLLMBackend`
-  (`"backend": "vllm"`). Needs `pip install vllm outlines` **and a CUDA GPU** — the weights are loaded
+  (`"backend": "vllm"`). **Mellea 0.8.0 (the pinned version) removed `LocalVLLMBackend`**, so this path
+  currently errors out with a clear message; it only works with an older Mellea. When it did work it
+  needed `pip install vllm outlines` **and a CUDA GPU** — the weights are loaded
   inside the script, so this cannot run on a machine without one. Per-model vLLM engine knobs go under
   `model_options` (e.g. `gpu_memory_utilization`, `max_model_len`). `VLLM_USE_V1=0` is set automatically
   because the Mellea backend does not support vLLM V1.
 - `configs/frontier_models.json` — models on the IBM litellm gateway. `model_id` is prefixed
   `openai/` so litellm uses the OpenAI-compatible route the gateway exposes. Needs
-  `ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` in `.env`.
+  `ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` in `.env`. Gateway ids are not always the obvious
+  name (Claude Opus 5.5 is `aws/claude-opus-5-5`); list them with `GET {ANTHROPIC_BASE_URL}/v1/models`.
 
 A `--model_id` containing a `/` that matches neither config is passed through verbatim as a raw
 litellm model id. A missing config file is not fatal — that family is just unavailable.
 
 `backends.py` is the only place that touches `mellea_ibm`, and the import is guarded, so the litellm
-path works even where RITS is unavailable. The old hardcoded `RITS.*` enum aliases (`llama`, `granite`,
+path works even where RITS is unavailable. Since mellea 0.8.0 LiteLLM is an optional extra:
+`pyproject.toml` depends on `mellea[litellm]`, and a bare `pip install mellea` makes every script fail
+at import with `requires extra dependencies ... mellea[litellm]`.
+
+In 0.8.0 `Backend.generate_from_context` is a `@final` base-class wrapper around each backend's
+`_generate_from_context`. `throttle_backend` still patches the public method on the instance, which is
+what the sampler and `ainstruct` call, so retries are still rate-limited. The old hardcoded `RITS.*` enum aliases (`llama`, `granite`,
 `mistral`, `gpt-oss`) are gone; note that `RITS.GPT_OSS_120B` and `RITS.MISTRAL_LARGE_3_675B_2512` now
 return **HTTP 404** (retired deployments), which is why the config points at live endpoints instead —
 `gpt-oss-120b-a100` replaces the dead gpt-oss. All five models in `configs/rits_models.json` were
@@ -139,6 +148,23 @@ python src/crosswords/gen_clues_ro.py \
 
 Evaluation here is **different from the solving task**: `eval_results()` scores each generated clue against the ground-truth `source_clue` via BERTScore F1, records the best candidate per answer (`best_clue`/`best_sbert`), and appends a `{num_samples, num_scored, sbert_mean, sbert_std}` summary as the final array element. The full clue is scored as-is even when hint words were given (hint leakage is intentionally not removed).
 
+### Few-shot prompt from real clues (`--prompt icl`)
+
+`--prompt icl` uses `INSTRUCTION_GEN_ICL`, whose examples are **real published clues** rather than the hand-written OCUPAT/ROASA/SAC ones, so the model copies their brevity and kind of wordplay. Both the examples and the answers to generate for come from one frozen sample file:
+
+```bash
+PYTHONPATH=src python -m crosswords.select_icl_sample      # -> data/gen_clues/polycross_icl_sample.json
+python src/crosswords/gen_clues_ro.py --model_id claude-opus-5-5 --prompt icl \
+  --dataset_type clues --output_name gen_clues_polycross --output_dir data/results/gen_clues
+```
+
+- `select_icl_sample.py` draws, with a fixed seed, 8 `icl` examples and 20 `eval` items that share no answer, so a model is never shown the clue it is asked about. "Non-trivial": answer ≥5 letters, letters only, and occurring ≤3 times in the corpus (drops the reused fillers like `ERA`/`ATA`). Clues must be 2-6 words, not an all-caps theme heading, and must not contain the answer's first 5 letters. `EXCLUDED_ANSWERS` holds hand-rejected examples; they are skipped **after** the shuffle, so adding one does not reshuffle the rest of the sample.
+- With `--prompt icl`, `--dataset_file` is ignored (the sample file is the dataset), `--num_hints` is rejected, and the output is `{output_name}_{dataset_type}_{model_id}_icl.json`. Each record also keeps `filePath`; `source_clue` is the ground truth.
+- Clues are capped at `--max_clue_words` (default 6, the corpus 90th percentile; median is 4). The cap, the clue count and "no answer leakage" are **enforced**: an extra requirement fails responses that break them, and this path uses `RepairTemplateStrategy` instead of rejection sampling. That matters, because plain rejection resends the identical prompt, and Opus 5.5 returned the same 7-word clue for TITULARA on all 5 attempts. The repair strategy feeds the failure reason (`over 6 words: '...'`) back to the model, and it fixed the clue on the first retry.
+- The summary also reports `clue_words_mean` and `within_word_limit`.
+- Results for `claude-opus-5-5` and `gpt-6-astra` are in `data/results/gen_clues/`: 20/20 items each, all clues within 6 words, no leakage. BERTScore against a single reference clue says little about wordplay quality, so read the clues.
+- mellea 0.8.0 gotcha when probing a model by hand: `ainstruct(..., strategy=None)` returns an **uncomputed** thunk, so `str(out)` is `''`. Pass `await_result=True`. The scripts are unaffected because a sampling strategy always awaits.
+
 Runner: `run_gen_clues.sh <model_id> <dataset_type> [num_candidates] [num_samples]` sweeps `--num_hints` over `0 1 2`. Like the other runners it hardcodes `/home/radu/...` paths and uses `./timeout`, so it is author-machine-specific.
 
 ## User-study rationale experiment
@@ -191,6 +217,74 @@ Why this split: run under the polysemantic prompt, the base dataset produced fab
 (ISAC — *"poate duce gândul spre numele biblic Isaac"*) and encyclopedic padding, with 25/100 items
 given a real wordplay label. The direct prompt cut the average rationale from 461 to 221 chars for
 `claude-opus-5` and from 294 to 189 for `gpt-oss-120b-a100`.
+
+## Base models via transformers (`solve_base_ro.py`)
+
+For **base** (non-instruction-tuned) models such as `faur-ai/LLMic_v2` (3B, Romanian-English, no chat
+template). `clues_ro.py` cannot run these: every Mellea backend applies a chat template and the prompts
+ask for JSON. `solve_base_ro.py` instead uses few-shot completion prompts (`prompts_base.py`: the same
+OCUPAT/ROASA/SAC examples and hint wording as v1-v3, ending in `Răspuns:`), greedy decoding up to the
+first newline, and writes the **same output format and filenames** as `clues_ro.py`
+(`clues_llmic-v2_v3_2.json`, `baseline_llmic-v2_v1_0.json`), so `rescore.py` picks the results up.
+
+```bash
+./run_llmic.sh [model=llmic-v2] [batch=64]      # all 12 runs: {polycross 3000, themcross 1148} x {v1, v2, v3 k=1..4}
+NUM_SAMPLES=50 OUT=/tmp/llmic_smoke ./run_llmic.sh   # smoke test
+MODEL_PATH=/path/to/LLMic_v2 ./run_llmic.sh          # pre-downloaded weights
+```
+
+- Models live in `configs/hf_models.json` (separate from `local_models.json`, which is the Mellea/vLLM
+  chat path). Only v1/v2/v3 exist for base models; v4 (CoT) and v5 (translate) are not defined.
+- **LLMic tokenizer quirks**, handled via the config record: the Hub `config.json` says
+  `eos_token_id=2`, which is `<|unk|>`; the real end-of-text is id 1. The tokenizer has
+  `add_eos_token=True`, so prompts are encoded with `add_special_tokens=False`.
+- **SDPA attention on Apple MPS breaks left-padded batches** (padded rows emit EOS at once); the solver
+  uses eager attention on MPS and SDPA elsewhere. Every run starts with a batched-vs-single self-check
+  that aborts if padded generation looks broken (an occasional differing answer is normal in fp16).
+- `--resume` skips items already in the output file (the runner always passes it); results are
+  checkpointed every `--save_every` batches.
+- Ollama does **not** work for LLMic: `ollama create` from the safetensors succeeds but mis-tokenizes
+  (unrelated English output for every prompt), because of the model's custom GPT-NeoX-style tokenizer.
+- **transformers 5 mis-tokenizes LLMic via `AutoTokenizer`**: it rebuilds `GPTNeoXTokenizer` from class
+  defaults and drops the custom `\n`-splitting pre-tokenizer in `tokenizer.json`, so every newline in the
+  few-shot prompt becomes the wrong token and the model emits garbage (0% accuracy). The config record sets
+  `"tokenizer_from_file": true`, which makes the solver load `tokenizer.json` verbatim via
+  `PreTrainedTokenizerFast`. The batching self-check does **not** catch this (batched and single are
+  equally wrong) — sanity-check the first predictions of any new base model.
+- bert-score calls `build_inputs_with_special_tokens` for empty predictions, which transformers 5 removed;
+  `eval_results` shims it back (`[CLS] ids [SEP]`), so scores match bert-score under transformers 4.
+- **On the CCC cluster (LSF)**: env `/u/radu/envs/crosswords` (Python 3.12, torch 2.8.0+cu128, `pip
+  install -e .` plus litellm, scipy, matplotlib, seaborn). Pre-download weights on the login node (the job
+  runs with `HF_HUB_OFFLINE=1`), then submit `run_llmic_lsf.sh`, which wraps `run_llmic.sh`:
+  `bsub -G grp_big_job_lease -q normal -gpu "num=1" -n 8 -R "rusage[mem=64GB]" -J llmic -o
+  data/results/logs_llmic-v2/lsf_%J.out ./run_llmic_lsf.sh`. The full 12-run sweep takes ~45 min on one
+  H100; re-submitting resumes. There is no system TeX; `/u/radu/envs/tex/bin/tectonic -X compile
+  error_analysis.tex` builds the paper.
+- The LLMic results are in and `paper/error_analysis.tex` has `\llmictrue`; the agreement analysis
+  (figure and text) now covers five models over v1-v3 only.
+
+## Error analysis (`src/crosswords/analysis/`, `paper/`)
+
+Three steps, run in order from the repo root (each reads the previous step's output):
+
+```bash
+PYTHONPATH=src python -m crosswords.analysis.rescore          # -> data/results/analysis/{predictions,runs}.csv
+PYTHONPATH=src python -m crosswords.analysis.error_analysis   # -> data/results/analysis/*.csv, paper/tables/*.tex
+PYTHONPATH=src python -m crosswords.analysis.plots            # -> paper/figures/*.pdf
+cd paper && latexmk -pdf error_analysis.tex                   # ICLR 2026 style files are vendored in paper/
+```
+
+- **Common item sets.** Every model is scored on `polycross_sample3000.json` and on `themcross_data.json`
+  (answers >= 3 letters, 1148 items). The old granite/llama/gpt-oss polycross runs cover the full ~26k
+  corpus and are aligned to the sample by (clue, uppercased answer); items missing from a run count as
+  wrong. Claude files (`{polycross,themcross}_v*_[k*_]claude_opus48.json`) are **Claude Opus 4.8**, a
+  dict whose `predictions` list is position-aligned with the dataset.
+- **Metric.** `rescore.normalize` (NFD, drop combining marks, uppercase, letters only) is the main,
+  diacritic-insensitive metric; `correct_strict` keeps the original case-insensitive exact match.
+- Llama polycross v3 k=4 never existed on the full corpus; it was run on the sample as
+  `clues_sample3000_llama-3.3-70b-instruct_v3_4.json` and wired in via `EXTRA_RUNS` in `rescore.py`.
+- The "crossword vocabulary" used for candidate counts and OOV rates is the union of answers in both
+  full corpora (~11.9k types), not a Romanian dictionary.
 
 ## Post-processing & manual annotation
 

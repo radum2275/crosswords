@@ -1,0 +1,311 @@
+[
+    {
+        "answer": "BRELOCURI",
+        "source_clue": "Podoabe asortate la inele",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/barcarola.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Atașați pe lângă chei",
+            "Figuranți în roluri de cheie",
+            "Suveniruri ținute în cercuri restrânse"
+        ],
+        "rationale": "",
+        "best_clue": "Atașați pe lângă chei",
+        "best_sbert": 0.5809705853462219
+    },
+    {
+        "answer": "RIGORI",
+        "source_clue": "Încadrate cu normă fixă",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/hobby-39.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Țin libertatea la regim (pl.)",
+            "Se simt când scad gradele (pl.)",
+            "Dau greutate literei legii (pl.)"
+        ],
+        "rationale": "",
+        "best_clue": "Țin libertatea la regim (pl.)",
+        "best_sbert": 0.5590565800666809
+    },
+    {
+        "answer": "SCOBITURA",
+        "source_clue": "Gol marcat pe teren",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/randuri.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Minus în plin",
+            "Urmă de intervenție în profunzime",
+            "Loc de muncă pentru plombă"
+        ],
+        "rationale": "",
+        "best_clue": "Loc de muncă pentru plombă",
+        "best_sbert": 0.5324289798736572
+    },
+    {
+        "answer": "TRADA",
+        "source_clue": "A depăși norma ca vânzător",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/reaparitii.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "A se vinde fără tarabă",
+            "A juca pentru cealaltă echipă",
+            "A scoate culisele la lumină"
+        ],
+        "rationale": "",
+        "best_clue": "A se vinde fără tarabă",
+        "best_sbert": 0.6777617931365967
+    },
+    {
+        "answer": "IARASI",
+        "source_clue": "Scoate în evidenţă o înfăţişare nouă",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/gong-final.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Semnal de întoarcere la start",
+            "Cerere de supliment după aplauze",
+            "Reproș pentru întoarcerea la sticlă"
+        ],
+        "rationale": "",
+        "best_clue": "Cerere de supliment după aplauze",
+        "best_sbert": 0.6529538631439209
+    },
+    {
+        "answer": "CIUDATA",
+        "source_clue": "Asta nu-i normală...",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/scheme.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "În afara comunului, fără schimbarea domiciliului",
+            "Cu un caracter greu de descifrat",
+            "Cu purtări croite după alt tipar"
+        ],
+        "rationale": "",
+        "best_clue": "Cu purtări croite după alt tipar",
+        "best_sbert": 0.5551159381866455
+    },
+    {
+        "answer": "SORCOVA",
+        "source_clue": "Comparaţie pentru una împopoţonată",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/calificabil.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Bătaie administrată pentru sănătate",
+            "Înflorită chiar în toiul iernii",
+            "Expoziție ambulantă de podoabe țipătoare"
+        ],
+        "rationale": "",
+        "best_clue": "Bătaie administrată pentru sănătate",
+        "best_sbert": 0.6586940288543701
+    },
+    {
+        "answer": "AMELIORANT",
+        "source_clue": "Alungă răul",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/vitralii.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Agent de îndreptare a terenului",
+            "Sprijin pentru culturile rămase în urmă",
+            "Promotor al creșterii în panificație"
+        ],
+        "rationale": "",
+        "best_clue": "Sprijin pentru culturile rămase în urmă",
+        "best_sbert": 0.4456709325313568
+    },
+    {
+        "answer": "AMIDON",
+        "source_clue": "Ingredientul întăririi e praf și pulbere",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/just-for-clu.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Sprijin pentru gulerele albe",
+            "Capital de rezervă al cartofului",
+            "Dat de gol prin albăstrire"
+        ],
+        "rationale": "",
+        "best_clue": "Dat de gol prin albăstrire",
+        "best_sbert": 0.4937905967235565
+    },
+    {
+        "answer": "APOLOGIE",
+        "source_clue": "Lucru de toată lauda",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/jaloane.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Piedestal construit din cuvinte",
+            "Flori oferite de avocat",
+            "Portret fără nicio umbră"
+        ],
+        "rationale": "",
+        "best_clue": "Portret fără nicio umbră",
+        "best_sbert": 0.6177241206169128
+    },
+    {
+        "answer": "ELEGANT",
+        "source_clue": "Bun la impresia artistică",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/croaziera-61.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cu clasă, dar fără elevi",
+            "Pus la punct fără mustrări",
+            "Cu ținută, chiar și așezat"
+        ],
+        "rationale": "",
+        "best_clue": "Pus la punct fără mustrări",
+        "best_sbert": 0.4582761824131012
+    },
+    {
+        "answer": "CAMERA",
+        "source_clue": "Vecina de apartament",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/marias.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Reține cadre fără mandat",
+            "Aleșii ei au locuri asigurate",
+            "Ține aerul în cerc închis"
+        ],
+        "rationale": "",
+        "best_clue": "Aleșii ei au locuri asigurate",
+        "best_sbert": 0.489883154630661
+    },
+    {
+        "answer": "ASALT",
+        "source_clue": "Forţare în atac",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/dublaje.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Presiune pentru ocuparea unui post",
+            "Dialog purtat cu vârful spadei",
+            "Tentativă de a ajunge la vârf"
+        ],
+        "rationale": "",
+        "best_clue": "Tentativă de a ajunge la vârf",
+        "best_sbert": 0.5176519155502319
+    },
+    {
+        "answer": "NEPIERITOR",
+        "source_clue": "Pomenit pe vecie",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/inedit.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Cu garanție fără termen de expirare",
+            "Imposibil de trecut la pierderi",
+            "Cu numele mereu în circulație"
+        ],
+        "rationale": "",
+        "best_clue": "Cu numele mereu în circulație",
+        "best_sbert": 0.6157051920890808
+    },
+    {
+        "answer": "SPLENDOARE",
+        "source_clue": "Regina frumuseţii",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/kilt.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "De luat ochii fără pagubă",
+            "Ținută de gală a naturii",
+            "Apariție ce pune soarele în umbră"
+        ],
+        "rationale": "",
+        "best_clue": "Ținută de gală a naturii",
+        "best_sbert": 0.5339608192443848
+    },
+    {
+        "answer": "UPERCUTURI",
+        "source_clue": "Lovituri venite de jos în sus",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/abyssus.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Atenții primite pe sub bărbie",
+            "Ascensiuni care te pun jos",
+            "Argumente aduse de jos în sus"
+        ],
+        "rationale": "",
+        "best_clue": "Argumente aduse de jos în sus",
+        "best_sbert": 0.7772551774978638
+    },
+    {
+        "answer": "TITULARA",
+        "source_clue": "Primă de joc",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-gazea-1/js/LBR-44-chichițe.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "În teren, fără statut de schimb",
+            "Cu post câștigat, nu ținut",
+            "Cu nume depus la bancă"
+        ],
+        "rationale": "",
+        "best_clue": "În teren, fără statut de schimb",
+        "best_sbert": 0.5073025822639465
+    },
+    {
+        "answer": "CONVORBIRI",
+        "source_clue": "Vorbe şoptite la ureche (pl.)",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/lisisme.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Schimburi făcute fără marfă",
+            "Legături taxate la minut",
+            "Literare puse în circulație"
+        ],
+        "rationale": "",
+        "best_clue": "Legături taxate la minut",
+        "best_sbert": 0.5494681000709534
+    },
+    {
+        "answer": "OSTATEC",
+        "source_clue": "Persoana in garantie",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/cu-patima.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Capital uman blocat în negocieri",
+            "Piesă capturată, păstrată pentru schimb",
+            "Garanție depusă fără voia titularului"
+        ],
+        "rationale": "",
+        "best_clue": "Capital uman blocat în negocieri",
+        "best_sbert": 0.5176876783370972
+    },
+    {
+        "answer": "INFIRMITATE",
+        "source_clue": "Pierderea suportului conducerii (funcții, organe)",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/dupa-idealuri.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Minus care nu ține de socoteli",
+            "Piedică purtată și în repaus",
+            "Opoziție fizică la libertatea de mișcare"
+        ],
+        "rationale": "",
+        "best_clue": "Piedică purtată și în repaus",
+        "best_sbert": 0.4861881136894226
+    },
+    {
+        "num_samples": 20,
+        "num_scored": 20,
+        "sbert_mean": 0.5613773167133331,
+        "sbert_std": 0.08135946477415963,
+        "clue_words_mean": 5.0,
+        "max_clue_words": 6,
+        "within_word_limit": 1.0
+    }
+]

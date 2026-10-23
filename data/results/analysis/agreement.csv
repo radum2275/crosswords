@@ -1,0 +1,13 @@
+dataset,version,k,n_models,solved_by_0,solved_by_1,solved_by_2,solved_by_3,solved_by_4,solved_by_5
+polycross,v1,0,5,2740,178,52,28,1,1
+polycross,v2,0,5,2552,304,90,45,9,0
+polycross,v3,1,5,1785,639,317,203,53,3
+polycross,v3,2,5,1083,733,587,386,187,24
+polycross,v3,3,5,492,544,568,565,571,260
+polycross,v3,4,5,256,342,376,603,827,596
+themcross,v1,0,5,413,259,193,180,81,22
+themcross,v2,0,5,328,248,225,222,105,20
+themcross,v3,1,5,158,254,256,273,169,38
+themcross,v3,2,5,104,214,242,309,213,66
+themcross,v3,3,5,56,132,205,284,290,181
+themcross,v3,4,5,24,79,143,204,346,352

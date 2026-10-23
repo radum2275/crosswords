@@ -1,0 +1,311 @@
+[
+    {
+        "answer": "BRELOCURI",
+        "source_clue": "Podoabe asortate la inele",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/barcarola.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Dețin cheile casei",
+            "Legați mereu de lanț",
+            "Amulete de buzunar"
+        ],
+        "rationale": "",
+        "best_clue": "Dețin cheile casei",
+        "best_sbert": 0.6065649390220642
+    },
+    {
+        "answer": "RIGORI",
+        "source_clue": "Încadrate cu normă fixă",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/hobby-39.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Gerul care nu iartă (pl.)",
+            "Nu admit nicio abatere",
+            "Cerințe fără drept de apel"
+        ],
+        "rationale": "",
+        "best_clue": "Cerințe fără drept de apel",
+        "best_sbert": 0.6822062134742737
+    },
+    {
+        "answer": "SCOBITURA",
+        "source_clue": "Gol marcat pe teren",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/randuri.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Rezultatul unor săpături adânci",
+            "Operă semnată de ciocănitoare",
+            "Lipsă de conținut în lemn"
+        ],
+        "rationale": "",
+        "best_clue": "Rezultatul unor săpături adânci",
+        "best_sbert": 0.6324060559272766
+    },
+    {
+        "answer": "TRADA",
+        "source_clue": "A depăși norma ca vânzător",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/reaparitii.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "A vinde un prieten",
+            "A da pe față",
+            "A trece la dușman"
+        ],
+        "rationale": "",
+        "best_clue": "A da pe față",
+        "best_sbert": 0.6809773445129395
+    },
+    {
+        "answer": "IARASI",
+        "source_clue": "Scoate în evidenţă o înfăţişare nouă",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/gong-final.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ca la repetiție",
+            "Cum revine un recidivist",
+            "Precum ecoul în munți"
+        ],
+        "rationale": "",
+        "best_clue": "Cum revine un recidivist",
+        "best_sbert": 0.554111897945404
+    },
+    {
+        "answer": "CIUDATA",
+        "source_clue": "Asta nu-i normală...",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/scheme.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ieșită din comun",
+            "O pasăre rară",
+            "Scoasă din tipare"
+        ],
+        "rationale": "",
+        "best_clue": "Ieșită din comun",
+        "best_sbert": 0.5205197334289551
+    },
+    {
+        "answer": "SORCOVA",
+        "source_clue": "Comparaţie pentru una împopoţonată",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/calificabil.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Înflorește în miez de iarnă",
+            "Lovește cu bune urări",
+            "Baghetă de Anul Nou"
+        ],
+        "rationale": "",
+        "best_clue": "Lovește cu bune urări",
+        "best_sbert": 0.5748350024223328
+    },
+    {
+        "answer": "AMELIORANT",
+        "source_clue": "Alungă răul",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/vitralii.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Face pâinea mai bună",
+            "Pune pământul pe picioare",
+            "Agent al schimbării în bine"
+        ],
+        "rationale": "",
+        "best_clue": "Face pâinea mai bună",
+        "best_sbert": 0.5210115909576416
+    },
+    {
+        "answer": "AMIDON",
+        "source_clue": "Ingredientul întăririi e praf și pulbere",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/just-for-clu.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pune cămașa pe picioare",
+            "Se învinețește de la iod",
+            "Rezerva de putere a cartofului"
+        ],
+        "rationale": "",
+        "best_clue": "Rezerva de putere a cartofului",
+        "best_sbert": 0.5844935178756714
+    },
+    {
+        "answer": "APOLOGIE",
+        "source_clue": "Lucru de toată lauda",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-3/js/jaloane.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Apărarea lui Socrate",
+            "Laudă fără măsură",
+            "Apărare cu vorbe frumoase"
+        ],
+        "rationale": "",
+        "best_clue": "Laudă fără măsură",
+        "best_sbert": 0.6798638105392456
+    },
+    {
+        "answer": "ELEGANT",
+        "source_clue": "Bun la impresia artistică",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/croaziera-61.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Se poartă foarte bine",
+            "Are o ținută impecabilă",
+            "Demonstrație de bun gust"
+        ],
+        "rationale": "",
+        "best_clue": "Are o ținută impecabilă",
+        "best_sbert": 0.5159172415733337
+    },
+    {
+        "answer": "CAMERA",
+        "source_clue": "Vecina de apartament",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/marias.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Poate fi inferioară sau superioară",
+            "Are obiectivul îndreptat spre actori",
+            "Se umflă sub cauciuc"
+        ],
+        "rationale": "",
+        "best_clue": "Se umflă sub cauciuc",
+        "best_sbert": 0.4261362552642822
+    },
+    {
+        "answer": "ASALT",
+        "source_clue": "Forţare în atac",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/dublaje.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Dispută între vârfuri",
+            "Ofensivă la ghișee",
+            "Urcare grăbită pe ziduri"
+        ],
+        "rationale": "",
+        "best_clue": "Urcare grăbită pe ziduri",
+        "best_sbert": 0.5007104873657227
+    },
+    {
+        "answer": "NEPIERITOR",
+        "source_clue": "Pomenit pe vecie",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/inedit.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Nu-și dă niciodată duhul",
+            "Trece mereu proba timpului",
+            "Nu cunoaște apusul"
+        ],
+        "rationale": "",
+        "best_clue": "Nu cunoaște apusul",
+        "best_sbert": 0.6030393242835999
+    },
+    {
+        "answer": "SPLENDOARE",
+        "source_clue": "Regina frumuseţii",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/kilt.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pompă la curtea regală",
+            "Îți ia ochii pe loc",
+            "Apariție care taie respirația"
+        ],
+        "rationale": "",
+        "best_clue": "Apariție care taie respirația",
+        "best_sbert": 0.5128352642059326
+    },
+    {
+        "answer": "UPERCUTURI",
+        "source_clue": "Lovituri venite de jos în sus",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/abyssus.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Ridicări de bărbie (pl.)",
+            "Atacuri venite de la bază",
+            "Argumente tari în ring"
+        ],
+        "rationale": "",
+        "best_clue": "Atacuri venite de la bază",
+        "best_sbert": 0.6705026626586914
+    },
+    {
+        "answer": "TITULARA",
+        "source_clue": "Primă de joc",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-gazea-1/js/LBR-44-chichițe.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Are cont, nu stă pe bancă",
+            "Cea care ține postul",
+            "Intră prima pe teren"
+        ],
+        "rationale": "",
+        "best_clue": "Intră prima pe teren",
+        "best_sbert": 0.5674753785133362
+    },
+    {
+        "answer": "CONVORBIRI",
+        "source_clue": "Vorbe şoptite la ureche (pl.)",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/lisisme.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Taxate la minut",
+            "Literare, scoase de Junimea",
+            "Vorbe date la schimb"
+        ],
+        "rationale": "",
+        "best_clue": "Vorbe date la schimb",
+        "best_sbert": 0.6639692783355713
+    },
+    {
+        "answer": "OSTATEC",
+        "source_clue": "Persoana in garantie",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii/js/cu-patima.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Pus sub sechestru",
+            "Eliberat cu bani grei",
+            "Garanție în carne și oase"
+        ],
+        "rationale": "",
+        "best_clue": "Garanție în carne și oase",
+        "best_sbert": 0.575922429561615
+    },
+    {
+        "answer": "INFIRMITATE",
+        "source_clue": "Pierderea suportului conducerii (funcții, organe)",
+        "filePath": "/home/adi/workspace/rebus/careuri-definitii-2/js/dupa-idealuri.js",
+        "hint": "",
+        "num_hints": 0,
+        "clues": [
+            "Lipsa unui membru",
+            "Handicap pe viață",
+            "Defect de construcție"
+        ],
+        "rationale": "",
+        "best_clue": "Handicap pe viață",
+        "best_sbert": 0.43553951382637024
+    },
+    {
+        "num_samples": 20,
+        "num_scored": 20,
+        "sbert_mean": 0.575451897084713,
+        "sbert_std": 0.07641386827089812,
+        "clue_words_mean": 3.966666666666667,
+        "max_clue_words": 6,
+        "within_word_limit": 1.0
+    }
+]

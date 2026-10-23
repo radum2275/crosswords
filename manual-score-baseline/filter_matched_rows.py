@@ -4,10 +4,8 @@ This script reads all CSV files in the same directory, identifies rows where the
 """
 
 
-import os
 import csv
-
-
+import os
 
 # Directory containing the CSV files
 CSV_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -28,8 +26,8 @@ for fname in csv_files:
 # Find the index of the 'match' column
 try:
     match_idx = headers.index('match')
-except ValueError:
-    raise Exception("No 'match' column found in CSV files.")
+except ValueError as e:
+    raise ValueError("No 'match' column found in CSV files.") from e
 
 # Find row indices where 'match' is True in all files
 num_rows = min(len(rows) for rows in all_rows)

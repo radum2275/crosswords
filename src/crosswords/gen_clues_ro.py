@@ -6,34 +6,32 @@
 # solving task in clues_ro.py: here the answer is the input and we produce
 # candidate clues as output.
 
-import os
 import argparse
 import json
+import os
+from typing import Any
 
-import numpy as np
 import mellea.stdlib.functional as mfuncs
-
+import numpy as np
 from bert_score import BERTScorer
-
 from dotenv import load_dotenv
-from typing import Any, Dict, List
 from mellea.backends import Backend
+from mellea.core import MelleaLogger
 from mellea.stdlib.context import SimpleContext
 from mellea.stdlib.requirements import check, simple_validate
-from mellea.stdlib.sampling import RejectionSamplingStrategy
-
-from mellea.core import FancyLogger
+from mellea.stdlib.sampling import RejectionSamplingStrategy, RepairTemplateStrategy
 
 # Disable Mellea logging
-FancyLogger.get_logger().setLevel(FancyLogger.ERROR)
+MelleaLogger.get_logger().setLevel(MelleaLogger.ERROR)
 
 # Local imports
-from crosswords.backends import build_backend, print_models
-from crosswords.runner import RateLimiter, throttle_backend, run_throttled
+from crosswords.backends import build_backend, load_json_utf8_relaxed, print_models
+from crosswords.runner import RateLimiter, run_throttled, throttle_backend
+from crosswords.select_icl_sample import fold
 from crosswords.utils import (
-    strip_code_fences,
     extract_first_code_block,
     get_think_tags,
+    strip_code_fences,
 )
 
 INSTRUCTION_GEN = """
@@ -161,6 +159,92 @@ HINT: {{hint_text}}
 load_dotenv()
 
 
+# Few-shot variant (--prompt icl). Same task as INSTRUCTION_GEN, but the examples
+# are real published (answer, clue) pairs from the corpus, filled in from the
+# sample file by format_icl_examples, so the model imitates their length and
+# style. The {{icl_examples}} block is plain text: one "ANSWER / CLUE" pair each.
+INSTRUCTION_GEN_ICL = """
+You are an expert at composing crossword puzzle clues in Romanian.
+Given the correct answer to a crossword (a word in Romanian), you will compose
+{{num_candidates}} distinct candidate clues that could lead to that answer.
+
+Important: each clue must be a POLYSEMANTIC clue, like those published in
+Romanian crossword magazines. The obvious, literal reading of the clue should
+point somewhere else, and only a second, less obvious meaning of its words leads
+to the given answer. Finding the answer should require lateral reasoning.
+
+Rules:
+- Every clue must be written in Romanian, with correct diacritics (ă, â, î, ș, ț).
+- Every clue must be SHORT: at most {{max_clue_words}} words. Most published clues
+  have 3 to 5 words. A clue is a phrase, not a full sentence or an explanation.
+- A clue must NOT contain the answer, a word derived from it, or a direct synonym.
+- If the answer is plural and the clue does not make that obvious, you may end
+  the clue with "(pl.)", as the published clues do.
+- The {{num_candidates}} clues must be distinct from one another, and should play
+  on different meanings of the answer where possible.
+- Do not translate the answer or the clues into English.
+- Output the final response as a JSON object inside a markdown code block, with
+  exactly the following structure:
+
+```json
+{
+  "answer": "<the input answer here>",
+  "clues": ["<clue 1>", "<clue 2>", "<clue 3>"]
+}
+```
+
+The "clues" array must contain exactly {{num_candidates}} clues.
+
+Here are real published clues. Match their brevity and their kind of wordplay:
+
+{{icl_examples}}
+
+ANSWER: {{answer_text}}
+"""
+
+
+def format_icl_examples(examples: list[dict[str, Any]]) -> str:
+    """Render the sample file's ICL pairs as the prompt's examples block."""
+    return "\n\n".join(f"ANSWER: {ex['answer']}\nCLUE: {ex['clue']}" for ex in examples)
+
+
+def load_icl_sample(file_name: str) -> dict[str, list[dict[str, Any]]]:
+    """
+    Load a sample file written by select_icl_sample.py: {"icl": [...], "eval": [...]}.
+    The "icl" pairs go into the prompt and the "eval" items are generated for.
+    """
+    sample = load_json_utf8_relaxed(file_name)
+    if not isinstance(sample, dict) or not {"icl", "eval"} <= sample.keys():
+        raise ValueError(
+            f"{file_name} is not an ICL sample file: expected 'icl' and 'eval' keys. "
+            "Create one with: python -m crosswords.select_icl_sample"
+        )
+    return sample
+
+
+def clue_problems(clues: Any, answer: str, num_candidates: int, max_words: int) -> list[str]:
+    """
+    Reasons a list of generated clues breaks the ICL prompt's hard rules: the
+    count, the word limit, and not giving the answer away. Empty means valid.
+    Used for rejection sampling, so a failing response is regenerated instead
+    of being silently kept.
+    """
+    if not isinstance(clues, list) or not all(isinstance(c, str) for c in clues):
+        return ["'clues' must be a list of strings"]
+    problems = []
+    if len(clues) != num_candidates:
+        problems.append(f"expected {num_candidates} clues, got {len(clues)}")
+    # Compare without diacritics or case; the first five letters catch inflected
+    # forms of the answer (e.g. ACCEPTA in "acceptat").
+    stem = fold(answer)[:5]
+    for clue in clues:
+        if len(clue.split()) > max_words:
+            problems.append(f"over {max_words} words: {clue!r}")
+        if stem and stem in fold(clue):
+            problems.append(f"contains the answer: {clue!r}")
+    return problems
+
+
 # Common Romanian stop words (and a few function-word forms) that carry little
 # meaning on their own and so make poor content hints.
 RO_STOP_WORDS = {
@@ -205,7 +289,7 @@ def get_sbert(reference: str, prediction: str, scorer) -> float:
     return F1.cpu().detach().numpy().tolist()[0]
 
 
-def parse_clues_response(text: str) -> Dict[str, Any]:
+def parse_clues_response(text: str) -> dict[str, Any]:
     """
     Parse an LLM response into a JSON dict, tolerating a <think>...</think>
     preamble before the fenced JSON block. Raises on failure.
@@ -216,7 +300,7 @@ def parse_clues_response(text: str) -> Dict[str, Any]:
     return json.loads(cleaned)
 
 
-def validate_clues_response(text: str, required_keys: List[str]) -> bool:
+def validate_clues_response(text: str, required_keys: list[str]) -> bool:
     """
     Validation for the rejection sampler. Unlike validate_json_code_block, this
     extracts the fenced block from anywhere in the response, so a valid answer
@@ -229,27 +313,29 @@ def validate_clues_response(text: str, required_keys: List[str]) -> bool:
     return isinstance(data, dict) and all(k in data for k in required_keys)
 
 
-def load_data(file_name: str) -> List[Dict[str, Any]]:
+def load_data(file_name: str) -> list[dict[str, Any]]:
     """Load the dataset."""
     try:
         with open(file_name, "r") as f:
             data = json.load(f)
         return data
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(e)
         return None
 
 
 def process_data(
-        data: List[Dict[str, Any]],
+        data: list[dict[str, Any]],
         backend: Backend,
         dataset_type: str,
         num_candidates: int,
         num_hints: int = 0,
-        num_samples: int = None,
+        num_samples: int | None = None,
         output_filename: str = "gen_clues.json",
         batch_size: int = 50,
-) -> List[Dict[str, Any]]:
+        icl_examples: list[dict[str, Any]] | None = None,
+        max_clue_words: int = 6,
+) -> list[dict[str, Any]]:
     """
     Generate candidate clues for the answers in the dataset.
 
@@ -259,6 +345,10 @@ def process_data(
     :param num_candidates: number of candidate clues to request per answer
     :param num_hints: number of leading words of the ground-truth clue to give
         as a hint (0 = no hint, use the plain generation prompt)
+    :param icl_examples: real (answer, clue) pairs. When given, use the few-shot
+        INSTRUCTION_GEN_ICL prompt and also enforce the clue count, the
+        max_clue_words limit and no answer leakage during rejection sampling.
+    :param max_clue_words: word limit per clue for the ICL prompt
     """
 
     print(f"Generating clues for {len(data)} answers...")
@@ -266,6 +356,9 @@ def process_data(
     print(f"Dataset type: {dataset_type}")
     print(f"Candidates per answer: {num_candidates}")
     print(f"Hint words from ground-truth clue: {num_hints}")
+    if icl_examples:
+        print(f"ICL prompt: {len(icl_examples)} examples, <= {max_clue_words} words per clue")
+    icl_text = format_icl_examples(icl_examples) if icl_examples else ""
 
     assert dataset_type in ["clues", "baseline"], f"Unknown dataset type: {dataset_type}"
 
@@ -292,7 +385,15 @@ def process_data(
         # With num_hints >= 1, feed the first num_hints words of the real clue
         # as a hint and use the hint-aware prompt; otherwise plain generation.
         hint_text = get_hint_words(item.get(clue_key, ""), num_hints)
-        if num_hints >= 1 and hint_text:
+        if icl_examples:
+            instruction = INSTRUCTION_GEN_ICL
+            user_variables = {
+                "answer_text": answer,
+                "num_candidates": num_candidates,
+                "max_clue_words": max_clue_words,
+                "icl_examples": icl_text,
+            }
+        elif num_hints >= 1 and hint_text:
             instruction = INSTRUCTION_GEN_HINTS
             user_variables = {
                 "answer_text": answer,
@@ -309,6 +410,27 @@ def process_data(
                 lambda s: validate_clues_response(s, required_keys=["answer", "clues"])
             ),
         )]
+        strategy = RejectionSamplingStrategy(loop_budget=5)
+        if icl_examples:
+            def check_clue_rules(s: str) -> tuple[bool, str]:
+                if not validate_clues_response(s, ["clues"]):
+                    return False, "The output must contain a valid JSON code block."
+                problems = clue_problems(
+                    parse_clues_response(s).get("clues"), answer,
+                    num_candidates, max_clue_words,
+                )
+                return not problems, "; ".join(problems)
+
+            requirements.append(check(
+                f"Exactly {num_candidates} clues, each at most {max_clue_words} words, "
+                "none containing the answer.",
+                validation_fn=simple_validate(check_clue_rules),
+            ))
+            # Plain rejection sampling resends the same prompt, and a model that
+            # writes one clue a word too long tends to repeat it every time. The
+            # repair strategy appends the failure reasons (e.g. "over 6 words:
+            # ...") to the instruction, so each retry knows what to fix.
+            strategy = RepairTemplateStrategy(loop_budget=5)
 
         return await mfuncs.ainstruct(
             instruction,
@@ -317,7 +439,7 @@ def process_data(
             requirements=requirements,
             user_variables=user_variables,
             icl_examples=[],
-            strategy=RejectionSamplingStrategy(loop_budget=5),
+            strategy=strategy,
             return_sampling_results=True,
         )
 
@@ -352,6 +474,7 @@ def process_data(
         results.append({
             "answer": answer,
             "source_clue": source_clue,
+            "filePath": item.get("filePath", item.get("path", "")),
             "hint": get_hint_words(source_clue, num_hints),
             "num_hints": num_hints,
             "clues": clues,
@@ -362,8 +485,8 @@ def process_data(
         for c in clues:
             print(f"    clue: {c}")
 
-    with open(output_filename, "w") as f:
-        json.dump(results, f, indent=4)
+    with open(output_filename, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=4, ensure_ascii=False)
 
     print(f"Finished {len(data)} answers")
     print(f"Generated clues for {num_generated}/{len(data)} answers.")
@@ -371,17 +494,21 @@ def process_data(
     return results
 
 
-def eval_results(output_filename: str) -> Dict[str, Any]:
+def eval_results(output_filename: str, max_clue_words: int | None = None) -> dict[str, Any]:
     """
     Score the generated clues against the ground-truth (source) clue using
     BERTScore F1. For each answer with at least one generated clue, the best
     candidate (highest F1 vs the source clue) is taken as the predicted clue.
-    A summary dict is appended as the final element of the output file.
+    A summary dict is appended as the final element of the output file. With
+    max_clue_words, it also reports the share of clues within that word limit.
     """
 
     print(f"Evaluating generated clues from {output_filename} ...")
     with open(output_filename, "r", encoding="utf-8") as f:
         results = json.load(f)
+    # Re-scoring a file that was already evaluated: drop the old summary.
+    if results and "num_scored" in results[-1]:
+        results = results[:-1]
 
     assert len(results) > 0, "No results to evaluate."
 
@@ -423,12 +550,18 @@ def eval_results(output_filename: str) -> Dict[str, Any]:
         "sbert_mean": sbert_mean,
         "sbert_std": sbert_std,
     }
+    lengths = [len(c.split()) for item in results for c in item.get("clues", []) if c]
+    if lengths:
+        summary["clue_words_mean"] = float(np.mean(lengths))
+        if max_clue_words is not None:
+            summary["max_clue_words"] = max_clue_words
+            summary["within_word_limit"] = float(np.mean([n <= max_clue_words for n in lengths]))
 
     print(f"Evaluation results: {summary}")
     print(f"Saving evaluation results to {output_filename} ...")
     results.append(summary)
-    with open(output_filename, "w") as f:
-        json.dump(results, f, indent=4)
+    with open(output_filename, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=4, ensure_ascii=False)
 
     return summary
 
@@ -455,6 +588,17 @@ if __name__ == '__main__':
     parser.add_argument('--max_tokens', type=int, default=4096)
     parser.add_argument('--list_models', action='store_true',
                         help='List the models available from the config files and exit')
+    parser.add_argument('--prompt', choices=["gen", "icl"], default="gen",
+                        help='"gen": hand-written examples (with --num_hints for hint '
+                             'words). "icl": real corpus clues as few-shot examples, '
+                             'read from --icl_file')
+    parser.add_argument('--icl_file', type=str,
+                        default="data/gen_clues/polycross_icl_sample.json",
+                        help='Sample file from select_icl_sample.py. With --prompt icl '
+                             'it supplies both the examples and the answers to generate '
+                             'for, so --dataset_file is not needed')
+    parser.add_argument('--max_clue_words', type=int, default=6,
+                        help='Word limit per clue for --prompt icl')
 
     args = parser.parse_args()
 
@@ -462,14 +606,22 @@ if __name__ == '__main__':
         print_models()
         raise SystemExit(0)
 
-    if not args.dataset_file:
-        parser.error("--dataset_file is required (unless --list_models)")
-
-    output_filename = f"{args.output_name}_{args.dataset_type}_{args.model_id}_h{args.num_hints}.json"
+    if args.prompt == "icl":
+        if args.num_hints:
+            parser.error("--num_hints cannot be combined with --prompt icl")
+        # The model id may contain "/" (a raw litellm id); keep the filename flat.
+        safe_model = args.model_id.replace("/", "_")
+        output_filename = f"{args.output_name}_{args.dataset_type}_{safe_model}_icl.json"
+        max_clue_words = args.max_clue_words
+    else:
+        if not args.dataset_file:
+            parser.error("--dataset_file is required (unless --list_models or --prompt icl)")
+        output_filename = f"{args.output_name}_{args.dataset_type}_{args.model_id}_h{args.num_hints}.json"
+        max_clue_words = None
     output_filename = os.path.join(args.output_dir, output_filename)
 
     if args.eval_only:
-        eval_results(output_filename)
+        eval_results(output_filename, max_clue_words=max_clue_words)
         print("Done.")
         raise SystemExit(0)
 
@@ -487,7 +639,15 @@ if __name__ == '__main__':
         # unavailable) are user errors, not bugs: no traceback.
         raise SystemExit(f"Configuration error: {e}")
 
-    data = load_data(args.dataset_file)
+    icl_examples = None
+    if args.prompt == "icl":
+        try:
+            sample = load_icl_sample(args.icl_file)
+        except (OSError, ValueError) as e:
+            raise SystemExit(f"Configuration error: {e}")
+        data, icl_examples = sample["eval"], sample["icl"]
+    else:
+        data = load_data(args.dataset_file)
     process_data(
         data,
         backend,
@@ -497,9 +657,11 @@ if __name__ == '__main__':
         num_samples=args.num_samples,
         output_filename=output_filename,
         batch_size=args.batch_size,
+        icl_examples=icl_examples,
+        max_clue_words=args.max_clue_words,
     )
 
     # Score the generated clues against the ground-truth clues.
-    eval_results(output_filename)
+    eval_results(output_filename, max_clue_words=max_clue_words)
 
     print("Done.")

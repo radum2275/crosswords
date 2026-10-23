@@ -6,11 +6,11 @@
 # keep the total call rate under a budget. That logic lives here once instead
 # of being copy-pasted per script.
 
-import time
 import asyncio
-
+import time
 from collections import deque
-from typing import Any, Awaitable, Callable, Dict, List, Optional, Sequence, Tuple
+from collections.abc import Awaitable, Callable, Sequence
+from typing import Any
 
 from mellea.backends import Backend
 
@@ -80,16 +80,16 @@ async def _gather_throttled(
     items: Sequence[Any],
     call_fn: Callable[[Any], Awaitable[Any]],
     batch_size: int,
-) -> List[Tuple[Any, Any, Optional[BaseException]]]:
+) -> list[tuple[Any, Any, BaseException | None]]:
     """Run call_fn over items with bounded concurrency, preserving order."""
     sem = asyncio.Semaphore(batch_size)
-    ordered: List[Any] = [None] * len(items)
+    ordered: list[Any] = [None] * len(items)
 
     async def run_one(i: int, item: Any) -> None:
         async with sem:
             try:
                 ordered[i] = (await call_fn(item), item, None)
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 # Keep one bad item from taking down the whole run. Callers get
                 # the exception and decide how to record it.
                 ordered[i] = (None, item, e)
@@ -104,7 +104,7 @@ def run_throttled(
     call_fn: Callable[[Any], Awaitable[Any]],
     batch_size: int = 50,
     verbose: bool = True,
-) -> List[Tuple[Any, Any, Optional[BaseException]]]:
+) -> list[tuple[Any, Any, BaseException | None]]:
     """
     Run `call_fn` over `items` concurrently and return a list of
     (result, item, error) triples in input order.
@@ -138,9 +138,9 @@ DATASET_TYPE_ALIASES = {
 
 
 def resolve_keys(
-    data: List[Dict[str, Any]],
-    dataset_type: Optional[str] = None,
-) -> Tuple[str, str]:
+    data: list[dict[str, Any]],
+    dataset_type: str | None = None,
+) -> tuple[str, str]:
     """
     Work out which field holds the answer and which holds the clue.
 
@@ -174,12 +174,12 @@ def resolve_keys(
 
 
 def filter_and_limit(
-    data: List[Dict[str, Any]],
+    data: list[dict[str, Any]],
     answer_key: str,
-    num_samples: Optional[int] = None,
+    num_samples: int | None = None,
     min_answer_len: int = 3,
     verbose: bool = True,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Drop answers shorter than `min_answer_len`, then truncate to `num_samples`.
 
