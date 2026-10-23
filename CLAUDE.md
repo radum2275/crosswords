@@ -78,7 +78,8 @@ backends themselves. Both config files hold a list of `{"name", "model_id", "bac
   because the Mellea backend does not support vLLM V1.
 - `configs/frontier_models.json` — models on the IBM litellm gateway. `model_id` is prefixed
   `openai/` so litellm uses the OpenAI-compatible route the gateway exposes. Needs
-  `ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` in `.env`.
+  `ANTHROPIC_BASE_URL` + `ANTHROPIC_AUTH_TOKEN` in `.env`. Gateway ids are not always the obvious
+  name (Claude Opus 5.5 is `aws/claude-opus-5-5`); list them with `GET {ANTHROPIC_BASE_URL}/v1/models`.
 
 A `--model_id` containing a `/` that matches neither config is passed through verbatim as a raw
 litellm model id. A missing config file is not fatal — that family is just unavailable.
@@ -146,6 +147,23 @@ python src/crosswords/gen_clues_ro.py \
 - Throttling (`--batch_size`, `--rate_limit`), the async pattern, and the `<think>`-before-JSON parsing are the same as `clues_ro.py`. Note: parsing uses `parse_clues_response` / `validate_clues_response`, which extract the fenced block from *anywhere* in the response (`extract_first_code_block`) — unlike `clues_ro.py`, which only strips a leading fence and would mis-handle a `<think>` preamble before JSON.
 
 Evaluation here is **different from the solving task**: `eval_results()` scores each generated clue against the ground-truth `source_clue` via BERTScore F1, records the best candidate per answer (`best_clue`/`best_sbert`), and appends a `{num_samples, num_scored, sbert_mean, sbert_std}` summary as the final array element. The full clue is scored as-is even when hint words were given (hint leakage is intentionally not removed).
+
+### Few-shot prompt from real clues (`--prompt icl`)
+
+`--prompt icl` uses `INSTRUCTION_GEN_ICL`, whose examples are **real published clues** rather than the hand-written OCUPAT/ROASA/SAC ones, so the model copies their brevity and kind of wordplay. Both the examples and the answers to generate for come from one frozen sample file:
+
+```bash
+PYTHONPATH=src python -m crosswords.select_icl_sample      # -> data/gen_clues/polycross_icl_sample.json
+python src/crosswords/gen_clues_ro.py --model_id claude-opus-5-5 --prompt icl \
+  --dataset_type clues --output_name gen_clues_polycross --output_dir data/results/gen_clues
+```
+
+- `select_icl_sample.py` draws, with a fixed seed, 8 `icl` examples and 20 `eval` items that share no answer, so a model is never shown the clue it is asked about. "Non-trivial": answer ≥5 letters, letters only, and occurring ≤3 times in the corpus (drops the reused fillers like `ERA`/`ATA`). Clues must be 2-6 words, not an all-caps theme heading, and must not contain the answer's first 5 letters. `EXCLUDED_ANSWERS` holds hand-rejected examples; they are skipped **after** the shuffle, so adding one does not reshuffle the rest of the sample.
+- With `--prompt icl`, `--dataset_file` is ignored (the sample file is the dataset), `--num_hints` is rejected, and the output is `{output_name}_{dataset_type}_{model_id}_icl.json`. Each record also keeps `filePath`; `source_clue` is the ground truth.
+- Clues are capped at `--max_clue_words` (default 6, the corpus 90th percentile; median is 4). The cap, the clue count and "no answer leakage" are **enforced**: an extra requirement fails responses that break them, and this path uses `RepairTemplateStrategy` instead of rejection sampling. That matters, because plain rejection resends the identical prompt, and Opus 5.5 returned the same 7-word clue for TITULARA on all 5 attempts. The repair strategy feeds the failure reason (`over 6 words: '...'`) back to the model, and it fixed the clue on the first retry.
+- The summary also reports `clue_words_mean` and `within_word_limit`.
+- Results for `claude-opus-5-5` and `gpt-6-astra` are in `data/results/gen_clues/`: 20/20 items each, all clues within 6 words, no leakage. BERTScore against a single reference clue says little about wordplay quality, so read the clues.
+- mellea 0.8.0 gotcha when probing a model by hand: `ainstruct(..., strategy=None)` returns an **uncomputed** thunk, so `str(out)` is `''`. Pass `await_result=True`. The scripts are unaffected because a sampling strategy always awaits.
 
 Runner: `run_gen_clues.sh <model_id> <dataset_type> [num_candidates] [num_samples]` sweeps `--num_hints` over `0 1 2`. Like the other runners it hardcodes `/home/radu/...` paths and uses `./timeout`, so it is author-machine-specific.
 

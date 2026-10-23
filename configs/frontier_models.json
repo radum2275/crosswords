@@ -1,5 +1,17 @@
 [
   {
+    "name": "claude-opus-5-5",
+    "model_id": "openai/aws/claude-opus-5-5",
+    "backend": "litellm",
+    "provider": "aws"
+  },
+  {
+    "name": "gpt-6-astra",
+    "model_id": "openai/azure/gpt-6-astra",
+    "backend": "litellm",
+    "provider": "azure"
+  },
+  {
     "name": "claude-opus-5",
     "model_id": "openai/aws/claude-opus-5",
     "backend": "litellm",
